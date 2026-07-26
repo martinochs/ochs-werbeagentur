@@ -3,6 +3,7 @@ export type PortfolioExample = {
   subtitle: string;
   gradient: string;
   href?: string;
+  image?: string;
 };
 
 export const portfolioExamples: PortfolioExample[] = [
@@ -11,6 +12,7 @@ export const portfolioExamples: PortfolioExample[] = [
     subtitle: "Moderne Praxis-Website mit Leistungsübersicht",
     gradient: "from-slate-600 to-slate-800",
     href: "/beispiele/zahnarztpraxis",
+    image: "/beispiele/zahnarzt-behandlungsraum.png",
   },
   {
     title: "Hautarzt Dr. Schmidt",

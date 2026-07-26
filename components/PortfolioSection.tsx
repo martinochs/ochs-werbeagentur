@@ -14,7 +14,7 @@ const concepts = [
 
     practice: "Dr. Weber · Mannheim",
 
-    image: "/images/portfolio/zahnarztpraxis.png",
+    image: "/beispiele/zahnarzt-behandlungsraum.png",
 
     icon: null,
 

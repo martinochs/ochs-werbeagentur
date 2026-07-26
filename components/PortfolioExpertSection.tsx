@@ -1,11 +1,8 @@
 import { ArrowRight, Check, ExternalLink, Mail, Phone } from "lucide-react";
-
+import Image from "next/image";
 import Link from "next/link";
-
 import { ProfilePhoto } from "@/components/ProfilePhoto";
-
 import { portfolioExamples } from "@/lib/content/portfolio-examples";
-
 import { siteConfig } from "@/lib/seo/config";
 
 
@@ -72,35 +69,61 @@ function WebsiteMockup({
 
 
 
+function ExamplePreview({
+  title,
+  gradient,
+  image,
+}: {
+  title: string;
+  gradient: string;
+  image?: string;
+}) {
+  if (image) {
+    return (
+      <div
+        className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-black/5"
+        role="img"
+        aria-label={`Webdesign-Beispiel ${title}`}
+      >
+        <div className="flex gap-1 border-b border-border bg-surface px-2.5 py-2">
+          <span className="h-1.5 w-1.5 rounded-full bg-red-400" />
+          <span className="h-1.5 w-1.5 rounded-full bg-yellow-400" />
+          <span className="h-1.5 w-1.5 rounded-full bg-green-400" />
+        </div>
+        <div className="relative aspect-[4/3] w-full">
+          <Image
+            src={image}
+            alt={`Design-Beispiel ${title}`}
+            fill
+            sizes="180px"
+            className="object-cover object-top"
+          />
+        </div>
+      </div>
+    );
+  }
+
+  return <WebsiteMockup title={title} gradient={gradient} />;
+}
+
 const traits = [
-
   "Persönliche Betreuung von Anfang bis Launch",
-
   "Spezialisiert auf Arzt- und Zahnarztpraxen",
-
   "Transparente Festpreise ohne versteckte Kosten",
-
 ];
 
 
 
 function ExampleCard({
-
   title,
-
   subtitle,
-
   gradient,
-
   href,
-
+  image,
 }: (typeof portfolioExamples)[number]) {
-
   const content = (
-
     <>
-
-      <WebsiteMockup title={title} gradient={gradient} />
+      <ExamplePreview title={title} gradient={gradient} image={image} />
 
       <div className="flex flex-col justify-center">
 
