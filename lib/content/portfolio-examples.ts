@@ -22,9 +22,10 @@ export const portfolioExamples: PortfolioExample[] = [
     image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
   },
   {
-    title: "Orthopädie am Rhein",
-    subtitle: "Übersichtliche Patientenführung online",
+    title: "Orthopädie Dr. Kraft",
+    subtitle: "Sportmedizin, Diagnostik & Patientenführung online",
     gradient: "from-blue-700 to-blue-900",
     href: "/beispiele/orthopaedie-am-rhein",
+    image: "/beispiele/orthopaedie-hero.png",
   },
 ];
