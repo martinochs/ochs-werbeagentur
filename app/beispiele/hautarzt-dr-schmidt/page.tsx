@@ -265,67 +265,73 @@ export default function HautarztExamplePage() {
         </section>
 
         <section id="praxis" className="bg-white py-16 lg:py-20">
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2 lg:gap-12 lg:px-8">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0946b]">
-                Unsere Praxis
-              </p>
-              <h2
-                className={`${playfair.className} mt-3 text-2xl font-semibold text-[#3d4a3d] sm:text-3xl`}
-              >
-                Individuelle Medizin statt Standardlösungen
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-[#3d4a3d]/65">
-                In unserer modernen Praxis verbinden wir fachliche Expertise mit
-                Zeit für das Gespräch — damit Sie verstehen, welche Behandlung
-                für Ihre Haut am sinnvollsten ist.
-              </p>
-              <a
-                href="#kontakt"
-                className="mt-6 inline-flex items-center gap-2 rounded-md border border-[#5a6e5a] px-5 py-3 text-sm font-semibold text-[#5a6e5a] transition-colors hover:bg-[#5a6e5a]/5"
-              >
-                Mehr über uns
-              </a>
-              <div className="mt-8 overflow-hidden rounded-xl shadow-md ring-1 ring-[#5a6e5a]/10">
-                <Image
-                  src="https://images.unsplash.com/photo-1631217868264-e5b90bb5e933?auto=format&fit=crop&w=900&q=80"
-                  alt="Empfangsbereich der Hautarztpraxis"
-                  width={900}
-                  height={500}
-                  className="aspect-[16/10] w-full object-cover"
-                />
-              </div>
-            </div>
-
-            <div id="aesthetik" className="grid gap-0 overflow-hidden rounded-xl lg:grid-cols-2">
-              <div className="flex flex-col justify-center bg-[#5a6e5a] p-8 text-white lg:p-10">
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#d4c4a8]">
-                  Ästhetische Dermatologie
+          <div className="mx-auto max-w-6xl px-4 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
+              <div className="flex flex-col justify-center lg:col-span-4">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0946b]">
+                  Unsere Praxis
                 </p>
                 <h2
-                  className={`${playfair.className} mt-3 text-2xl font-semibold leading-snug`}
+                  className={`${playfair.className} mt-3 text-2xl font-semibold text-[#3d4a3d] sm:text-3xl`}
                 >
-                  Natürliche Ergebnisse. Sichtbare Frische.
+                  Individuelle Medizin statt Standardlösungen
                 </h2>
-                <p className="mt-4 text-sm leading-relaxed text-white/80">
-                  Von Faltenbehandlung bis Hautverjüngung — individuell
-                  abgestimmt auf Ihre Wünsche und Ihren Hauttyp.
+                <p className="mt-4 text-sm leading-relaxed text-[#3d4a3d]/65">
+                  In unserer modernen Praxis verbinden wir fachliche Expertise mit
+                  Zeit für das Gespräch — damit Sie verstehen, welche Behandlung
+                  für Ihre Haut am sinnvollsten ist.
                 </p>
                 <a
                   href="#kontakt"
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-md bg-[#b0946b] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-md border border-[#5a6e5a] px-5 py-3 text-sm font-semibold text-[#5a6e5a] transition-colors hover:bg-[#5a6e5a]/5"
                 >
-                  Mehr erfahren
+                  Mehr über uns
                 </a>
               </div>
-              <div className="relative min-h-[280px]">
+
+              <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-[#5a6e5a]/10 lg:col-span-4">
                 <Image
-                  src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80"
-                  alt="Gesunde, strahlende Haut"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 400px"
-                  className="object-cover"
+                  src="/beispiele/hautarzt-empfang.png"
+                  alt="Empfangsbereich der Hautarztpraxis Dr. med. Maria Weiss"
+                  width={600}
+                  height={800}
+                  className="h-full min-h-[320px] w-full object-cover lg:min-h-[420px]"
                 />
+              </div>
+
+              <div
+                id="aesthetik"
+                className="grid overflow-hidden rounded-xl shadow-md ring-1 ring-[#5a6e5a]/10 lg:col-span-4 lg:grid-cols-2"
+              >
+                <div className="flex flex-col justify-center bg-[#5a6e5a] p-6 text-white lg:p-8">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#d4c4a8]">
+                    Ästhetische Dermatologie
+                  </p>
+                  <h2
+                    className={`${playfair.className} mt-3 text-xl font-semibold leading-snug`}
+                  >
+                    Natürliche Ergebnisse. Sichtbare Frische.
+                  </h2>
+                  <p className="mt-3 text-sm leading-relaxed text-white/80">
+                    Von Faltenbehandlung bis Hautverjüngung — individuell
+                    abgestimmt auf Ihre Wünsche und Ihren Hauttyp.
+                  </p>
+                  <a
+                    href="#kontakt"
+                    className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-[#b0946b] px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                  >
+                    Mehr erfahren
+                  </a>
+                </div>
+                <div className="relative min-h-[240px] lg:min-h-full">
+                  <Image
+                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80"
+                    alt="Gesunde, strahlende Haut"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 250px"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
