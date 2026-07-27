@@ -8,17 +8,18 @@ export type PortfolioExample = {
 
 export const portfolioExamples: PortfolioExample[] = [
   {
-    title: "Zahnarztpraxis",
-    subtitle: "Moderne Praxis-Website mit Leistungsübersicht",
+    title: "Zahnarztpraxis Dr. Schmidt",
+    subtitle: "Moderne Praxis-Website mit Team, Leistungen & Bewertungen",
     gradient: "from-slate-600 to-slate-800",
     href: "/beispiele/zahnarztpraxis",
     image: "/beispiele/zahnarzt-behandlungsraum.png",
   },
   {
-    title: "Hautarzt Dr. Schmidt",
-    subtitle: "Vertrauensvoller Auftritt für Facharztpraxis",
+    title: "Hautärztin Dr. Weiss",
+    subtitle: "Elegante Praxis-Website mit Schwerpunkten & Ästhetik",
     gradient: "from-emerald-700 to-emerald-900",
     href: "/beispiele/hautarzt-dr-schmidt",
+    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
   },
   {
     title: "Orthopädie am Rhein",
