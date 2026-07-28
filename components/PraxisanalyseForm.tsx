@@ -14,7 +14,8 @@ import {
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
-const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+const formId =
+  process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "kqerngya";
 
 const inputClassName =
   "mt-1.5 w-full rounded-lg border border-border bg-white px-3.5 py-2.5 text-sm text-navy outline-none transition-shadow focus:border-accent focus:ring-2 focus:ring-accent/20";
