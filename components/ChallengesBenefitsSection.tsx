@@ -129,15 +129,15 @@ export function ChallengesBenefitsSection() {
               ))}
             </ul>
 
-            <div className="mt-4 flex items-center gap-4 rounded-2xl border border-[#fca5a5] bg-[#fef2f2] p-5">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#ef4444] text-white">
+            <div className="mt-4 flex items-center gap-4 rounded-2xl bg-[#ef4444] p-5 text-white shadow-md">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#ef4444]">
                 <Clock className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
               </div>
               <div>
-                <h4 className="text-[15px] font-bold text-[#dc2626]">
+                <h4 className="text-[15px] font-bold text-white">
                   Die Folge: unnötiger Verwaltungsaufwand
                 </h4>
-                <p className="mt-0.5 text-[13px] text-muted">
+                <p className="mt-0.5 text-[13px] text-white/90">
                   Zeit geht verloren, das Team wird unterbrochen und potenzielle Patienten springen ab.
                 </p>
               </div>
