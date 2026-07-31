@@ -100,23 +100,6 @@ const packages: Package[] = [
     badge: "Beste Gesamtlösung",
     googleAdsBonus: true,
   },
-  {
-    title: "Betreuung & Weiterentwicklung",
-    subtitle: "Wir kümmern uns dauerhaft um Ihren Erfolg.",
-    pricePrefix: "Monatlich ab",
-    price: "199 €",
-    icon: Headphones,
-    theme: themes.purple,
-    features: [
-      "Technische Wartung & Updates",
-      "Inhaltspflege (Texte & Bilder)",
-      "Sicherheits- & Backup-Service",
-      "Persönlicher Ansprechpartner",
-      "Monatliche Optimierungen",
-    ],
-    highlighted: false,
-    badge: null,
-  },
 ];
 
 function GoogleAdsBonusBox() {
@@ -258,7 +241,7 @@ export function PricingSection() {
           Unsere Leistungen und Preise
         </h2>
 
-        <div className="mt-10 grid items-stretch gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
           {packages.map((pkg) => (
             <PricingCard key={pkg.title} pkg={pkg} />
           ))}
