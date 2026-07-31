@@ -4,6 +4,7 @@ import {
   BarChart3,
   Calendar,
   Check,
+  CheckCircle2,
   ChevronDown,
   Clock,
   Gift,
