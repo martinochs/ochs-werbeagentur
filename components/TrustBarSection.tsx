@@ -2,7 +2,7 @@ import { Cloud, Heart, ShieldCheck, User } from "lucide-react";
 
 const trustItems = [
   { icon: User, label: "Spezialisiert auf Webdesign für Arzt- & Zahnarztpraxen" },
-  { icon: Heart, label: "Persönliche Betreuung durch Mariia Ochs" },
+  { icon: Heart, label: "Persönliche Betreuung" },
   { icon: ShieldCheck, label: "DSGVO-konform & sicher" },
   { icon: Cloud, label: "Hosting in Deutschland" },
 ];
