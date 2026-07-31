@@ -141,7 +141,7 @@ function ExampleCard({
     return (
       <Link
         href={href}
-        className="group flex flex-col gap-3 rounded-2xl border border-border bg-white p-4 shadow-sm transition-all hover:shadow-md hover:ring-1 hover:ring-black/5"
+        className="group flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-4 shadow-sm transition-all hover:shadow-md hover:ring-1 hover:ring-black/5"
       >
         {content}
       </Link>
@@ -149,7 +149,7 @@ function ExampleCard({
   }
 
   return (
-    <article className="flex flex-col gap-3 rounded-2xl border border-border bg-white p-4 shadow-sm">
+    <article className="flex h-full flex-col gap-3 rounded-2xl border border-border bg-white p-4 shadow-sm">
       {content}
     </article>
   );
@@ -179,9 +179,11 @@ export function PortfolioExpertSection() {
               Fachrichtung zugeschnitten.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="scrollbar-hide -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
             {portfolioExamples.map((item) => (
-              <ExampleCard key={item.title} {...item} />
+              <div key={item.title} className="w-[85vw] shrink-0 snap-center sm:w-[50vw] lg:w-auto">
+                <ExampleCard {...item} />
+              </div>
             ))}
           </div>
         </div>
