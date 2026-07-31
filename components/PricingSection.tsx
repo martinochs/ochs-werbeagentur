@@ -1,10 +1,13 @@
 import {
   Activity,
   ArrowRight,
+  BarChart3,
   Check,
   Gift,
   Headphones,
   Lightbulb,
+  Monitor,
+  Tag,
   Users,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
@@ -261,9 +264,70 @@ export function PricingSection() {
           ))}
         </div>
 
-        <p className="mt-8 text-center text-sm text-muted">
-          Alle Preise verstehen sich zzgl. MwSt.
-        </p>
+        {/* Monthly Options Box */}
+        <div className="mt-12 rounded-[2rem] border border-blue-100 bg-[#f8fafc] p-6 lg:p-10">
+          <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+            {/* Left Side: Title & Icon */}
+            <div className="flex items-center gap-6 lg:w-1/3">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[#eff6ff] text-[#1d6fd8]">
+                <Tag className="h-10 w-10" strokeWidth={2} aria-hidden="true" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold leading-snug text-navy">
+                  Unsere monatlichen<br />Betreuungsoptionen
+                </h3>
+                <p className="mt-2 text-sm text-muted">
+                  Flexible Betreuung – passend<br />für Ihre Praxis.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Side: Table */}
+            <div className="flex-1 lg:pl-12">
+              <div className="grid grid-cols-[1fr_auto] gap-4 border-b-2 border-blue-900/10 pb-3 text-sm font-bold text-navy">
+                <div>Leistung</div>
+                <div>Preis netto</div>
+              </div>
+              
+              <ul className="mt-4 flex flex-col gap-4">
+                <li className="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-blue-900/10 border-dashed pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-white">
+                      <Monitor className="h-4 w-4" strokeWidth={2.5} />
+                    </div>
+                    <span className="text-sm font-medium text-navy">Website-Betreuung</span>
+                  </div>
+                  <span className="text-base font-bold text-[#5b21b6]">199 €/Monat</span>
+                </li>
+
+                <li className="grid grid-cols-[1fr_auto] items-center gap-4 border-b border-blue-900/10 border-dashed pb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
+                      <BarChart3 className="h-4 w-4" strokeWidth={2.5} />
+                    </div>
+                    <span className="text-sm font-medium text-navy">Google-Ads-Betreuung</span>
+                  </div>
+                  <span className="text-base font-bold text-[#166534]">449 €/Monat</span>
+                </li>
+
+                <li className="grid grid-cols-[1fr_auto] items-center gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#1d6fd8] text-white">
+                      <Monitor className="h-4 w-4" strokeWidth={2.5} />
+                    </div>
+                    <span className="text-sm font-medium text-navy">Website + Google Ads</span>
+                  </div>
+                  <span className="text-base font-bold text-[#1d6fd8]">599 €/Monat</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 space-y-2 text-center text-xs text-muted">
+          <p>* Google-Werbeguthaben wird von Google gewährt und ist abhängig von den Teilnahmebedingungen.</p>
+          <p className="text-sm">Alle Preise verstehen sich zzgl. MwSt.</p>
+        </div>
       </div>
     </section>
   );
