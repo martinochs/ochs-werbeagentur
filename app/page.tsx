@@ -1,3 +1,4 @@
+import { AboutSection } from "@/components/AboutSection";
 import { ChallengesBenefitsSection } from "@/components/ChallengesBenefitsSection";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
@@ -44,6 +45,7 @@ export default function HomePage() {
         <GoogleAdsSection />
         <PricingSection />
         <FaqSection />
+        <AboutSection />
       </main>
       <Footer />
     </>
