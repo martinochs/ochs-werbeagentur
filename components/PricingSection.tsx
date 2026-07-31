@@ -319,7 +319,7 @@ export function PricingSection() {
               
               <div className="mt-4 flex flex-col gap-4">
                 {/* Row 1 */}
-                <details className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
+                <details name="monthly-options" className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
                   <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-white">
@@ -344,7 +344,7 @@ export function PricingSection() {
                 </details>
 
                 {/* Row 2 */}
-                <details className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
+                <details name="monthly-options" className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
                   <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
@@ -369,7 +369,7 @@ export function PricingSection() {
                 </details>
 
                 {/* Row 3 (Highlighted) */}
-                <details className="group relative mt-2 rounded-2xl border-2 border-[#1d6fd8] bg-white p-4 lg:p-6">
+                <details name="monthly-options" className="group relative mt-2 rounded-2xl border-2 border-[#1d6fd8] bg-white p-4 lg:p-6">
                   <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1d6fd8] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white lg:left-8 lg:translate-x-0">
                       Empfohlen
