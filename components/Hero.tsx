@@ -1,6 +1,5 @@
-import { ArrowRight, Calendar, Check, CheckCircle2, Clock, Phone, Tag } from "lucide-react";
+import { ArrowRight, Calendar, Check, CheckCircle2, Clock, Phone, Tag, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
-import { Tooth } from "lucide-react";
 
 const highlights = [
   { 
@@ -93,7 +92,7 @@ export function Hero() {
 
             {/* Top Right Floating Badge */}
             <div className="absolute right-4 top-8 z-20 flex flex-col items-center justify-center rounded-xl bg-white/90 p-3 text-center shadow-lg backdrop-blur-sm ring-1 ring-black/5">
-              <Tooth className="h-6 w-6 text-navy" strokeWidth={1.5} aria-hidden="true" />
+              <Stethoscope className="h-6 w-6 text-navy" strokeWidth={1.5} aria-hidden="true" />
               <p className="mt-1 text-[10px] font-bold uppercase tracking-wide text-navy">
                 Zahnarztpraxis
                 <br />
