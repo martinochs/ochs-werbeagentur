@@ -187,7 +187,8 @@ export function PortfolioExpertSection() {
         </div>
 
         {/* About Section */}
-        <div id="ueber-uns" className="rounded-[2rem] border border-border bg-[#f8fafc] p-6 sm:p-10 lg:p-12">
+        <div id="ueber-uns" className="mt-20 border-t border-border pt-20 lg:mt-32 lg:pt-32">
+          <div className="rounded-[2rem] border border-border bg-[#f8fafc] p-6 sm:p-10 lg:p-12">
           <div className="grid gap-10 lg:grid-cols-[340px_1fr] lg:items-center lg:gap-16">
             <ProfilePhoto
               src="/images/mariia-ochs-about.png"
