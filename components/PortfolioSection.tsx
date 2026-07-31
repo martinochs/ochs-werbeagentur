@@ -90,7 +90,7 @@ export function PortfolioSection() {
 
 
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-3">
+        <div className="scrollbar-hide -mx-4 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
 
           {concepts.map(({ title, tagline, practice, image, icon: Icon }) => (
 
@@ -98,7 +98,7 @@ export function PortfolioSection() {
 
               key={title}
 
-              className="group relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5"
+              className="group relative w-[85vw] shrink-0 snap-center overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5 sm:w-[50vw] lg:w-auto"
 
             >
 
