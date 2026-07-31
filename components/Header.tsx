@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Phone, X } from "lucide-react";
+import { Gift, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -26,7 +26,26 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
+    <>
+      <div className="bg-[#166534] px-4 py-2.5 text-white">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-3 text-center sm:flex-row sm:gap-6 lg:justify-between">
+          <div className="flex items-center gap-2 text-sm">
+            <Gift className="h-4 w-4 shrink-0 text-[#bbf7d0]" />
+            <p className="leading-snug">
+              <span className="font-bold text-[#bbf7d0] underline decoration-[#bbf7d0]/50 underline-offset-2">STARTKONDITIONEN BIS 31.10.2026:</span>{" "}
+              Premium Praxis-Website oder Google-Ads-Einrichtung jeweils 2.999 € netto
+            </p>
+          </div>
+          <Link
+            href="/#preise"
+            className="shrink-0 rounded bg-white px-3 py-1.5 text-xs font-bold text-[#166534] transition-colors hover:bg-gray-100"
+          >
+            ANGEBOT ANSEHEN &rarr;
+          </Link>
+        </div>
+      </div>
+
+      <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 lg:px-8">
         <Link
           href="/"
@@ -63,8 +82,9 @@ export function Header() {
               {siteConfig.phoneDisplay}
             </a>
           )}
-          <Link href="/praxisanalyse" className="btn-primary px-4 py-2.5">
+          <Link href="/praxisanalyse" className="btn-primary flex items-center gap-1.5 px-4 py-2.5">
             Kostenlose Praxisanalyse
+            <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
 
@@ -103,5 +123,6 @@ export function Header() {
         </nav>
       )}
     </header>
+    </>
   );
 }
