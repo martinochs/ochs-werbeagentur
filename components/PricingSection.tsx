@@ -312,95 +312,80 @@ export function PricingSection() {
 
             {/* Right Side: Table */}
             <div className="flex flex-col">
-              <div className="hidden grid-cols-[1fr_auto_120px] gap-4 border-b border-border pb-3 text-sm font-semibold text-navy lg:grid">
+              <div className="hidden grid-cols-[1fr_120px] gap-4 border-b border-border pb-3 text-sm font-semibold text-navy lg:grid">
                 <div>Leistung</div>
-                <div className="flex items-center gap-1">Enthalten <Info className="h-3.5 w-3.5 text-muted" aria-hidden="true" /></div>
                 <div className="text-right">Preis netto</div>
               </div>
               
               <div className="mt-4 flex flex-col gap-4">
                 {/* Row 1 */}
-                <div className="grid gap-4 rounded-2xl border border-border bg-white p-4 lg:grid-cols-[1fr_auto_120px] lg:items-center lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-white">
-                      <Monitor className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h4 className="text-[15px] font-bold text-navy">Website-Betreuung</h4>
-                      <p className="mt-1 text-[13px] text-muted">Wir kümmern uns um die<br className="hidden lg:block" />Technik und Inhalte Ihrer Website.</p>
-                    </div>
-                  </div>
-                  <div className="lg:w-[220px]">
-                    <details className="group relative">
-                      <summary className="flex cursor-pointer items-center justify-between gap-2 rounded-lg border border-border bg-white px-3 py-2 text-[13px] font-medium text-navy transition-colors hover:bg-surface list-none [&::-webkit-details-marker]:hidden">
-                        Enthaltene Leistungen
-                        <ChevronDown className="h-4 w-4 text-muted transition-transform group-open:rotate-180" aria-hidden="true" />
-                      </summary>
-                      <div className="absolute left-0 top-full z-10 mt-1 w-full rounded-lg border border-border bg-white p-3 text-[13px] text-muted shadow-lg lg:w-[280px]">
-                        Updates, Backups, Sicherheitschecks und kleinere Änderungen
+                <details className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
+                  <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#5b21b6] text-white">
+                        <Monitor className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
                       </div>
-                    </details>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-[15px] font-bold text-navy">Website-Betreuung</h4>
+                          <ChevronDown className="h-4 w-4 text-muted transition-transform group-open:rotate-180" aria-hidden="true" />
+                        </div>
+                        <p className="mt-1 text-[13px] text-muted">Wir kümmern uns um die<br className="hidden lg:block" />Technik und Inhalte Ihrer Website.</p>
+                      </div>
+                    </div>
+                    <div className="text-left lg:text-right">
+                      <p className="text-2xl font-bold text-[#5b21b6]">199 €</p>
+                      <p className="text-[13px] text-muted">/Monat</p>
+                    </div>
+                  </summary>
+                  <div className="mt-4 lg:ml-16 rounded-xl bg-white lg:bg-surface p-4 text-[13px] text-muted border border-border lg:border-none">
+                    <span className="font-semibold text-navy">Enthaltene Leistungen:</span> Updates, Backups, Sicherheitschecks und kleinere Änderungen
                   </div>
-                  <div className="text-left lg:text-right">
-                    <p className="text-2xl font-bold text-[#5b21b6]">199 €</p>
-                    <p className="text-[13px] text-muted">/Monat</p>
-                  </div>
-                </div>
+                </details>
 
                 {/* Row 2 */}
-                <div className="grid gap-4 rounded-2xl border border-border bg-white p-4 lg:grid-cols-[1fr_auto_120px] lg:items-center lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
-                      <BarChart3 className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h4 className="text-[15px] font-bold text-navy">Google-Ads-Betreuung</h4>
-                      <p className="mt-1 text-[13px] text-muted">Wir optimieren Ihre Kampagnen<br className="hidden lg:block" />für mehr Anfragen und Patienten.</p>
-                    </div>
-                  </div>
-                  <div className="lg:w-[220px]">
-                    <details className="group relative">
-                      <summary className="flex cursor-pointer items-center justify-between gap-2 rounded-lg border border-border bg-white px-3 py-2 text-[13px] font-medium text-[#166534] transition-colors hover:bg-surface list-none [&::-webkit-details-marker]:hidden">
-                        Enthaltene Leistungen
-                        <ChevronDown className="h-4 w-4 text-[#166534]/60 transition-transform group-open:rotate-180" aria-hidden="true" />
-                      </summary>
-                      <div className="absolute left-0 top-full z-10 mt-1 w-full rounded-lg border border-border bg-white p-3 text-[13px] text-muted shadow-lg lg:w-[280px]">
-                        Optimierung, Budgetkontrolle und monatliche Auswertung
+                <details className="group rounded-2xl border border-border bg-white p-4 lg:border-none lg:bg-transparent lg:p-0 lg:pb-4 lg:border-b">
+                  <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
+                        <BarChart3 className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
                       </div>
-                    </details>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-[15px] font-bold text-navy">Google-Ads-Betreuung</h4>
+                          <ChevronDown className="h-4 w-4 text-muted transition-transform group-open:rotate-180" aria-hidden="true" />
+                        </div>
+                        <p className="mt-1 text-[13px] text-muted">Wir optimieren Ihre Kampagnen<br className="hidden lg:block" />für mehr Anfragen und Patienten.</p>
+                      </div>
+                    </div>
+                    <div className="text-left lg:text-right">
+                      <p className="text-2xl font-bold text-[#166534]">449 €</p>
+                      <p className="text-[13px] text-muted">/Monat</p>
+                    </div>
+                  </summary>
+                  <div className="mt-4 lg:ml-16 rounded-xl bg-white lg:bg-surface p-4 text-[13px] text-muted border border-border lg:border-none">
+                    <span className="font-semibold text-navy">Enthaltene Leistungen:</span> Optimierung, Budgetkontrolle und monatliche Auswertung
                   </div>
-                  <div className="text-left lg:text-right">
-                    <p className="text-2xl font-bold text-[#166534]">449 €</p>
-                    <p className="text-[13px] text-muted">/Monat</p>
-                  </div>
-                </div>
+                </details>
 
                 {/* Row 3 (Highlighted) */}
-                <div className="relative mt-2 rounded-2xl border-2 border-[#1d6fd8] bg-white p-4 lg:p-6">
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1d6fd8] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white lg:left-8 lg:translate-x-0">
-                    Empfohlen
-                  </span>
-                  <div className="grid gap-4 lg:grid-cols-[1fr_auto_120px] lg:items-center">
+                <details className="group relative mt-2 rounded-2xl border-2 border-[#1d6fd8] bg-white p-4 lg:p-6">
+                  <summary className="grid cursor-pointer gap-4 lg:grid-cols-[1fr_120px] lg:items-center list-none [&::-webkit-details-marker]:hidden">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-[#1d6fd8] px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white lg:left-8 lg:translate-x-0">
+                      Empfohlen
+                    </span>
                     <div className="flex items-start gap-4">
                       <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1d6fd8] text-white">
                         <Monitor className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
                         <Activity className="absolute ml-4 mt-4 h-4 w-4 rounded-full bg-white text-[#1d6fd8] p-0.5" strokeWidth={3} aria-hidden="true" />
                       </div>
                       <div>
-                        <h4 className="text-[15px] font-bold text-navy">Website + Google Ads</h4>
+                        <div className="flex items-center gap-2">
+                          <h4 className="text-[15px] font-bold text-navy">Website + Google Ads</h4>
+                          <ChevronDown className="h-4 w-4 text-[#1d6fd8] transition-transform group-open:rotate-180" aria-hidden="true" />
+                        </div>
                         <p className="mt-1 text-[13px] text-muted">Die komplette Betreuung für<br className="hidden lg:block" />Ihre Website und Werbekampagnen.</p>
                       </div>
-                    </div>
-                    <div className="lg:w-[220px]">
-                      <details className="group relative">
-                        <summary className="flex cursor-pointer items-center justify-between gap-2 rounded-lg border border-border bg-white px-3 py-2 text-[13px] font-medium text-[#1d6fd8] transition-colors hover:bg-surface list-none [&::-webkit-details-marker]:hidden">
-                          Enthaltene Leistungen
-                          <ChevronDown className="h-4 w-4 text-[#1d6fd8]/60 transition-transform group-open:rotate-180" aria-hidden="true" />
-                        </summary>
-                        <div className="absolute left-0 top-full z-10 mt-1 w-full rounded-lg border border-border bg-white p-3 text-[13px] text-muted shadow-lg lg:w-[280px]">
-                          Vollständige Betreuung beider Bereiche
-                        </div>
-                      </details>
                     </div>
                     <div className="text-left lg:text-right">
                       <p className="text-2xl font-bold text-[#1d6fd8]">599 €</p>
@@ -410,8 +395,11 @@ export function PricingSection() {
                         Sie sparen 49 € / Monat
                       </div>
                     </div>
+                  </summary>
+                  <div className="mt-4 lg:ml-16 rounded-xl bg-[#eff6ff] p-4 text-[13px] text-muted">
+                    <span className="font-semibold text-[#1d6fd8]">Enthaltene Leistungen:</span> Vollständige Betreuung beider Bereiche
                   </div>
-                </div>
+                </details>
               </div>
 
               <a href="/praxisanalyse" className="btn-primary mt-8 flex w-full items-center justify-center gap-2 py-3.5 text-base">
