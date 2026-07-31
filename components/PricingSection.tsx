@@ -339,7 +339,13 @@ export function PricingSection() {
                     </div>
                   </summary>
                   <div className="mt-4 lg:ml-16 rounded-xl bg-white lg:bg-surface p-4 text-[13px] text-muted border border-border lg:border-none">
-                    <span className="font-semibold text-navy">Enthaltene Leistungen:</span> Updates, Backups, Sicherheitschecks und kleinere Änderungen
+                    <span className="mb-2 block font-semibold text-navy">Enthaltene Leistungen:</span>
+                    <ul className="space-y-1.5">
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Updates</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Backups</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Sicherheitschecks</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> kleinere Änderungen</li>
+                    </ul>
                   </div>
                 </details>
 
@@ -364,7 +370,12 @@ export function PricingSection() {
                     </div>
                   </summary>
                   <div className="mt-4 lg:ml-16 rounded-xl bg-white lg:bg-surface p-4 text-[13px] text-muted border border-border lg:border-none">
-                    <span className="font-semibold text-navy">Enthaltene Leistungen:</span> Optimierung, Budgetkontrolle und monatliche Auswertung
+                    <span className="mb-2 block font-semibold text-navy">Enthaltene Leistungen:</span>
+                    <ul className="space-y-1.5">
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Optimierung</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Budgetkontrolle</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> monatliche Auswertung</li>
+                    </ul>
                   </div>
                 </details>
 
@@ -397,7 +408,10 @@ export function PricingSection() {
                     </div>
                   </summary>
                   <div className="mt-4 lg:ml-16 rounded-xl bg-[#eff6ff] p-4 text-[13px] text-muted">
-                    <span className="font-semibold text-[#1d6fd8]">Enthaltene Leistungen:</span> Vollständige Betreuung beider Bereiche
+                    <span className="mb-2 block font-semibold text-[#1d6fd8]">Enthaltene Leistungen:</span>
+                    <ul className="space-y-1.5">
+                      <li className="flex items-start gap-2"><span className="text-[#1d6fd8]">•</span> Vollständige Betreuung beider Bereiche</li>
+                    </ul>
                   </div>
                 </details>
               </div>
