@@ -129,7 +129,7 @@ export function ChallengesBenefitsSection() {
               ))}
             </ul>
 
-            <div className="mt-auto flex h-[160px] items-center gap-4 rounded-2xl bg-[#ef4444] p-5 text-white shadow-md sm:h-[144px]">
+            <div className="mt-8 flex h-[160px] items-center gap-4 rounded-2xl bg-[#ef4444] p-5 text-white shadow-md sm:h-[144px]">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#ef4444]">
                 <Clock className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
               </div>
@@ -189,7 +189,7 @@ export function ChallengesBenefitsSection() {
               ))}
             </ul>
 
-            <div className="mt-auto flex h-[160px] items-center gap-4 rounded-2xl bg-[#16a34a] p-5 text-white shadow-md sm:h-[144px]">
+            <div className="mt-8 flex h-[160px] items-center gap-4 rounded-2xl bg-[#16a34a] p-5 text-white shadow-md sm:h-[144px]">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-[#16a34a]">
                 <Rocket className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
               </div>
