@@ -24,42 +24,88 @@ type PackageTheme = {
   check: string;
 };
 
-const googleAdsBonus = {
-  label: "Exklusiver Vorteil für Erstnutzer",
-  amount: "4.000 €",
-  subtitle: "Google-Werbeguthaben*",
-  footnote: "Wir prüfen Ihre Berechtigung kostenlos.*",
+type ActionTheme = {
+  boxBorder: string;
+  boxBg: string;
+  titleText: string;
+  priceText: string;
+  badgeBg: string;
+  badgeText: string;
+  iconColor: string;
+  buttonBg: string;
+  buttonText: string;
+  buttonBorder: string;
 };
 
 type Package = {
   title: string;
   subtitle: string;
-  pricePrefix: string;
-  price: string;
-  priceNote?: string;
+  regularPrice: string;
+  actionPrice: string;
+  savings: string;
   features: string[];
   icon: LucideIcon;
   theme: PackageTheme;
+  actionTheme: ActionTheme;
   highlighted: boolean;
   badge: string | null;
-  googleAdsBonus?: boolean;
 };
 
 const themes = {
   navy: { accent: "#0a2540", check: "text-navy" },
   green: { accent: "#166534", check: "text-[#166534]" },
   blue: { accent: "#1d6fd8", check: "text-[#1d6fd8]" },
-  purple: { accent: "#5b21b6", check: "text-[#5b21b6]" },
 } as const;
+
+const actionThemes = {
+  green: {
+    boxBorder: "border-[#bbf7d0]",
+    boxBg: "bg-[#f0fdf4]",
+    titleText: "text-[#166534]",
+    priceText: "text-[#166534]",
+    badgeBg: "bg-[#16a34a]",
+    badgeText: "text-white",
+    iconColor: "text-[#16a34a]",
+    buttonBg: "bg-navy",
+    buttonText: "text-white",
+    buttonBorder: "border-navy",
+  },
+  green2: {
+    boxBorder: "border-[#bbf7d0]",
+    boxBg: "bg-[#f0fdf4]",
+    titleText: "text-[#166534]",
+    priceText: "text-[#166534]",
+    badgeBg: "bg-[#16a34a]",
+    badgeText: "text-white",
+    iconColor: "text-[#16a34a]",
+    buttonBg: "bg-[#166534]",
+    buttonText: "text-white",
+    buttonBorder: "border-[#166534]",
+  },
+  blue: {
+    boxBorder: "border-[#bfdbfe]",
+    boxBg: "bg-[#eff6ff]",
+    titleText: "text-[#1d6fd8]",
+    priceText: "text-[#1d6fd8]",
+    badgeBg: "bg-[#1d6fd8]",
+    badgeText: "text-white",
+    iconColor: "text-[#1d6fd8]",
+    buttonBg: "bg-white",
+    buttonText: "text-[#1d6fd8]",
+    buttonBorder: "border-[#1d6fd8]",
+  },
+};
 
 const packages: Package[] = [
   {
     title: "Premium Praxis-Website",
     subtitle: "Die Basis für Ihren digitalen Auftritt.",
-    pricePrefix: "Einmalig",
-    price: "4.749 €",
+    regularPrice: "4.749 €",
+    actionPrice: "2.999 €",
+    savings: "1.750 €",
     icon: Activity,
     theme: themes.navy,
+    actionTheme: actionThemes.green,
     features: [
       "Individuelles Design",
       "Online-Terminbuchung integriert",
@@ -73,10 +119,12 @@ const packages: Package[] = [
   {
     title: "Google Ads Patientengewinnung",
     subtitle: "Mehr qualifizierte Patientenanfragen.",
-    pricePrefix: "Einmalig",
-    price: "4.749 €",
+    regularPrice: "4.749 €",
+    actionPrice: "2.999 €",
+    savings: "1.750 €",
     icon: Users,
     theme: themes.green,
+    actionTheme: actionThemes.green2,
     features: [
       "Strategie & Keyword-Recherche",
       "Google Ads Kampagnen Einrichtung",
@@ -86,16 +134,16 @@ const packages: Package[] = [
     ],
     highlighted: false,
     badge: null,
-    googleAdsBonus: true,
   },
   {
     title: "Praxis-Wachstumspaket Website + Google Ads",
     subtitle: "Die perfekte Kombination für nachhaltiges Wachstum.",
-    pricePrefix: "Einmalig",
-    price: "8.999 €",
-    priceNote: "Empfohlen – sparen Sie 499 €",
+    regularPrice: "8.999 €",
+    actionPrice: "5.499 €",
+    savings: "3.500 €",
     icon: Lightbulb,
     theme: themes.blue,
+    actionTheme: actionThemes.blue,
     features: [
       "Website (inkl. Terminbuchung & SEO)",
       "Google Ads Kampagnen",
@@ -104,73 +152,41 @@ const packages: Package[] = [
       "Ein Ansprechpartner für alles",
     ],
     highlighted: true,
-    badge: "Beste Gesamtlösung",
-    googleAdsBonus: true,
+    badge: "BESTE GESAMTLÖSUNG",
   },
 ];
 
-function GoogleAdsBonusBox() {
-  return (
-    <div className="relative overflow-hidden rounded-xl border-2 border-[#16a34a] bg-gradient-to-br from-[#ecfdf5] via-[#dcfce7] to-[#bbf7d0] px-3 py-3 text-center shadow-[0_4px_16px_rgba(22,101,52,0.15)]">
-      <div
-        className="pointer-events-none absolute -right-3 -top-3 h-14 w-14 rounded-full bg-[#16a34a]/10"
-        aria-hidden="true"
-      />
-      <div className="relative flex items-center justify-center gap-1.5">
-        <Gift className="h-4 w-4 text-[#15803d]" strokeWidth={2.25} aria-hidden="true" />
-        <p className="text-[10px] font-bold uppercase tracking-wide text-[#166534]">
-          {googleAdsBonus.label}
-        </p>
-      </div>
-      <p className="relative mt-2 text-[11px] font-medium text-[#166534]">bis zu</p>
-      <p className="relative text-2xl font-bold leading-none tracking-tight text-[#15803d]">
-        {googleAdsBonus.amount}
-      </p>
-      <p className="relative mt-1 text-xs font-semibold text-[#166534]">
-        {googleAdsBonus.subtitle}
-      </p>
-      <p className="relative mt-2 text-[10px] leading-snug text-[#166534]/80">
-        {googleAdsBonus.footnote}
-      </p>
-    </div>
-  );
-}
+function PricingFooter({ pkg }: { pkg: Package }) {
+  const { boxBorder, boxBg, titleText, priceText, badgeBg, badgeText, iconColor, buttonBg, buttonText, buttonBorder } = pkg.actionTheme;
 
-function PricingFooter({
-  pkg,
-  accent,
-}: {
-  pkg: Package;
-  accent: string;
-}) {
   return (
-    <div className="mt-auto shrink-0 border-t border-border pt-5">
-      <div className="mb-5 min-h-[8.5rem]">
-        {pkg.googleAdsBonus ? <GoogleAdsBonusBox /> : null}
-      </div>
-
+    <div className="mt-auto shrink-0 border-t border-border pt-6">
       <div className="text-center">
-        <p className="text-xs font-semibold" style={{ color: accent }}>
-          {pkg.pricePrefix}
+        <p className="text-xs text-muted">Regulärer Preis</p>
+        <p className="mt-0.5 text-lg font-bold text-muted line-through decoration-red-500 decoration-2">
+          {pkg.regularPrice}
         </p>
-        <p className="mt-1 text-2xl font-bold" style={{ color: accent }}>
-          {pkg.price}
+      </div>
+
+      <div className={`mt-4 rounded-xl border ${boxBorder} ${boxBg} p-4 text-center`}>
+        <div className="flex items-center justify-center gap-1.5">
+          <Gift className={`h-4 w-4 ${iconColor}`} aria-hidden="true" />
+          <p className={`text-[11px] font-bold uppercase tracking-wide ${titleText}`}>
+            Aktion bis 31.10.2026
+          </p>
+        </div>
+        <p className="mt-2 text-xs font-semibold text-navy">Aktionspreis</p>
+        <p className={`mt-0.5 text-3xl font-extrabold ${priceText}`}>
+          {pkg.actionPrice}
         </p>
-        {pkg.priceNote ? (
-          <p className="mt-2 text-xs font-semibold text-accent">{pkg.priceNote}</p>
-        ) : (
-          <div className="mt-2 min-h-[2rem]" aria-hidden="true" />
-        )}
+        <div className={`mx-auto mt-3 inline-block rounded-md px-3 py-1 text-xs font-bold ${badgeBg} ${badgeText}`}>
+          Sie sparen {pkg.savings}
+        </div>
       </div>
 
       <a
         href="/praxisanalyse"
-        className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold transition-colors ${
-          pkg.highlighted
-            ? "border-2 border-[#1d6fd8] bg-white text-[#1d6fd8] hover:bg-[#eff6ff]"
-            : "text-white hover:opacity-90"
-        }`}
-        style={pkg.highlighted ? undefined : { backgroundColor: accent }}
+        className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-semibold transition-colors ${buttonBg} ${buttonText} ${buttonBorder} hover:opacity-90`}
       >
         Mehr erfahren
         <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -228,7 +244,7 @@ function PricingCard({ pkg }: { pkg: Package }) {
         </ul>
       </div>
 
-      <PricingFooter pkg={pkg} accent={accent} />
+      <PricingFooter pkg={pkg} />
     </article>
   );
 }
@@ -243,15 +259,24 @@ export function PricingSection() {
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <h2
           id="pricing-heading"
-          className="text-center text-xl font-bold text-navy sm:text-2xl"
+          className="text-center text-2xl font-bold text-navy sm:text-3xl lg:text-4xl"
         >
           Unsere Leistungen und Preise
         </h2>
+        <div className="mt-3 flex items-center justify-center gap-2 text-sm font-bold text-[#166534]">
+          <Calendar className="h-5 w-5" aria-hidden="true" />
+          Aktionsangebot gültig bis 31.10.2026
+        </div>
 
         <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">
           {packages.map((pkg) => (
             <PricingCard key={pkg.title} pkg={pkg} />
           ))}
+        </div>
+
+        <div className="mt-8 text-center text-sm text-muted">
+          <p>Alle Preise verstehen sich zzgl. der gesetzlichen MwSt.</p>
+          <p className="mt-1 text-xs">* Details und Voraussetzungen finden Sie in unseren Leistungsbeschreibungen.</p>
         </div>
 
         {/* Monthly Options Box */}
@@ -435,19 +460,6 @@ export function PricingSection() {
                   In 24h Rückmeldung
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-8 rounded-2xl bg-[#f8fafc] p-6 text-sm text-muted">
-          <div className="flex gap-3">
-            <Info className="mt-0.5 h-5 w-5 shrink-0 text-navy/40" aria-hidden="true" />
-            <div>
-              <p>Alle Preise zzgl. MwSt. Das Google-Werbebudget ist nicht im Betreuungspreis enthalten.</p>
-              <p>Es gelten die im Angebot vereinbarten Leistungsgrenzen und Kündigungsfristen.</p>
-              <a href="#kontakt" className="mt-2 inline-flex items-center gap-1 font-semibold text-[#1d6fd8] hover:underline">
-                Details zu Leistungen &amp; Bedingungen <ArrowRight className="h-3 w-3" aria-hidden="true" />
-              </a>
             </div>
           </div>
         </div>
