@@ -79,7 +79,7 @@ export function ReviewsSection() {
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end">
           <div>
             <h2 id="reviews-heading" className="text-2xl font-bold text-navy sm:text-3xl">
-              Das sagen unsere Kunden
+              Designbeispiel
             </h2>
             <div className="mt-3 flex items-center gap-3">
               <div className="flex items-center gap-1">
