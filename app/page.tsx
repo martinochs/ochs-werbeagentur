@@ -8,6 +8,7 @@ import { Hero } from "@/components/Hero";
 import { PortfolioExpertSection } from "@/components/PortfolioExpertSection";
 import { PricingSection } from "@/components/PricingSection";
 import { ProcessSection } from "@/components/ProcessSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { TrustBarSection } from "@/components/TrustBarSection";
 import { faqItems } from "@/lib/content/faq";
 import { siteConfig } from "@/lib/seo/config";
@@ -43,6 +44,7 @@ export default function HomePage() {
         <ProcessSection />
         <PortfolioExpertSection />
         <GoogleAdsSection />
+        <ReviewsSection />
         <PricingSection />
         <FaqSection />
         <AboutSection />
