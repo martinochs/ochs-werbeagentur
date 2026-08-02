@@ -325,7 +325,7 @@ export function PricingSection() {
                 <div className="flex items-start gap-3">
                   <Gift className="mt-0.5 h-5 w-5 shrink-0 text-[#1d6fd8]" strokeWidth={2} aria-hidden="true" />
                   <div>
-                    <h4 className="text-[13px] font-bold text-navy">Bis zu 600 € Google-Werbeguthaben*</h4>
+                    <h4 className="text-[13px] font-bold text-navy">Bis zu 4.000 € Google-Werbeguthaben*</h4>
                     <p className="mt-0.5 text-[12px] text-muted">Für neue Google-Ads-Konten.</p>
                     <a href="#kontakt" className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-[#1d6fd8] hover:underline">
                       Mehr erfahren <ArrowRight className="h-3 w-3" aria-hidden="true" />
