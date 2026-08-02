@@ -32,7 +32,7 @@ export function Header() {
           <div className="flex items-center gap-2 text-sm">
             <Gift className="h-4 w-4 shrink-0 text-[#bbf7d0]" />
             <p className="leading-snug">
-              <span className="font-bold text-[#bbf7d0] underline decoration-[#bbf7d0]/50 underline-offset-2">STARTKONDITIONEN BIS 31.10.2026:</span>{" "}
+              <span className="font-bold text-[#bbf7d0] underline decoration-[#bbf7d0]/50 underline-offset-2">AKTIONSPREISE BIS 31.10.2026:</span>{" "}
               Premium Praxis-Website oder Google-Ads-Einrichtung jeweils 2.999 € netto
             </p>
           </div>
