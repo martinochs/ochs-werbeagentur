@@ -90,7 +90,7 @@ export function ReviewsSection() {
                   ))}
                 </div>
               </div>
-              <span className="text-sm text-muted">Basierend auf echten Google-Bewertungen</span>
+              <span className="text-sm text-muted">Basierend auf Google-Bewertungen</span>
             </div>
           </div>
 
