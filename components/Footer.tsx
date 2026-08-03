@@ -1,6 +1,6 @@
 import { ArrowRight, MapPin } from "lucide-react";
 import Link from "next/link";
-import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
+import { formatAddress, siteConfig } from "@/lib/seo/config";
 
 export function Footer() {
   const { name, contactPerson, address } = siteConfig;
@@ -23,21 +23,17 @@ export function Footer() {
             </a>
           </div>
 
-          <address className="not-italic">
-            <a
-              href={mapsUrl()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-start gap-2 text-sm text-white/80 hover:text-white"
-            >
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-              <span>
-                {contactPerson}
-                <br />
-                {formatAddress()}, Deutschland
-              </span>
-            </a>
-          </address>
+          <div className="not-italic">
+            <div className="flex items-start gap-3 text-sm text-white/80">
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-white/60" aria-hidden="true" />
+              <div>
+                <strong className="font-semibold text-white">Firmensitz in Mannheim</strong>
+                <p className="mt-1.5 leading-relaxed">
+                  Am Firmensitz findet kein Kundenverkehr statt. Persönliche Gespräche erfolgen nach vorheriger Vereinbarung in einem Besprechungsbüro in Mannheim.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10 flex flex-col items-center gap-3 border-t border-white/10 pt-6 text-center text-xs text-white/45">
