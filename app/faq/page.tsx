@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FaqSection } from "@/components/FaqSection";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { siteConfig } from "@/lib/seo/config";
 import { faqItems } from "@/lib/content/faq";
 
@@ -12,6 +13,7 @@ export const metadata = {
 export default function FaqPage() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <main className="flex-1 bg-white">
         <div className="pb-16 pt-16 lg:pb-20 lg:pt-24">

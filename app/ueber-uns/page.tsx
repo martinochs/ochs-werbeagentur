@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { siteConfig } from "@/lib/seo/config";
 
 export const metadata = {
@@ -10,6 +11,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <main className="flex-1 bg-white">
         <section className="py-16 lg:py-24">
