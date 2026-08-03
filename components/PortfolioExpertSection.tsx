@@ -160,13 +160,14 @@ export function PortfolioExpertSection() {
 
   return (
     <section
-      className="border-t border-border bg-white py-16 lg:py-24"
+      id="designbeispiele"
+      className="scroll-mt-28 border-t border-border bg-white py-16 lg:py-24"
       aria-labelledby="portfolio-heading"
     >
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         
         {/* Portfolio Section */}
-        <div id="designbeispiele">
+        <div>
           <div className="text-center">
             <h2
               id="portfolio-heading"

@@ -250,7 +250,7 @@ export function ProcessSection() {
 
       id="ablauf"
 
-      className="border-t border-border bg-white py-10 lg:py-14"
+      className="scroll-mt-28 border-t border-border bg-white py-10 lg:py-14"
 
       aria-labelledby="process-heading"
 

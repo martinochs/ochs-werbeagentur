@@ -119,7 +119,7 @@ export function GoogleAdsSection() {
   return (
     <section
       id="leistungen"
-      className="border-t border-border bg-white py-10 lg:py-14"
+      className="scroll-mt-28 border-t border-border bg-white py-10 lg:py-14"
       aria-labelledby="google-ads-heading"
     >
       <div className="mx-auto max-w-6xl px-4 lg:px-8">

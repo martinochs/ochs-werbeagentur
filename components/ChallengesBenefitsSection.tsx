@@ -64,7 +64,7 @@ export function ChallengesBenefitsSection() {
   return (
     <section
       id="fuer-praxen"
-      className="bg-white pb-12 pt-16 lg:pb-20 lg:pt-24"
+      className="scroll-mt-28 bg-white pb-12 pt-16 lg:pb-20 lg:pt-24"
       aria-labelledby="challenges-heading"
     >
       <div className="mx-auto max-w-6xl px-4 lg:px-8">

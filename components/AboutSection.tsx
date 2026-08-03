@@ -14,7 +14,7 @@ export function AboutSection() {
   return (
     <section
       id="ueber-uns"
-      className="border-t border-border bg-white py-16 lg:py-20"
+      className="scroll-mt-28 border-t border-border bg-white py-16 lg:py-20"
       aria-labelledby="about-heading"
     >
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
