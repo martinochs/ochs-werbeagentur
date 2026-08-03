@@ -13,7 +13,7 @@ export function AboutSection() {
 
   return (
     <section
-      id="ueber-uns"
+      id="kontakt"
       className="scroll-mt-28 border-t border-border bg-white py-16 lg:py-20"
       aria-labelledby="about-heading"
     >

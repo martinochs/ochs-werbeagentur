@@ -6,7 +6,7 @@ export function Footer() {
   const { name, contactPerson, address } = siteConfig;
 
   return (
-    <footer id="kontakt" className="scroll-mt-28 border-t border-border bg-navy text-white">
+    <footer id="footer" className="scroll-mt-28 border-t border-border bg-navy text-white">
       <div className="mx-auto max-w-6xl px-4 py-14 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
           <div>

@@ -8,17 +8,18 @@ import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/seo/config";
 
 const navLinks = [
-  { hash: "#leistungen", label: "Leistungen" },
-  { hash: "#fuer-praxen", label: "Für Praxen" },
-  { hash: "#designbeispiele", label: "Praxis-Beispiele" },
-  { hash: "#ueber-uns", label: "Über uns" },
-  { hash: "#ablauf", label: "Ablauf" },
-  { hash: "#faq", label: "FAQ" },
-  { hash: "#kontakt", label: "Kontakt" },
+  { path: "#leistungen", label: "Leistungen" },
+  { path: "#fuer-praxen", label: "Für Praxen" },
+  { path: "#designbeispiele", label: "Praxis-Beispiele" },
+  { path: "/ueber-uns", label: "Über uns" },
+  { path: "#ablauf", label: "Ablauf" },
+  { path: "#faq", label: "FAQ" },
+  { path: "#kontakt", label: "Kontakt" },
 ];
 
-function sectionHref(pathname: string, hash: string) {
-  return pathname === "/" ? hash : `/${hash}`;
+function getHref(pathname: string, path: string) {
+  if (path.startsWith("/")) return path;
+  return pathname === "/" ? path : `/${path}`;
 }
 
 export function Header() {
@@ -63,8 +64,8 @@ export function Header() {
         <nav className="hidden items-center gap-4 xl:flex" aria-label="Hauptnavigation">
           {navLinks.map((link) => (
             <Link
-              key={link.hash}
-              href={sectionHref(pathname, link.hash)}
+              key={link.path}
+              href={getHref(pathname, link.path)}
               className="text-sm text-muted transition-colors hover:text-navy"
             >
               {link.label}
@@ -104,8 +105,8 @@ export function Header() {
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <Link
-                key={link.hash}
-                href={sectionHref(pathname, link.hash)}
+                key={link.path}
+                href={getHref(pathname, link.path)}
                 className="text-sm text-muted"
                 onClick={() => setOpen(false)}
               >
