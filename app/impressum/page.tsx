@@ -25,7 +25,7 @@ export default function ImpressumPage() {
                 {siteConfig.contactPerson}<br />
                 {siteConfig.name}<br />
                 {siteConfig.address.street}<br />
-                {siteConfig.address.zip} {siteConfig.address.city}
+                {siteConfig.address.postalCode} {siteConfig.address.city}
               </p>
 
               <h2 className="mt-8 text-xl font-bold text-navy">Kontakt</h2>
