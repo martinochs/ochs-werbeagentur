@@ -28,11 +28,11 @@ function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
 
 
 
-export function FaqSection() {
+export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen" }: { items?: typeof faqItems, title?: string }) {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const columns = splitIntoColumns(faqItems, COLUMN_COUNT);
+  const columns = splitIntoColumns(items, COLUMN_COUNT);
 
 
 
@@ -50,15 +50,15 @@ export function FaqSection() {
 
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
 
-        <h2 id="faq-heading" className="text-xl font-bold text-navy sm:text-2xl">
+        {title && (
+          <h2 id="faq-heading" className="text-xl font-bold text-navy sm:text-2xl">
+            {title}
+          </h2>
+        )}
 
-          Häufig gestellte Fragen
-
-        </h2>
 
 
-
-        <div className="mt-10 grid gap-4 lg:grid-cols-3 lg:gap-5">
+        <div className={`grid gap-4 lg:grid-cols-3 lg:gap-5 ${title ? "mt-10" : "mt-0"}`}>
 
           {columns.map((column, columnIndex) => (
 
@@ -74,7 +74,7 @@ export function FaqSection() {
 
                 const globalIndex =
 
-                  columnIndex * Math.ceil(faqItems.length / COLUMN_COUNT) + index;
+                  columnIndex * Math.ceil(items.length / COLUMN_COUNT) + index;
 
                 const isOpen = openIndex === globalIndex;
 
@@ -143,6 +143,14 @@ export function FaqSection() {
           ))}
 
         </div>
+        
+        {title && (
+          <div className="mt-12 text-center">
+            <a href="/faq" className="btn-primary inline-flex px-6 py-3.5 text-base">
+              Alle häufigen Fragen ansehen
+            </a>
+          </div>
+        )}
 
       </div>
 

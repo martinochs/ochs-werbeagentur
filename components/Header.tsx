@@ -13,7 +13,7 @@ const navLinks = [
   { path: "#designbeispiele", label: "Praxis-Beispiele" },
   { path: "/ueber-uns", label: "Über uns" },
   { path: "#ablauf", label: "Ablauf" },
-  { path: "#faq", label: "FAQ" },
+  { path: "/faq", label: "FAQ" },
   { path: "#kontakt", label: "Kontakt" },
 ];
 

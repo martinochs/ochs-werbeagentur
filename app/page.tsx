@@ -18,6 +18,14 @@ import {
   webPageSchema,
 } from "@/lib/seo/schema";
 
+const homeFaqItems = [
+  faqItems[0], // Was kostet eine professionelle Website für eine Arztpraxis?
+  faqItems[1], // Wie lange dauert die Erstellung einer Praxis-Website?
+  faqItems[6], // Kann eine bestehende Praxis-Website modernisiert werden?
+  faqItems[10], // Wer betreut meine Praxis-Website nach dem Launch?
+  faqItems[13], // Wie starten wir mit der Zusammenarbeit?
+];
+
 export default function HomePage() {
   const pageTitle = `${siteConfig.name} — ${siteConfig.tagline}`;
   const schemas = [
@@ -46,7 +54,7 @@ export default function HomePage() {
         <GoogleAdsSection />
         <ReviewsSection />
         <PricingSection />
-        <FaqSection />
+        <FaqSection items={homeFaqItems} />
         <AboutSection />
       </main>
       <Footer />
