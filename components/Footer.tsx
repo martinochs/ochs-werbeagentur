@@ -42,6 +42,9 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center gap-3 border-t border-white/10 pt-6 text-center text-xs text-white/45">
           <nav className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <Link href="/impressum" className="hover:text-white/70">
+              Impressum
+            </Link>
             <Link href="/datenschutz" className="hover:text-white/70">
               Datenschutz
             </Link>

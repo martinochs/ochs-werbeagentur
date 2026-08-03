@@ -15,6 +15,7 @@ const navLinks = [
   { path: "#ablauf", label: "Ablauf" },
   { path: "/faq", label: "FAQ" },
   { path: "#kontakt", label: "Kontakt" },
+  { path: "/impressum", label: "Impressum" },
 ];
 
 function getHref(pathname: string, path: string) {
