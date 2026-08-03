@@ -54,7 +54,7 @@ export default function HomePage() {
         <GoogleAdsSection />
         <ReviewsSection />
         <PricingSection />
-        <FaqSection items={homeFaqItems} />
+        <FaqSection items={homeFaqItems} showMoreLink={true} />
         <AboutSection />
       </main>
       <Footer />
