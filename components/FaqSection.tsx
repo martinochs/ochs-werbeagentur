@@ -10,6 +10,8 @@ import { faqItems } from "@/lib/content/faq";
 
 
 
+import Link from "next/link";
+
 const COLUMN_COUNT = 3;
 
 
@@ -28,24 +30,15 @@ function splitIntoColumns<T>(items: T[], columnCount: number): T[][] {
 
 
 
-export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen" }: { items?: typeof faqItems, title?: string }) {
-
+export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen", id = "faq" }: { items?: typeof faqItems, title?: string, id?: string }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const columns = splitIntoColumns(items, COLUMN_COUNT);
 
-
-
   return (
-
     <section
-
-      id="faq"
-
+      id={id}
       className="scroll-mt-28 border-t border-border bg-white py-16 lg:py-20"
-
-      aria-labelledby="faq-heading"
-
+      aria-labelledby={title ? "faq-heading" : undefined}
     >
 
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
@@ -146,9 +139,9 @@ export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen
         
         {title && (
           <div className="mt-12 text-center">
-            <a href="/faq" className="btn-primary inline-flex px-6 py-3.5 text-base">
+            <Link href="/faq" className="btn-primary inline-flex px-6 py-3.5 text-base">
               Alle häufigen Fragen ansehen
-            </a>
+            </Link>
           </div>
         )}
 

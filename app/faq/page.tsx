@@ -26,7 +26,7 @@ export default function FaqPage() {
           </div>
         </div>
         {/* We reuse the FaqSection but hide its internal title since we have the h1 above */}
-        <FaqSection items={faqItems} title="" />
+        <FaqSection items={faqItems} title="" id="faq-list" />
       </main>
       <Footer />
     </>
