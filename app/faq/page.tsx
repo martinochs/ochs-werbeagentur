@@ -14,7 +14,7 @@ export default function FaqPage() {
     <>
       <Header />
       <main className="flex-1 bg-white">
-        <div className="pt-16 lg:pt-24">
+        <div className="pb-16 pt-16 lg:pb-20 lg:pt-24">
           <div className="mx-auto max-w-4xl px-4 text-center lg:px-8">
             <h1 className="text-3xl font-bold text-navy sm:text-4xl lg:text-5xl">
               Häufig gestellte Fragen
