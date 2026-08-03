@@ -1,14 +1,30 @@
 "use client";
 
-import { Gift, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, Gift, Menu, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/seo/config";
 
-const navLinks = [
-  { path: "#leistungen", label: "Leistungen" },
+type NavLink = {
+  path: string;
+  label: string;
+  children?: { path: string; label: string }[];
+};
+
+const navLinks: NavLink[] = [
+  {
+    path: "/leistungen",
+    label: "Leistungen",
+    children: [
+      { path: "/leistungen/praxis-websites", label: "Praxis-Websites" },
+      { path: "/leistungen/google-ads", label: "Google Ads für Arztpraxen" },
+      { path: "/leistungen/seo", label: "SEO & KI-Sichtbarkeit" },
+      { path: "/leistungen/betreuung", label: "Betreuung & Weiterentwicklung" },
+      { path: "/leistungen", label: "Alle Leistungen" },
+    ],
+  },
   { path: "#fuer-praxen", label: "Für Praxen" },
   { path: "#designbeispiele", label: "Praxis-Beispiele" },
   { path: "/ueber-uns", label: "Über uns" },
@@ -64,13 +80,34 @@ export function Header() {
 
         <nav className="hidden items-center gap-4 xl:flex" aria-label="Hauptnavigation">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              href={getHref(pathname, link.path)}
-              className="text-sm text-muted transition-colors hover:text-navy"
-            >
-              {link.label}
-            </Link>
+            <div key={link.path} className="group relative">
+              <Link
+                href={getHref(pathname, link.path)}
+                className="flex items-center gap-1 text-sm text-muted transition-colors hover:text-navy"
+              >
+                {link.label}
+                {link.children && <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />}
+              </Link>
+              {link.children && (
+                <div className="absolute left-0 top-full hidden pt-4 group-hover:block">
+                  <div className="flex w-64 flex-col overflow-hidden rounded-xl border border-border bg-white shadow-lg">
+                    {link.children.map((child, index) => (
+                      <Link
+                        key={child.path}
+                        href={getHref(pathname, child.path)}
+                        className={`px-4 py-3 text-sm text-muted transition-colors hover:bg-[#f8fafc] hover:text-navy ${
+                          index === link.children!.length - 1
+                            ? "border-t border-border bg-[#f8fafc] font-semibold text-navy"
+                            : ""
+                        }`}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
@@ -105,14 +142,29 @@ export function Header() {
         <nav className="border-t border-border bg-white px-4 py-4 lg:hidden" aria-label="Mobile Navigation">
           <div className="flex flex-col gap-3">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                href={getHref(pathname, link.path)}
-                className="text-sm text-muted"
-                onClick={() => setOpen(false)}
-              >
-                {link.label}
-              </Link>
+              <div key={link.path} className="flex flex-col gap-2">
+                <Link
+                  href={getHref(pathname, link.path)}
+                  className={`text-sm ${link.children ? "font-semibold text-navy" : "text-muted"}`}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+                {link.children && (
+                  <div className="ml-3 flex flex-col gap-2 border-l-2 border-border pl-3">
+                    {link.children.map((child) => (
+                      <Link
+                        key={child.path}
+                        href={getHref(pathname, child.path)}
+                        className="text-sm text-muted"
+                        onClick={() => setOpen(false)}
+                      >
+                        {child.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Link
               href="/praxisanalyse"
