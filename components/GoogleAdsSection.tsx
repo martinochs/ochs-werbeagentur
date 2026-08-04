@@ -115,7 +115,7 @@ function StepContent({
   );
 }
 
-export function GoogleAdsSection() {
+export function GoogleAdsSection({ hideButton = false }: { hideButton?: boolean } = {}) {
   return (
     <section
       id="leistungen"
@@ -192,14 +192,16 @@ export function GoogleAdsSection() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#preise"
-                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
-                  style={{ backgroundColor: adsGreen }}
-                >
-                  Mehr über Google Ads erfahren
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                </a>
+                {!hideButton && (
+                  <a
+                    href="/leistungen/google-ads"
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                    style={{ backgroundColor: adsGreen }}
+                  >
+                    Mehr über Google Ads erfahren
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                )}
               </div>
             </div>
 

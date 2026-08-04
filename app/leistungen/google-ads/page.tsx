@@ -29,7 +29,7 @@ export default function GoogleAdsPage() {
         </section>
 
         {/* Reuse the existing Google Ads Section */}
-        <GoogleAdsSection />
+        <GoogleAdsSection hideButton={true} />
 
         {/* Dedicated Pricing Section for Google Ads */}
         <section id="preise" className="scroll-mt-28 border-t border-border bg-[#f8fafc] py-16 lg:py-24">
@@ -43,40 +43,44 @@ export default function GoogleAdsPage() {
               </p>
             </div>
 
-            <div className="mx-auto mt-12 max-w-lg">
-              <article className="relative flex flex-col rounded-2xl bg-white p-6 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04] sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
-                    <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
+            <div className="mx-auto mt-12 w-full">
+              <article className="relative flex flex-col lg:flex-row gap-8 lg:gap-12 rounded-2xl bg-white p-6 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04] sm:p-8 lg:p-10">
+                {/* Left Side: Info & Features */}
+                <div className="flex-1">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#166534] text-white">
+                      <Users className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold leading-snug text-[#166534]">
+                        Google Ads Patientengewinnung
+                      </h3>
+                      <p className="mt-1 text-sm leading-snug text-muted">
+                        Mehr qualifizierte Patientenanfragen.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold leading-snug text-[#166534]">
-                      Google Ads Patientengewinnung
-                    </h3>
-                    <p className="mt-1 text-sm leading-snug text-muted">
-                      Mehr qualifizierte Patientenanfragen.
-                    </p>
+
+                  <div className="mt-8 flex flex-col">
+                    <ul className="space-y-4">
+                      {[
+                        "Strategie & Keyword-Recherche",
+                        "Google Ads Kampagnen Einrichtung",
+                        "Anzeigenerstellung & Zielgruppen",
+                        "Conversion-Tracking & Auswertung",
+                        "Laufende Optimierung",
+                      ].map((feature) => (
+                        <li key={feature} className="flex items-start gap-3 text-base text-navy/85">
+                          <Check className="mt-0.5 h-6 w-6 shrink-0 text-[#166534]" strokeWidth={2.5} aria-hidden="true" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
 
-                <div className="mt-8 flex flex-col">
-                  <ul className="space-y-3">
-                    {[
-                      "Strategie & Keyword-Recherche",
-                      "Google Ads Kampagnen Einrichtung",
-                      "Anzeigenerstellung & Zielgruppen",
-                      "Conversion-Tracking & Auswertung",
-                      "Laufende Optimierung",
-                    ].map((feature) => (
-                      <li key={feature} className="flex items-start gap-3 text-sm text-navy/85">
-                        <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#166534]" strokeWidth={2.5} aria-hidden="true" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-8 shrink-0 border-t border-border pt-8">
+                {/* Right Side: Prices & Buttons */}
+                <div className="flex-1 shrink-0 border-t border-border pt-8 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
                   <div className="text-center">
                     <p className="text-sm text-muted">Regulärer Preis Einrichtung</p>
                     <p className="mt-1 text-xl font-bold text-muted line-through decoration-red-500 decoration-2">
@@ -100,22 +104,24 @@ export default function GoogleAdsPage() {
                     </div>
                   </div>
 
-                  <div className="mt-6 rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-5 text-center">
-                    <div className="flex items-center justify-center gap-2">
-                      <Gift className="h-5 w-5 text-[#1d6fd8]" aria-hidden="true" />
-                      <p className="text-xs font-bold uppercase tracking-wide text-[#1d6fd8]">
-                        Exklusiver Vorteil für Erstnutzer
-                      </p>
+                  <div className="mt-6 grid gap-6 sm:grid-cols-2">
+                    <div className="rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-5 text-center">
+                      <div className="flex items-center justify-center gap-2">
+                        <Gift className="h-5 w-5 text-[#1d6fd8]" aria-hidden="true" />
+                        <p className="text-[10px] font-bold uppercase tracking-wide text-[#1d6fd8]">
+                          Vorteil für Erstnutzer
+                        </p>
+                      </div>
+                      <p className="mt-2 text-sm font-medium text-navy">bis zu</p>
+                      <p className="mt-1 text-2xl font-extrabold text-[#1d6fd8]">4.000 €</p>
+                      <p className="mt-1 text-xs font-semibold text-navy">Werbeguthaben*</p>
                     </div>
-                    <p className="mt-2 text-sm font-medium text-navy">bis zu</p>
-                    <p className="mt-1 text-3xl font-extrabold text-[#1d6fd8]">4.000 €</p>
-                    <p className="mt-1 text-sm font-semibold text-navy">Google-Werbeguthaben*</p>
-                    <p className="mt-2 text-xs text-muted">Für neue Google-Ads-Konten. Wir prüfen Ihre Berechtigung kostenlos.</p>
-                  </div>
-                  
-                  <div className="mt-6 rounded-xl border border-border bg-white p-5 text-center shadow-sm">
-                     <p className="text-sm font-semibold text-navy">Laufende Betreuung & Optimierung</p>
-                     <p className="mt-1 text-2xl font-bold text-[#166534]">449 € <span className="text-sm font-normal text-muted">/ Monat</span></p>
+                    
+                    <div className="rounded-xl border border-border bg-white p-5 text-center shadow-sm flex flex-col justify-center">
+                       <p className="text-sm font-semibold text-navy">Laufende Betreuung</p>
+                       <p className="mt-2 text-2xl font-bold text-[#166534]">449 €</p>
+                       <p className="text-xs font-normal text-muted">/ Monat</p>
+                    </div>
                   </div>
 
                   <a
