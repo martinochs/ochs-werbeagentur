@@ -91,19 +91,22 @@ export default function SeoPage() {
                       <div className="flex items-center justify-center gap-2">
                         <Gift className="h-4 w-4 text-[#1d6fd8]" aria-hidden="true" />
                         <p className="text-[11px] font-bold uppercase tracking-wide text-[#1d6fd8]">
-                          AKTION BIS 31.10.2026
+                          INKLUSIVE BEI NEUER WEBSITE
                         </p>
                       </div>
                       <div className="mt-6">
-                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">2.499 €</span> regulär</p>
+                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">1.499 €</span> regulär</p>
                         <p className="mt-2 text-5xl font-extrabold text-[#1d6fd8]">
-                          1.499 €
+                          0 € <span className="text-xl font-bold">*</span>
                         </p>
                         <p className="mt-1 text-sm font-medium text-navy">einmalig</p>
                       </div>
                       <div className="mx-auto mt-4 inline-block rounded bg-[#2563eb] px-3 py-1 text-[13px] font-bold text-white">
-                        Sie sparen 1.000 €
+                        Sie sparen 1.499 €
                       </div>
+                      <p className="mt-4 text-[11px] text-muted leading-tight">
+                        * Die komplette SEO-Grundoptimierung ist bei der Erstellung einer neuen Praxis-Website durch uns bereits kostenlos enthalten.
+                      </p>
                     </div>
 
                     <div className="mt-6 space-y-4 px-2">
