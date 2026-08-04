@@ -291,19 +291,13 @@ export default function GoogleAdsPage() {
               </div>
 
               {/* Footer Bar */}
-              <div className="mt-4 flex flex-col md:flex-row items-center justify-between gap-4">
+              <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#166534]" /> 100 % transparent</span>
                   <span className="text-border">•</span>
                   <span>Keine versteckten Kosten</span>
                   <span className="text-border">•</span>
                   <span>Volle Kontrolle</span>
-                </div>
-                <div className="w-full md:w-auto">
-                  <a href="/praxisanalyse" className="flex w-full items-center justify-between gap-4 rounded-md bg-[#166534] px-6 py-3 text-white hover:bg-[#14532d] transition-colors">
-                    <span className="font-bold text-sm">Kostenlose Praxisanalyse anfordern <ArrowRight className="inline h-4 w-4 ml-1" /></span>
-                  </a>
-                  <p className="text-center text-[11px] text-muted mt-2">Unverbindlich. Persönlich. Schnell.</p>
                 </div>
               </div>
 
