@@ -36,12 +36,18 @@ export default function GoogleAdsPage() {
         <section id="preise" className="scroll-mt-28 border-t border-border bg-[#f8fafc] py-16 lg:py-24">
           <div className="mx-auto max-w-6xl px-4 lg:px-8">
             
+            <div className="mx-auto max-w-3xl text-center mb-12">
+              <h2 className="text-2xl font-bold text-navy sm:text-3xl">
+                Transparentes Angebot für Ihre Praxis
+              </h2>
+              <p className="mt-4 text-base text-muted">
+                Volle Kostenkontrolle und messbare Ergebnisse für Ihre Patientengewinnung.
+              </p>
+            </div>
+
             <div className="flex flex-col gap-6">
               {/* Hauptangebot */}
               <div className="relative">
-                <span className="absolute -top-3 left-6 rounded bg-[#e6f4ea] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#166534]">
-                  HAUPTANGEBOT
-                </span>
                 <article className="flex flex-col lg:flex-row gap-8 lg:gap-12 rounded-2xl bg-white p-6 pt-10 lg:p-10 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04]">
                   {/* Left Side */}
                   <div className="flex-1">
@@ -133,9 +139,6 @@ export default function GoogleAdsPage() {
 
               {/* Zusatzleistung */}
               <div className="relative mt-4">
-                <span className="absolute -top-3 left-6 rounded bg-[#eff6ff] px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-[#1d6fd8]">
-                  ZUSATZLEISTUNG
-                </span>
                 <article className="flex flex-col lg:flex-row gap-8 lg:gap-12 rounded-2xl bg-white p-6 pt-10 lg:p-10 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04]">
                   {/* Left Side */}
                   <div className="flex-1">
