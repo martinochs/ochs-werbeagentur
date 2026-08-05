@@ -3,7 +3,7 @@ import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { siteConfig } from "@/lib/seo/config";
-import { ArrowRight, Check, Phone, Mail, MapPin, Target, Lightbulb, Users, MessagesSquare, Settings, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Check, Phone, Mail, MapPin, Target, Lightbulb, Users, MessagesSquare, Settings, CheckCircle2, Info } from "lucide-react";
 
 export const metadata = {
   title: `Über uns | ${siteConfig.name}`,
