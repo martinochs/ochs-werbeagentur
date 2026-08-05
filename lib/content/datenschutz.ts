@@ -112,8 +112,8 @@ export const datenschutzSections: DatenschutzSection[] = [
     title: "11. Speicherdauer",
     paragraphs: [
       "Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.",
-      "Anfragen über das Kontaktformular speichern wir in der Regel bis zu 24 Monate nach Abschluss der Korrespondenz, sofern kein Vertragsverhältnis zustande kommt. Entsteht ein Mandats- oder Vertragsverhältnis, gelten die gesetzlichen handels- und steuerrechtlichen Aufbewahrungsfristen (regelmäßig 6 bis 10 Jahre).",
-      "Server-Logdatien des Hosting-Anbieters werden nach den Vorgaben von Vercel in der Regel nur für einen begrenzten Zeitraum aufbewahrt.",
+      "Anfragen über das Kontaktformular speichern wir in der Regel bis zu 24 Monate nach Abschluss der Korrespondenz, sofern kein Vertragsverhältnis zustande kommt. Entsteht ein Vertragsverhältnis, gelten die gesetzlichen handels- und steuerrechtlichen Aufbewahrungsfristen (regelmäßig 6 bis 10 Jahre).",
+      "Server-Logdateien des Hosting-Anbieters werden nach den Vorgaben von Vercel in der Regel nur für einen begrenzten Zeitraum aufbewahrt.",
     ],
   },
   {

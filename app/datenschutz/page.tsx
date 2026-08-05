@@ -107,7 +107,7 @@ export default function DatenschutzPage() {
                   </div>
                 ) : section.id === "formspree" ? (
                   <div className="mt-3 space-y-3">
-                    {section.paragraphs.slice(0, 3).map((paragraph) => (
+                    {section.paragraphs.slice(0, 2).map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
                     <p>
@@ -152,15 +152,6 @@ export default function DatenschutzPage() {
               </section>
             ))}
           </div>
-
-          <p className="mt-10 rounded-lg border border-border bg-surface px-4 py-3 text-xs leading-relaxed text-muted">
-            Hinweis: Diese Datenschutzerklärung wurde für die aktuelle
-            Website-Konfiguration formuliert (Hosting über Vercel, Kontaktformular
-            über Formspree, kein Tracking). Vor dem produktiven Go-live empfiehlt
-            sich eine abschließende Prüfung durch eine Rechtsberatung — insbesondere
-            bei künftigen Ergänzungen wie Impressum, Analytics oder weiteren
-            Drittanbietern.
-          </p>
 
           <Link href="/" className="btn-secondary mt-6 inline-flex">
             Zurück zur Startseite
