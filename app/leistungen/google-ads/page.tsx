@@ -133,6 +133,21 @@ export default function GoogleAdsPage() {
                         </div>
                       </div>
                     </div>
+
+                    <div className="mt-6 rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-5 text-center">
+                      <div className="flex items-center justify-center gap-2">
+                        <Gift className="h-5 w-5 text-[#1d6fd8]" aria-hidden="true" />
+                        <p className="text-[10px] font-bold uppercase tracking-wide text-[#1d6fd8]">
+                          Vorteil für Erstnutzer
+                        </p>
+                      </div>
+                      <p className="mt-2 text-sm font-medium text-navy">Bis zu 4.000 € Google-Werbeguthaben*</p>
+                      <div className="mt-3 border-t border-[#bfdbfe] pt-3 text-left">
+                        <p className="text-[11px] leading-relaxed text-muted">
+                          * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </article>
               </div>

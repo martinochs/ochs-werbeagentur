@@ -332,6 +332,11 @@ export function PricingSection() {
                     </a>
                   </div>
                 </div>
+                <div className="mt-3 border-t border-[#bfdbfe] pt-3">
+                  <p className="text-[11px] leading-relaxed text-muted">
+                    * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
+                  </p>
+                </div>
               </div>
             </div>
 
