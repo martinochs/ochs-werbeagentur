@@ -22,21 +22,21 @@ export default function ImpressumPage() {
             <div className="mt-8 text-base leading-relaxed text-muted">
               <h2 className="mt-6 text-xl font-bold text-navy">Angaben gemäß § 5 TMG</h2>
               <p className="mt-2">
-                {siteConfig.contactPerson}<br />
-                {siteConfig.name}<br />
-                {siteConfig.address.street}<br />
+                {siteConfig.contactPerson} <br />
+                {siteConfig.name} <br />
+                {siteConfig.address.street} <br />
                 {siteConfig.address.postalCode} {siteConfig.address.city}
               </p>
 
               <h2 className="mt-8 text-xl font-bold text-navy">Kontakt</h2>
               <p className="mt-2">
-                Telefon: {siteConfig.phoneDisplay}<br />
+                Telefon: {siteConfig.phoneDisplay} <br />
                 E-Mail: {siteConfig.email}
               </p>
 
               <h2 className="mt-8 text-xl font-bold text-navy">Umsatzsteuer-ID</h2>
               <p className="mt-2">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: <br />
                 DE XXX XXX XXX {/* Bitte hier die echte USt-ID eintragen */}
               </p>
 

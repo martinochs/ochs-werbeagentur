@@ -23,7 +23,7 @@ export default function GoogleAdsPage() {
               Mehr Patienten. Mehr Termine. Mehr Wachstum.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Professionelle Google Ads Kampagnen für Ihre Praxis – erstellt von Experten.<br />
+              Professionelle Google-Ads-Kampagnen für Ihre Praxis – erstellt von Experten.<br />
               Sichtbar bei den richtigen Patienten, genau dann, wenn sie Sie suchen.
             </p>
           </div>
@@ -57,7 +57,7 @@ export default function GoogleAdsPage() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold leading-snug text-[#166534]">
-                          Google Ads Kampagnen-Erstellung
+                          Google-Ads-Kampagnenerstellung
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
                           Einmalige Einrichtung. Starkes Fundament für messbare Ergebnisse.
@@ -66,14 +66,14 @@ export default function GoogleAdsPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir planen, erstellen und starten Ihre Google Ads Kampagne –<br />
+                      Wir planen, erstellen und starten Ihre Google-Ads-Kampagne – <br />
                       für maximale Sichtbarkeit und gezielte Neupatienten.
                     </p>
 
                     <ul className="mt-6 space-y-4">
                       {[
                         { title: "Strategie & Keyword-Recherche", desc: "Wir finden die Suchbegriffe, mit denen Patienten wirklich suchen." },
-                        { title: "Google Ads Kampagnen Einrichtung", desc: "Professionelle Einrichtung Ihrer Kampagne und Anzeigengruppen." },
+                        { title: "Google-Ads-Kampagneneinrichtung", desc: "Professionelle Einrichtung Ihrer Kampagne und Anzeigengruppen." },
                         { title: "Anzeigenerstellung & Zielgruppen", desc: "Überzeugende Anzeigen für die richtigen Patienten." },
                         { title: "Conversion-Tracking & Auswertung", desc: "Damit Sie genau sehen, was funktioniert." },
                         { title: "Laufende Optimierung (erste Phase)", desc: "Wir starten Ihre Kampagne mit optimalen Einstellungen." },
@@ -172,7 +172,7 @@ export default function GoogleAdsPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir überwachen, optimieren und skalieren Ihre Kampagnen –<br />
+                      Wir überwachen, optimieren und skalieren Ihre Kampagnen – <br />
                       für mehr Anfragen, mehr Termine und nachhaltiges Wachstum.
                     </p>
 
@@ -292,6 +292,7 @@ export default function GoogleAdsPage() {
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">8.999 €</span>
+                    {" "}
                     <span className="text-3xl font-extrabold text-[#ca8a04]">5.499 €</span>
                   </div>
                   <div className="mt-1.5 inline-block rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
@@ -309,9 +310,9 @@ export default function GoogleAdsPage() {
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#166534]" /> 100 % transparent</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Keine versteckten Kosten</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Volle Kontrolle</span>
                 </div>
               </div>

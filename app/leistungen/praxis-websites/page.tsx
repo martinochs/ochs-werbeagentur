@@ -62,7 +62,7 @@ export default function PraxisWebsitesPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir konzipieren, designen und programmieren Ihre neue Praxis-Website –<br />
+                      Wir konzipieren, designen und programmieren Ihre neue Praxis-Website – <br />
                       schlüsselfertig und bereit für neue Patienten.
                     </p>
 
@@ -146,7 +146,7 @@ export default function PraxisWebsitesPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Lehnen Sie sich zurück. Wir sorgen dafür, dass Ihre Website immer aktuell,<br />
+                      Lehnen Sie sich zurück. Wir sorgen dafür, dass Ihre Website immer aktuell, <br />
                       sicher und erreichbar bleibt.
                     </p>
 
@@ -266,6 +266,7 @@ export default function PraxisWebsitesPage() {
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">8.999 €</span>
+                    {" "}
                     <span className="text-3xl font-extrabold text-[#ca8a04]">5.499 €</span>
                   </div>
                   <div className="mt-1.5 inline-block rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
@@ -283,9 +284,9 @@ export default function PraxisWebsitesPage() {
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#5b21b6]" /> 100 % transparent</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Keine versteckten Kosten</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Volle Kontrolle</span>
                 </div>
               </div>

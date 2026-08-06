@@ -26,7 +26,7 @@ const dummyReviews = [
     author: "Dr. Sarah Schmidt",
     role: "Zahnärztin",
     date: "vor 1 Monat",
-    text: "Sehr professionelle Zusammenarbeit. Die Google Ads Kampagnen haben vom ersten Monat an funktioniert. Transparente Kommunikation, faire Preise und tolle Ergebnisse für unsere Zahnarztpraxis.",
+    text: "Sehr professionelle Zusammenarbeit. Die Google-Ads-Kampagnen haben vom ersten Monat an funktioniert. Transparente Kommunikation, faire Preise und tolle Ergebnisse für unsere Zahnarztpraxis.",
     rating: 5,
   },
   {

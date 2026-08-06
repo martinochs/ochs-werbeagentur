@@ -127,7 +127,7 @@ const packages: Package[] = [
     actionTheme: actionThemes.green2,
     features: [
       "Strategie & Keyword-Recherche",
-      "Google Ads Kampagnen Einrichtung",
+      "Google-Ads-Kampagneneinrichtung",
       "Anzeigenerstellung & Zielgruppen",
       "Conversion-Tracking & Auswertung",
       "Laufende Optimierung",
@@ -146,7 +146,7 @@ const packages: Package[] = [
     actionTheme: actionThemes.blue,
     features: [
       "Website (inkl. Terminbuchung & SEO)",
-      "Google Ads Kampagnen",
+      "Google-Ads-Kampagnen",
       "Tracking & Conversion-Optimierung",
       "Professionelle Einrichtung",
       "Ein Ansprechpartner für alles",
@@ -285,7 +285,7 @@ export function PricingSection() {
             {/* Left Side: Title & Features */}
             <div>
               <h3 className="text-2xl font-bold leading-tight text-navy">
-                Monatliche Betreuung<br />für Ihre Praxis
+                Monatliche Betreuung <br />für Ihre Praxis
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 Wir halten Ihre Website aktuell und optimieren Ihre Google-Anzeigen kontinuierlich – mit festen monatlichen Preisen.
@@ -316,7 +316,7 @@ export function PricingSection() {
                   </div>
                   <div>
                     <h4 className="text-sm font-bold text-navy">Transparente Festpreise</h4>
-                    <p className="mt-0.5 text-[13px] text-muted">Keine versteckten Kosten,<br />volle Planungssicherheit.</p>
+                    <p className="mt-0.5 text-[13px] text-muted">Keine versteckten Kosten, <br />volle Planungssicherheit.</p>
                   </div>
                 </li>
               </ul>
@@ -360,7 +360,7 @@ export function PricingSection() {
                           <h4 className="text-[15px] font-bold text-navy">Website-Betreuung</h4>
                           <ChevronDown className="h-4 w-4 text-muted transition-transform group-open:rotate-180" aria-hidden="true" />
                         </div>
-                        <p className="mt-1 text-[13px] text-muted">Wir kümmern uns um die<br className="hidden lg:block" />Technik und Inhalte Ihrer Website.</p>
+                        <p className="mt-1 text-[13px] text-muted">Wir kümmern uns um die <br className="hidden lg:block" />Technik und Inhalte Ihrer Website.</p>
                       </div>
                     </div>
                     <div className="text-left lg:text-right">
@@ -391,7 +391,7 @@ export function PricingSection() {
                           <h4 className="text-[15px] font-bold text-navy">Google-Ads-Betreuung</h4>
                           <ChevronDown className="h-4 w-4 text-muted transition-transform group-open:rotate-180" aria-hidden="true" />
                         </div>
-                        <p className="mt-1 text-[13px] text-muted">Wir optimieren Ihre Kampagnen<br className="hidden lg:block" />für mehr Anfragen und Patienten.</p>
+                        <p className="mt-1 text-[13px] text-muted">Wir optimieren Ihre Kampagnen <br className="hidden lg:block" />für mehr Anfragen und Patienten.</p>
                       </div>
                     </div>
                     <div className="text-left lg:text-right">
@@ -425,7 +425,7 @@ export function PricingSection() {
                           <h4 className="text-[15px] font-bold text-navy">Website + Google Ads</h4>
                           <ChevronDown className="h-4 w-4 text-[#1d6fd8] transition-transform group-open:rotate-180" aria-hidden="true" />
                         </div>
-                        <p className="mt-1 text-[13px] text-muted">Die komplette Betreuung für<br className="hidden lg:block" />Ihre Website und Werbekampagnen.</p>
+                        <p className="mt-1 text-[13px] text-muted">Die komplette Betreuung für <br className="hidden lg:block" />Ihre Website und Werbekampagnen.</p>
                       </div>
                     </div>
                     <div className="text-left lg:text-right">

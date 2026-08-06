@@ -19,7 +19,7 @@ export default function BetreuungPage() {
         <section className="py-16 lg:py-24">
           <div className="mx-auto max-w-4xl px-4 text-center lg:px-8">
             <h1 className="text-3xl font-bold text-navy sm:text-4xl lg:text-5xl">
-              Sorgenfrei digital wachsen.<br />Wir kümmern uns um den Rest.
+              Sorgenfrei digital wachsen. <br />Wir kümmern uns um den Rest.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
               Konzentrieren Sie sich voll und ganz auf Ihre Patienten. Wir übernehmen die technische 
@@ -63,7 +63,7 @@ export default function BetreuungPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir sorgen dafür, dass Ihre Website immer auf dem neuesten Stand ist,<br />
+                      Wir sorgen dafür, dass Ihre Website immer auf dem neuesten Stand ist, <br />
                       schnell lädt und vor Hackerangriffen geschützt bleibt.
                     </p>
 
@@ -126,14 +126,14 @@ export default function BetreuungPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil<br />
+                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil <br />
                       und bauen Ihre Sichtbarkeit Monat für Monat weiter aus.
                     </p>
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
                       {[
                         { title: "Content-Optimierung", desc: "Laufende Anpassung und Erweiterung Ihrer Website-Texte." },
-                        { title: "Google Profil Pflege", desc: "Regelmäßige Updates, Posts und Bewertungsmanagement." },
+                        { title: "Google-Profil-Pflege", desc: "Regelmäßige Updates, Posts und Bewertungsmanagement." },
                         { title: "Technisches SEO", desc: "Kontinuierliche Überwachung von Ladezeiten und Fehlern." },
                         { title: "Backlink-Aufbau", desc: "Stärkung Ihrer Autorität durch hochwertige Verlinkungen." },
                       ].map((feature) => (
@@ -189,7 +189,7 @@ export default function BetreuungPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir überwachen, optimieren und skalieren Ihre Kampagnen –<br />
+                      Wir überwachen, optimieren und skalieren Ihre Kampagnen – <br />
                       für mehr Anfragen, mehr Termine und nachhaltiges Wachstum.
                     </p>
 
@@ -304,6 +304,7 @@ export default function BetreuungPage() {
                 <div className="text-center md:text-right shrink-0 flex flex-col items-center md:items-end">
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">648 €</span>
+                    {" "}
                     <span className="text-3xl font-extrabold text-[#ca8a04]">599 €</span>
                     <span className="text-sm text-muted">/ Monat</span>
                   </div>
@@ -323,9 +324,9 @@ export default function BetreuungPage() {
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#0a2540]" /> 100 % transparent</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Monatlich kündbar</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Fester Ansprechpartner</span>
                 </div>
               </div>

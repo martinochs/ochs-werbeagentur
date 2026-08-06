@@ -62,14 +62,14 @@ export default function SeoPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir optimieren Ihre Website und Ihr Google-Profil, damit Sie bei lokalen<br />
+                      Wir optimieren Ihre Website und Ihr Google-Profil, damit Sie bei lokalen <br />
                       Suchanfragen und relevanten Behandlungen optimal ranken.
                     </p>
 
                     <ul className="mt-6 space-y-4">
                       {[
                         { title: "Keyword- & Wettbewerbsanalyse", desc: "Wir identifizieren die lukrativsten Suchbegriffe in Ihrer Region." },
-                        { title: "Google Unternehmensprofil", desc: "Professionelle Einrichtung und Optimierung für Local SEO." },
+                        { title: "Google-Unternehmensprofil", desc: "Professionelle Einrichtung und Optimierung für Local SEO." },
                         { title: "Onpage-SEO", desc: "Optimierung von Meta-Tags, Überschriften und Ladezeiten." },
                         { title: "Lokale Verzeichnisse", desc: "Eintragung in die wichtigsten Ärzte- und Branchenportale." },
                         { title: "KI-Sichtbarkeit", desc: "Aufbereitung Ihrer Daten für ChatGPT, Perplexity & Co." },
@@ -149,14 +149,14 @@ export default function SeoPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil<br />
+                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil <br />
                       und bauen Ihre Sichtbarkeit Monat für Monat weiter aus.
                     </p>
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
                       {[
                         { title: "Content-Optimierung", desc: "Laufende Anpassung und Erweiterung Ihrer Website-Texte." },
-                        { title: "Google Profil Pflege", desc: "Regelmäßige Updates, Posts und Bewertungsmanagement." },
+                        { title: "Google-Profil-Pflege", desc: "Regelmäßige Updates, Posts und Bewertungsmanagement." },
                         { title: "Technisches SEO", desc: "Kontinuierliche Überwachung von Ladezeiten und Fehlern." },
                         { title: "Backlink-Aufbau", desc: "Stärkung Ihrer Autorität durch hochwertige Verlinkungen." },
                         { title: "Reporting & Strategie", desc: "Transparente Auswertungen und regelmäßige Abstimmung." },
@@ -269,6 +269,7 @@ export default function SeoPage() {
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">8.999 €</span>
+                    {" "}
                     <span className="text-3xl font-extrabold text-[#ca8a04]">5.499 €</span>
                   </div>
                   <div className="mt-1.5 inline-block rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
@@ -286,9 +287,9 @@ export default function SeoPage() {
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
                   <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#1d6fd8]" /> 100 % transparent</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Keine versteckten Kosten</span>
-                  <span className="text-border">•</span>
+                  <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Volle Kontrolle</span>
                 </div>
               </div>

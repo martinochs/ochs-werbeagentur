@@ -18,7 +18,7 @@ const steps = [
   {
     icon: ClipboardList,
     title: "Kampagnenerstellung",
-    text: "Wir erstellen und strukturieren Ihre Google Ads Kampagnen und optimieren Zielgruppen und Anzeigentexte.",
+    text: "Wir erstellen und strukturieren Ihre Google-Ads-Kampagnen und optimieren Zielgruppen und Anzeigentexte.",
   },
   {
     icon: BarChart3,
@@ -136,7 +136,7 @@ export function GoogleAdsSection({ hideButton = false }: { hideButton?: boolean 
                   gewinnen
                 </h2>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
-                  Wir schalten gezielte Google Ads Kampagnen, die genau die
+                  Wir schalten gezielte Google-Ads-Kampagnen, die genau die
                   Patienten erreichen, die Sie suchen.
                 </p>
               </div>
