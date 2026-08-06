@@ -4,7 +4,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { siteConfig } from "@/lib/seo/config";
 
 export const metadata = {
-  title: `Impressum | ${siteConfig.name}`,
+  title: "Impressum",
   description: "Impressum und rechtliche Angaben.",
 };
 

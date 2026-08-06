@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { faqItems } from "@/lib/content/faq";
 
 export const metadata = {
-  title: `FAQ - Häufig gestellte Fragen | ${siteConfig.name}`,
+  title: "FAQ - Häufig gestellte Fragen",
   description: "Antworten auf die häufigsten Fragen rund um Praxis-Websites, Google Ads, Kosten und Ablauf der Zusammenarbeit.",
 };
 

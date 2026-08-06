@@ -6,7 +6,7 @@ import { ArrowRight, Monitor, BarChart3, Search, Settings } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: `Leistungen | ${siteConfig.name}`,
+  title: "Leistungen",
   description: "Unsere Leistungen für Arzt- und Zahnarztpraxen: Praxis-Websites, Google Ads, SEO und laufende Betreuung.",
 };
 

@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { Monitor, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, Activity } from "lucide-react";
 
 export const metadata = {
-  title: `Praxis-Websites für Ärzte | ${siteConfig.name}`,
+  title: "Praxis-Websites für Ärzte",
   description: "Moderne, DSGVO-konforme Websites mit Online-Terminbuchung. Perfekt auf Ihre Fachrichtung zugeschnitten und optimiert für Patienten.",
 };
 

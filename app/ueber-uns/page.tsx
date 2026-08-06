@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { ArrowRight, Check, Phone, Mail, MapPin, Target, Lightbulb, Users, MessagesSquare, Settings, CheckCircle2, Info } from "lucide-react";
 
 export const metadata = {
-  title: `Über uns | ${siteConfig.name}`,
+  title: "Über uns",
   description: "Erfahren Sie mehr über OCHS Digital Consulting und Mariia Ochs. Wir entwickeln moderne Websites und Google-Ads-Kampagnen speziell für Arzt- und Zahnarztpraxen.",
 };
 

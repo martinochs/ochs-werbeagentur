@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { Check, ShieldCheck, Info, Star, Monitor, BarChart3, Search, Clock, TrendingUp, ArrowRight, Tag } from "lucide-react";
 
 export const metadata = {
-  title: `Betreuung & Weiterentwicklung | ${siteConfig.name}`,
+  title: "Betreuung & Weiterentwicklung",
   description: "Sorgenfreier Betrieb Ihrer Praxis-Website. Wir kümmern uns um Updates, Sicherheit, SEO und Google Ads – für Ihren langfristigen Erfolg.",
 };
 

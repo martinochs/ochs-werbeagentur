@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
 export const metadata = {
-  title: `Google Ads für Arztpraxen | ${siteConfig.name}`,
+  title: "Google Ads für Arztpraxen",
   description: "Gezielte Patientengewinnung durch Suchmaschinenwerbung. Erreichen Sie genau die Patienten, die in Ihrer Region nach Ihren Leistungen suchen.",
 };
 

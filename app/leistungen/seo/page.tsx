@@ -5,7 +5,7 @@ import { siteConfig } from "@/lib/seo/config";
 import { Search, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, MapPin, LineChart } from "lucide-react";
 
 export const metadata = {
-  title: `SEO & KI-Sichtbarkeit für Ärzte | ${siteConfig.name}`,
+  title: "SEO & KI-Sichtbarkeit für Ärzte",
   description: "Langfristige Sichtbarkeit bei Google und in KI-Suchen. Wir optimieren Ihre Praxis für lokale Suchanfragen und relevante Behandlungen.",
 };
 
