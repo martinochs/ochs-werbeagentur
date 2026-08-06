@@ -59,6 +59,8 @@ export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen
                     <div key={item.question}>
                       <button
                         type="button"
+                        id={`faq-question-${globalIndex}`}
+                        aria-controls={`faq-answer-${globalIndex}`}
                         className="flex w-full items-center gap-3 px-4 py-3.5 text-left"
                         onClick={() => setOpenIndex(isOpen ? null : globalIndex)}
                         aria-expanded={isOpen}
@@ -76,11 +78,16 @@ export function FaqSection({ items = faqItems, title = "Häufig gestellte Fragen
                           aria-hidden="true"
                         />
                       </button>
-                      {isOpen && (
+                      <div
+                        id={`faq-answer-${globalIndex}`}
+                        role="region"
+                        aria-labelledby={`faq-question-${globalIndex}`}
+                        className={isOpen ? "block" : "hidden"}
+                      >
                         <p className="px-4 pb-4 pl-11 text-sm leading-relaxed text-muted">
                           {item.answer}
                         </p>
-                      )}
+                      </div>
                     </div>
                   );
                 })}
