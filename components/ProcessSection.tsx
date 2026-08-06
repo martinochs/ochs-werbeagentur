@@ -294,72 +294,26 @@ export function ProcessSection() {
 
 
 
-              <ol className="mt-10 list-none space-y-10 lg:hidden">
-
-                {steps.map((step, index) => (
-
-                  <li key={step.title} className="text-center">
-
-                    <StepContent {...step} />
-
-                    {index < steps.length - 1 && (
-
-                      <div className="mt-8 flex justify-center" aria-hidden="true">
-
-                        <ArrowRight className="h-4 w-4 rotate-90 text-navy/25" />
-
-                      </div>
-
-                    )}
-
-                  </li>
-
-                ))}
-
-              </ol>
-
-
-
-              <ol className="mt-10 hidden list-none items-start lg:flex">
-
+              <ol className="mt-10 flex flex-col gap-8 list-none lg:flex-row lg:items-start lg:gap-0">
                 {steps.flatMap((step, index) => {
-
                   const items = [
-
                     <li key={step.title} className="flex-1 text-center">
-
                       <StepContent {...step} />
-
                     </li>,
-
                   ];
-
                   if (index < steps.length - 1) {
-
                     items.push(
-
                       <li
-
                         key={`arrow-${index}`}
-
-                        className="flex shrink-0 items-start px-1 pt-3"
-
+                        className="flex justify-center lg:shrink-0 lg:items-start lg:px-1 lg:pt-3"
                         aria-hidden="true"
-
                       >
-
-                        <ArrowRight className="h-4 w-4 text-navy/25" />
-
+                        <ArrowRight className="h-4 w-4 rotate-90 text-navy/25 lg:rotate-0" />
                       </li>,
-
                     );
-
                   }
-
                   return items;
-
                 })}
-
               </ol>
 
 
