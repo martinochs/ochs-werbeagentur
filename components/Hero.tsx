@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Check, CheckCircle2, Clock, Phone, Tag, Stethoscope } from "lucide-react";
+import { ArrowRight, Calendar, Check, CheckCircle2, Clock, Phone, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 
 const highlights = [
@@ -27,16 +27,12 @@ export function Hero() {
             </p>
             <h1
               id="hero-heading"
-              className="text-[1.65rem] font-bold leading-tight text-navy sm:text-3xl lg:text-[2.35rem] lg:leading-[1.15]"
+              className="text-[1.65rem] font-bold leading-tight text-navy sm:text-3xl lg:text-[2.35rem] lg:leading-[1.15] max-w-xl text-balance"
             >
-              Webdesign für Arzt- und Zahnarztpraxen: Moderne Praxis-Websites
-              mit Online-Terminbuchung, SEO und planbarer Patientengewinnung
+              Praxis-Websites, die Ihr Team entlasten und neue Patienten überzeugen
             </h1>
-            <p className="mt-5 text-[15px] leading-relaxed text-muted">
-              Wir entwickeln professionelle Websites für Arztpraxen und Zahnarztpraxen mit
-              Online-Terminbuchung, Suchmaschinenoptimierung (SEO), DSGVO-konformer
-              Technik und gezielter Patientengewinnung. Von der ersten Analyse bis zur
-              laufenden Betreuung erhalten Sie alles aus einer Hand.
+            <p className="mt-5 text-[15px] leading-relaxed text-muted max-w-lg">
+              Individuell entwickelt für Arzt- und Zahnarztpraxen – mit Online-Terminbuchung, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
             </p>
             <ul className="mt-8 space-y-4">
               {highlights.map((item, i) => (
@@ -50,34 +46,13 @@ export function Hero() {
               ))}
             </ul>
 
-            <div className="mt-8 rounded-xl border border-[#86efac] bg-[#f0fdf4] p-4 sm:p-5">
-              <div className="flex items-start gap-4">
-                <div className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#16a34a] text-white">
-                  <Tag className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-wide text-[#166534]">
-                    Aktionspreis bis 31.10.2026
-                  </p>
-                  <p className="mt-1 text-base text-navy sm:text-lg">
-                    <span className="font-semibold">Premium Praxis-Website für</span>{" "}
-                    <span className="text-2xl font-bold text-[#166534] sm:text-3xl">2.999 €</span>{" "}
-                    <span className="font-semibold">netto</span>
-                  </p>
-                  <p className="mt-1 text-[13px] text-muted">
-                    Regulär anschließend 4.749 € netto &bull; <span className="font-semibold text-navy">Sie sparen 1.750 €</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="/praxisanalyse" className="btn-primary flex items-center justify-center gap-2 px-6 py-3.5 text-base">
-                Kostenlose Praxisanalyse anfordern
+                Kostenloses Erstgespräch vereinbaren
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
-              <a href="#preise" className="flex items-center justify-center gap-2 rounded-lg border-2 border-navy bg-white px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-slate-50">
-                Aktionsangebot ansehen
+              <a href="/leistungen" className="flex items-center justify-center gap-2 rounded-lg border-2 border-navy bg-white px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-slate-50">
+                Leistungen und Preise ansehen
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
             </div>
