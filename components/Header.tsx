@@ -30,6 +30,7 @@ const navLinks: NavLink[] = [
   { path: "/ueber-uns", label: "Über uns" },
   { path: "#ablauf", label: "Ablauf" },
   { path: "/faq", label: "FAQ" },
+  { path: "/praxisanalyse", label: "Erstgespräch" },
   { path: "#kontakt", label: "Kontakt" },
 ];
 
@@ -121,7 +122,7 @@ export function Header() {
             </a>
           )}
           <Link href="/praxisanalyse" className="btn-primary flex items-center gap-1.5 px-4 py-2.5">
-            Kostenlose Praxisanalyse
+            Kostenloses Erstgespräch
             <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -170,7 +171,7 @@ export function Header() {
               className="btn-primary mt-2 text-center"
               onClick={() => setOpen(false)}
             >
-              Kostenlose Praxisanalyse
+              Kostenloses Erstgespräch
             </Link>
           </div>
         </nav>

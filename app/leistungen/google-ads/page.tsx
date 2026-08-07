@@ -1,8 +1,9 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { GoogleAdsSection } from "@/components/GoogleAdsSection";
-import { siteConfig } from "@/lib/seo/config";
+import { erstgespraechUrl } from "@/lib/cta";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
 export const metadata = {
@@ -108,6 +109,12 @@ export default function GoogleAdsPage() {
                       <div className="mx-auto mt-4 inline-block rounded bg-[#16a34a] px-3 py-1 text-[13px] font-bold text-white">
                         Sie sparen 1.750 €
                       </div>
+                      <a
+                        href={erstgespraechUrl("google-ads")}
+                        className="mt-6 block w-full rounded-lg bg-[#166534] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90 text-center"
+                      >
+                        Kostenloses Google-Ads-Erstgespräch vereinbaren
+                      </a>
                     </div>
 
                     <div className="mt-6 space-y-4 px-2">
@@ -300,8 +307,8 @@ export default function GoogleAdsPage() {
                   </div>
                 </div>
                 <div className="shrink-0 w-full md:w-auto">
-                  <a href="/praxisanalyse" className="block w-full rounded-md bg-[#ca8a04] px-6 py-3 text-sm font-bold text-white hover:bg-[#a16207] transition-colors text-center">
-                    Kombination anfragen
+                  <a href={erstgespraechUrl("kombi")} className="block w-full rounded-md bg-[#ca8a04] px-6 py-3 text-sm font-bold text-white hover:bg-[#a16207] transition-colors text-center">
+                    Kostenloses Erstgespräch vereinbaren
                   </a>
                 </div>
               </div>
@@ -321,6 +328,7 @@ export default function GoogleAdsPage() {
           </div>
         </section>
       </main>
+      <ClosingCtaSection leistung="google-ads" />
       <Footer />
     </>
   );

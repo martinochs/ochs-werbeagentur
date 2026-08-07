@@ -2,15 +2,22 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PraxisanalyseForm } from "@/components/PraxisanalyseForm";
-import { siteConfig } from "@/lib/seo/config";
+import { parseLeistungSlug } from "@/lib/cta";
 
 export const metadata: Metadata = {
-  title: "Kostenlose Praxisanalyse anfordern",
+  title: "Kostenloses Erstgespräch",
   description:
-    "Unverbindlicher Fragebogen für Arzt- und Zahnarztpraxen — wir melden uns persönlich mit einer Einschätzung für Ihre Praxis-Website.",
+    "Unverbindliches Erstgespräch für Arzt- und Zahnarztpraxen — wir besprechen Ihre Ziele und welche digitale Lösung zu Ihrer Praxis passt.",
 };
 
-export default function PraxisanalysePage() {
+type PraxisanalysePageProps = {
+  searchParams: Promise<{ leistung?: string }>;
+};
+
+export default async function PraxisanalysePage({ searchParams }: PraxisanalysePageProps) {
+  const params = await searchParams;
+  const initialLeistung = parseLeistungSlug(params.leistung);
+
   return (
     <>
       <Header />
@@ -20,16 +27,20 @@ export default function PraxisanalysePage() {
             Kostenlos & unverbindlich
           </p>
           <h1 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-            Kostenlose Praxisanalyse anfordern
+            Kostenloses Erstgespräch für Ihre Praxis
           </h1>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            Beantworten Sie ein paar kurze Fragen — {siteConfig.contactPerson}{" "}
-            meldet sich persönlich mit einer ehrlichen Einschätzung und den nächsten
-            Schritten für Ihre Praxis-Website.
+            Lernen Sie uns unverbindlich kennen. Wir sprechen über Ihre Praxis, Ihre Ziele
+            und darüber, welche digitale Lösung für Sie sinnvoll ist.
+          </p>
+          <p className="mt-4 rounded-lg border border-border bg-white px-4 py-3 text-sm leading-relaxed text-muted">
+            Ob neue Praxis-Website, Google Ads, SEO oder laufende Betreuung – im Erstgespräch
+            klären wir gemeinsam, welche Lösung zu Ihrer Situation passt. Das Gespräch ist
+            kostenlos, unverbindlich und ohne Kaufverpflichtung.
           </p>
 
           <div className="mt-10 rounded-2xl border border-border bg-white p-6 shadow-[0_4px_24px_rgba(10,37,64,0.06)] lg:p-8">
-            <PraxisanalyseForm />
+            <PraxisanalyseForm initialLeistung={initialLeistung} />
           </div>
         </div>
       </main>

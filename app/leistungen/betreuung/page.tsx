@@ -1,7 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { siteConfig } from "@/lib/seo/config";
+import { erstgespraechUrl } from "@/lib/cta";
 import { Check, ShieldCheck, Info, Star, Monitor, BarChart3, Search, Clock, TrendingUp, ArrowRight, Tag } from "lucide-react";
 
 export const metadata = {
@@ -101,6 +102,12 @@ export default function BetreuungPage() {
                           Sorgenfreier Betrieb Ihrer Praxis-Website ohne technischen Aufwand für Sie.
                         </p>
                       </div>
+                      <a
+                        href={erstgespraechUrl("betreuung")}
+                        className="mt-6 block w-full rounded-lg bg-[#5b21b6] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90 text-center"
+                      >
+                        Betreuung unverbindlich besprechen
+                      </a>
                     </div>
                   </div>
                 </article>
@@ -314,8 +321,8 @@ export default function BetreuungPage() {
                   </div>
                 </div>
                 <div className="shrink-0 w-full md:w-auto">
-                  <a href="/praxisanalyse" className="block w-full rounded-md bg-[#ca8a04] px-6 py-3 text-sm font-bold text-white hover:bg-[#a16207] transition-colors text-center">
-                    Kombination anfragen
+                  <a href={erstgespraechUrl("kombi")} className="block w-full rounded-md bg-[#ca8a04] px-6 py-3 text-sm font-bold text-white hover:bg-[#a16207] transition-colors text-center">
+                    Kostenloses Erstgespräch vereinbaren
                   </a>
                 </div>
               </div>
@@ -335,6 +342,7 @@ export default function BetreuungPage() {
           </div>
         </section>
       </main>
+      <ClosingCtaSection leistung="betreuung" />
       <Footer />
     </>
   );

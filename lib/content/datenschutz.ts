@@ -18,7 +18,7 @@ export const datenschutzSections: DatenschutzSection[] = [
     bullets: [
       "Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), Mannheim.",
       "Beim Besuch der Website werden technisch notwendige Server-Logdaten durch unseren Hosting-Anbieter Vercel verarbeitet.",
-      "Wenn Sie das Formular „Kostenlose Praxisanalyse“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
+      "Wenn Sie das Formular „Kostenloses Erstgespräch“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
       "Wir setzen derzeit keine Analyse- oder Marketing-Tools ein und verwenden keine Cookies zu Tracking-Zwecken.",
     ],
   },
@@ -65,9 +65,9 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "kontaktformular",
-    title: "6. Kontaktformular „Kostenlose Praxisanalyse“",
+    title: "6. Kontaktformular „Kostenloses Erstgespräch“",
     paragraphs: [
-      "Wenn Sie uns über das Formular auf der Seite /praxisanalyse kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage, zur Vorbereitung einer unverbindlichen Praxisanalyse sowie für mögliche Anschlussfragen.",
+      "Wenn Sie uns über das Formular auf der Seite /praxisanalyse kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage, zur Vorbereitung eines unverbindlichen Erstgesprächs sowie für mögliche Anschlussfragen.",
       "Pflichtangaben sind insbesondere Ansprechpartner, Praxisname, E-Mail-Adresse, Fachrichtung, Standort, Angaben zu Ihrer aktuellen Website-Situation, Ziele, Priorität und gewünschter Zeitrahmen. Optional können Sie Telefonnummer, Anzahl der Behandler, Website-URL, Zufriedenheit mit dem aktuellen Auftritt sowie Freitextangaben zu Herausforderungen mitteilen.",
       "Ohne diese Daten können wir Ihre Anfrage in der Regel nicht bearbeiten. Die Übermittlung erfolgt nur, wenn Sie der Datenschutzerklärung zugestimmt haben.",
       "Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen auf Ihre Anfrage hin). Sofern Sie keine vertragliche Beziehung anstreben, stützen wir die Bearbeitung zusätzlich auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).",

@@ -49,6 +49,8 @@ type Package = {
   actionTheme: ActionTheme;
   highlighted: boolean;
   badge: string | null;
+  linkHref: string;
+  linkLabel: string;
 };
 
 const themes = {
@@ -115,6 +117,8 @@ const packages: Package[] = [
     ],
     highlighted: false,
     badge: null,
+    linkHref: "/leistungen/praxis-websites",
+    linkLabel: "Mehr zur Praxis-Website",
   },
   {
     title: "Google Ads Patientengewinnung",
@@ -134,6 +138,8 @@ const packages: Package[] = [
     ],
     highlighted: false,
     badge: null,
+    linkHref: "/leistungen/google-ads",
+    linkLabel: "Mehr zu Google Ads",
   },
   {
     title: "Praxis-Wachstumspaket Website + Google Ads",
@@ -153,6 +159,8 @@ const packages: Package[] = [
     ],
     highlighted: true,
     badge: "BESTE GESAMTLÖSUNG",
+    linkHref: "/leistungen/praxis-websites",
+    linkLabel: "Website + Google Ads ansehen",
   },
 ];
 
@@ -185,10 +193,10 @@ function PricingFooter({ pkg }: { pkg: Package }) {
       </div>
 
       <a
-        href="/praxisanalyse"
+        href={pkg.linkHref}
         className={`mt-4 flex w-full items-center justify-center gap-2 rounded-lg border-2 px-4 py-3 text-sm font-semibold transition-colors ${buttonBg} ${buttonText} ${buttonBorder} hover:opacity-90`}
       >
-        Mehr erfahren
+        {pkg.linkLabel}
         <ArrowRight className="h-4 w-4" aria-hidden="true" />
       </a>
     </div>
@@ -328,8 +336,8 @@ export function PricingSection() {
                   <div>
                     <h4 className="text-[13px] font-bold text-navy">Bis zu 4.000 € Google-Werbeguthaben*</h4>
                     <p className="mt-0.5 text-[12px] text-muted">Für neue Google-Ads-Konten.</p>
-                    <a href="#kontakt" className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-[#1d6fd8] hover:underline">
-                      Mehr erfahren <ArrowRight className="h-3 w-3" aria-hidden="true" />
+                    <a href="/leistungen/google-ads" className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-[#1d6fd8] hover:underline">
+                      Mehr zu Google Ads <ArrowRight className="h-3 w-3" aria-hidden="true" />
                     </a>
                   </div>
                 </div>
@@ -447,8 +455,8 @@ export function PricingSection() {
                 </details>
               </div>
 
-              <a href="/praxisanalyse" className="btn-primary mt-8 flex w-full items-center justify-center gap-2 py-3.5 text-base">
-                Betreuung unverbindlich anfragen
+              <a href="/leistungen/betreuung" className="btn-primary mt-8 flex w-full items-center justify-center gap-2 py-3.5 text-base">
+                Mehr zur Betreuung
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               

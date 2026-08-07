@@ -136,7 +136,7 @@ export const faqItems = [
 
     answer:
 
-      "Mit einer kostenlosen und unverbindlichen Praxisanalyse. Wir besprechen Ihre Ziele, prüfen Ihren aktuellen Auftritt und zeigen konkrete nächste Schritte — telefonisch, per Video oder vor Ort in Mannheim.",
+      "Mit einem kostenlosen und unverbindlichen Erstgespräch. Wir besprechen Ihre Ziele, prüfen Ihren aktuellen Auftritt und zeigen konkrete nächste Schritte — telefonisch, per Video oder vor Ort in Mannheim.",
 
   },
 

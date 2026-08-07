@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
   contactPerson: "Mariia Ochs",
   tagline: "Websites für Ärzte & Zahnärzte in Mannheim",
   description:
-    "Webdesign für Arzt- und Zahnarztpraxen in Mannheim: Moderne Praxis-Websites mit Online-Terminbuchung, SEO, Google Ads und persönlicher Betreuung durch Mariia Ochs — kostenlose Praxisanalyse.",
+    "Webdesign für Arzt- und Zahnarztpraxen in Mannheim: Moderne Praxis-Websites mit Online-Terminbuchung, SEO, Google Ads und persönlicher Betreuung durch Mariia Ochs — kostenloses Erstgespräch.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ochs-digital-consulting.vercel.app",
   locale: "de_DE",
   phone: null,

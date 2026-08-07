@@ -1,5 +1,6 @@
-import { ArrowRight, Calendar, Check, CheckCircle2, Clock, Phone, Stethoscope } from "lucide-react";
+import { ArrowRight, Calendar, Check, CheckCircle2, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
+import { erstgespraechUrl } from "@/lib/cta";
 
 const highlights = [
   { 
@@ -50,7 +51,7 @@ export function Hero() {
             </ul>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="/praxisanalyse" className="btn-primary flex items-center justify-center gap-2 px-6 py-3.5 text-base">
+              <a href={erstgespraechUrl()} className="btn-primary flex items-center justify-center gap-2 px-6 py-3.5 text-base">
                 Kostenloses Erstgespräch vereinbaren
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>

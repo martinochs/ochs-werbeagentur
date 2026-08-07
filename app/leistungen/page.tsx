@@ -1,7 +1,8 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { siteConfig } from "@/lib/seo/config";
+import { erstgespraechUrl } from "@/lib/cta";
 import { ArrowRight, Monitor, BarChart3, Search, Settings } from "lucide-react";
 import Link from "next/link";
 
@@ -96,16 +97,17 @@ export default function LeistungenPage() {
                 Unsicher, welche Leistung die richtige ist?
               </h3>
               <p className="mx-auto mt-4 max-w-2xl text-base text-muted">
-                Lassen Sie uns in einer kostenlosen Praxisanalyse gemeinsam herausfinden, 
+                Lassen Sie uns in einem kostenlosen Erstgespräch gemeinsam herausfinden,
                 wo Ihre Praxis aktuell steht und welche digitalen Schritte am meisten Sinn machen.
               </p>
-              <a href="/praxisanalyse" className="btn-primary mt-8 inline-flex px-6 py-3.5 text-base">
-                Kostenlose Praxisanalyse anfordern
+              <a href={erstgespraechUrl()} className="btn-primary mt-8 inline-flex px-6 py-3.5 text-base">
+                Kostenloses Erstgespräch vereinbaren
               </a>
             </div>
           </div>
         </section>
       </main>
+      <ClosingCtaSection />
       <Footer />
     </>
   );

@@ -4,13 +4,11 @@ import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import {
-  behandlerOptionen,
   fachrichtungen,
-  prioritaetOptionen,
-  zielOptionen,
-  zeitrahmenOptionen,
-  zufriedenheitOptionen,
+  gewuenschteLeistungen,
+  leistungSlugToFormValue,
 } from "@/lib/content/praxisanalyse-form";
+import type { LeistungSlug } from "@/lib/cta";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -22,17 +20,19 @@ const inputClassName =
 
 const labelClassName = "text-sm font-medium text-navy";
 
-export function PraxisanalyseForm() {
+type PraxisanalyseFormProps = {
+  initialLeistung?: LeistungSlug;
+};
+
+function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
+  if (!initialLeistung) return "";
+  return leistungSlugToFormValue[initialLeistung] ?? "";
+}
+
+export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [hatWebsite, setHatWebsite] = useState<"ja" | "nein" | "">("");
-  const [ziele, setZiele] = useState<string[]>([]);
-
-  function toggleZiel(ziel: string) {
-    setZiele((current) =>
-      current.includes(ziel) ? current.filter((item) => item !== ziel) : [...current, ziel],
-    );
-  }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -45,18 +45,11 @@ export function PraxisanalyseForm() {
       return;
     }
 
-    if (ziele.length === 0) {
-      setStatus("error");
-      setErrorMessage("Bitte wählen Sie mindestens ein Ziel aus.");
-      return;
-    }
-
     setStatus("submitting");
     setErrorMessage("");
 
     const formData = new FormData(event.currentTarget);
     const payload = Object.fromEntries(formData.entries());
-    payload.ziele = ziele.join(", ");
 
     try {
       const response = await fetch(`https://formspree.io/f/${formId}`, {
@@ -76,7 +69,6 @@ export function PraxisanalyseForm() {
       setStatus("success");
       event.currentTarget.reset();
       setHatWebsite("");
-      setZiele([]);
     } catch (error) {
       setStatus("error");
       setErrorMessage(
@@ -93,8 +85,8 @@ export function PraxisanalyseForm() {
         <CheckCircle2 className="mx-auto h-12 w-12 text-accent" aria-hidden="true" />
         <h2 className="mt-4 text-xl font-bold text-navy">Vielen Dank für Ihre Anfrage!</h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
-          Wir haben Ihre Angaben erhalten und melden uns persönlich mit einer
-          unverbindlichen Einschätzung und den nächsten Schritten.
+          Wir haben Ihre Angaben erhalten und melden uns persönlich, um ein kostenloses
+          Erstgespräch zu vereinbaren.
         </p>
         <Link href="/" className="btn-primary mt-6 inline-flex">
           Zurück zur Startseite
@@ -113,7 +105,7 @@ export function PraxisanalyseForm() {
       )}
 
       <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Kontakt</legend>
+        <legend className="text-base font-bold text-navy">Ihre Angaben</legend>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="block">
@@ -153,42 +145,19 @@ export function PraxisanalyseForm() {
             />
           </label>
         </div>
-      </fieldset>
 
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Ihre Praxis</legend>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>Fachrichtung *</span>
-            <select name="fachrichtung" required className={inputClassName} defaultValue="">
-              <option value="" disabled>
-                Bitte wählen
-              </option>
-              {fachrichtungen.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className={labelClassName}>Standort (PLZ & Ort) *</span>
-            <input
-              type="text"
-              name="standort"
-              required
-              placeholder="z. B. 68259 Mannheim"
-              className={inputClassName}
-            />
-          </label>
-        </div>
-
-        <label className="block sm:max-w-xs">
-          <span className={labelClassName}>Anzahl Behandler</span>
-          <select name="behandler" className={inputClassName} defaultValue="">
-            <option value="">Optional</option>
-            {behandlerOptionen.map((option) => (
+        <label className="block">
+          <span className={labelClassName}>Gewünschte Leistung *</span>
+          <select
+            name="gewuenschte_leistung"
+            required
+            className={inputClassName}
+            defaultValue={getDefaultLeistung(initialLeistung)}
+          >
+            <option value="" disabled>
+              Bitte wählen
+            </option>
+            {gewuenschteLeistungen.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
@@ -198,23 +167,43 @@ export function PraxisanalyseForm() {
       </fieldset>
 
       <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Aktuelle Situation</legend>
+        <legend className="text-base font-bold text-navy">Optional</legend>
 
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="block">
-            <span className={labelClassName}>Haben Sie bereits eine Website? *</span>
+            <span className={labelClassName}>Fachrichtung</span>
+            <select name="fachrichtung" className={inputClassName} defaultValue="">
+              <option value="">Optional</option>
+              {fachrichtungen.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className={labelClassName}>Standort (PLZ & Ort)</span>
+            <input
+              type="text"
+              name="standort"
+              placeholder="z. B. 68259 Mannheim"
+              className={inputClassName}
+            />
+          </label>
+        </div>
+
+        <div className="grid gap-4 sm:grid-cols-2">
+          <label className="block">
+            <span className={labelClassName}>Haben Sie bereits eine Website?</span>
             <select
               name="hat_website"
-              required
               className={inputClassName}
               value={hatWebsite}
               onChange={(event) =>
                 setHatWebsite(event.target.value as "ja" | "nein" | "")
               }
             >
-              <option value="" disabled>
-                Bitte wählen
-              </option>
+              <option value="">Optional</option>
               <option value="ja">Ja</option>
               <option value="nein">Nein</option>
             </select>
@@ -233,97 +222,14 @@ export function PraxisanalyseForm() {
           )}
         </div>
 
-        {hatWebsite === "ja" && (
-          <label className="block sm:max-w-md">
-            <span className={labelClassName}>
-              Wie zufrieden sind Sie mit Ihrem aktuellen Online-Auftritt?
-            </span>
-            <select name="zufriedenheit" className={inputClassName} defaultValue="">
-              <option value="">Optional</option>
-              {zufriedenheitOptionen.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
-      </fieldset>
-
-      <fieldset className="space-y-3">
-        <legend className="text-base font-bold text-navy">
-          Was möchten Sie erreichen? *
-        </legend>
-        <p className="text-sm text-muted">Mindestens eine Option auswählen.</p>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {zielOptionen.map((ziel) => (
-            <label
-              key={ziel}
-              className="flex cursor-pointer items-start gap-3 rounded-lg border border-border bg-white px-3.5 py-3 text-sm text-navy transition-colors hover:border-accent/30"
-            >
-              <input
-                type="checkbox"
-                checked={ziele.includes(ziel)}
-                onChange={() => toggleZiel(ziel)}
-                className="mt-0.5 h-4 w-4 shrink-0 accent-accent"
-              />
-              {ziel}
-            </label>
-          ))}
-        </div>
-      </fieldset>
-
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Priorität & Zeitrahmen</legend>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>Was ist Ihnen am wichtigsten? *</span>
-            <select name="prioritaet" required className={inputClassName} defaultValue="">
-              <option value="" disabled>
-                Bitte wählen
-              </option>
-              {prioritaetOptionen.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className={labelClassName}>Wann möchten Sie starten? *</span>
-            <select name="zeitrahmen" required className={inputClassName} defaultValue="">
-              <option value="" disabled>
-                Bitte wählen
-              </option>
-              {zeitrahmenOptionen.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-      </fieldset>
-
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Optional</legend>
-
         <label className="block">
-          <span className={labelClassName}>
-            Was ist Ihre größte Herausforderung online?
-          </span>
+          <span className={labelClassName}>Kurze Nachricht</span>
           <textarea
-            name="herausforderung"
+            name="nachricht"
             rows={3}
             className={inputClassName}
-            placeholder="z. B. wenig Anfragen, veraltetes Design, keine Terminbuchung …"
+            placeholder="Was möchten Sie erreichen? Gibt es Besonderheiten, die wir wissen sollten?"
           />
-        </label>
-
-        <label className="block">
-          <span className={labelClassName}>Gibt es sonst noch etwas, das wir wissen sollten?</span>
-          <textarea name="sonstiges" rows={3} className={inputClassName} />
         </label>
       </fieldset>
 
@@ -365,7 +271,7 @@ export function PraxisanalyseForm() {
           </>
         ) : (
           <>
-            Kostenlose Praxisanalyse anfordern
+            Kostenloses Erstgespräch vereinbaren
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </>
         )}
