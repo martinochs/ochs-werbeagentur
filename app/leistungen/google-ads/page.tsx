@@ -24,7 +24,7 @@ export default function GoogleAdsPage() {
               Mehr Patienten. Mehr Termine. Mehr Wachstum.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Professionelle Google-Ads-Kampagnen für Ihre Praxis – erstellt von Experten.<br />
+              Professionelle Google-Ads-Kampagnen speziell für Arzt- und Zahnarztpraxen.<br />
               Sichtbar bei den richtigen Patienten, genau dann, wenn sie Sie suchen.
             </p>
           </div>
