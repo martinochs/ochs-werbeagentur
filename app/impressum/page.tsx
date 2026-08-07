@@ -44,12 +44,6 @@ export default function ImpressumPage() {
                   {siteConfig.email}
                 </a>
               </p>
-
-              <h2 className="mt-8 text-xl font-bold text-navy">Umsatzsteuer-ID</h2>
-              <p className="mt-2">
-                Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: <br />
-                DE XXX XXX XXX {/* Bitte hier die echte USt-ID eintragen */}
-              </p>
             </div>
           </div>
         </section>
