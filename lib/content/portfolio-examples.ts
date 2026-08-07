@@ -15,7 +15,7 @@ export const portfolioExamples: PortfolioExample[] = [
     image: "/beispiele/zahnarzt-behandlungsraum.png",
   },
   {
-    title: "Hautärztin Dr. Weiss",
+    title: "Hautärztin Dr. Sophie Keller",
     subtitle: "Elegante Praxis-Website mit Schwerpunkten & Ästhetik",
     gradient: "from-emerald-700 to-emerald-900",
     href: "/webdesign-hautarzt",

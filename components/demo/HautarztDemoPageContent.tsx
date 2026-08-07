@@ -137,7 +137,7 @@ const testimonials = [
 function MonogramLogo() {
   return (
     <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#b0946b]/40 text-sm font-semibold tracking-wide text-[#5a6e5a]">
-      MW
+      SK
     </div>
   );
 }
@@ -199,7 +199,7 @@ export function HautarztDemoPageContent() {
                 Hautärztin
               </p>
               <p className="text-xs font-bold uppercase tracking-wide text-[#3d4a3d] sm:text-sm">
-                Dr. med. Maria Weiss
+                Dr. med. Sophie Keller
               </p>
             </div>
           </div>
@@ -228,20 +228,26 @@ export function HautarztDemoPageContent() {
       </header>
 
       <main id="start">
-        <section className="relative overflow-hidden bg-[#ebe8e2]">
-          <div className="absolute inset-0">
-            <Image
-              src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1600&q=80"
-              alt=""
-              fill
-              className="object-cover opacity-30 blur-sm"
-              sizes="100vw"
-              priority
-            />
-          </div>
+        <section className="relative min-h-[580px] overflow-hidden bg-[#f5f3ef] lg:min-h-[640px]">
+          <Image
+            src="/beispiele/hautarzt-hero.jpg"
+            alt="Fiktive Hautärztin in moderner dermatologischer Praxis – Webdesign-Beispiel"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[68%_22%] sm:object-[72%_20%]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[linear-gradient(90deg,#f5f3ef_0%,#f5f3ef_30%,rgba(245,243,239,0.96)_38%,rgba(245,243,239,0.82)_46%,rgba(245,243,239,0.55)_56%,rgba(245,243,239,0.2)_66%,transparent_78%)]"
+          />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,243,239,0.15)_0%,rgba(245,243,239,0.88)_78%,#f5f3ef_100%)] lg:hidden"
+          />
 
-          <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 lg:grid-cols-2 lg:gap-12 lg:px-8 lg:py-20">
-            <div>
+          <div className="relative mx-auto flex min-h-[580px] max-w-6xl items-center px-4 py-14 lg:min-h-[640px] lg:px-8 lg:py-20">
+            <div className="max-w-lg lg:max-w-xl">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0946b]">
                 Moderne Dermatologie mit persönlicher Betreuung
               </p>
@@ -265,23 +271,10 @@ export function HautarztDemoPageContent() {
                 </DemoBookButton>
                 <a
                   href="#praxis"
-                  className="inline-flex items-center gap-2 rounded-md border border-[#5a6e5a]/25 bg-white/60 px-5 py-3 text-sm font-semibold text-[#5a6e5a] backdrop-blur transition-colors hover:bg-white"
+                  className="inline-flex items-center gap-2 rounded-md border border-[#5a6e5a]/25 bg-white/70 px-5 py-3 text-sm font-semibold text-[#5a6e5a] backdrop-blur transition-colors hover:bg-white"
                 >
                   Praxis kennenlernen
                 </a>
-              </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(61,74,61,0.15)] ring-1 ring-[#5a6e5a]/10">
-                <Image
-                  src="/beispiele/hautarzt-hero.jpg"
-                  alt="Fiktive Hautärztin in moderner dermatologischer Praxis – Webdesign-Beispiel"
-                  fill
-                  className="object-cover object-[35%_20%]"
-                  sizes="(max-width: 1024px) 100vw, 480px"
-                  priority
-                />
               </div>
             </div>
           </div>
@@ -529,7 +522,7 @@ export function HautarztDemoPageContent() {
           <div className="flex items-center gap-2 text-white/70">
             <MonogramLogo />
             <span className="text-xs font-semibold uppercase tracking-wide">
-              Dr. med. Maria Weiss
+              Dr. med. Sophie Keller
             </span>
           </div>
           <p className="text-center text-xs text-white/40">
