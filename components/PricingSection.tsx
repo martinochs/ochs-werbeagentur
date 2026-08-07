@@ -472,7 +472,7 @@ export function PricingSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="h-4 w-4 text-navy/40" aria-hidden="true" />
-                  In 24h Rückmeldung
+                  Rückmeldung innerhalb von 24 Stunden
                 </div>
               </div>
             </div>
