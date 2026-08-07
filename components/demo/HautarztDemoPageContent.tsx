@@ -275,11 +275,12 @@ export function HautarztDemoPageContent() {
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
               <div className="overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(61,74,61,0.15)] ring-1 ring-[#5a6e5a]/10">
                 <Image
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
-                  alt="Beispielbild: Fiktives Praxisprofil Dr. med. Maria Weiss"
-                  width={800}
-                  height={1000}
-                  className="aspect-[4/5] w-full object-cover object-top"
+                  src="/beispiele/hautarzt-hero.png"
+                  alt="Fiktive Hautärztin in moderner dermatologischer Praxis – Webdesign-Beispiel"
+                  width={1024}
+                  height={682}
+                  className="aspect-[4/5] w-full object-cover object-[35%_20%]"
+                  sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
               </div>
