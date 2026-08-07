@@ -181,7 +181,7 @@ export default function PraxisWebsitesPage() {
                     <div className="rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-6 text-center h-full flex flex-col justify-center">
                       <p className="text-sm font-bold text-navy">Monatliche Betreuung</p>
                       <p className="mt-4 text-4xl font-extrabold text-[#1d6fd8]">
-                        199 €
+                        249 €
                       </p>
                       <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
                       <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>

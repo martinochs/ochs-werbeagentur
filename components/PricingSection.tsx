@@ -373,7 +373,7 @@ export function PricingSection() {
                       </div>
                     </div>
                     <div className="text-left lg:text-right">
-                      <p className="text-2xl font-bold text-[#5b21b6]">199 €</p>
+                      <p className="text-2xl font-bold text-[#5b21b6]">249 €</p>
                       <p className="text-[13px] text-muted">/Monat</p>
                     </div>
                   </summary>
@@ -438,7 +438,7 @@ export function PricingSection() {
                       </div>
                     </div>
                     <div className="text-left lg:text-right">
-                      <p className="text-2xl font-bold text-[#1d6fd8]">599 €</p>
+                      <p className="text-2xl font-bold text-[#1d6fd8]">649 €</p>
                       <p className="text-[13px] text-muted">/Monat</p>
                       <div className="mt-2 inline-flex items-center gap-1.5 rounded bg-[#f0fdf4] px-2 py-1 text-[11px] font-bold text-[#15803d]">
                         <Tag className="h-3 w-3" aria-hidden="true" />

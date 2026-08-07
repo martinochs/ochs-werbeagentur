@@ -91,7 +91,7 @@ export default function BetreuungPage() {
                     <div className="rounded-xl border border-[#ddd6fe] bg-[#f5f3ff] p-6 text-center h-full flex flex-col justify-center">
                       <p className="text-sm font-bold text-navy">Monatliche Betreuung</p>
                       <p className="mt-4 text-4xl font-extrabold text-[#5b21b6]">
-                        199 €
+                        249 €
                       </p>
                       <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
                       <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
@@ -312,7 +312,7 @@ export default function BetreuungPage() {
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">648 €</span>
                     {" "}
-                    <span className="text-3xl font-extrabold text-[#ca8a04]">599 €</span>
+                    <span className="text-3xl font-extrabold text-[#ca8a04]">649 €</span>
                     <span className="text-sm text-muted">/ Monat</span>
                   </div>
                   <div className="mt-1.5 inline-flex items-center gap-1.5 rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
