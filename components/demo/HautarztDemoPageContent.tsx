@@ -87,7 +87,7 @@ const otherSpecialties = [
   },
 ];
 
-const trustPoints = [
+const practiceFeatures = [
   {
     icon: Heart,
     title: "Persönliche Betreuung",
@@ -110,10 +110,42 @@ const trustPoints = [
   },
 ];
 
-const aestheticServices = [
-  "Faltenbehandlung",
-  "Hautverjüngung",
-  "Medizinische Kosmetik",
+const focusPoints = [
+  {
+    icon: Heart,
+    text: "Ganzheitlicher Ansatz für gesunde Haut",
+  },
+  {
+    icon: Sparkles,
+    text: "Natürliche Ergebnisse mit medizinischem Anspruch",
+  },
+  {
+    icon: Shield,
+    text: "Vertrauensvolle Betreuung auf Augenhöhe",
+  },
+];
+
+const practiceHighlights = [
+  {
+    icon: User,
+    title: "Erfahrene Betreuung",
+    description: "Fachliche Kompetenz mit Zeit für Ihr Anliegen.",
+  },
+  {
+    icon: Star,
+    title: "Moderne Technologie",
+    description: "Innovative Verfahren für präzise Diagnostik.",
+  },
+  {
+    icon: Heart,
+    title: "Individuelle Behandlung",
+    description: "Therapiekonzepte passend zu Ihrer Haut.",
+  },
+  {
+    icon: Calendar,
+    title: "Gut organisierte Abläufe",
+    description: "Effiziente Terminplanung ohne unnötige Wartezeiten.",
+  },
 ];
 
 const testimonials = [
@@ -317,108 +349,109 @@ export function HautarztDemoPageContent() {
           </div>
         </section>
 
-        <section className="border-y border-[#5a6e5a]/10 bg-[#ebe8e2] py-8">
-          <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
-            {trustPoints.map(({ icon: Icon, title, description }) => (
-              <div key={title} className="flex items-center gap-4">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white text-[#5a6e5a] shadow-sm">
-                  <Icon className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="text-sm font-bold text-[#3d4a3d]">{title}</p>
-                  <p className="text-xs text-[#3d4a3d]/60">{description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section id="praxis" className="bg-white py-16 lg:py-20">
+        <section id="praxis" className="bg-[#f9f9f7] py-16 lg:py-20">
           <div className="mx-auto max-w-6xl px-4 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
+            <div className="grid gap-6 lg:grid-cols-12 lg:items-stretch lg:gap-5">
               <div className="flex flex-col justify-center lg:col-span-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0946b]">
-                  Unsere Praxis
+                  Über die Praxis
                 </p>
                 <h2
-                  className={`${playfair.className} mt-3 text-2xl font-semibold text-[#3d4a3d] sm:text-3xl`}
+                  className={`${playfair.className} mt-3 text-2xl font-semibold leading-snug text-[#3d4a3d] sm:text-3xl`}
                 >
-                  Individuelle Medizin statt Standardlösungen
+                  Moderne Dermatologie mit persönlicher Betreuung
                 </h2>
-                <p className="mt-3 rounded-lg border border-[#5a6e5a]/20 bg-[#f5f3ef] px-3 py-2 text-xs font-medium text-[#3d4a3d]/75">
-                  Beispielprofil – Name und dargestellte Person sind fiktiv.
-                </p>
                 <p className="mt-4 text-sm leading-relaxed text-[#3d4a3d]/65">
                   In unserer modernen Praxis verbinden wir fachliche Expertise mit
                   Zeit für das Gespräch — damit Sie verstehen, welche Behandlung
                   für Ihre Haut am sinnvollsten ist.
                 </p>
+                <p className="mt-4 rounded-xl border border-[#5a6e5a]/15 bg-[#f5f3ef] px-3 py-2 text-xs font-medium text-[#3d4a3d]/75">
+                  Beispielprofil – Name und dargestellte Person sind fiktiv.
+                </p>
+
+                <ul className="mt-6 space-y-4">
+                  {practiceFeatures.map(({ icon: Icon, title, description }) => (
+                    <li key={title} className="flex gap-3">
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#f0f0ee] text-[#5a6e5a]">
+                        <Icon className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                      <div>
+                        <p className="text-sm font-bold text-[#3d4a3d]">{title}</p>
+                        <p className="mt-0.5 text-xs leading-relaxed text-[#3d4a3d]/60">
+                          {description}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+
                 <a
                   href="#praxis"
-                  className="mt-6 inline-flex w-fit items-center gap-2 rounded-md border border-[#5a6e5a] px-5 py-3 text-sm font-semibold text-[#5a6e5a] transition-colors hover:bg-[#5a6e5a]/5"
+                  className="mt-8 inline-flex w-fit items-center gap-2 rounded-xl bg-[#5a6e5a] px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
                 >
                   Mehr über uns
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
 
-              <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-[#5a6e5a]/10 lg:col-span-4">
+              <div className="relative min-h-[360px] overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#5a6e5a]/10 lg:col-span-4 lg:min-h-[520px]">
                 <Image
                   src="/beispiele/hautarzt-empfang.png"
                   alt="Beispielbild: Empfangsbereich einer fiktiven Hautarztpraxis"
-                  width={600}
-                  height={800}
-                  className="h-full min-h-[320px] w-full object-cover lg:min-h-[420px]"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
 
-              <div
-                id="aesthetik"
-                className="grid overflow-hidden rounded-xl shadow-md ring-1 ring-[#5a6e5a]/10 lg:col-span-4 lg:grid-cols-2"
-              >
-                <div className="flex flex-col justify-center bg-[#5a6e5a] p-6 text-white lg:p-8">
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#d4c4a8]">
-                    Ästhetische Dermatologie
+              <div className="flex flex-col gap-5 lg:col-span-4">
+                <div
+                  id="aesthetik"
+                  className="rounded-2xl bg-[#5a6e5a] p-6 text-white shadow-sm lg:p-7"
+                >
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-[#d4c4a8]">
+                    Fokus auf das Wesentliche
                   </p>
-                  <h2
-                    className={`${playfair.className} mt-3 text-xl font-semibold leading-snug`}
+                  <h3
+                    className={`${playfair.className} mt-3 text-xl font-semibold leading-snug sm:text-2xl`}
                   >
-                    Natürliche Ergebnisse. Sichtbare Frische.
-                  </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-white/80">
-                    Von Faltenbehandlung bis Hautverjüngung — individuell
-                    abgestimmt auf Ihre Wünsche und Ihren Hauttyp.
-                  </p>
-                  <ul
-                    id="aesthetik-leistungen"
-                    className="mt-4 space-y-2 border-t border-white/15 pt-4"
-                  >
-                    {aestheticServices.map((service) => (
-                      <li
-                        key={service}
-                        className="flex items-center gap-2 text-sm text-white/90"
-                      >
-                        <Sparkles className="h-3.5 w-3.5 shrink-0 text-[#d4c4a8]" aria-hidden="true" />
-                        {service}
+                    Ihre Haut. Ihre Gesundheit. Unser Anspruch.
+                  </h3>
+                  <ul className="mt-5 space-y-3 border-t border-white/15 pt-5">
+                    {focusPoints.map(({ icon: Icon, text }) => (
+                      <li key={text} className="flex items-start gap-3 text-sm text-white/90">
+                        <Icon className="mt-0.5 h-4 w-4 shrink-0 text-[#d4c4a8]" aria-hidden="true" />
+                        {text}
                       </li>
                     ))}
                   </ul>
-                  <a
-                    href="#aesthetik-leistungen"
-                    className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-[#b0946b] px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                  >
-                    Mehr erfahren
-                  </a>
                 </div>
-                <div className="relative min-h-[240px] lg:min-h-full">
+
+                <div className="relative min-h-[220px] flex-1 overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#5a6e5a]/10 lg:min-h-[240px]">
                   <Image
-                    src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80"
-                    alt="Beispielbild: Gesunde Haut"
+                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80"
+                    alt="Beispielbild: Behandlungsraum einer fiktiven Hautarztpraxis"
                     fill
-                    sizes="(max-width: 1024px) 100vw, 250px"
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>
               </div>
+            </div>
+
+            <div className="mt-12 grid gap-8 border-t border-[#5a6e5a]/10 pt-10 sm:grid-cols-2 lg:grid-cols-4">
+              {practiceHighlights.map(({ icon: Icon, title, description }) => (
+                <div key={title} className="text-center">
+                  <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-[#f0f0ee] text-[#5a6e5a]">
+                    <Icon className="h-5 w-5" aria-hidden="true" />
+                  </span>
+                  <p className="mt-3 text-sm font-bold text-[#3d4a3d]">{title}</p>
+                  <p className="mx-auto mt-2 max-w-[220px] text-xs leading-relaxed text-[#3d4a3d]/60">
+                    {description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
