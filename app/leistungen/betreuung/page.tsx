@@ -310,7 +310,7 @@ export default function BetreuungPage() {
                 </div>
                 <div className="text-center md:text-right shrink-0 flex flex-col items-center md:items-end">
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">648 €</span>
+                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">698 €</span>
                     {" "}
                     <span className="text-3xl font-extrabold text-[#ca8a04]">649 €</span>
                     <span className="text-sm text-muted">/ Monat</span>
