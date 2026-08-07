@@ -273,13 +273,12 @@ export function HautarztDemoPageContent() {
             </div>
 
             <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(61,74,61,0.15)] ring-1 ring-[#5a6e5a]/10">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_24px_60px_rgba(61,74,61,0.15)] ring-1 ring-[#5a6e5a]/10">
                 <Image
-                  src="/beispiele/hautarzt-hero.png"
+                  src="/beispiele/hautarzt-hero.jpg"
                   alt="Fiktive Hautärztin in moderner dermatologischer Praxis – Webdesign-Beispiel"
-                  width={1024}
-                  height={682}
-                  className="aspect-[4/5] w-full object-cover object-[35%_20%]"
+                  fill
+                  className="object-cover object-[35%_20%]"
                   sizes="(max-width: 1024px) 100vw, 480px"
                   priority
                 />
