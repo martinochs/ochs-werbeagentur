@@ -285,10 +285,11 @@ export function PricingSection() {
             {/* Left Side: Title & Features */}
             <div>
               <h3 className="text-2xl font-bold leading-tight text-navy">
-                Monatliche Betreuung <br />für Ihre Praxis
+                Monatliche Betreuung
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                Wir halten Ihre Website aktuell und optimieren Ihre Google-Anzeigen kontinuierlich – mit festen monatlichen Preisen.
+                Optional nach Erstellung Ihrer Website oder Google-Ads-Einrichtung — mit festen
+                monatlichen Preisen und persönlicher Betreuung.
               </p>
               
               <ul className="mt-8 space-y-6">

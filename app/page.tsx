@@ -1,5 +1,6 @@
 import { AboutSection } from "@/components/AboutSection";
 import { ChallengesBenefitsSection } from "@/components/ChallengesBenefitsSection";
+import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { FaqSection } from "@/components/FaqSection";
 import { Footer } from "@/components/Footer";
 import { GoogleAdsSection } from "@/components/GoogleAdsSection";
@@ -8,8 +9,8 @@ import { Hero } from "@/components/Hero";
 import { PortfolioExpertSection } from "@/components/PortfolioExpertSection";
 import { PricingSection } from "@/components/PricingSection";
 import { ProcessSection } from "@/components/ProcessSection";
-import { ReviewsSection } from "@/components/ReviewsSection";
 import { TrustBarSection } from "@/components/TrustBarSection";
+import { WebsiteFeaturesSection } from "@/components/WebsiteFeaturesSection";
 import { faqItems } from "@/lib/content/faq";
 import { siteConfig } from "@/lib/seo/config";
 import {
@@ -48,14 +49,15 @@ export default function HomePage() {
       <main>
         <Hero />
         <TrustBarSection />
+        <AboutSection />
         <ChallengesBenefitsSection />
-        <ProcessSection />
+        <WebsiteFeaturesSection />
         <PortfolioExpertSection />
+        <ProcessSection />
         <GoogleAdsSection />
-        <ReviewsSection />
         <PricingSection />
         <FaqSection items={homeFaqItems} showMoreLink={true} />
-        <AboutSection />
+        <ClosingCtaSection />
       </main>
       <Footer />
     </>

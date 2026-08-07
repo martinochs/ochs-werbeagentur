@@ -34,6 +34,9 @@ export function Hero() {
             <p className="mt-5 text-[15px] leading-relaxed text-muted max-w-lg">
               Individuell entwickelt für Arzt- und Zahnarztpraxen – mit Online-Terminbuchung, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
             </p>
+            <p className="mt-3 text-sm font-medium text-navy">
+              Bundesweit für Arzt- und Zahnarztpraxen – persönlich betreut aus Mannheim.
+            </p>
             <ul className="mt-8 space-y-4">
               {highlights.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">

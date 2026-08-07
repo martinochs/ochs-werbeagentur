@@ -1,9 +1,7 @@
-import { ArrowRight, Check, ExternalLink, Mail, Phone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { portfolioExamples } from "@/lib/content/portfolio-examples";
-import { siteConfig } from "@/lib/seo/config";
 
 
 
@@ -106,14 +104,6 @@ function ExamplePreview({
   return <WebsiteMockup title={title} gradient={gradient} />;
 }
 
-const traits = [
-  "Persönliche Betreuung von Anfang bis Launch",
-  "Spezialisiert auf Arzt- und Zahnarztpraxen",
-  "Transparente Festpreise ohne versteckte Kosten",
-];
-
-
-
 function ExampleCard({
   title,
   subtitle,
@@ -156,8 +146,6 @@ function ExampleCard({
 }
 
 export function PortfolioExpertSection() {
-  const { contactPerson, phone, phoneDisplay, email } = siteConfig;
-
   return (
     <section
       id="designbeispiele"
@@ -178,6 +166,9 @@ export function PortfolioExpertSection() {
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted">
               Individuelle Design-Konzepte — modern, vertrauensvoll und auf Ihre
               Fachrichtung zugeschnitten.
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
+              Fiktive Designkonzepte zur Veranschaulichung – keine echten Kundenprojekte.
             </p>
           </div>
           <div className="scrollbar-hide -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
