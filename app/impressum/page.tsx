@@ -39,11 +39,6 @@ export default function ImpressumPage() {
                 Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: <br />
                 DE XXX XXX XXX {/* Bitte hier die echte USt-ID eintragen */}
               </p>
-
-              <h2 className="mt-8 text-xl font-bold text-navy">Verbraucher&shy;streit&shy;beilegung/Universal&shy;schlichtungs&shy;stelle</h2>
-              <p className="mt-2">
-                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-              </p>
             </div>
           </div>
         </section>
