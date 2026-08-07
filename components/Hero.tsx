@@ -12,8 +12,8 @@ const highlights = [
     text: "Patienten buchen einfach, schnell und wann es ihnen passt." 
   },
   { 
-    title: "Mehr passende Patienten und Vertrauen",
-    text: "Moderner Auftritt bringt Ihre Praxis bei Google nach vorne." 
+    title: "Passende Patienten gewinnen und Vertrauen schaffen",
+    text: "Moderner Auftritt und gezielte SEO verbessern Ihre digitale Sichtbarkeit." 
   },
 ];
 
