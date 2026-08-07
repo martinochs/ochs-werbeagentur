@@ -34,7 +34,7 @@ export const siteConfig: SiteConfig = {
   locale: "de_DE",
   phone: null,
   phoneDisplay: null,
-  email: null,
+  email: "info@ochsdigital.de",
   address: {
     street: "Glücksteinallee 7",
     city: "Mannheim",

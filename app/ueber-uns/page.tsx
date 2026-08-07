@@ -270,7 +270,7 @@ export default function UeberUnsPage() {
                     </div>
                     <div>
                       <p className="text-xs text-white/60 uppercase tracking-wider mb-1">E-Mail</p>
-                      <p className="text-base font-medium">{siteConfig.email || "info@ochsdigital.de"}</p>
+                      <p className="text-base font-medium">{siteConfig.email}</p>
                     </div>
                   </div>
 

@@ -30,8 +30,19 @@ export default function ImpressumPage() {
 
               <h2 className="mt-8 text-xl font-bold text-navy">Kontakt</h2>
               <p className="mt-2">
-                Telefon: {siteConfig.phoneDisplay} <br />
-                E-Mail: {siteConfig.email}
+                {siteConfig.phoneDisplay && (
+                  <>
+                    Telefon: {siteConfig.phoneDisplay}
+                    <br />
+                  </>
+                )}
+                E-Mail:{" "}
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="text-navy underline-offset-2 hover:underline"
+                >
+                  {siteConfig.email}
+                </a>
               </p>
 
               <h2 className="mt-8 text-xl font-bold text-navy">Umsatzsteuer-ID</h2>
