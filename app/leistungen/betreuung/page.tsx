@@ -127,14 +127,14 @@ export default function BetreuungPage() {
                           Laufende SEO-Betreuung
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Kontinuierliche Optimierung für Top-Platzierungen.
+                          Rankings kontinuierlich beobachten und optimieren.
                         </p>
                       </div>
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil <br />
-                      und bauen Ihre Sichtbarkeit Monat für Monat weiter aus.
+                      Suchmaschinen ändern sich ständig. Wir beobachten Ihre Rankings kontinuierlich <br />
+                      und optimieren Ihre Sichtbarkeit Monat für Monat.
                     </p>
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">

@@ -23,8 +23,8 @@ export default function SeoPage() {
               Gefunden werden, wenn es darauf ankommt.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Lokale SEO & KI-Sichtbarkeit für Arzt- und Zahnarztpraxen. Wir sorgen dafür, 
-              dass Patienten in Ihrer Region Sie bei Google und in modernen KI-Suchen ganz oben finden.
+              Lokale SEO & KI-Sichtbarkeit für Arzt- und Zahnarztpraxen. Wir verbessern Ihre
+              Sichtbarkeit, damit Patienten in Ihrer Region Sie bei Google und in modernen KI-Suchen leichter finden können.
             </p>
           </div>
         </section>
@@ -63,8 +63,8 @@ export default function SeoPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir optimieren Ihre Website und Ihr Google-Profil, damit Sie bei lokalen <br />
-                      Suchanfragen und relevanten Behandlungen optimal ranken.
+                      Wir optimieren Ihre Website und Ihr Google-Profil, um Ihre Chancen auf <br />
+                      relevante lokale Platzierungen bei passenden Suchanfragen zu erhöhen.
                     </p>
 
                     <ul className="mt-6 space-y-4">
@@ -120,8 +120,8 @@ export default function SeoPage() {
                       <div className="flex items-start gap-3">
                         <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#1d6fd8]" aria-hidden="true" />
                         <div>
-                          <p className="text-sm font-bold text-navy">Lokal dominant</p>
-                          <p className="text-xs text-muted">Werden Sie die Nr. 1 in Ihrer Stadt oder Region.</p>
+                          <p className="text-sm font-bold text-navy">Lokale Sichtbarkeit</p>
+                          <p className="text-xs text-muted">Chancen auf relevante lokale Platzierungen erhöhen.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -150,14 +150,14 @@ export default function SeoPage() {
                           Laufende SEO-Betreuung
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Kontinuierliche Optimierung für Top-Platzierungen.
+                          Rankings kontinuierlich beobachten und optimieren.
                         </p>
                       </div>
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Suchmaschinen ändern sich ständig. Wir halten Ihre Rankings stabil <br />
-                      und bauen Ihre Sichtbarkeit Monat für Monat weiter aus.
+                      Suchmaschinen ändern sich ständig. Wir beobachten Ihre Rankings kontinuierlich <br />
+                      und optimieren Ihre Sichtbarkeit Monat für Monat.
                     </p>
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
@@ -239,9 +239,9 @@ export default function SeoPage() {
                         <TrendingUp className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
                       </div>
                       <div>
-                        <h4 className="text-base font-bold text-[#0a2540]">Langfristig dominieren?</h4>
+                        <h4 className="text-base font-bold text-[#0a2540]">Langfristig sichtbar bleiben?</h4>
                         <p className="mt-1 text-[13px] text-muted">
-                          Kombinieren Sie das Fundament mit laufender Betreuung für Top-Rankings.
+                          Kombinieren Sie das Fundament mit laufender Betreuung für nachhaltige Sichtbarkeit.
                         </p>
                       </div>
                     </div>
@@ -266,8 +266,8 @@ export default function SeoPage() {
                   <Star className="h-6 w-6 fill-current" strokeWidth={1} aria-hidden="true" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-base font-bold text-navy">Maximaler Erfolg mit der richtigen Kombination.</h4>
-                  <p className="text-[13px] text-muted mt-1">Website + SEO + Google Ads = Omnipräsenz in Ihrer Region.</p>
+                  <h4 className="text-base font-bold text-navy">Stärkere Präsenz mit der richtigen Kombination.</h4>
+                  <p className="text-[13px] text-muted mt-1">Website + SEO + Google Ads = Sichtbarkeit in Ihrer Region gezielt ausbauen.</p>
                 </div>
                 <div className="text-center md:text-right shrink-0 flex flex-col items-center md:items-end">
                   <div className="flex items-center gap-1.5">
