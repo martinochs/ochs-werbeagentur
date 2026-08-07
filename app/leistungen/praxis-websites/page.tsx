@@ -159,7 +159,7 @@ export default function PraxisWebsitesPage() {
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
                       {[
-                        { title: "Regelmäßige Updates", desc: "System- und Plugin-Updates für höchste Sicherheit." },
+                        { title: "Regelmäßige Updates", desc: "Technische Updates und Sicherheitsaktualisierungen." },
                         { title: "Tägliche Backups", desc: "Automatische Sicherungen Ihrer gesamten Website." },
                         { title: "Sicherheitschecks", desc: "Proaktiver Schutz vor Malware und Hackerangriffen." },
                         { title: "Inhaltliche Änderungen", desc: "Wir passen Texte, Bilder oder Öffnungszeiten für Sie an." },
