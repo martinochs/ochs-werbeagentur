@@ -397,11 +397,11 @@ export function HautarztDemoPageContent() {
 
               <div className="relative min-h-[360px] overflow-hidden rounded-2xl shadow-sm ring-1 ring-[#5a6e5a]/10 lg:col-span-4 lg:min-h-[520px]">
                 <Image
-                  src="/beispiele/hautarzt-empfang.png"
+                  src="/beispiele/hautarzt-empfang.jpg"
                   alt="Beispielbild: Empfangsbereich einer fiktiven Hautarztpraxis"
                   fill
                   sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover"
+                  className="object-cover object-[52%_42%]"
                 />
               </div>
 
