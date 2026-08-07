@@ -141,26 +141,25 @@ export function GoogleAdsSection({ hideButton = false }: { hideButton?: boolean 
                 </p>
               </div>
 
-              <ol className="mt-10 flex flex-col gap-8 list-none lg:flex-row lg:items-start lg:gap-0">
-                {steps.flatMap((step, index) => {
-                  const items = [
-                    <li key={step.title} className="flex-1 text-center">
+              <ol className="mt-10 flex list-none flex-col gap-8 lg:flex-row lg:items-start lg:gap-0">
+                {steps.map((step, index) => (
+                  <li
+                    key={step.title}
+                    className="flex flex-1 flex-col items-center text-center lg:flex-row lg:items-start"
+                  >
+                    <div className="flex-1">
                       <StepContent {...step} />
-                    </li>,
-                  ];
-                  if (index < steps.length - 1) {
-                    items.push(
-                      <li
-                        key={`arrow-${index}`}
-                        className="flex justify-center lg:shrink-0 lg:items-start lg:px-1 lg:pt-3"
+                    </div>
+                    {index < steps.length - 1 && (
+                      <span
+                        className="mt-4 flex justify-center lg:mt-0 lg:shrink-0 lg:items-start lg:px-1 lg:pt-3"
                         aria-hidden="true"
                       >
                         <ArrowRight className="h-4 w-4 rotate-90 text-navy/25 lg:rotate-0" />
-                      </li>,
-                    );
-                  }
-                  return items;
-                })}
+                      </span>
+                    )}
+                  </li>
+                ))}
               </ol>
 
               <div className="mt-10 flex flex-col gap-6 border-t border-navy/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
