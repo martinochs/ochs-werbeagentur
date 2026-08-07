@@ -39,12 +39,22 @@ function getHref(pathname: string, path: string) {
   return pathname === "/" ? path : `/${path}`;
 }
 
+const legalPagePaths = ["/impressum", "/datenschutz"];
+
+function isLegalPage(pathname: string): boolean {
+  return legalPagePaths.some(
+    (path) => pathname === path || pathname.startsWith(`${path}/`),
+  );
+}
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const showPromoBar = !isLegalPage(pathname);
 
   return (
     <div className="sticky top-0 z-50 flex flex-col">
+      {showPromoBar && (
       <div className="bg-[#166534] px-4 py-2.5 text-white">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-center gap-3 text-center sm:flex-row sm:gap-6 lg:justify-between">
           <div className="flex items-center gap-2 text-sm">
@@ -62,6 +72,7 @@ export function Header() {
           </Link>
         </div>
       </div>
+      )}
 
       <header className="border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 lg:px-8">
