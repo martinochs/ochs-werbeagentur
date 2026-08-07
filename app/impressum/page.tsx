@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { siteConfig } from "@/lib/seo/config";
+import { formatRegisteredOffice, siteConfig } from "@/lib/seo/config";
 
 export const metadata = {
   title: "Impressum",
@@ -24,8 +24,7 @@ export default function ImpressumPage() {
               <p className="mt-2">
                 {siteConfig.contactPerson} <br />
                 {siteConfig.name} <br />
-                {siteConfig.address.street} <br />
-                {siteConfig.address.postalCode} {siteConfig.address.city}
+                Betriebssitz {formatRegisteredOffice()}
               </p>
 
               <h2 className="mt-8 text-xl font-bold text-navy">Kontakt</h2>

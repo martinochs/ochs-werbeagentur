@@ -7,7 +7,7 @@ import {
   datenschutzSections,
   datenschutzStand,
 } from "@/lib/content/datenschutz";
-import { formatAddress, siteConfig } from "@/lib/seo/config";
+import { formatRegisteredOffice, siteConfig } from "@/lib/seo/config";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung",
@@ -65,7 +65,7 @@ export default function DatenschutzPage() {
                       <br />
                       {contactPerson}
                       <br />
-                      {formatAddress()}
+                      {formatRegisteredOffice()}
                       <br />
                       Deutschland
                     </p>

@@ -1,4 +1,4 @@
-import { formatAddress } from "@/lib/seo/config";
+import { formatRegisteredOffice } from "@/lib/seo/config";
 
 export type DatenschutzSection = {
   id: string;
@@ -18,7 +18,7 @@ export const datenschutzSections: DatenschutzSection[] = [
       "Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie dieser Datenschutzerklärung.",
     ],
     bullets: [
-      `Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), ${formatAddress()}.`,
+      `Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), Betriebssitz ${formatRegisteredOffice()}.`,
       "Beim Besuch der Website werden technisch notwendige Server-Logdaten durch unseren Hosting-Anbieter Vercel verarbeitet.",
       "Wenn Sie das Formular „Kostenloses Erstgespräch“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
       "Wir setzen derzeit keine Analyse- oder Marketing-Tools ein und verwenden keine Cookies zu Tracking-Zwecken.",

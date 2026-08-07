@@ -1,7 +1,7 @@
 import { siteConfig } from "./config";
 
 export function localBusinessSchema() {
-  const { address, geo, phone, email, url, name, description, contactPerson } =
+  const { registeredOffice, geo, phone, email, url, name, description, contactPerson } =
     siteConfig;
 
   return {
@@ -19,11 +19,11 @@ export function localBusinessSchema() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: address.street,
-      addressLocality: address.city,
-      addressRegion: address.region,
-      postalCode: address.postalCode,
-      addressCountry: address.country,
+      streetAddress: registeredOffice.street,
+      addressLocality: registeredOffice.city,
+      addressRegion: registeredOffice.region,
+      postalCode: registeredOffice.postalCode,
+      addressCountry: registeredOffice.country,
     },
     geo: {
       "@type": "GeoCoordinates",

@@ -16,6 +16,13 @@ export type SiteConfig = {
     postalCode: string;
     country: string;
   };
+  registeredOffice: {
+    street: string;
+    city: string;
+    region: string;
+    postalCode: string;
+    country: string;
+  };
   geo: {
     latitude: number;
     longitude: number;
@@ -42,6 +49,13 @@ export const siteConfig: SiteConfig = {
     postalCode: "68163",
     country: "DE",
   },
+  registeredOffice: {
+    street: "Römerstraße 1",
+    city: "Mannheim",
+    region: "Baden-Württemberg",
+    postalCode: "68259",
+    country: "DE",
+  },
   geo: {
     latitude: 49.3694,
     longitude: 8.4322,
@@ -64,6 +78,11 @@ export const primaryKeyword = "Praxis-Website Mannheim";
 export function formatAddress(config: SiteConfig = siteConfig): string {
   const { address } = config;
   return `${address.street}, ${address.postalCode} ${address.city}`;
+}
+
+export function formatRegisteredOffice(config: SiteConfig = siteConfig): string {
+  const { registeredOffice } = config;
+  return `${registeredOffice.street}, ${registeredOffice.postalCode} ${registeredOffice.city}`;
 }
 
 export function mapsUrl(config: SiteConfig = siteConfig): string {
