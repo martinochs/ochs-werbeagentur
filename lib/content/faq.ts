@@ -76,7 +76,7 @@ export const faqItems = [
 
     answer:
 
-      "Ja. Datenschutz, Impressum, Cookie-Hinweise und sichere Formulare sind Standard. Hosting erfolgt in Deutschland — damit erfüllen Sie die Anforderungen an medizinische Praxis-Websites.",
+      "Ja. Datenschutz, Impressum, Cookie-Hinweise und sichere Formulare sind Standard. Das Hosting Ihrer Praxis-Website erfolgt in Deutschland — damit erfüllen Sie die Anforderungen an medizinische Praxis-Websites.",
 
   },
 

@@ -4,7 +4,7 @@ const trustItems = [
   { icon: User, label: "Spezialisiert auf Webdesign für Arzt- & Zahnarztpraxen" },
   { icon: Heart, label: "Persönliche Betreuung" },
   { icon: ShieldCheck, label: "DSGVO-konform & sicher" },
-  { icon: Cloud, label: "Hosting in Deutschland" },
+  { icon: Cloud, label: "Hosting Ihrer Praxis-Website in Deutschland" },
 ];
 
 export function TrustBarSection() {
