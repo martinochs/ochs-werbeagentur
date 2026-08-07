@@ -74,7 +74,7 @@ const highlights = [
 
   "Datenschutzfreundlich & mobil optimiert",
 
-  "Festpreis nach kostenloser Analyse",
+  "Transparentes Festpreis-Angebot nach dem Erstgespräch",
 
 ];
 
