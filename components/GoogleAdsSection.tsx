@@ -23,7 +23,7 @@ const steps = [
   {
     icon: BarChart3,
     title: "Tracking & Optimierung",
-    text: "Wir messen Ergebnisse, optimieren laufend und sorgen für maximale Leistung und Effizienz.",
+    text: "Wir messen die Ergebnisse und optimieren Kampagnen kontinuierlich anhand der gewonnenen Daten.",
   },
   {
     icon: TrendingUp,
