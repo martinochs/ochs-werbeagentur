@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
-import { siteConfig } from "@/lib/seo/config";
+import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
 import { ArrowRight, Check, Phone, Mail, MapPin, Target, Lightbulb, Users, MessagesSquare, Settings, CheckCircle2, Info } from "lucide-react";
 
 export const metadata = {
@@ -279,8 +279,16 @@ export default function UeberUnsPage() {
                       <MapPin className="h-5 w-5 text-[#4ade80]" />
                     </div>
                     <div>
-                      <p className="text-xs text-white/60 uppercase tracking-wider mb-1">Standort</p>
-                      <p className="text-base font-medium">{siteConfig.address.city}</p>
+                      <p className="text-xs text-white/60 uppercase tracking-wider mb-1">Büro</p>
+                      <p className="text-base font-medium">{formatAddress()}</p>
+                      <a
+                        href={mapsUrl()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-block text-sm text-[#4ade80] underline-offset-2 hover:underline"
+                      >
+                        In Google Maps öffnen
+                      </a>
                     </div>
                   </div>
                 </div>

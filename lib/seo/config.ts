@@ -36,15 +36,15 @@ export const siteConfig: SiteConfig = {
   phoneDisplay: null,
   email: null,
   address: {
-    street: "Römerstraße 1",
+    street: "Glücksteinallee 7",
     city: "Mannheim",
     region: "Baden-Württemberg",
-    postalCode: "68259",
+    postalCode: "68163",
     country: "DE",
   },
   geo: {
-    latitude: 49.4893,
-    longitude: 8.5218,
+    latitude: 49.3694,
+    longitude: 8.4322,
   },
   keywords: [
     "Website für Ärzte Mannheim",

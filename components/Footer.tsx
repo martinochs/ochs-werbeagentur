@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { siteConfig } from "@/lib/seo/config";
+import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
 
 export function Footer() {
-  const { name, address } = siteConfig;
+  const { name } = siteConfig;
 
   return (
     <footer id="footer" className="scroll-mt-28 border-t border-border bg-navy text-white">
@@ -11,11 +11,19 @@ export function Footer() {
         <div className="flex items-start gap-3 text-sm text-white/80">
           <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-white/60" aria-hidden="true" />
           <div>
-            <strong className="font-semibold text-white">Firmensitz in Mannheim</strong>
+            <strong className="font-semibold text-white">Büroadresse</strong>
+            <p className="mt-1.5 text-white">{formatAddress()}</p>
             <p className="mt-1.5 max-w-xl leading-relaxed">
-              Am Firmensitz findet kein Kundenverkehr statt. Persönliche Gespräche erfolgen nach
-              vorheriger Vereinbarung in einem Besprechungsbüro in Mannheim.
+              Termine nur nach Vereinbarung.
             </p>
+            <a
+              href={mapsUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block text-sm font-medium text-white/90 underline-offset-2 hover:underline"
+            >
+              In Google Maps öffnen
+            </a>
           </div>
         </div>
 
@@ -29,7 +37,7 @@ export function Footer() {
             </Link>
           </nav>
           <p>
-            © {new Date().getFullYear()} {name} · {address.city}, Deutschland
+            © {new Date().getFullYear()} {name} · Mannheim, Deutschland
           </p>
         </div>
       </div>
