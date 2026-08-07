@@ -41,7 +41,7 @@ const benefits = [
   {
     icon: CheckCircle2,
     title: "Moderner Auftritt und bessere Google-Sichtbarkeit",
-    text: "Ein professionelles Erscheinungsbild und SEO bringen Ihre Praxis nach vorne.",
+    text: "Ein professioneller Auftritt und eine saubere SEO-Grundlage verbessern Ihre Chancen, bei relevanten Suchanfragen gefunden zu werden.",
   },
 ];
 
