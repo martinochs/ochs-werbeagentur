@@ -159,7 +159,7 @@ export default function PraxisWebsitesPage() {
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
                       {[
-                        { title: "Regelmäßige Updates", desc: "Technische Updates und Sicherheitsaktualisierungen." },
+                        { title: "Technische Updates und Sicherheitsaktualisierungen", desc: "Für dauerhafte Stabilität und Sicherheit Ihrer Website." },
                         { title: "Tägliche Backups", desc: "Automatische Sicherungen Ihrer gesamten Website." },
                         { title: "Sicherheitschecks", desc: "Proaktiver Schutz vor Malware und Hackerangriffen." },
                         { title: "Inhaltliche Änderungen", desc: "Wir passen Texte, Bilder oder Öffnungszeiten für Sie an." },
@@ -247,7 +247,7 @@ export default function PraxisWebsitesPage() {
                         <Check className="h-4 w-4 text-[#1d6fd8]" /> Website immer auf dem neuesten Stand
                       </li>
                       <li className="flex items-center gap-2 text-[13px] text-navy">
-                        <Check className="h-4 w-4 text-[#1d6fd8]" /> Höchste Sicherheit durch Updates & Backups
+                        <Check className="h-4 w-4 text-[#1d6fd8]" /> Technische Updates und Sicherheitsaktualisierungen
                       </li>
                       <li className="flex items-center gap-2 text-[13px] text-navy">
                         <Check className="h-4 w-4 text-[#1d6fd8]" /> Wir übernehmen alle inhaltlichen Änderungen

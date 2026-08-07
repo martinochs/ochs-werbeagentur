@@ -381,7 +381,7 @@ export function PricingSection() {
                   <div className="mt-4 lg:ml-16 rounded-xl bg-white lg:bg-surface p-4 text-[13px] text-muted border border-border lg:border-none">
                     <span className="mb-2 block font-semibold text-navy">Enthaltene Leistungen:</span>
                     <ul className="space-y-1.5">
-                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Updates</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Technische Updates und Sicherheitsaktualisierungen</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Backups</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Sicherheitschecks</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> kleinere Änderungen</li>

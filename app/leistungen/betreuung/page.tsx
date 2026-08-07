@@ -70,7 +70,7 @@ export default function BetreuungPage() {
 
                     <ul className="mt-6 space-y-4">
                       {[
-                        { title: "Regelmäßige Updates", desc: "Technische Updates und Sicherheitsaktualisierungen." },
+                        { title: "Technische Updates und Sicherheitsaktualisierungen", desc: "Für dauerhafte Stabilität und Sicherheit Ihrer Website." },
                         { title: "Tägliche Backups", desc: "Automatische Sicherungen Ihrer gesamten Website." },
                         { title: "Sicherheitschecks", desc: "Proaktiver Schutz vor Malware und Ausfällen." },
                         { title: "Inhaltliche Änderungen", desc: "Wir passen Texte, Bilder oder Öffnungszeiten für Sie an." },
