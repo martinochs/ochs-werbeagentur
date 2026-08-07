@@ -51,6 +51,7 @@ type Package = {
   badge: string | null;
   linkHref: string;
   linkLabel: string;
+  showAdCredit?: boolean;
 };
 
 const themes = {
@@ -140,6 +141,7 @@ const packages: Package[] = [
     badge: null,
     linkHref: "/leistungen/google-ads",
     linkLabel: "Mehr zu Google Ads",
+    showAdCredit: true,
   },
   {
     title: "Praxis-Wachstumspaket Website + Google Ads",
@@ -191,6 +193,23 @@ function PricingFooter({ pkg }: { pkg: Package }) {
           Sie sparen {pkg.savings}
         </div>
       </div>
+
+      {pkg.showAdCredit && (
+        <div className="mt-4 rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-4">
+          <div className="flex items-start gap-3">
+            <Gift className="mt-0.5 h-5 w-5 shrink-0 text-[#1d6fd8]" strokeWidth={2} aria-hidden="true" />
+            <div>
+              <p className="text-[13px] font-bold text-navy">Bis zu 4.000 € Google-Werbeguthaben*</p>
+              <p className="mt-0.5 text-[12px] text-muted">Für berechtigte neue Google-Ads-Konten.</p>
+            </div>
+          </div>
+          <div className="mt-3 border-t border-[#bfdbfe] pt-3">
+            <p className="text-[11px] leading-relaxed text-muted">
+              * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
+            </p>
+          </div>
+        </div>
+      )}
 
       <a
         href={pkg.linkHref}
@@ -329,24 +348,6 @@ export function PricingSection() {
                   </div>
                 </li>
               </ul>
-
-              <div className="mt-8 rounded-2xl bg-[#eff6ff] p-4">
-                <div className="flex items-start gap-3">
-                  <Gift className="mt-0.5 h-5 w-5 shrink-0 text-[#1d6fd8]" strokeWidth={2} aria-hidden="true" />
-                  <div>
-                    <h4 className="text-[13px] font-bold text-navy">Bis zu 4.000 € Google-Werbeguthaben*</h4>
-                    <p className="mt-0.5 text-[12px] text-muted">Für neue Google-Ads-Konten.</p>
-                    <a href="/leistungen/google-ads" className="mt-1 inline-flex items-center gap-1 text-[12px] font-semibold text-[#1d6fd8] hover:underline">
-                      Mehr zu Google Ads <ArrowRight className="h-3 w-3" aria-hidden="true" />
-                    </a>
-                  </div>
-                </div>
-                <div className="mt-3 border-t border-[#bfdbfe] pt-3">
-                  <p className="text-[11px] leading-relaxed text-muted">
-                    * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
-                  </p>
-                </div>
-              </div>
             </div>
 
             {/* Right Side: Table */}
