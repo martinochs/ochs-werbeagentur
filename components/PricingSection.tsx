@@ -111,7 +111,7 @@ const packages: Package[] = [
     features: [
       "Individuelles Design",
       "Online-Terminbuchung integriert",
-      "DSGVO-konform & sicher",
+      "Datenschutzfreundliche technische Umsetzung",
       "SEO-Grundoptimierung",
       "Texte & Bilder auf Wunsch",
     ],

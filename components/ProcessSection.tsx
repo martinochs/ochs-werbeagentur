@@ -50,7 +50,7 @@ const steps = [
 
     title: "Umsetzung & Inhalte",
 
-    text: "Technische Umsetzung, SEO-Grundlagen und Unterstützung bei Texten und Bildern — DSGVO-konform.",
+    text: "Technische Umsetzung, SEO-Grundlagen und Unterstützung bei Texten und Bildern — datenschutzfreundlich mit deutschem Hosting, SSL und datensparsamen Einbindungen.",
 
   },
 
@@ -72,7 +72,7 @@ const highlights = [
 
   "Individuelles Design für Ihre Fachrichtung",
 
-  "DSGVO-konform & mobil optimiert",
+  "Datenschutzfreundlich & mobil optimiert",
 
   "Festpreis nach kostenloser Analyse",
 

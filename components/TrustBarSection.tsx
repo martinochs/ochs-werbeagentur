@@ -3,7 +3,7 @@ import { Cloud, Heart, ShieldCheck, User } from "lucide-react";
 const trustItems = [
   { icon: User, label: "Spezialisiert auf Webdesign für Arzt- & Zahnarztpraxen" },
   { icon: Heart, label: "Persönliche Betreuung" },
-  { icon: ShieldCheck, label: "DSGVO-konform & sicher" },
+  { icon: ShieldCheck, label: "Datenschutzfreundlich technisch umgesetzt" },
   { icon: Cloud, label: "Hosting Ihrer Praxis-Website in Deutschland" },
 ];
 

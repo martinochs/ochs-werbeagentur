@@ -72,11 +72,11 @@ export const faqItems = [
 
   {
 
-    question: "Ist die Praxis-Website DSGVO-konform?",
+    question: "Wie wird Datenschutz bei der Praxis-Website berücksichtigt?",
 
     answer:
 
-      "Ja. Datenschutz, Impressum, Cookie-Hinweise und sichere Formulare sind Standard. Das Hosting Ihrer Praxis-Website erfolgt in Deutschland — damit erfüllen Sie die Anforderungen an medizinische Praxis-Websites.",
+      "Wir setzen Ihre Website datenschutzfreundlich und technisch solide um: Hosting in Deutschland, SSL-Verschlüsselung, datensparsame Einbindungen sowie Impressum und Datenschutzerklärung als Basis. Die vollständige Rechtskonformität hängt zusätzlich von Ihren Inhalten, eingebundenen Drittanbietern (z. B. Terminbuchung, Tracking) und Ihren Praxisprozessen ab — dabei unterstützen wir Sie gerne.",
 
   },
 

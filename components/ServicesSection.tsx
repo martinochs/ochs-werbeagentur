@@ -26,7 +26,7 @@ const services = [
   {
     icon: Globe,
     title: "Hosting & Wartung",
-    text: "Sicheres Hosting Ihrer Praxis-Website in Deutschland mit regelmäßigen Updates, Backups und technischer Wartung — DSGVO-bewusst.",
+    text: "Sicheres Hosting Ihrer Praxis-Website in Deutschland mit regelmäßigen Updates, Backups und technischer Wartung — datenschutzfreundlich umgesetzt.",
   },
   {
     icon: Headphones,
