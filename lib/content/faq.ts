@@ -6,7 +6,7 @@ export const faqItems = [
 
     answer:
 
-      "Die Kosten hängen von Umfang und Funktionen ab — von einer kompakten Praxis-Website bis zur umfassenden Lösung mit SEO und laufender Betreuung. Unser Premium-Paket startet bei 4.749 €. Nach einer kostenlosen Analyse erhalten Sie ein transparentes Festpreis-Angebot ohne versteckte Kosten.",
+      "Die Kosten hängen von Umfang und Funktionen ab — von einer kompakten Praxis-Website bis zur umfassenden Lösung mit SEO und laufender Betreuung. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto. Nach einem kostenlosen Erstgespräch erhalten Sie ein transparentes Festpreis-Angebot ohne versteckte Kosten.",
 
   },
 
