@@ -3,7 +3,7 @@
 import { Calendar, Check, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const demoServices = [
+const defaultDemoServices = [
   "Kontrolluntersuchung",
   "Professionelle Zahnreinigung",
   "Erstberatung Implantologie",
@@ -18,9 +18,14 @@ const demoSlots = [
 type DemoAppointmentModalProps = {
   open: boolean;
   onClose: () => void;
+  services?: readonly string[];
 };
 
-export function DemoAppointmentModal({ open, onClose }: DemoAppointmentModalProps) {
+export function DemoAppointmentModal({
+  open,
+  onClose,
+  services = defaultDemoServices,
+}: DemoAppointmentModalProps) {
   const [selectedService, setSelectedService] = useState<string>("");
   const [selectedSlot, setSelectedSlot] = useState<string>("");
   const [completed, setCompleted] = useState(false);
@@ -116,7 +121,7 @@ export function DemoAppointmentModal({ open, onClose }: DemoAppointmentModalProp
               <div>
                 <p className="text-sm font-semibold text-[#0a2540]">Leistung wählen</p>
                 <div className="mt-3 space-y-2">
-                  {demoServices.map((service) => (
+                  {services.map((service) => (
                     <button
                       key={service}
                       type="button"
