@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} — ${siteConfig.tagline}`,
+    default: siteConfig.seoDefaultTitle,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} — Websites für Ärzte & Zahnärzte`,
+    title: siteConfig.seoDefaultTitle,
     description: siteConfig.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} — Websites für Ärzte & Zahnärzte`,
+    title: siteConfig.seoDefaultTitle,
     description: siteConfig.description,
   },
 };

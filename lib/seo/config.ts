@@ -3,6 +3,7 @@ export type SiteConfig = {
   legalName: string;
   contactPerson: string;
   tagline: string;
+  seoDefaultTitle: string;
   description: string;
   url: string;
   locale: string;
@@ -34,7 +35,8 @@ export const siteConfig: SiteConfig = {
   name: "OCHS Digital Consulting",
   legalName: "OCHS Digital Consulting",
   contactPerson: "Mariia Ochs",
-  tagline: "Websites für Ärzte & Zahnärzte in Mannheim",
+  tagline: "Praxis-Websites & Google Ads für Ärzte",
+  seoDefaultTitle: "Praxis-Websites & Google Ads für Ärzte | OCHS Digital",
   description:
     "Webdesign für Arzt- und Zahnarztpraxen in Mannheim: Moderne Praxis-Websites mit Online-Terminbuchung, SEO, Google Ads und persönlicher Betreuung durch Mariia Ochs — kostenloses Erstgespräch.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ochs-digital-consulting.vercel.app",

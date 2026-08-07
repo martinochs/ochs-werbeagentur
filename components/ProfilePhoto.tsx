@@ -21,8 +21,7 @@ export function ProfilePhoto({
   sizes = "(max-width: 1024px) 100vw, 480px",
 }: ProfilePhotoProps) {
   const imageAlt =
-    alt ??
-    `${siteConfig.contactPerson} — Praxis-Websites für Ärzte & Zahnärzte in Mannheim`;
+    alt ?? `${siteConfig.contactPerson} – ${siteConfig.name}`;
 
   return (
     <div className={`relative overflow-hidden ${className}`}>

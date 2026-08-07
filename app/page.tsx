@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AboutSection } from "@/components/AboutSection";
 import { ChallengesBenefitsSection } from "@/components/ChallengesBenefitsSection";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
@@ -27,8 +28,14 @@ const homeFaqItems = [
   faqItems[13], // Wie starten wir mit der Zusammenarbeit?
 ];
 
+export const metadata: Metadata = {
+  title: {
+    absolute: siteConfig.seoDefaultTitle,
+  },
+};
+
 export default function HomePage() {
-  const pageTitle = `${siteConfig.name} — ${siteConfig.tagline}`;
+  const pageTitle = siteConfig.seoDefaultTitle;
   const schemas = [
     localBusinessSchema(),
     webPageSchema(pageTitle, siteConfig.description),
