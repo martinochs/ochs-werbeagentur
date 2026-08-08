@@ -62,6 +62,26 @@ export const faqItems = [
 
   {
 
+    question: "Was ist im kostenlosen Google-Ads-Potenzialcheck enthalten?",
+
+    answer:
+
+      "Der kostenlose Potenzialcheck ist eine kurze Ersteinschätzung per E-Mail — keine vollständige Google-Ads-Analyse. Enthalten ist eine grobe Einschätzung, ob Google Ads grundsätzlich zu Ihrer Praxis passen kann, welche Leistungen oder Behandlungen sich besonders eignen könnten und eine erste Eindrucksbewertung von Nachfrage und Wettbewerb. Nicht enthalten sind vollständige Keyword-Recherche, detaillierte Wettbewerbsanalyse, Kampagnenstruktur, Budget- oder Klickkostenanalyse sowie die Erstellung von Anzeigen — das gehört zur kostenpflichtigen Google-Ads-Erstellung.",
+
+  },
+
+  {
+
+    question: "Was ist im kostenlosen Kampagnen-Check enthalten?",
+
+    answer:
+
+      "Wenn Sie bereits Google Ads schalten, prüfen wir Ihre Angaben und geben Ihnen eine kurze Ersteinschätzung, ob offensichtliches Optimierungspotenzial besteht. Es handelt sich nicht um eine vollständige kostenlose Kampagnenanalyse — eine detaillierte Optimierung ist Teil der kostenpflichtigen Google-Ads-Betreuung.",
+
+  },
+
+  {
+
     question: "Was bringt eine Praxis-Website meiner Praxis?",
 
     answer:

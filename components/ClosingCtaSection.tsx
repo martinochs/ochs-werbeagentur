@@ -1,13 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import type { LeistungSlug } from "@/lib/cta";
-import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import { erstgespraechUrl } from "@/lib/cta";
 import { analyseCtaSubtext } from "@/lib/content/website-analyse";
+import { getLeistungCtaLabel } from "@/lib/content/praxisanalyse-variants";
 
 type ClosingCtaSectionProps = {
   leistung?: LeistungSlug;
 };
 
 export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
+  const ctaLabel = getLeistungCtaLabel(leistung);
+
   return (
     <section
       id="kontakt"
@@ -25,7 +28,7 @@ export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
           href={erstgespraechUrl(leistung)}
           className="btn-primary mt-8 inline-flex px-6 py-3.5 text-base"
         >
-          {primaryCtaLabel}
+          {ctaLabel}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </a>
       </div>

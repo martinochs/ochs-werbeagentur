@@ -4,33 +4,30 @@ import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { PraxisanalyseForm } from "@/components/PraxisanalyseForm";
 import { parseLeistungSlug } from "@/lib/cta";
-import {
-  analyseMetadataDescription,
-  analysePageInfoBox,
-  analysePageIntro,
-} from "@/lib/content/website-analyse";
+import { getPraxisanalyseVariant } from "@/lib/content/praxisanalyse-variants";
 
 export const dynamic = "force-dynamic";
-
-export const metadata: Metadata = {
-  title: "Kostenlose Website-Analyse",
-  description: analyseMetadataDescription,
-};
 
 type PraxisanalysePageProps = {
   searchParams: Promise<{ leistung?: string }>;
 };
 
-function getPageHeading(initialLeistung: ReturnType<typeof parseLeistungSlug>): string {
-  if (initialLeistung === "kombi") {
-    return "Kostenlose Analyse für Website + Google Ads anfordern";
-  }
-  return "Kostenlose Website-Analyse anfordern";
+export async function generateMetadata({
+  searchParams,
+}: PraxisanalysePageProps): Promise<Metadata> {
+  const params = await searchParams;
+  const variant = getPraxisanalyseVariant(parseLeistungSlug(params.leistung));
+
+  return {
+    title: variant.metadataTitle,
+    description: variant.metadataDescription,
+  };
 }
 
 export default async function PraxisanalysePage({ searchParams }: PraxisanalysePageProps) {
   const params = await searchParams;
   const initialLeistung = parseLeistungSlug(params.leistung);
+  const variant = getPraxisanalyseVariant(initialLeistung);
 
   return (
     <>
@@ -40,12 +37,10 @@ export default async function PraxisanalysePage({ searchParams }: PraxisanalyseP
           <p className="text-xs font-semibold uppercase tracking-widest text-accent">
             Kostenlos & unverbindlich
           </p>
-          <h1 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-            {getPageHeading(initialLeistung)}
-          </h1>
-          <p className="mt-4 text-base leading-relaxed text-muted">{analysePageIntro}</p>
+          <h1 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">{variant.heading}</h1>
+          <p className="mt-4 text-base leading-relaxed text-muted">{variant.description}</p>
           <p className="mt-4 rounded-lg border border-border bg-white px-4 py-3 text-sm leading-relaxed text-muted">
-            {analysePageInfoBox}
+            {variant.infoBox}
           </p>
 
           <div className="mt-8">

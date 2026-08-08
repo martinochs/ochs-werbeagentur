@@ -5,12 +5,15 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   fachrichtungen,
+  getFormFieldVisibility,
+  getFormVariantKey,
+  googleAdsErfahrungOptions,
   gewuenschteLeistungen,
   leistungSlugToFormValue,
 } from "@/lib/content/praxisanalyse-form";
-import { formSubmitLabel } from "@/lib/cta";
 import type { LeistungSlug } from "@/lib/cta";
 import { analyseSuccessText, analyseSuccessTitle } from "@/lib/content/website-analyse";
+import { getPraxisanalyseVariant } from "@/lib/content/praxisanalyse-variants";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -34,7 +37,15 @@ function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
 export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [hatWebsite, setHatWebsite] = useState<"ja" | "nein" | "">("");
+  const [gewuenschteLeistung, setGewuenschteLeistung] = useState(() =>
+    getDefaultLeistung(initialLeistung),
+  );
+
+  const variantKey = getFormVariantKey(initialLeistung, gewuenschteLeistung);
+  const variant = getPraxisanalyseVariant(
+    variantKey === "default" ? initialLeistung : variantKey,
+  );
+  const fields = getFormFieldVisibility(variantKey);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -70,7 +81,7 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
 
       setStatus("success");
       event.currentTarget.reset();
-      setHatWebsite("");
+      setGewuenschteLeistung(getDefaultLeistung(initialLeistung));
     } catch (error) {
       setStatus("error");
       setErrorMessage(
@@ -123,10 +134,12 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
               className={inputClassName}
             />
           </label>
-          <label className="block">
-            <span className={labelClassName}>Praxisname *</span>
-            <input type="text" name="praxisname" required className={inputClassName} />
-          </label>
+          {fields.showPraxisname && (
+            <label className="block">
+              <span className={labelClassName}>Praxisname *</span>
+              <input type="text" name="praxisname" required className={inputClassName} />
+            </label>
+          )}
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -157,7 +170,8 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
             name="gewuenschte_leistung"
             required
             className={inputClassName}
-            defaultValue={getDefaultLeistung(initialLeistung)}
+            value={gewuenschteLeistung}
+            onChange={(event) => setGewuenschteLeistung(event.target.value)}
           >
             <option value="" disabled>
               Bitte wählen
@@ -169,12 +183,8 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
             ))}
           </select>
         </label>
-      </fieldset>
 
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Optional</legend>
-
-        <div className="grid gap-4 sm:grid-cols-2">
+        {fields.showFachrichtung && (
           <label className="block">
             <span className={labelClassName}>Fachrichtung</span>
             <select name="fachrichtung" className={inputClassName} defaultValue="">
@@ -186,6 +196,72 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
               ))}
             </select>
           </label>
+        )}
+
+        {fields.showWebsiteUrl && (
+          <label className="block">
+            <span className={labelClassName}>Website-URL (falls vorhanden)</span>
+            <input
+              type="url"
+              name="website_url"
+              placeholder="https://..."
+              className={inputClassName}
+            />
+          </label>
+        )}
+
+        {fields.showBeworbeneLeistungen && (
+          <label className="block">
+            <span className={labelClassName}>
+              Welche Leistungen oder Behandlungen sollen beworben werden?
+            </span>
+            <textarea
+              name="beworbene_leistungen"
+              rows={3}
+              className={inputClassName}
+              placeholder="z. B. Implantate, Prophylaxe, Hautkrebsvorsorge …"
+            />
+          </label>
+        )}
+
+        {fields.showGoogleAdsErfahrung && (
+          <label className="block">
+            <span className={labelClassName}>Bisherige Erfahrung mit Google Ads</span>
+            <select name="google_ads_erfahrung" className={inputClassName} defaultValue="">
+              <option value="">Optional</option>
+              {googleAdsErfahrungOptions.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+        )}
+
+        {fields.showGoogleAdsAktiv && (
+          <label className="block">
+            <span className={labelClassName}>Bestehende Google-Ads-Kampagne vorhanden?</span>
+            <select name="google_ads_aktiv" className={inputClassName} defaultValue="">
+              <option value="">Optional</option>
+              <option value="ja">Ja</option>
+              <option value="nein">Nein</option>
+            </select>
+          </label>
+        )}
+
+        {fields.showWerbebudget && (
+          <label className="block">
+            <span className={labelClassName}>Bisheriges Werbebudget (optional)</span>
+            <input
+              type="text"
+              name="werbebudget"
+              placeholder="z. B. ca. 500 € / Monat"
+              className={inputClassName}
+            />
+          </label>
+        )}
+
+        {fields.showStandort && (
           <label className="block">
             <span className={labelClassName}>Standort (PLZ & Ort)</span>
             <input
@@ -195,47 +271,19 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
               className={inputClassName}
             />
           </label>
-        </div>
+        )}
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        {fields.showNachricht && (
           <label className="block">
-            <span className={labelClassName}>Haben Sie bereits eine Website?</span>
-            <select
-              name="hat_website"
+            <span className={labelClassName}>Kurze Nachricht</span>
+            <textarea
+              name="nachricht"
+              rows={3}
               className={inputClassName}
-              value={hatWebsite}
-              onChange={(event) =>
-                setHatWebsite(event.target.value as "ja" | "nein" | "")
-              }
-            >
-              <option value="">Optional</option>
-              <option value="ja">Ja</option>
-              <option value="nein">Nein</option>
-            </select>
+              placeholder="Was möchten Sie erreichen? Gibt es Besonderheiten, die wir wissen sollten?"
+            />
           </label>
-
-          {hatWebsite === "ja" && (
-            <label className="block">
-              <span className={labelClassName}>Adresse Ihrer Website</span>
-              <input
-                type="url"
-                name="website_url"
-                placeholder="https://..."
-                className={inputClassName}
-              />
-            </label>
-          )}
-        </div>
-
-        <label className="block">
-          <span className={labelClassName}>Kurze Nachricht</span>
-          <textarea
-            name="nachricht"
-            rows={3}
-            className={inputClassName}
-            placeholder="Was möchten Sie erreichen? Gibt es Besonderheiten, die wir wissen sollten?"
-          />
-        </label>
+        )}
       </fieldset>
 
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
@@ -275,7 +323,7 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
           </>
         ) : (
           <>
-            {formSubmitLabel}
+            {variant.submitLabel}
             <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </>
         )}
