@@ -3,11 +3,11 @@ import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
-import { Check, ShieldCheck, Info, Star, Monitor, BarChart3, Search, Clock, TrendingUp, ArrowRight, Tag } from "lucide-react";
+import { Check, ShieldCheck, Info, Star, Monitor, BarChart3, Clock, TrendingUp, Tag } from "lucide-react";
 
 export const metadata = {
   title: "Betreuung & Weiterentwicklung",
-  description: "Sorgenfreier Betrieb Ihrer Praxis-Website. Wir kümmern uns um Updates, Sicherheit, SEO und Google Ads – für Ihren langfristigen Erfolg.",
+  description: "Sorgenfreier Betrieb Ihrer Praxis-Website. Wir kümmern uns um Updates, Sicherheit und optional Google Ads – für Ihren langfristigen Erfolg.",
 };
 
 export default function BetreuungPage() {
@@ -113,70 +113,7 @@ export default function BetreuungPage() {
                 </article>
               </div>
 
-              {/* 2. SEO-Betreuung */}
-              <div className="relative mt-4">
-                <article className="flex flex-col lg:flex-row gap-8 lg:gap-12 rounded-2xl bg-white p-6 pt-10 lg:p-10 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04]">
-                  {/* Left Side */}
-                  <div className="flex-1">
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#1d6fd8] text-white">
-                        <Search className="h-6 w-6" strokeWidth={1.75} aria-hidden="true" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold leading-snug text-[#1d6fd8]">
-                          Laufende SEO-Betreuung
-                        </h3>
-                        <p className="mt-1 text-sm leading-snug text-muted">
-                          Rankings kontinuierlich beobachten und optimieren.
-                        </p>
-                      </div>
-                    </div>
-
-                    <p className="mt-6 text-sm text-navy">
-                      Suchmaschinen ändern sich ständig. Wir beobachten Ihre Rankings kontinuierlich <br />
-                      und optimieren Ihre Sichtbarkeit Monat für Monat.
-                    </p>
-
-                    <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">
-                      {[
-                        { title: "Content-Optimierung", desc: "Laufende Anpassung und Erweiterung Ihrer Website-Texte." },
-                        { title: "Google-Profil-Pflege", desc: "Regelmäßige Updates, Posts und Bewertungsmanagement." },
-                        { title: "Technisches SEO", desc: "Kontinuierliche Überwachung von Ladezeiten und Fehlern." },
-                        { title: "Backlink-Aufbau", desc: "Stärkung Ihrer Autorität durch hochwertige Verlinkungen." },
-                      ].map((feature) => (
-                        <div key={feature.title} className="flex items-start gap-3">
-                          <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#1d6fd8]" strokeWidth={2.5} aria-hidden="true" />
-                          <div>
-                            <p className="text-[13px] font-bold text-navy">{feature.title}</p>
-                            <p className="text-[13px] text-muted">{feature.desc}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Right Side */}
-                  <div className="w-full lg:w-[380px] shrink-0">
-                    <div className="rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-6 text-center h-full flex flex-col justify-center">
-                      <p className="text-sm font-bold text-navy">Monatliche SEO-Betreuung</p>
-                      <p className="mt-4 text-4xl font-extrabold text-[#1d6fd8]">
-                        349 €
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
-                      <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
-                      
-                      <div className="mt-6 border-t border-[#bfdbfe] pt-4 flex items-start gap-2 text-left">
-                        <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#1d6fd8]" aria-hidden="true" />
-                        <p className="text-xs text-muted">
-                          Empfohlen für Praxen in umkämpften Regionen oder Fachgebieten.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              {/* 3. Google-Ads-Betreuung */}
+              {/* 2. Google-Ads-Betreuung */}
               <div className="relative mt-4">
                 <article className="flex flex-col lg:flex-row gap-8 lg:gap-12 rounded-2xl bg-white p-6 pt-10 lg:p-10 shadow-[0_4px_24px_rgba(10,37,64,0.06)] ring-1 ring-black/[0.04]">
                   {/* Left Side */}
