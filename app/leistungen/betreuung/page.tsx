@@ -4,6 +4,10 @@ import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import {
+  googleAdsBetreuungSubtitle,
+  googleAdsBudgetSteuerungDesc,
+} from "@/lib/content/google-ads-setup";
+import {
   websiteBetreuungContentChangeFeature,
   websiteBetreuungContentChangeScope,
   websiteBetreuungIntro,
@@ -131,7 +135,7 @@ export default function BetreuungPage() {
                           Google-Ads-Betreuung
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Maximale Effizienz für Ihr Werbebudget.
+                          {googleAdsBetreuungSubtitle}
                         </p>
                       </div>
                     </div>
@@ -146,7 +150,7 @@ export default function BetreuungPage() {
                         { title: "Regelmäßige Optimierung", desc: "Wir verbessern Ihre Anzeigen, Keywords und Budgets laufend." },
                         { title: "Performance-Monitoring", desc: "Sie erhalten klare Auswertungen und Empfehlungen." },
                         { title: "A/B-Tests", desc: "Wir testen neue Anzeigen für bessere Ergebnisse." },
-                        { title: "Budget-Steuerung", desc: "Wir sorgen für das beste Verhältnis aus Kosten und Anfragen." },
+                        { title: "Budget-Steuerung", desc: googleAdsBudgetSteuerungDesc },
                       ].map((feature) => (
                         <div key={feature.title} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-4 w-4 shrink-0 text-[#166534]" strokeWidth={2.5} aria-hidden="true" />

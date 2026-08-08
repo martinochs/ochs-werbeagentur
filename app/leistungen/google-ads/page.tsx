@@ -10,6 +10,10 @@ import {
   googleAdsOptionalBetreuungShort,
   googleAdsSetupFeatures,
   googleAdsStartoptimierungNote,
+  googleAdsSetupGoalPhrase,
+  googleAdsSichtbarkeitLabel,
+  googleAdsBetreuungSubtitle,
+  googleAdsBudgetSteuerungDesc,
 } from "@/lib/content/google-ads-setup";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
@@ -75,7 +79,7 @@ export default function GoogleAdsPage() {
 
                     <p className="mt-6 text-sm text-navy">
                       Wir planen, erstellen und starten Ihre Google-Ads-Kampagne – <br />
-                      für maximale Sichtbarkeit und gezielte Neupatienten.
+                      {googleAdsSetupGoalPhrase}
                     </p>
 
                     <ul className="mt-6 space-y-4">
@@ -135,8 +139,8 @@ export default function GoogleAdsPage() {
                       <div className="flex items-start gap-3">
                         <TrendingUp className="mt-0.5 h-5 w-5 shrink-0 text-[#166534]" aria-hidden="true" />
                         <div>
-                          <p className="text-sm font-bold text-navy">Maximale Sichtbarkeit</p>
-                          <p className="text-xs text-muted">Erreichen Sie genau die Patienten, die Sie suchen.</p>
+                          <p className="text-sm font-bold text-navy">{googleAdsSichtbarkeitLabel}</p>
+                          <p className="text-xs text-muted">Sichtbar bei relevanten Suchanfragen in Ihrer Region.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -182,7 +186,7 @@ export default function GoogleAdsPage() {
                         { title: "Regelmäßige Kampagnen-Optimierung", desc: "Wir verbessern Ihre Anzeigen, Keywords und Budgets laufend." },
                         { title: "Performance-Monitoring & Reporting", desc: "Sie erhalten klare Auswertungen und Empfehlungen." },
                         { title: "A/B-Tests & Anzeigentexte", desc: "Wir testen neue Anzeigen für bessere Ergebnisse." },
-                        { title: "Budget-Steuerung", desc: "Wir sorgen für das beste Verhältnis aus Kosten und Anfragen." },
+                        { title: "Budget-Steuerung", desc: googleAdsBudgetSteuerungDesc },
                         { title: "Persönlicher Ansprechpartner", desc: "Direkte Kommunikation und schnelle Umsetzung." },
                       ].map((feature) => (
                         <div key={feature.title} className="flex items-start gap-3">
