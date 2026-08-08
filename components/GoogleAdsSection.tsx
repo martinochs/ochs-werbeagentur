@@ -13,12 +13,12 @@ const steps = [
   {
     icon: Search,
     title: "Analyse & Strategie",
-    text: "Wir analysieren Ihre Leistungen, Ihre Region, Ihre Wunschpatienten und die Wettbewerbssituation.",
+    text: "Wir analysieren Ihre Leistungen, relevante Suchanfragen, Ihre Region und die Wettbewerbssituation.",
   },
   {
     icon: ClipboardList,
     title: "Kampagnenerstellung",
-    text: "Wir erstellen und strukturieren Ihre Google-Ads-Kampagnen und optimieren Zielgruppen und Anzeigentexte.",
+    text: "Wir strukturieren Kampagnen nach Leistungen, Suchintention und Region.",
   },
   {
     icon: BarChart3,
