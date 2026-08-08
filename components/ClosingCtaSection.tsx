@@ -18,8 +18,9 @@ export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
           Lassen Sie uns über Ihre Praxis sprechen
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          In einem kostenlosen und unverbindlichen Erstgespräch besprechen wir Ihre Ziele
-          und welche digitale Lösung zu Ihrer Praxis passt.
+          Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihren Auftritt und
+          senden Ihnen eine erste Einschätzung per E-Mail — danach können Sie bequem
+          einen Termin für Ihr persönliches Erstgespräch auswählen.
         </p>
         <a
           href={erstgespraechUrl(leistung)}

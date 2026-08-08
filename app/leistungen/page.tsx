@@ -97,8 +97,9 @@ export default function LeistungenPage() {
                 Unsicher, welche Leistung die richtige ist?
               </h3>
               <p className="mx-auto mt-4 max-w-2xl text-base text-muted">
-                Lassen Sie uns in einem kostenlosen Erstgespräch gemeinsam herausfinden,
-                wo Ihre Praxis aktuell steht und welche digitalen Schritte am meisten Sinn machen.
+                Lassen Sie uns gemeinsam herausfinden, wo Ihre Praxis aktuell steht und
+                welche digitalen Schritte am meisten Sinn machen — starten Sie mit einer
+                kostenlosen Website-Analyse.
               </p>
               <a href={erstgespraechUrl()} className="btn-primary mt-8 inline-flex px-6 py-3.5 text-base">
                 {primaryCtaLabel}

@@ -94,10 +94,11 @@ export default function DatenschutzPage() {
                         href="/praxisanalyse"
                         className="text-navy underline-offset-2 hover:underline"
                       >
-                        Kostenloses Erstgespräch
+                        Kostenlose Website-Analyse
                       </Link>{" "}
                       kontaktieren, verarbeiten wir die von Ihnen eingegebenen
-                      Daten zur Bearbeitung Ihrer Anfrage, zur Vorbereitung
+                      Daten zur Bearbeitung Ihrer Analyse-Anfrage, zur Erstellung
+                      einer ersten Einschätzung, zur Vorbereitung
                       eines unverbindlichen Erstgesprächs sowie für mögliche
                       Anschlussfragen.
                     </p>

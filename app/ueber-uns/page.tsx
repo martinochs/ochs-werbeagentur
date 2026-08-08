@@ -169,14 +169,14 @@ export default function UeberUnsPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#e6f4ea] text-[#166534] mb-6">
                   <MessagesSquare className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">1. Persönliches Erstgespräch</h3>
+                <h3 className="text-xl font-bold text-navy mb-3">1. Analyse anfordern</h3>
                 <p className="text-sm text-muted leading-relaxed flex-1">
-                  Zu Beginn lernen wir Ihre Praxis, Ihre Leistungen und Ihre Ziele kennen. Wir
-                  besprechen, welche Patientengruppen Sie ansprechen möchten und ob Sie eine
-                  Website, Google Ads oder eine Kombination aus beidem benötigen.
+                  Zu Beginn senden Sie uns Ihre Website und einige Angaben zu Ihrer Praxis.
+                  Wir prüfen Ihren aktuellen Auftritt und identifizieren erste
+                  Verbesserungspotenziale.
                 </p>
                 <p className="mt-4 text-xs font-semibold text-[#166534] bg-[#e6f4ea] inline-block px-3 py-1.5 rounded-md w-fit">
-                  Bequem telefonisch oder per Video
+                  Kostenlos & unverbindlich
                 </p>
               </div>
 
@@ -185,11 +185,11 @@ export default function UeberUnsPage() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#eff6ff] text-[#1d6fd8] mb-6">
                   <Lightbulb className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold text-navy mb-3">2. Klare Empfehlung</h3>
+                <h3 className="text-xl font-bold text-navy mb-3">2. Erste Einschätzung & Erstgespräch</h3>
                 <p className="text-sm text-muted leading-relaxed flex-1">
-                  Anschließend entwickeln wir eine passende Strategie für Ihre Praxis. Sie erhalten
-                  eine klare Empfehlung zum Aufbau der Website, zu den benötigten Inhalten und –
-                  sofern gewünscht – zur Ausrichtung Ihrer Google-Ads-Kampagne.
+                  Sie erhalten unsere vorläufige Analyse per E-Mail. Anschließend können Sie
+                  selbst einen Termin für das persönliche Erstgespräch auswählen — dort besprechen
+                  wir Ihre Ziele und welche Lösung zu Ihrer Praxis passt.
                 </p>
               </div>
 
@@ -235,8 +235,9 @@ export default function UeberUnsPage() {
                   Sie möchten wissen, wie Ihre Praxis online moderner, sichtbarer und überzeugender auftreten kann?
                 </p>
                 <p className="mt-4 text-lg text-muted leading-relaxed">
-                  In einem unverbindlichen Erstgespräch lernen wir Ihre Praxis kennen und besprechen,
-                  welche Lösung zu Ihren Zielen passt.
+                  Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihren Auftritt und
+                  senden Ihnen eine erste Einschätzung per E-Mail — danach können Sie bequem
+                  einen Termin für Ihr persönliches Erstgespräch auswählen.
                 </p>
                 <div className="mt-8">
                   <a href="/praxisanalyse" className="btn-primary inline-flex px-8 py-4 text-base w-full sm:w-auto justify-center">

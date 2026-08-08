@@ -62,8 +62,9 @@ export function Hero() {
                 </a>
               </div>
               <p className="max-w-lg text-sm text-muted">
-                In einem kostenlosen und unverbindlichen Erstgespräch besprechen wir Ihre
-                Ziele und welche digitale Lösung zu Ihrer Praxis passt.
+                Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihren Auftritt und
+                senden Ihnen eine erste Einschätzung per E-Mail — danach können Sie bequem
+                einen Termin für Ihr persönliches Erstgespräch auswählen.
               </p>
             </div>
           </div>

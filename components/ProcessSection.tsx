@@ -30,7 +30,7 @@ const steps = [
 
     title: "Analyse & Strategie",
 
-    text: "Wir besprechen Ihre Ziele, Zielgruppe und den aktuellen Auftritt — unverbindlich und persönlich.",
+    text: "Sie fordern eine kostenlose Analyse an — wir prüfen Ihren Auftritt und senden Ihnen eine erste Einschätzung.",
 
   },
 
@@ -74,7 +74,7 @@ const highlights = [
 
   "Datenschutzfreundlich & mobil optimiert",
 
-  "Transparentes Festpreis-Angebot nach dem Erstgespräch",
+  "Transparentes Festpreis-Angebot nach der Analyse",
 
 ];
 
@@ -282,7 +282,7 @@ export function ProcessSection() {
 
                 <p className="mt-3 text-sm leading-relaxed text-muted">
 
-                  Vom ersten Gespräch bis zum Go-live: Wir begleiten Sie
+                  Von der Analyse bis zum Go-live: Wir begleiten Sie
 
                   strukturiert zum neuen Internetauftritt — ohne Technik-Stress
 
