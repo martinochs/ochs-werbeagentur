@@ -15,12 +15,11 @@ export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
     >
       <div className="mx-auto max-w-3xl px-4 text-center lg:px-8">
         <h2 id="closing-cta-heading" className="text-2xl font-bold text-navy sm:text-3xl">
-          Lassen Sie uns Ihre Website prüfen
+          Lassen Sie uns über Ihre Praxis sprechen
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihre Online-Präsenz,
-          senden Ihnen eine erste Einschätzung per E-Mail und besprechen die Ergebnisse
-          anschließend persönlich mit Ihnen.
+          In einem kostenlosen und unverbindlichen Erstgespräch besprechen wir Ihre Ziele
+          und welche digitale Lösung zu Ihrer Praxis passt.
         </p>
         <a
           href={erstgespraechUrl(leistung)}

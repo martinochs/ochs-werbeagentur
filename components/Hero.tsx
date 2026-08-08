@@ -62,8 +62,8 @@ export function Hero() {
                 </a>
               </div>
               <p className="max-w-lg text-sm text-muted">
-                Wir analysieren Ihre bestehende Website und zeigen Ihnen erste konkrete
-                Verbesserungspotenziale – kostenlos und unverbindlich.
+                In einem kostenlosen und unverbindlichen Erstgespräch besprechen wir Ihre
+                Ziele und welche digitale Lösung zu Ihrer Praxis passt.
               </p>
             </div>
           </div>

@@ -20,7 +20,7 @@ export const datenschutzSections: DatenschutzSection[] = [
     bullets: [
       `Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), Betriebssitz ${formatRegisteredOffice()}.`,
       "Beim Besuch der Website werden technisch notwendige Server-Logdaten durch unseren Hosting-Anbieter Vercel verarbeitet.",
-      "Wenn Sie das Formular „Kostenlose Website-Analyse“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
+      "Wenn Sie das Formular „Kostenloses Erstgespräch“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
       "Wir setzen derzeit keine Analyse- oder Marketing-Tools ein und verwenden keine Cookies zu Tracking-Zwecken.",
     ],
   },
@@ -67,10 +67,10 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "kontaktformular",
-    title: "6. Kontaktformular „Kostenlose Website-Analyse“",
+    title: "6. Kontaktformular „Kostenloses Erstgespräch“",
     paragraphs: [
-      "Wenn Sie uns über das Formular auf der Seite /praxisanalyse kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage, zur Durchführung der kostenlosen Website-Analyse, zur Vorbereitung eines unverbindlichen Erstgesprächs sowie für mögliche Anschlussfragen.",
-      "Pflichtangaben sind insbesondere Ansprechpartner, Website-URL, E-Mail-Adresse und Telefonnummer sowie die gewünschte Unterstützung. Optional können Sie Praxisname, Fachrichtung sowie Freitextangaben mitteilen.",
+      "Wenn Sie uns über das Formular auf der Seite /praxisanalyse kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage, zur Vorbereitung eines unverbindlichen Erstgesprächs sowie für mögliche Anschlussfragen.",
+      "Pflichtangaben sind insbesondere Ansprechpartner, Praxisname, E-Mail-Adresse und gewünschte Leistung. Optional können Sie Telefonnummer, Fachrichtung, Standort, Angaben zu Ihrer Website sowie Freitext mitteilen.",
       "Ohne diese Daten können wir Ihre Anfrage in der Regel nicht bearbeiten. Mit dem Absenden des Formulars senden Sie uns eine konkrete Anfrage zur Anbahnung einer möglichen Zusammenarbeit.",
       "Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin). Soweit erforderlich, stützen wir die Bearbeitung ergänzend auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).",
       "Die von Ihnen im Formular eingegebenen Daten verbleiben bei uns, bis der Zweck der Speicherung entfällt oder Sie der Speicherung widersprechen. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.",

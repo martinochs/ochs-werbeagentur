@@ -8,11 +8,10 @@ export const leistungOptions = [
 
 export type LeistungSlug = (typeof leistungOptions)[number]["value"];
 
-export const primaryCtaLabel = "Kostenlose Website-Analyse anfordern";
-export const headerCtaLabel = "Analyse anfordern";
-export const navAnalyseLabel = "Website-Analyse";
-export const formSubmitLabel = "Kostenlose Analyse anfordern";
-export const shortCtaLabel = "Website kostenlos analysieren lassen";
+export const primaryCtaLabel = "Kostenloses Erstgespräch vereinbaren";
+export const headerCtaLabel = "Kostenloses Erstgespräch";
+export const navAnalyseLabel = "Erstgespräch";
+export const formSubmitLabel = "Anfrage senden";
 
 const validSlugs = new Set<string>(leistungOptions.map((option) => option.value));
 

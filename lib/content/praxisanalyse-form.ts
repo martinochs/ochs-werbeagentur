@@ -11,41 +11,19 @@ export const fachrichtungen = [
   "Andere Fachrichtung",
 ] as const;
 
-export const unterstuetzungsOptionen = [
-  "Neue Website",
-  "Bestehende Website verbessern",
+export const gewuenschteLeistungen = [
+  "Praxis-Website",
   "Google Ads",
-  "SEO / bessere Google-Sichtbarkeit",
-  "Noch nicht sicher",
+  "SEO & KI-Sichtbarkeit",
+  "Monatliche Betreuung",
+  "Website + Google Ads",
+  "Noch unsicher — Beratung gewünscht",
 ] as const;
 
 export const leistungSlugToFormValue: Record<string, string> = {
-  website: "Neue Website",
+  website: "Praxis-Website",
   "google-ads": "Google Ads",
-  seo: "SEO / bessere Google-Sichtbarkeit",
-  betreuung: "Bestehende Website verbessern",
-  kombi: "Neue Website",
+  seo: "SEO & KI-Sichtbarkeit",
+  betreuung: "Monatliche Betreuung",
+  kombi: "Website + Google Ads",
 };
-
-export const analyseProcessSteps = [
-  {
-    step: 1,
-    title: "Anfrage senden",
-    text: "Sie übermitteln uns Ihre Website und einige kurze Informationen zu Ihrer Praxis.",
-  },
-  {
-    step: 2,
-    title: "Wir analysieren Ihre Website",
-    text: "Wir prüfen Ihre aktuelle Online-Präsenz und identifizieren erste konkrete Verbesserungspotenziale.",
-  },
-  {
-    step: 3,
-    title: "Sie erhalten unsere Ersteinschätzung",
-    text: "Vor unserem Gespräch senden wir Ihnen eine kurze vorläufige Analyse per E-Mail.",
-  },
-  {
-    step: 4,
-    title: "Persönliches Erstgespräch",
-    text: "Anschließend besprechen wir die Ergebnisse mit Ihnen und zeigen Ihnen, welche Maßnahmen für Ihre Praxis sinnvoll sind.",
-  },
-] as const;

@@ -6,7 +6,7 @@ export const faqItems = [
 
     answer:
 
-      "Die Kosten hängen von Umfang und Funktionen ab — von einer kompakten Praxis-Website bis zur umfassenden Lösung mit SEO und laufender Betreuung. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto. Nach der kostenlosen Website-Analyse und unserem persönlichen Erstgespräch erhalten Sie ein transparentes Festpreis-Angebot ohne versteckte Kosten.",
+      "Die Kosten hängen von Umfang und Funktionen ab — von einer kompakten Praxis-Website bis zur umfassenden Lösung mit SEO und laufender Betreuung. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto. Nach einem kostenlosen Erstgespräch erhalten Sie ein transparentes Festpreis-Angebot ohne versteckte Kosten.",
 
   },
 
@@ -136,7 +136,7 @@ export const faqItems = [
 
     answer:
 
-      "Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihre aktuelle Online-Präsenz, senden Ihnen eine erste Einschätzung per E-Mail und besprechen die Ergebnisse anschließend persönlich mit Ihnen — telefonisch, per Video oder vor Ort in Mannheim.",
+      "Mit einem kostenlosen und unverbindlichen Erstgespräch. Wir besprechen Ihre Ziele, prüfen Ihren aktuellen Auftritt und zeigen konkrete nächste Schritte — telefonisch, per Video oder vor Ort in Mannheim.",
 
   },
 
