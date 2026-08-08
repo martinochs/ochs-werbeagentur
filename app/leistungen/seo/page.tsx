@@ -2,7 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
-import { erstgespraechUrl } from "@/lib/cta";
+import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import { Search, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, MapPin, LineChart } from "lucide-react";
 
 export const metadata = {
@@ -112,7 +112,7 @@ export default function SeoPage() {
                         href={erstgespraechUrl("seo")}
                         className="mt-6 block w-full rounded-lg bg-[#1d6fd8] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90 text-center"
                       >
-                        Kostenloses SEO-Erstgespräch vereinbaren
+                        {primaryCtaLabel}
                       </a>
                     </div>
 
@@ -285,7 +285,7 @@ export default function SeoPage() {
                 </div>
                 <div className="shrink-0 w-full md:w-auto">
                   <a href={erstgespraechUrl("kombi")} className="block w-full rounded-md bg-[#ca8a04] px-6 py-3 text-sm font-bold text-white hover:bg-[#a16207] transition-colors text-center">
-                    Kostenloses Erstgespräch vereinbaren
+                    {primaryCtaLabel}
                   </a>
                 </div>
               </div>

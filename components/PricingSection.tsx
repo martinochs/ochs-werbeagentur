@@ -464,7 +464,7 @@ export function PricingSection() {
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[13px] text-muted lg:justify-between">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4 text-navy/40" aria-hidden="true" />
-                  Kostenloses Erstgespräch
+                  Kostenlose Website-Analyse
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-navy/40" aria-hidden="true" />

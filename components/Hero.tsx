@@ -1,6 +1,6 @@
 import { ArrowRight, Calendar, Check, CheckCircle2, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
-import { erstgespraechUrl } from "@/lib/cta";
+import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 
 const highlights = [
   { 
@@ -50,15 +50,21 @@ export function Hero() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href={erstgespraechUrl()} className="btn-primary flex items-center justify-center gap-2 px-6 py-3.5 text-base">
-                Kostenloses Erstgespräch vereinbaren
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
-              <a href="/leistungen" className="flex items-center justify-center gap-2 rounded-lg border-2 border-navy bg-white px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-slate-50">
-                Leistungen und Preise ansehen
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </a>
+            <div className="mt-10 flex flex-col gap-3">
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <a href={erstgespraechUrl()} className="btn-primary flex items-center justify-center gap-2 px-6 py-3.5 text-base">
+                  {primaryCtaLabel}
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+                <a href="/leistungen" className="flex items-center justify-center gap-2 rounded-lg border-2 border-navy bg-white px-6 py-3.5 text-base font-semibold text-navy transition-colors hover:bg-slate-50">
+                  Leistungen und Preise ansehen
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              </div>
+              <p className="max-w-lg text-sm text-muted">
+                Wir analysieren Ihre bestehende Website und zeigen Ihnen erste konkrete
+                Verbesserungspotenziale – kostenlos und unverbindlich.
+              </p>
             </div>
           </div>
 

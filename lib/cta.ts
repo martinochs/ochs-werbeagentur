@@ -8,6 +8,12 @@ export const leistungOptions = [
 
 export type LeistungSlug = (typeof leistungOptions)[number]["value"];
 
+export const primaryCtaLabel = "Kostenlose Website-Analyse anfordern";
+export const headerCtaLabel = "Analyse anfordern";
+export const navAnalyseLabel = "Website-Analyse";
+export const formSubmitLabel = "Kostenlose Analyse anfordern";
+export const shortCtaLabel = "Website kostenlos analysieren lassen";
+
 const validSlugs = new Set<string>(leistungOptions.map((option) => option.value));
 
 export function parseLeistungSlug(value: string | undefined): LeistungSlug | undefined {
@@ -21,3 +27,6 @@ export function erstgespraechUrl(leistung?: LeistungSlug): string {
   if (!leistung) return "/praxisanalyse";
   return `/praxisanalyse?leistung=${leistung}`;
 }
+
+/** @deprecated Alias — use erstgespraechUrl */
+export const analyseUrl = erstgespraechUrl;

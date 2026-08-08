@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   fachrichtungen,
-  gewuenschteLeistungen,
   leistungSlugToFormValue,
+  unterstuetzungsOptionen,
 } from "@/lib/content/praxisanalyse-form";
+import { formSubmitLabel } from "@/lib/cta";
 import type { LeistungSlug } from "@/lib/cta";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
@@ -24,7 +25,7 @@ type PraxisanalyseFormProps = {
   initialLeistung?: LeistungSlug;
 };
 
-function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
+function getDefaultUnterstuetzung(initialLeistung?: LeistungSlug): string {
   if (!initialLeistung) return "";
   return leistungSlugToFormValue[initialLeistung] ?? "";
 }
@@ -32,7 +33,6 @@ function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
 export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
-  const [hatWebsite, setHatWebsite] = useState<"ja" | "nein" | "">("");
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -68,7 +68,6 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
 
       setStatus("success");
       event.currentTarget.reset();
-      setHatWebsite("");
     } catch (error) {
       setStatus("error");
       setErrorMessage(
@@ -83,10 +82,13 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
     return (
       <div className="rounded-2xl border border-accent/20 bg-accent-soft px-6 py-10 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-accent" aria-hidden="true" />
-        <h2 className="mt-4 text-xl font-bold text-navy">Vielen Dank für Ihre Anfrage!</h2>
+        <h2 className="mt-4 text-xl font-bold text-navy">
+          Vielen Dank – wir schauen uns Ihre Website an.
+        </h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
-          Wir haben Ihre Angaben erhalten und melden uns persönlich, um ein kostenloses
-          Erstgespräch zu vereinbaren.
+          Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihre Website und melden uns
+          anschließend persönlich bei Ihnen. Vor unserem Gespräch erhalten Sie von uns eine
+          erste Einschätzung per E-Mail.
         </p>
         <Link href="/" className="btn-primary mt-6 inline-flex">
           Zurück zur Startseite
@@ -96,7 +98,7 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-6">
       {!formId && (
         <p className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
           Hinweis für die Einrichtung: Formspree-Formular-ID fehlt noch in{" "}
@@ -104,134 +106,98 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
         </p>
       )}
 
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Ihre Angaben</legend>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>Ansprechpartner *</span>
-            <input
-              type="text"
-              name="ansprechpartner"
-              required
-              autoComplete="name"
-              className={inputClassName}
-            />
-          </label>
-          <label className="block">
-            <span className={labelClassName}>Praxisname *</span>
-            <input type="text" name="praxisname" required className={inputClassName} />
-          </label>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>E-Mail *</span>
-            <input
-              type="email"
-              name="email"
-              required
-              autoComplete="email"
-              className={inputClassName}
-            />
-          </label>
-          <label className="block">
-            <span className={labelClassName}>Telefon</span>
-            <input
-              type="tel"
-              name="telefon"
-              autoComplete="tel"
-              className={inputClassName}
-            />
-          </label>
-        </div>
-
+      <div className="grid gap-4 sm:grid-cols-2">
         <label className="block">
-          <span className={labelClassName}>Gewünschte Leistung *</span>
-          <select
-            name="gewuenschte_leistung"
+          <span className={labelClassName}>Name / Ansprechpartner *</span>
+          <input
+            type="text"
+            name="ansprechpartner"
             required
+            autoComplete="name"
             className={inputClassName}
-            defaultValue={getDefaultLeistung(initialLeistung)}
-          >
-            <option value="" disabled>
-              Bitte wählen
-            </option>
-            {gewuenschteLeistungen.map((option) => (
+          />
+        </label>
+        <label className="block">
+          <span className={labelClassName}>Praxisname</span>
+          <input type="text" name="praxisname" className={inputClassName} />
+        </label>
+      </div>
+
+      <label className="block">
+        <span className={labelClassName}>Website / URL *</span>
+        <input
+          type="url"
+          name="website_url"
+          required
+          placeholder="https://..."
+          className={inputClassName}
+        />
+      </label>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="block">
+          <span className={labelClassName}>E-Mail-Adresse *</span>
+          <input
+            type="email"
+            name="email"
+            required
+            autoComplete="email"
+            className={inputClassName}
+          />
+        </label>
+        <label className="block">
+          <span className={labelClassName}>Telefonnummer *</span>
+          <input
+            type="tel"
+            name="telefon"
+            required
+            autoComplete="tel"
+            className={inputClassName}
+          />
+        </label>
+      </div>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <label className="block">
+          <span className={labelClassName}>Fachrichtung / Praxisart</span>
+          <select name="fachrichtung" className={inputClassName} defaultValue="">
+            <option value="">Bitte wählen (optional)</option>
+            {fachrichtungen.map((option) => (
               <option key={option} value={option}>
                 {option}
               </option>
             ))}
           </select>
         </label>
-      </fieldset>
-
-      <fieldset className="space-y-4">
-        <legend className="text-base font-bold text-navy">Optional</legend>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>Fachrichtung</span>
-            <select name="fachrichtung" className={inputClassName} defaultValue="">
-              <option value="">Optional</option>
-              {fachrichtungen.map((option) => (
-                <option key={option} value={option}>
-                  {option}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="block">
-            <span className={labelClassName}>Standort (PLZ & Ort)</span>
-            <input
-              type="text"
-              name="standort"
-              placeholder="z. B. 68259 Mannheim"
-              className={inputClassName}
-            />
-          </label>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2">
-          <label className="block">
-            <span className={labelClassName}>Haben Sie bereits eine Website?</span>
-            <select
-              name="hat_website"
-              className={inputClassName}
-              value={hatWebsite}
-              onChange={(event) =>
-                setHatWebsite(event.target.value as "ja" | "nein" | "")
-              }
-            >
-              <option value="">Optional</option>
-              <option value="ja">Ja</option>
-              <option value="nein">Nein</option>
-            </select>
-          </label>
-
-          {hatWebsite === "ja" && (
-            <label className="block">
-              <span className={labelClassName}>Adresse Ihrer Website</span>
-              <input
-                type="url"
-                name="website_url"
-                placeholder="https://..."
-                className={inputClassName}
-              />
-            </label>
-          )}
-        </div>
-
         <label className="block">
-          <span className={labelClassName}>Kurze Nachricht</span>
-          <textarea
-            name="nachricht"
-            rows={3}
+          <span className={labelClassName}>Wobei können wir Sie unterstützen? *</span>
+          <select
+            name="unterstuetzung"
+            required
             className={inputClassName}
-            placeholder="Was möchten Sie erreichen? Gibt es Besonderheiten, die wir wissen sollten?"
-          />
+            defaultValue={getDefaultUnterstuetzung(initialLeistung)}
+          >
+            <option value="" disabled>
+              Bitte wählen
+            </option>
+            {unterstuetzungsOptionen.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
         </label>
-      </fieldset>
+      </div>
+
+      <label className="block">
+        <span className={labelClassName}>Weitere Informationen (optional)</span>
+        <textarea
+          name="nachricht"
+          rows={3}
+          className={inputClassName}
+          placeholder="Gibt es Besonderheiten oder Fragen, die wir vorab wissen sollten?"
+        />
+      </label>
 
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
 
@@ -259,23 +225,28 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={status === "submitting"}
-        className="btn-primary w-full sm:w-auto disabled:cursor-not-allowed disabled:opacity-70"
-      >
-        {status === "submitting" ? (
-          <>
-            <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
-            Wird gesendet …
-          </>
-        ) : (
-          <>
-            Kostenloses Erstgespräch vereinbaren
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </>
-        )}
-      </button>
+      <div className="space-y-2">
+        <button
+          type="submit"
+          disabled={status === "submitting"}
+          className="btn-primary w-full sm:w-auto disabled:cursor-not-allowed disabled:opacity-70"
+        >
+          {status === "submitting" ? (
+            <>
+              <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" />
+              Wird gesendet …
+            </>
+          ) : (
+            <>
+              {formSubmitLabel}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </>
+          )}
+        </button>
+        <p className="text-xs text-muted">
+          Ihre Anfrage ist unverbindlich. Wir melden uns persönlich bei Ihnen.
+        </p>
+      </div>
     </form>
   );
 }

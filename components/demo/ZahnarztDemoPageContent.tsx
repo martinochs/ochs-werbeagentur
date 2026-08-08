@@ -1,7 +1,7 @@
 "use client";
 
 import { DemoAppointmentModal } from "@/components/demo/DemoAppointmentModal";
-import { erstgespraechUrl } from "@/lib/cta";
+import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import { siteConfig } from "@/lib/seo/config";
 import {
   ArrowLeft,
@@ -480,7 +480,7 @@ export function ZahnarztDemoPageContent() {
               href={erstgespraechUrl("website")}
               className="btn-primary inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 text-base sm:w-auto"
             >
-              Kostenloses Erstgespräch vereinbaren
+              {primaryCtaLabel}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
             <Link

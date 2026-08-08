@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Logo } from "@/components/Logo";
+import { headerCtaLabel, navAnalyseLabel } from "@/lib/cta";
 import { siteConfig } from "@/lib/seo/config";
 
 type NavLink = {
@@ -30,7 +31,7 @@ const navLinks: NavLink[] = [
   { path: "/ueber-uns", label: "Über uns" },
   { path: "#ablauf", label: "Ablauf" },
   { path: "/faq", label: "FAQ" },
-  { path: "/praxisanalyse", label: "Erstgespräch" },
+  { path: "/praxisanalyse", label: navAnalyseLabel },
   { path: "#kontakt", label: "Kontakt" },
 ];
 
@@ -133,7 +134,7 @@ export function Header() {
             </a>
           )}
           <Link href="/praxisanalyse" className="btn-primary flex items-center gap-1.5 px-4 py-2.5">
-            Kostenloses Erstgespräch
+            {headerCtaLabel}
             <span aria-hidden="true">&rarr;</span>
           </Link>
         </div>
@@ -182,7 +183,7 @@ export function Header() {
               className="btn-primary mt-2 text-center"
               onClick={() => setOpen(false)}
             >
-              Kostenloses Erstgespräch
+              {headerCtaLabel}
             </Link>
           </div>
         </nav>
