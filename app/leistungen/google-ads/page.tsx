@@ -4,6 +4,10 @@ import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { GoogleAdsSection } from "@/components/GoogleAdsSection";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import {
+  googleAdsCreditFootnote,
+  googleAdsCreditHeadline,
+} from "@/lib/content/google-ads-credit";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
 export const metadata = {
@@ -148,10 +152,10 @@ export default function GoogleAdsPage() {
                           Vorteil für Erstnutzer
                         </p>
                       </div>
-                      <p className="mt-2 text-sm font-medium text-navy">Bis zu 4.000 € Google-Werbeguthaben*</p>
+                      <p className="mt-2 text-sm font-medium text-navy">{googleAdsCreditHeadline}</p>
                       <div className="mt-3 border-t border-[#bfdbfe] pt-3 text-left">
                         <p className="text-[11px] leading-relaxed text-muted">
-                          * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
+                          {googleAdsCreditFootnote}
                         </p>
                       </div>
                     </div>

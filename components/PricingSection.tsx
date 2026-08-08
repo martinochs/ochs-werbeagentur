@@ -18,6 +18,10 @@ import {
   Users,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import {
+  googleAdsCreditFootnote,
+  googleAdsCreditHeadline,
+} from "@/lib/content/google-ads-credit";
 
 type PackageTheme = {
   accent: string;
@@ -199,13 +203,12 @@ function PricingFooter({ pkg }: { pkg: Package }) {
           <div className="flex items-start gap-3">
             <Gift className="mt-0.5 h-5 w-5 shrink-0 text-[#1d6fd8]" strokeWidth={2} aria-hidden="true" />
             <div>
-              <p className="text-[13px] font-bold text-navy">Bis zu 4.000 € Google-Werbeguthaben*</p>
-              <p className="mt-0.5 text-[12px] text-muted">Für berechtigte neue Google-Ads-Konten.</p>
+              <p className="text-[13px] font-bold text-navy">{googleAdsCreditHeadline}</p>
             </div>
           </div>
           <div className="mt-3 border-t border-[#bfdbfe] pt-3">
             <p className="text-[11px] leading-relaxed text-muted">
-              * Nur für berechtigte neue Google-Ads-Konten und abhängig von den jeweils geltenden Google-Aktionsbedingungen. Das Werbebudget ist nicht im Einrichtungs- oder Betreuungspreis enthalten.
+              {googleAdsCreditFootnote}
             </p>
           </div>
         </div>
