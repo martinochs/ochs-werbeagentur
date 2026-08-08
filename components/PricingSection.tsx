@@ -384,7 +384,7 @@ export function PricingSection() {
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Technische Updates und Sicherheitsaktualisierungen</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Backups</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Sicherheitschecks</li>
-                      <li className="flex items-start gap-2"><span className="text-navy">•</span> kleinere Änderungen</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Kleinere inhaltliche Änderungen im Rahmen der Betreuung</li>
                     </ul>
                   </div>
                 </details>

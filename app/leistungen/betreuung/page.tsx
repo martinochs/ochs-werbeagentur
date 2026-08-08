@@ -73,7 +73,7 @@ export default function BetreuungPage() {
                         { title: "Technische Updates und Sicherheitsaktualisierungen", desc: "Für dauerhafte Stabilität und Sicherheit Ihrer Website." },
                         { title: "Tägliche Backups", desc: "Automatische Sicherungen Ihrer gesamten Website." },
                         { title: "Sicherheitschecks", desc: "Proaktiver Schutz vor Malware und Ausfällen." },
-                        { title: "Inhaltliche Änderungen", desc: "Wir passen Texte, Bilder oder Öffnungszeiten für Sie an." },
+                        { title: "Inhaltliche Änderungen", desc: "Kleinere inhaltliche Änderungen — z. B. Texte, Bilder oder Öffnungszeiten — sind im Rahmen der Betreuung enthalten." },
                       ].map((feature) => (
                         <li key={feature.title} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#5b21b6]" strokeWidth={2.5} aria-hidden="true" />
