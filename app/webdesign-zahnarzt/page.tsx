@@ -4,7 +4,7 @@ import { ZahnarztDemoPageContent } from "@/components/demo/ZahnarztDemoPageConte
 export const metadata: Metadata = {
   title: "Webdesign-Beispiel Zahnarztpraxis",
   description:
-    "Fiktives Webdesign-Beispiel von OCHS Digital Consulting für eine moderne Zahnarztpraxis – mit Leistungen, Team, Online-Terminbuchung und Patientenkommunikation.",
+    "Fiktives Webdesign-Beispiel von OCHS Digital Consulting für eine moderne Zahnarztpraxis – mit Leistungen, Team, Terminbuchungs-Einbindung und Patientenkommunikation.",
   robots: {
     index: false,
     follow: true,

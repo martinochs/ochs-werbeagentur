@@ -4,7 +4,7 @@ import { HautarztDemoPageContent } from "@/components/demo/HautarztDemoPageConte
 export const metadata: Metadata = {
   title: "Webdesign-Beispiel Hautarztpraxis",
   description:
-    "Fiktives Webdesign-Beispiel von OCHS Digital Consulting für eine moderne Hautarztpraxis – mit Leistungen, Hautkrebsvorsorge, Ästhetik und Online-Terminbuchung.",
+    "Fiktives Webdesign-Beispiel von OCHS Digital Consulting für eine moderne Hautarztpraxis – mit Leistungen, Hautkrebsvorsorge, Ästhetik und Einbindung eines Terminbuchungssystems.",
   robots: {
     index: false,
     follow: true,

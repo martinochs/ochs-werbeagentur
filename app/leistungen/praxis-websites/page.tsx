@@ -3,11 +3,18 @@ import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import {
+  terminbuchungFeatureTitle,
+  terminbuchungHeroMention,
+  terminbuchungIntegrationNote,
+} from "@/lib/content/terminbuchung";
+import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
 import { Monitor, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, Activity } from "lucide-react";
 
 export const metadata = {
   title: "Praxis-Websites für Ärzte",
-  description: "Moderne Praxis-Websites mit Online-Terminbuchung und datenschutzfreundlicher technischer Umsetzung. Perfekt auf Ihre Fachrichtung zugeschnitten und optimiert für Patienten.",
+  description:
+    "Moderne Praxis-Websites mit Einbindung Ihres bestehenden Terminbuchungssystems und datenschutzfreundlicher technischer Umsetzung. Perfekt auf Ihre Fachrichtung zugeschnitten.",
 };
 
 export default function PraxisWebsitesPage() {
@@ -23,8 +30,8 @@ export default function PraxisWebsitesPage() {
               Ihre neue Praxis-Website. Modern, sicher, gewinnend.
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-              Wir erstellen individuelle Websites für Ärzte und Zahnärzte – optimiert für die Patientengewinnung, 
-              inklusive Online-Terminbuchung und datenschutzfreundlicher technischer Umsetzung.
+              Wir erstellen individuelle Websites für Ärzte und Zahnärzte – optimiert für die Patientengewinnung,
+              inklusive {terminbuchungHeroMention.toLowerCase()} und datenschutzfreundlicher technischer Umsetzung.
             </p>
           </div>
         </section>
@@ -70,7 +77,10 @@ export default function PraxisWebsitesPage() {
                     <ul className="mt-6 space-y-4">
                       {[
                         { title: "Individuelles Design", desc: "Modernes Layout, das perfekt zu Ihrer Praxis passt." },
-                        { title: "Online-Terminbuchung integriert", desc: "Patienten können rund um die Uhr Termine vereinbaren." },
+                        {
+                          title: terminbuchungFeatureTitle,
+                          desc: terminbuchungIntegrationNote,
+                        },
                         { title: "Datenschutzfreundliche technische Umsetzung", desc: "Deutsches Kundenhosting, SSL-Verschlüsselung und datensparsame Einbindungen — Impressum und Datenschutz als Basis." },
                         { title: "SEO-Grundoptimierung", desc: "Gute Auffindbarkeit bei Google von Anfang an." },
                         { title: "Texte & Bilder auf Wunsch", desc: "Wir unterstützen Sie bei der professionellen Inhaltserstellung." },
@@ -84,6 +94,8 @@ export default function PraxisWebsitesPage() {
                         </li>
                       ))}
                     </ul>
+
+                    <TerminbuchungDisclaimer variant="full" className="mt-6" />
                   </div>
 
                   {/* Right Side */}

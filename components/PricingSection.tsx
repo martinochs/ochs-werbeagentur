@@ -25,6 +25,11 @@ import {
   googleAdsStartoptimierungNote,
 } from "@/lib/content/google-ads-setup";
 import { erstgespraechUrl } from "@/lib/cta";
+import {
+  terminbuchungFeatureTitle,
+  terminbuchungKombiFeature,
+} from "@/lib/content/terminbuchung";
+import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
 
 type PackageTheme = {
   accent: string;
@@ -59,6 +64,7 @@ type Package = {
   linkHref: string;
   linkLabel: string;
   showAdCredit?: boolean;
+  showTerminbuchungNote?: boolean;
 };
 
 const themes = {
@@ -118,7 +124,7 @@ const packages: Package[] = [
     actionTheme: actionThemes.green,
     features: [
       "Individuelles Design",
-      "Online-Terminbuchung integriert",
+      terminbuchungFeatureTitle,
       "Datenschutzfreundliche technische Umsetzung",
       "SEO-Grundoptimierung",
       "Texte & Bilder auf Wunsch",
@@ -127,6 +133,7 @@ const packages: Package[] = [
     badge: null,
     linkHref: "/leistungen/praxis-websites",
     linkLabel: "Mehr zur Praxis-Website",
+    showTerminbuchungNote: true,
   },
   {
     title: "Google Ads Patientengewinnung",
@@ -154,7 +161,7 @@ const packages: Package[] = [
     theme: themes.blue,
     actionTheme: actionThemes.blue,
     features: [
-      "Website (inkl. Terminbuchung & SEO)",
+      terminbuchungKombiFeature,
       "Google-Ads-Einrichtung inkl. 30 Tage Startoptimierung",
       "Tracking & Conversion-Optimierung",
       "Professionelle Einrichtung",
@@ -164,6 +171,7 @@ const packages: Package[] = [
     badge: "BESTE GESAMTLÖSUNG",
     linkHref: erstgespraechUrl("kombi"),
     linkLabel: "Kombinationspaket besprechen",
+    showTerminbuchungNote: true,
   },
 ];
 
@@ -267,6 +275,10 @@ function PricingCard({ pkg }: { pkg: Package }) {
               {googleAdsOptionalBetreuungNote}
             </p>
           </div>
+        )}
+
+        {pkg.showTerminbuchungNote && (
+          <TerminbuchungDisclaimer variant="compact" className="mt-5" />
         )}
       </div>
 

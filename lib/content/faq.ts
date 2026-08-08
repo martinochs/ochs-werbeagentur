@@ -26,7 +26,17 @@ export const faqItems = [
 
     answer:
 
-      "Ja. Eine integrierte Online-Terminbuchung entlastet Ihren Empfang, reduziert Telefonate und ermöglicht Patienten die Terminvergabe rund um die Uhr — auch außerhalb der Sprechzeiten.",
+      "Ja — wenn Sie bereits ein Terminbuchungssystem nutzen oder planen, eines einzusetzen. Die Einbindung in Ihre Website entlastet den Empfang, reduziert Telefonate und ermöglicht Patienten die Terminvergabe rund um die Uhr.",
+
+  },
+
+  {
+
+    question: "Was ist bei der Terminbuchung im Website-Paket enthalten?",
+
+    answer:
+
+      "Im Website-Paket ist die technische und optische Einbindung Ihres bereits vorhandenen Terminbuchungssystems — z. B. Doctolib, eTermin oder einen vergleichbaren Anbieter — in Ihre neue Website enthalten. Nicht enthalten sind die erstmalige Einrichtung, Konfiguration oder laufende Pflege des Systems beim Anbieter, das Anlegen von Terminarten, Öffnungszeiten, Leistungen, Verfügbarkeiten oder sonstigen Einstellungen sowie Gebühren des jeweiligen Drittanbieters.",
 
   },
 

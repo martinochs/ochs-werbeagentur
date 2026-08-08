@@ -1,3 +1,5 @@
+import { terminbuchungFeatureTitle } from "@/lib/content/terminbuchung";
+import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
 import {
   Calendar,
   Image,
@@ -18,7 +20,7 @@ const features = [
   },
   {
     icon: Calendar,
-    title: "Online-Terminbuchung",
+    title: terminbuchungFeatureTitle,
   },
   {
     icon: Search,
@@ -67,6 +69,8 @@ export function WebsiteFeaturesSection() {
             </li>
           ))}
         </ul>
+
+        <TerminbuchungDisclaimer variant="full" className="mx-auto mt-8 max-w-3xl" />
       </div>
     </section>
   );

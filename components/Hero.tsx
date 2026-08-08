@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar, Check, CheckCircle2, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import { terminbuchungHeroMention } from "@/lib/content/terminbuchung";
 
 const highlights = [
   { 
@@ -8,8 +9,8 @@ const highlights = [
     text: "Digitale Abläufe reduzieren Rückfragen und Terminabsprachen." 
   },
   { 
-    title: "Online-Termine rund um die Uhr",
-    text: "Patienten buchen einfach, schnell und wann es ihnen passt." 
+    title: "Bestehendes Terminbuchungssystem eingebunden",
+    text: "Patienten nutzen Ihr vorhandenes System direkt über die Website — rund um die Uhr und ohne zusätzliche Telefonate." 
   },
   { 
     title: "Passende Patienten gewinnen und Vertrauen schaffen",
@@ -33,7 +34,7 @@ export function Hero() {
               Praxis-Websites, die Ihr Team entlasten und neue Patienten überzeugen
             </h1>
             <p className="mt-5 text-[15px] leading-relaxed text-muted max-w-lg">
-              Individuell entwickelt für Arzt- und Zahnarztpraxen – mit Online-Terminbuchung, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
+              Individuell entwickelt für Arzt- und Zahnarztpraxen – mit {terminbuchungHeroMention.toLowerCase()}, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
             </p>
             <p className="mt-3 text-sm font-medium text-navy">
               Bundesweit für Arzt- und Zahnarztpraxen – persönlich betreut.

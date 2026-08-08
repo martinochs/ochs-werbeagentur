@@ -15,7 +15,7 @@ const services = [
   {
     id: "praxis-websites",
     title: "Praxis-Websites",
-    description: "Datenschutzfreundlich technisch umgesetzte Websites mit Online-Terminbuchung. Perfekt auf Ihre Fachrichtung zugeschnitten und optimiert für Patienten.",
+    description: "Datenschutzfreundlich technisch umgesetzte Websites mit Einbindung Ihres bestehenden Terminbuchungssystems. Perfekt auf Ihre Fachrichtung zugeschnitten und optimiert für Patienten.",
     icon: Monitor,
     color: "bg-[#5b21b6]",
     href: "/leistungen/praxis-websites",

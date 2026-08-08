@@ -18,7 +18,7 @@ const dummyReviews = [
     author: "Dr. med. Thomas Müller",
     role: "Hausarzt",
     date: "vor 2 Wochen",
-    text: "Frau Ochs hat unsere Praxis-Website komplett neu gestaltet. Wir bekommen jetzt deutlich mehr Anfragen von Neupatienten und die Online-Terminbuchung entlastet unser Team enorm. Absolute Empfehlung!",
+    text: "Frau Ochs hat unsere Praxis-Website komplett neu gestaltet. Wir bekommen jetzt deutlich mehr Anfragen von Neupatienten und die Einbindung unseres Terminbuchungssystems entlastet unser Team enorm. Absolute Empfehlung!",
     rating: 5,
   },
   {

@@ -200,7 +200,7 @@ export default function UeberUnsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">3. Vollständige Umsetzung</h3>
                 <p className="text-sm text-muted leading-relaxed flex-1">
-                  Wir übernehmen die technische und gestalterische Umsetzung für Sie. Je nach gewählter Leistung erstellen wir Ihre neue Praxis-Website, integrieren die Terminbuchung oder richten Ihre Google-Ads-Kampagnen einschließlich Erfolgsmessung ein.
+                  Wir übernehmen die technische und gestalterische Umsetzung für Sie. Je nach gewählter Leistung erstellen wir Ihre neue Praxis-Website, binden Ihr bestehendes Terminbuchungssystem ein oder richten Ihre Google-Ads-Kampagnen einschließlich Erfolgsmessung ein.
                 </p>
                 <p className="mt-4 text-xs font-semibold text-[#6d28d9] bg-[#f5f3ff] inline-block px-3 py-1.5 rounded-md w-fit">
                   Unkomplizierte Online-Abstimmung

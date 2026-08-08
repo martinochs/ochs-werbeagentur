@@ -24,7 +24,7 @@ import { siteConfig } from "@/lib/seo/config";
 export const metadata: Metadata = {
   title: "Orthopädie Dr. Kraft — Webdesign-Beispiel",
   description:
-    "Design-Beispiel einer Orthopädie-Website mit Behandlungsschwerpunkten, Diagnostik, Sportmedizin und Terminbuchung.",
+    "Design-Beispiel einer Orthopädie-Website mit Behandlungsschwerpunkten, Diagnostik, Sportmedizin und Einbindung eines Terminbuchungssystems.",
   robots: { index: false, follow: false },
 };
 

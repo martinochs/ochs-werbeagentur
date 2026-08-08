@@ -14,7 +14,7 @@ const benefits = [
   {
     icon: Users,
     title: "Mehr Anfragen & Patienten",
-    text: "Klare Struktur, Online-Terminoptionen und überzeugende Inhalte, die Interessenten zur Kontaktaufnahme motivieren.",
+    text: "Klare Struktur, Einbindung Ihres Terminbuchungssystems und überzeugende Inhalte, die Interessenten zur Kontaktaufnahme motivieren.",
   },
   {
     icon: Headphones,

@@ -182,9 +182,9 @@ function WebsiteMockup() {
 
           <div>
 
-            <p className="text-[10px] font-semibold text-navy">Online-Terminbuchung</p>
+            <p className="text-[10px] font-semibold text-navy">Terminbuchung eingebunden</p>
 
-            <p className="text-[9px] text-muted">24/7 verfügbar für Patienten</p>
+            <p className="text-[9px] text-muted">Bestehendes System in der Website</p>
 
           </div>
 

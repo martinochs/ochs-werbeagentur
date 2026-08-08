@@ -103,7 +103,7 @@ export function DemoAppointmentModal({
                 <Check className="h-6 w-6" aria-hidden="true" />
               </span>
               <p className="mt-4 text-sm font-semibold text-[#0a2540]">
-                So könnte die Online-Terminbuchung auf Ihrer Praxis-Website funktionieren.
+                So könnte die Einbindung Ihres Terminbuchungssystems auf Ihrer Praxis-Website aussehen.
               </p>
               <p className="mt-2 text-xs text-[#0a2540]/60">
                 Ausgewählt: {selectedService} · {selectedSlot}

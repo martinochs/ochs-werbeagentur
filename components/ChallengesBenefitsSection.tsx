@@ -30,8 +30,8 @@ const challenges = [
 const benefits = [
   {
     icon: Calendar,
-    title: "Termine online buchen – rund um die Uhr",
-    text: "Eine integrierte Online-Terminbuchung entlastet den Empfang und erleichtert die Terminvergabe.",
+    title: "Bestehendes Terminbuchungssystem eingebunden",
+    text: "Wir binden Ihr vorhandenes System technisch und optisch in die Website ein — ohne Neuerstellung oder laufende Pflege beim Anbieter.",
   },
   {
     icon: Info,
