@@ -33,7 +33,7 @@ export default function PraxisWebsitesPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
               Wir erstellen individuelle Websites für Ärzte und Zahnärzte – optimiert für die Patientengewinnung,
-              inklusive {terminbuchungHeroMention.toLowerCase()} und datenschutzfreundlicher technischer Umsetzung.
+              inklusive {terminbuchungHeroMention} und datenschutzfreundlicher technischer Umsetzung.
             </p>
           </div>
         </section>

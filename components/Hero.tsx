@@ -35,7 +35,7 @@ export function Hero() {
               Praxis-Websites, die Ihr Team entlasten und neue Patienten überzeugen
             </h1>
             <p className="mt-5 text-[15px] leading-relaxed text-muted max-w-lg">
-              Individuell entwickelt für Arzt- und Zahnarztpraxen – mit {terminbuchungHeroMention.toLowerCase()}, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
+              Individuell entwickelt für Arzt- und Zahnarztpraxen – mit {terminbuchungHeroMention}, lokaler Google-Sichtbarkeit und persönlicher Betreuung.
             </p>
             <p className="mt-3 text-sm font-medium text-navy">
               Bundesweit für Arzt- und Zahnarztpraxen – persönlich betreut.
