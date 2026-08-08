@@ -1,4 +1,4 @@
-import { analyseProcessSteps } from "@/lib/content/analyse-process";
+import { analyseProcessSteps } from "@/lib/content/website-analyse";
 
 export function AnalyseProcessSteps() {
   return (

@@ -10,6 +10,7 @@ import {
 } from "@/lib/content/praxisanalyse-form";
 import { formSubmitLabel } from "@/lib/cta";
 import type { LeistungSlug } from "@/lib/cta";
+import { analyseSuccessText, analyseSuccessTitle } from "@/lib/content/website-analyse";
 
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
@@ -84,13 +85,9 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
     return (
       <div className="rounded-2xl border border-accent/20 bg-accent-soft px-6 py-10 text-center">
         <CheckCircle2 className="mx-auto h-12 w-12 text-accent" aria-hidden="true" />
-        <h2 className="mt-4 text-xl font-bold text-navy">
-          Vielen Dank – wir schauen uns Ihre Website an.
-        </h2>
+        <h2 className="mt-4 text-xl font-bold text-navy">{analyseSuccessTitle}</h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
-          Ihre Anfrage ist bei uns eingegangen. Wir prüfen Ihre Website und senden Ihnen
-          anschließend eine erste Einschätzung per E-Mail. Danach können Sie bequem einen
-          Termin für Ihr persönliches Erstgespräch auswählen.
+          {analyseSuccessText}
         </p>
         <Link href="/" className="btn-primary mt-6 inline-flex">
           Zurück zur Startseite

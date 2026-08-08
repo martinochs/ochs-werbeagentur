@@ -30,7 +30,7 @@ const steps = [
 
     title: "Analyse & Strategie",
 
-    text: "Sie fordern eine kostenlose Analyse an — wir prüfen Ihren Auftritt und senden Ihnen eine erste Einschätzung.",
+    text: "Sie fordern eine kostenlose Analyse an — mit oder ohne bestehende Website prüfen wir Ihren Auftritt bzw. Ihre Ziele und senden Ihnen eine erste Einschätzung.",
 
   },
 

@@ -1,6 +1,7 @@
 import { ArrowRight, Calendar, Check, CheckCircle2, Stethoscope } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import { analyseCtaSubtext } from "@/lib/content/website-analyse";
 import { terminbuchungHeroMention } from "@/lib/content/terminbuchung";
 
 const highlights = [
@@ -62,11 +63,7 @@ export function Hero() {
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
-              <p className="max-w-lg text-sm text-muted">
-                Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihren Auftritt und
-                senden Ihnen eine erste Einschätzung per E-Mail — danach können Sie bequem
-                einen Termin für Ihr persönliches Erstgespräch auswählen.
-              </p>
+              <p className="max-w-lg text-sm text-muted">{analyseCtaSubtext}</p>
             </div>
           </div>
 

@@ -156,7 +156,7 @@ export const faqItems = [
 
     answer:
 
-      "Mit einer kostenlosen Website-Analyse. Sie senden uns Ihre Website und einige Angaben — wir prüfen Ihren Auftritt und senden Ihnen eine erste Einschätzung per E-Mail. Anschließend können Sie selbst einen Termin für das persönliche Erstgespräch auswählen.",
+      "Mit einer kostenlosen Website-Analyse. Sie senden uns einige Angaben zu Ihrer Praxis — und, falls vorhanden, Ihre Website. Falls noch keine Website vorhanden ist, analysieren wir Ihre Ausgangssituation, Ihre Ziele und die Anforderungen an Ihren neuen Praxisauftritt. Anschließend erhalten Sie eine erste Einschätzung per E-Mail und können selbst einen Termin für das persönliche Erstgespräch auswählen.",
 
   },
 

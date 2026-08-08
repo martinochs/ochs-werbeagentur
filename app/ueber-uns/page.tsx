@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { primaryCtaLabel } from "@/lib/cta";
+import { analyseCtaSubtext, analyseUeberUnsStep1 } from "@/lib/content/website-analyse";
 import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
 import { ArrowRight, Check, Phone, Mail, MapPin, Target, Lightbulb, Users, MessagesSquare, Settings, CheckCircle2, Info } from "lucide-react";
 
@@ -171,9 +172,7 @@ export default function UeberUnsPage() {
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-3">1. Analyse anfordern</h3>
                 <p className="text-sm text-muted leading-relaxed flex-1">
-                  Zu Beginn senden Sie uns Ihre Website und einige Angaben zu Ihrer Praxis.
-                  Wir prüfen Ihren aktuellen Auftritt und identifizieren erste
-                  Verbesserungspotenziale.
+                  {analyseUeberUnsStep1}
                 </p>
                 <p className="mt-4 text-xs font-semibold text-[#166534] bg-[#e6f4ea] inline-block px-3 py-1.5 rounded-md w-fit">
                   Kostenlos & unverbindlich
@@ -234,11 +233,7 @@ export default function UeberUnsPage() {
                 <p className="mt-4 text-lg text-muted leading-relaxed">
                   Sie möchten wissen, wie Ihre Praxis online moderner, sichtbarer und überzeugender auftreten kann?
                 </p>
-                <p className="mt-4 text-lg text-muted leading-relaxed">
-                  Fordern Sie eine kostenlose Website-Analyse an. Wir prüfen Ihren Auftritt und
-                  senden Ihnen eine erste Einschätzung per E-Mail — danach können Sie bequem
-                  einen Termin für Ihr persönliches Erstgespräch auswählen.
-                </p>
+                <p className="mt-4 text-lg text-muted leading-relaxed">{analyseCtaSubtext}</p>
                 <div className="mt-8">
                   <a href="/praxisanalyse" className="btn-primary inline-flex px-8 py-4 text-base w-full sm:w-auto justify-center">
                     {primaryCtaLabel}
