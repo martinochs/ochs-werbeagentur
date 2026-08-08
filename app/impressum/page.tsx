@@ -20,7 +20,7 @@ export default function ImpressumPage() {
               Impressum
             </h1>
             <div className="mt-8 text-base leading-relaxed text-muted">
-              <h2 className="mt-6 text-xl font-bold text-navy">Angaben gemäß § 5 TMG</h2>
+              <h2 className="mt-6 text-xl font-bold text-navy">Angaben gemäß § 5 DDG</h2>
               <p className="mt-2">
                 {siteConfig.contactPerson} <br />
                 {siteConfig.name} <br />
