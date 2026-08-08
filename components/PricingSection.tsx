@@ -30,6 +30,7 @@ import {
   terminbuchungKombiFeature,
 } from "@/lib/content/terminbuchung";
 import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
+import { websiteBetreuungContentChangeScope } from "@/lib/content/website-betreuung";
 
 type PackageTheme = {
   accent: string;
@@ -395,7 +396,7 @@ export function PricingSection() {
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Technische Updates und Sicherheitsaktualisierungen</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Backups</li>
                       <li className="flex items-start gap-2"><span className="text-navy">•</span> Sicherheitschecks</li>
-                      <li className="flex items-start gap-2"><span className="text-navy">•</span> Kleinere inhaltliche Änderungen im Rahmen der Betreuung</li>
+                      <li className="flex items-start gap-2"><span className="text-navy">•</span> {websiteBetreuungContentChangeScope}</li>
                     </ul>
                   </div>
                 </details>
