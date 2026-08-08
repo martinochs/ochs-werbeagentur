@@ -214,8 +214,7 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
           <Link href="/datenschutz" className="font-medium text-navy underline-offset-2 hover:underline">
             Datenschutzerklärung
           </Link>{" "}
-          gelesen und bin mit der Verarbeitung meiner Daten zur Bearbeitung meiner
-          Anfrage einverstanden. *
+          zur Kenntnis genommen. *
         </span>
       </label>
 

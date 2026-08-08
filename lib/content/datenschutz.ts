@@ -7,7 +7,7 @@ export type DatenschutzSection = {
   bullets?: string[];
 };
 
-export const datenschutzStand = "Juli 2026";
+export const datenschutzStand = "August 2026";
 
 export const datenschutzSections: DatenschutzSection[] = [
   {
@@ -71,9 +71,9 @@ export const datenschutzSections: DatenschutzSection[] = [
     paragraphs: [
       "Wenn Sie uns über das Formular auf der Seite /praxisanalyse kontaktieren, verarbeiten wir die von Ihnen eingegebenen Daten zur Bearbeitung Ihrer Anfrage, zur Durchführung der kostenlosen Website-Analyse, zur Vorbereitung eines unverbindlichen Erstgesprächs sowie für mögliche Anschlussfragen.",
       "Pflichtangaben sind insbesondere Ansprechpartner, Website-URL, E-Mail-Adresse und Telefonnummer sowie die gewünschte Unterstützung. Optional können Sie Praxisname, Fachrichtung sowie Freitextangaben mitteilen.",
-      "Ohne diese Daten können wir Ihre Anfrage in der Regel nicht bearbeiten. Die Übermittlung erfolgt nur, wenn Sie der Datenschutzerklärung zugestimmt haben.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO (Einwilligung) sowie Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen auf Ihre Anfrage hin). Sofern Sie keine vertragliche Beziehung anstreben, stützen wir die Bearbeitung zusätzlich auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).",
-      "Die von Ihnen im Formular eingegebenen Daten verbleiben bei uns, bis der Zweck der Speicherung entfällt, Sie der Speicherung widersprechen oder Ihre Einwilligung widerrufen. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.",
+      "Ohne diese Daten können wir Ihre Anfrage in der Regel nicht bearbeiten. Mit dem Absenden des Formulars senden Sie uns eine konkrete Anfrage zur Anbahnung einer möglichen Zusammenarbeit.",
+      "Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage hin). Soweit erforderlich, stützen wir die Bearbeitung ergänzend auf Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).",
+      "Die von Ihnen im Formular eingegebenen Daten verbleiben bei uns, bis der Zweck der Speicherung entfällt oder Sie der Speicherung widersprechen. Zwingende gesetzliche Bestimmungen — insbesondere Aufbewahrungsfristen — bleiben unberührt.",
     ],
   },
   {
