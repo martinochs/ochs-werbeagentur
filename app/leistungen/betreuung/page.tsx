@@ -6,6 +6,7 @@ import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import {
   websiteBetreuungContentChangeFeature,
   websiteBetreuungContentChangeScope,
+  websiteBetreuungIntro,
 } from "@/lib/content/website-betreuung";
 import { Check, ShieldCheck, Info, Star, Monitor, BarChart3, Clock, TrendingUp, Tag } from "lucide-react";
 
@@ -68,8 +69,7 @@ export default function BetreuungPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir sorgen dafür, dass Ihre Website immer auf dem neuesten Stand ist, <br />
-                      schnell lädt und vor Hackerangriffen geschützt bleibt.
+                      {websiteBetreuungIntro}
                     </p>
 
                     <ul className="mt-6 space-y-4">

@@ -11,6 +11,7 @@ import {
 import {
   websiteBetreuungContentChangeFeature,
   websiteBetreuungContentChangeScope,
+  websiteBetreuungIntro,
 } from "@/lib/content/website-betreuung";
 import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
 import { Monitor, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, Activity } from "lucide-react";
@@ -169,8 +170,7 @@ export default function PraxisWebsitesPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Lehnen Sie sich zurück. Wir sorgen dafür, dass Ihre Website immer aktuell, <br />
-                      sicher und erreichbar bleibt.
+                      Lehnen Sie sich zurück. {websiteBetreuungIntro}
                     </p>
 
                     <div className="mt-6 grid sm:grid-cols-2 gap-x-6 gap-y-4">

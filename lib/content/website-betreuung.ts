@@ -3,3 +3,6 @@ export const websiteBetreuungContentChangeFeature =
 
 export const websiteBetreuungContentChangeScope =
   "Kleinere inhaltliche Änderungen sind im Rahmen der laufenden Betreuung enthalten.";
+
+export const websiteBetreuungIntro =
+  "Wir halten Ihre Website technisch aktuell, überwachen die Erreichbarkeit und führen regelmäßige Sicherheitsmaßnahmen durch.";
