@@ -21,7 +21,6 @@ const navLinks: NavLink[] = [
     children: [
       { path: "/leistungen/praxis-websites", label: "Praxis-Websites" },
       { path: "/leistungen/google-ads", label: "Google Ads für Arztpraxen" },
-      { path: "/leistungen/seo", label: "SEO & KI-Sichtbarkeit" },
       { path: "/leistungen/betreuung", label: "Betreuung & Weiterentwicklung" },
       { path: "/leistungen", label: "Alle Leistungen" },
     ],

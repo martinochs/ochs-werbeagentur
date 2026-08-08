@@ -45,7 +45,7 @@ export default async function PraxisanalysePage({ searchParams }: PraxisanalyseP
             folgt erst danach, wenn Sie möchten.
           </p>
           <p className="mt-4 rounded-lg border border-border bg-white px-4 py-3 text-sm leading-relaxed text-muted">
-            Ob neue Praxis-Website, Google Ads, SEO oder laufende Betreuung: In der Analyse
+            Ob neue Praxis-Website, Google Ads oder laufende Betreuung: In der Analyse
             schauen wir uns Ihren aktuellen Auftritt an und zeigen Ihnen, wo Potenzial liegt.
             Die Anfrage ist kostenlos, unverbindlich und ohne Kaufverpflichtung.
           </p>

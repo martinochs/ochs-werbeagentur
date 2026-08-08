@@ -32,16 +32,6 @@ export const faqItems = [
 
   {
 
-    question: "Wie funktioniert SEO für Arztpraxen?",
-
-    answer:
-
-      "Wir optimieren Ihre Website technisch und inhaltlich für relevante Suchbegriffe wie „Zahnarzt Mannheim“ oder „Hautarzt in der Nähe“. Dazu gehören Seitenstruktur, Meta-Daten, Ladegeschwindigkeit und lokale Sichtbarkeit bei Google.",
-
-  },
-
-  {
-
     question: "Was bringt eine Praxis-Website meiner Praxis?",
 
     answer:
@@ -112,11 +102,11 @@ export const faqItems = [
 
   {
 
-    question: "Kann ich nur Google Ads oder nur SEO buchen?",
+    question: "Kann ich nur Google Ads buchen?",
 
     answer:
 
-      "Ja. Google Ads und SEO sind als eigenständige Leistungen buchbar — unabhängig von einer neuen Website. Im Wachstumspaket kombinieren wir beides mit Ihrer Praxis-Website für maximale Wirkung.",
+      "Ja. Google Ads sind als eigenständige Leistung buchbar — unabhängig von einer neuen Website. Im Wachstumspaket kombinieren wir Google Ads mit Ihrer Praxis-Website für maximale Wirkung.",
 
   },
 

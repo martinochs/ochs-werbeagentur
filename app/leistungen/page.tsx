@@ -3,12 +3,12 @@ import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
-import { ArrowRight, Monitor, BarChart3, Search, Settings } from "lucide-react";
+import { ArrowRight, Monitor, BarChart3, Settings } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
   title: "Leistungen",
-  description: "Unsere Leistungen für Arzt- und Zahnarztpraxen: Praxis-Websites, Google Ads, SEO und laufende Betreuung.",
+  description: "Unsere Leistungen für Arzt- und Zahnarztpraxen: Praxis-Websites, Google Ads und laufende Betreuung.",
 };
 
 const services = [
@@ -27,14 +27,6 @@ const services = [
     icon: BarChart3,
     color: "bg-[#166534]",
     href: "/leistungen/google-ads",
-  },
-  {
-    id: "seo",
-    title: "SEO & KI-Sichtbarkeit",
-    description: "Langfristige Sichtbarkeit bei Google und in KI-Suchen. Wir optimieren Ihre Praxis für lokale Suchanfragen und relevante Behandlungen.",
-    icon: Search,
-    color: "bg-[#1d6fd8]",
-    href: "/leistungen/seo",
   },
   {
     id: "betreuung",

@@ -1,7 +1,6 @@
 export const leistungOptions = [
   { value: "website", label: "Praxis-Website" },
   { value: "google-ads", label: "Google Ads" },
-  { value: "seo", label: "SEO & KI-Sichtbarkeit" },
   { value: "betreuung", label: "Monatliche Betreuung" },
   { value: "kombi", label: "Website + Google Ads" },
 ] as const;

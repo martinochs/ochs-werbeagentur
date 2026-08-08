@@ -4,7 +4,6 @@ import {
   Layout,
   Megaphone,
   Pencil,
-  Search,
 } from "lucide-react";
 
 const services = [
@@ -12,11 +11,6 @@ const services = [
     icon: Layout,
     title: "Webdesign",
     text: "Individuelle, vertrauenswürdige Praxis-Websites — modern, übersichtlich und auf Ihre Fachrichtung zugeschnitten.",
-  },
-  {
-    icon: Search,
-    title: "SEO",
-    text: "Bessere Rankings bei Google — damit Patienten Ihre Praxis finden, wenn sie nach einem Arzt oder Zahnarzt suchen.",
   },
   {
     icon: Megaphone,
