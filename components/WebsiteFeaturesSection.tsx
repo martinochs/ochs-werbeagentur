@@ -70,7 +70,7 @@ export function WebsiteFeaturesSection() {
           ))}
         </ul>
 
-        <TerminbuchungDisclaimer variant="full" className="mx-auto mt-8 max-w-3xl" />
+        <TerminbuchungDisclaimer className="mx-auto mt-8 max-w-3xl" />
       </div>
     </section>
   );

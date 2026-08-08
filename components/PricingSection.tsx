@@ -29,7 +29,6 @@ import {
   terminbuchungFeatureTitle,
   terminbuchungKombiFeature,
 } from "@/lib/content/terminbuchung";
-import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
 import { websiteBetreuungContentChangeScope } from "@/lib/content/website-betreuung";
 
 type PackageTheme = {
@@ -65,7 +64,6 @@ type Package = {
   linkHref: string;
   linkLabel: string;
   showAdCredit?: boolean;
-  showTerminbuchungNote?: boolean;
 };
 
 const themes = {
@@ -134,7 +132,6 @@ const packages: Package[] = [
     badge: null,
     linkHref: "/leistungen/praxis-websites",
     linkLabel: "Mehr zur Praxis-Website",
-    showTerminbuchungNote: true,
   },
   {
     title: "Google Ads Patientengewinnung",
@@ -172,7 +169,6 @@ const packages: Package[] = [
     badge: "BESTE GESAMTLÖSUNG",
     linkHref: erstgespraechUrl("kombi"),
     linkLabel: "Kombinationspaket besprechen",
-    showTerminbuchungNote: true,
   },
 ];
 
@@ -278,9 +274,6 @@ function PricingCard({ pkg }: { pkg: Package }) {
           </div>
         )}
 
-        {pkg.showTerminbuchungNote && (
-          <TerminbuchungDisclaimer variant="compact" className="mt-5" />
-        )}
       </div>
 
       <PricingFooter pkg={pkg} />

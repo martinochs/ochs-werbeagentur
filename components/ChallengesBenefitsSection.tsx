@@ -31,7 +31,7 @@ const benefits = [
   {
     icon: Calendar,
     title: "Bestehendes Terminbuchungssystem eingebunden",
-    text: "Wir binden Ihr vorhandenes System technisch und optisch in die Website ein — ohne Neuerstellung oder laufende Pflege beim Anbieter.",
+    text: "Patienten nutzen Ihr vorhandenes System direkt über die Website — rund um die Uhr.",
   },
   {
     icon: Info,

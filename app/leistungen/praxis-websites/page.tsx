@@ -6,7 +6,6 @@ import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import {
   terminbuchungFeatureTitle,
   terminbuchungHeroMention,
-  terminbuchungIntegrationNote,
 } from "@/lib/content/terminbuchung";
 import {
   websiteBetreuungContentChangeFeature,
@@ -84,7 +83,7 @@ export default function PraxisWebsitesPage() {
                         { title: "Individuelles Design", desc: "Modernes Layout, das perfekt zu Ihrer Praxis passt." },
                         {
                           title: terminbuchungFeatureTitle,
-                          desc: terminbuchungIntegrationNote,
+                          desc: "Nahtlos in Ihr Website-Design integriert.",
                         },
                         { title: "Datenschutzfreundliche technische Umsetzung", desc: "Deutsches Kundenhosting, SSL-Verschlüsselung und datensparsame Einbindungen — Impressum und Datenschutz als Basis." },
                         { title: "SEO-Grundoptimierung", desc: "Gute Auffindbarkeit bei Google von Anfang an." },
@@ -100,7 +99,7 @@ export default function PraxisWebsitesPage() {
                       ))}
                     </ul>
 
-                    <TerminbuchungDisclaimer variant="full" className="mt-6" />
+                    <TerminbuchungDisclaimer className="mt-6" />
                   </div>
 
                   {/* Right Side */}
