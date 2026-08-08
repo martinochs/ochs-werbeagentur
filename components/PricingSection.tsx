@@ -24,6 +24,7 @@ import {
   googleAdsSetupFeatures,
   googleAdsStartoptimierungNote,
 } from "@/lib/content/google-ads-setup";
+import { erstgespraechUrl } from "@/lib/cta";
 
 type PackageTheme = {
   accent: string;
@@ -161,8 +162,8 @@ const packages: Package[] = [
     ],
     highlighted: true,
     badge: "BESTE GESAMTLÖSUNG",
-    linkHref: "/leistungen/praxis-websites",
-    linkLabel: "Website + Google Ads ansehen",
+    linkHref: erstgespraechUrl("kombi"),
+    linkLabel: "Kombinationspaket besprechen",
   },
 ];
 

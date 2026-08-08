@@ -29,7 +29,9 @@ export default async function PraxisanalysePage({ searchParams }: PraxisanalyseP
             Kostenlos & unverbindlich
           </p>
           <h1 className="mt-3 text-3xl font-bold text-navy sm:text-4xl">
-            Kostenloses Erstgespräch für Ihre Praxis
+            {initialLeistung === "kombi"
+              ? "Kostenlose Analyse für Website + Google Ads anfordern"
+              : "Kostenloses Erstgespräch für Ihre Praxis"}
           </h1>
           <p className="mt-4 text-base leading-relaxed text-muted">
             Lernen Sie uns unverbindlich kennen. Wir sprechen über Ihre Praxis, Ihre Ziele
