@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import { ArrowRight, Monitor, BarChart3, Settings } from "lucide-react";
@@ -100,7 +99,6 @@ export default function LeistungenPage() {
           </div>
         </section>
       </main>
-      <ClosingCtaSection />
       <Footer />
     </>
   );
