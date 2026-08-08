@@ -230,7 +230,7 @@ export default function BetreuungPage() {
                         <Check className="h-4 w-4 text-[#0a2540]" /> Schutz vor Ausfällen und Hackerangriffen
                       </li>
                       <li className="flex items-center gap-2 text-[13px] text-navy">
-                        <Check className="h-4 w-4 text-[#0a2540]" /> Kontinuierliche Steigerung der Anfragen
+                        <Check className="h-4 w-4 text-[#0a2540]" /> Kontinuierliche Optimierung auf mehr qualifizierte Anfragen
                       </li>
                       <li className="flex items-center gap-2 text-[13px] text-navy">
                         <Check className="h-4 w-4 text-[#0a2540]" /> Anpassung an neue Google-Richtlinien
