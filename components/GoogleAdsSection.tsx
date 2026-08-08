@@ -22,13 +22,13 @@ const steps = [
   },
   {
     icon: BarChart3,
-    title: "Tracking & Optimierung",
-    text: "Wir messen die Ergebnisse und optimieren Kampagnen kontinuierlich anhand der gewonnenen Daten.",
+    title: "Tracking & Startoptimierung",
+    text: "Wir richten Conversion-Tracking ein und optimieren Ihre Kampagne in den ersten 30 Tagen nach Kampagnenstart.",
   },
   {
     icon: TrendingUp,
-    title: "Auswertung & Wachstum",
-    text: "Wir kontrollieren Suchbegriffe, Anzeigen, Kosten und Ergebnisse während des vereinbarten Betreuungszeitraums.",
+    title: "Optional: laufende Betreuung",
+    text: "Danach können Sie optional unsere monatliche Google-Ads-Betreuung buchen — für Auswertung, Anpassungen und Wachstum.",
   },
 ];
 

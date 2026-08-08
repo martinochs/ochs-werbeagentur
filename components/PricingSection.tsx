@@ -19,6 +19,11 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { GoogleAdsCreditBlock } from "@/components/GoogleAdsCreditBlock";
+import {
+  googleAdsOptionalBetreuungNote,
+  googleAdsSetupFeatures,
+  googleAdsStartoptimierungNote,
+} from "@/lib/content/google-ads-setup";
 
 type PackageTheme = {
   accent: string;
@@ -131,13 +136,7 @@ const packages: Package[] = [
     icon: Users,
     theme: themes.green,
     actionTheme: actionThemes.green2,
-    features: [
-      "Strategie & Keyword-Recherche",
-      "Google-Ads-Kampagneneinrichtung",
-      "Anzeigenerstellung & Zielgruppen",
-      "Conversion-Tracking & Auswertung",
-      "Laufende Optimierung",
-    ],
+    features: [...googleAdsSetupFeatures],
     highlighted: false,
     badge: null,
     linkHref: "/leistungen/google-ads",
@@ -155,7 +154,7 @@ const packages: Package[] = [
     actionTheme: actionThemes.blue,
     features: [
       "Website (inkl. Terminbuchung & SEO)",
-      "Google-Ads-Kampagnen",
+      "Google-Ads-Einrichtung inkl. 30 Tage Startoptimierung",
       "Tracking & Conversion-Optimierung",
       "Professionelle Einrichtung",
       "Ein Ansprechpartner für alles",
@@ -257,6 +256,17 @@ function PricingCard({ pkg }: { pkg: Package }) {
             </li>
           ))}
         </ul>
+
+        {pkg.showAdCredit && (
+          <div className="mt-5 space-y-2 rounded-lg border border-[#bbf7d0] bg-[#f0fdf4] px-3.5 py-3">
+            <p className="text-[11px] leading-relaxed text-muted">
+              {googleAdsStartoptimierungNote}
+            </p>
+            <p className="text-xs font-semibold leading-snug text-navy">
+              {googleAdsOptionalBetreuungNote}
+            </p>
+          </div>
+        )}
       </div>
 
       <PricingFooter pkg={pkg} />
@@ -303,8 +313,8 @@ export function PricingSection() {
                 Monatliche Betreuung
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-muted">
-                Optional nach Erstellung Ihrer Website oder Google-Ads-Einrichtung — mit festen
-                monatlichen Preisen und persönlicher Betreuung.
+                Optional nach Erstellung Ihrer Website oder Google-Ads-Einrichtung — separate
+                monatliche Leistung, nicht im einmaligen Einrichtungspreis enthalten.
               </p>
               
               <ul className="mt-8 space-y-6">

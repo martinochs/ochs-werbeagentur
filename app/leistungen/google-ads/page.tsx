@@ -5,6 +5,12 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { GoogleAdsSection } from "@/components/GoogleAdsSection";
 import { GoogleAdsCreditBlock } from "@/components/GoogleAdsCreditBlock";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
+import {
+  googleAdsOptionalBetreuungNote,
+  googleAdsOptionalBetreuungShort,
+  googleAdsSetupFeatures,
+  googleAdsStartoptimierungNote,
+} from "@/lib/content/google-ads-setup";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
 export const metadata = {
@@ -59,10 +65,10 @@ export default function GoogleAdsPage() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold leading-snug text-[#166534]">
-                          Google-Ads-Kampagnenerstellung
+                          Google-Ads-Kampagne
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Einmalige Einrichtung. Starkes Fundament für messbare Ergebnisse.
+                          Einmalig 2.999 € netto
                         </p>
                       </div>
                     </div>
@@ -73,22 +79,22 @@ export default function GoogleAdsPage() {
                     </p>
 
                     <ul className="mt-6 space-y-4">
-                      {[
-                        { title: "Strategie & Keyword-Recherche", desc: "Wir finden die Suchbegriffe, mit denen Patienten wirklich suchen." },
-                        { title: "Google-Ads-Kampagneneinrichtung", desc: "Professionelle Einrichtung Ihrer Kampagne und Anzeigengruppen." },
-                        { title: "Anzeigenerstellung & Zielgruppen", desc: "Überzeugende Anzeigen für die richtigen Patienten." },
-                        { title: "Conversion-Tracking & Auswertung", desc: "Damit Sie genau sehen, was funktioniert." },
-                        { title: "Laufende Optimierung (erste Phase)", desc: "Wir starten Ihre Kampagne mit optimalen Einstellungen." },
-                      ].map((feature) => (
-                        <li key={feature.title} className="flex items-start gap-3">
+                      {googleAdsSetupFeatures.map((feature) => (
+                        <li key={feature} className="flex items-start gap-3">
                           <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#166534]" strokeWidth={2.5} aria-hidden="true" />
-                          <div>
-                            <p className="text-sm font-bold text-navy">{feature.title}</p>
-                            <p className="text-sm text-muted">{feature.desc}</p>
-                          </div>
+                          <p className="text-sm font-bold text-navy">{feature}</p>
                         </li>
                       ))}
                     </ul>
+
+                    <div className="mt-6 space-y-2 rounded-xl border border-[#bbf7d0] bg-[#f0fdf4] px-4 py-4">
+                      <p className="text-xs leading-relaxed text-muted">
+                        {googleAdsStartoptimierungNote}
+                      </p>
+                      <p className="text-sm font-semibold text-navy">
+                        {googleAdsOptionalBetreuungShort}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Right Side */}
@@ -105,7 +111,7 @@ export default function GoogleAdsPage() {
                         <p className="mt-2 text-5xl font-extrabold text-[#166534]">
                           2.999 €
                         </p>
-                        <p className="mt-1 text-sm font-medium text-navy">einmalig</p>
+                        <p className="mt-1 text-sm font-medium text-navy">einmalig · netto</p>
                       </div>
                       <div className="mx-auto mt-4 inline-block rounded bg-[#16a34a] px-3 py-1 text-[13px] font-bold text-white">
                         Sie sparen 1.750 €
@@ -158,10 +164,10 @@ export default function GoogleAdsPage() {
                       </div>
                       <div>
                         <h3 className="text-xl font-bold leading-snug text-[#1d6fd8]">
-                          Laufende Betreuung & Optimierung
+                          Google-Ads-Betreuung (optional)
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Monatliche Betreuung für kontinuierlichen Erfolg.
+                          Separate Zusatzleistung — nicht im Einrichtungspreis enthalten.
                         </p>
                       </div>
                     </div>
@@ -197,13 +203,13 @@ export default function GoogleAdsPage() {
                       <p className="mt-4 text-4xl font-extrabold text-[#1d6fd8]">
                         449 €
                       </p>
-                      <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
+                      <p className="mt-1 text-sm font-medium text-navy">/ Monat · netto</p>
                       <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
                       
                       <div className="mt-6 border-t border-[#bfdbfe] pt-4 flex items-start gap-2 text-left">
                         <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#1d6fd8]" aria-hidden="true" />
                         <p className="text-xs text-muted">
-                          Empfohlen für nachhaltiges Wachstum und maximale Ergebnisse.
+                          {googleAdsOptionalBetreuungNote}
                         </p>
                       </div>
                     </div>
@@ -252,13 +258,14 @@ export default function GoogleAdsPage() {
                       <div>
                         <h4 className="text-base font-bold text-[#1d6fd8]">Sie möchten wachsen?</h4>
                         <p className="mt-1 text-[13px] text-muted">
-                          Kombinieren Sie Erstellung und Betreuung für kontinuierliche Optimierung und mehr Anfragen.
+                          Optional buchbar: laufende Google-Ads-Betreuung für 449 € netto/Monat —
+                          getrennt vom einmaligen Einrichtungspreis.
                         </p>
                       </div>
                     </div>
                     <ul className="mt-6 space-y-2">
                       <li className="flex items-center gap-2 text-[13px] text-navy">
-                        <Check className="h-4 w-4 text-[#1d6fd8]" /> Stetige Optimierung & mehr Ergebnisse
+                        <Check className="h-4 w-4 text-[#1d6fd8]" /> Optionale Betreuung ab 449 € netto/Monat
                       </li>
                       <li className="flex items-center gap-2 text-[13px] text-navy">
                         <Check className="h-4 w-4 text-[#1d6fd8]" /> Regelmäßige Auswertungen & Empfehlungen

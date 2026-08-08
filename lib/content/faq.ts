@@ -56,7 +56,7 @@ export const faqItems = [
 
     answer:
 
-      "Ja, wenn Kampagnen gezielt aufgesetzt werden. Google Ads erreicht Patienten genau dann, wenn sie aktiv nach einer Praxis suchen — regional, messbar und mit kontrollierbarem Budget. Wir richten Tracking und Optimierung professionell ein.",
+      "Ja, wenn Kampagnen gezielt aufgesetzt werden. Google Ads erreicht Patienten genau dann, wenn sie aktiv nach einer Praxis suchen — regional, messbar und mit kontrollierbarem Budget. Die Einrichtung umfasst 30 Tage Startoptimierung nach Kampagnenstart; laufende Betreuung ist optional separat buchbar.",
 
   },
 
