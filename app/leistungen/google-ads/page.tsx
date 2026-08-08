@@ -204,7 +204,7 @@ export default function GoogleAdsPage() {
                         449 €
                       </p>
                       <p className="mt-1 text-sm font-medium text-navy">/ Monat · netto</p>
-                      <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
+                      <p className="mt-4 text-xs text-muted">Monatlich kündbar</p>
                       
                       <div className="mt-6 border-t border-[#bfdbfe] pt-4 flex items-start gap-2 text-left">
                         <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#1d6fd8]" aria-hidden="true" />

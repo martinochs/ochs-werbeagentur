@@ -42,7 +42,7 @@ export default function BetreuungPage() {
                 Unsere Betreuungs-Pakete
               </h2>
               <p className="mt-4 text-base text-muted">
-                Transparente monatliche Festpreise. Flexibel kündbar. Keine versteckten Kosten.
+                Transparente monatliche Festpreise. Monatlich kündbar. Keine versteckten Kosten.
               </p>
             </div>
 
@@ -98,7 +98,7 @@ export default function BetreuungPage() {
                         249 €
                       </p>
                       <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
-                      <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
+                      <p className="mt-4 text-xs text-muted">Monatlich kündbar</p>
                       
                       <div className="mt-6 border-t border-[#ddd6fe] pt-4 flex items-start gap-2 text-left">
                         <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#5b21b6]" aria-hidden="true" />
@@ -167,7 +167,7 @@ export default function BetreuungPage() {
                         449 €
                       </p>
                       <p className="mt-1 text-sm font-medium text-navy">/ Monat</p>
-                      <p className="mt-4 text-xs text-muted">Flexible Kündigung: monatlich</p>
+                      <p className="mt-4 text-xs text-muted">Monatlich kündbar</p>
                       
                       <div className="mt-6 border-t border-[#bbf7d0] pt-4 flex items-start gap-2 text-left">
                         <Info className="mt-0.5 h-4 w-4 shrink-0 text-[#166534]" aria-hidden="true" />
