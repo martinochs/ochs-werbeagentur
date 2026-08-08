@@ -3,11 +3,8 @@ import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { GoogleAdsSection } from "@/components/GoogleAdsSection";
+import { GoogleAdsCreditBlock } from "@/components/GoogleAdsCreditBlock";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
-import {
-  googleAdsCreditFootnote,
-  googleAdsCreditHeadline,
-} from "@/lib/content/google-ads-credit";
 import { Megaphone, BarChart3, Rocket, TrendingUp, Check, Gift, ArrowRight, ShieldCheck, Info, Star } from "lucide-react";
 
 export const metadata = {
@@ -145,20 +142,7 @@ export default function GoogleAdsPage() {
                       </div>
                     </div>
 
-                    <div className="mt-6 rounded-xl border border-[#bfdbfe] bg-[#eff6ff] p-5 text-center">
-                      <div className="flex items-center justify-center gap-2">
-                        <Gift className="h-5 w-5 text-[#1d6fd8]" aria-hidden="true" />
-                        <p className="text-[10px] font-bold uppercase tracking-wide text-[#1d6fd8]">
-                          Vorteil für Erstnutzer
-                        </p>
-                      </div>
-                      <p className="mt-2 text-sm font-medium text-navy">{googleAdsCreditHeadline}</p>
-                      <div className="mt-3 border-t border-[#bfdbfe] pt-3 text-left">
-                        <p className="text-[11px] leading-relaxed text-muted">
-                          {googleAdsCreditFootnote}
-                        </p>
-                      </div>
-                    </div>
+                    <GoogleAdsCreditBlock variant="featured" className="mt-6" />
                   </div>
                 </article>
               </div>
