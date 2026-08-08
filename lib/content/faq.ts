@@ -6,7 +6,27 @@ export const faqItems = [
 
     answer:
 
-      "Die Kosten hängen von Umfang und Funktionen ab — von einer kompakten Praxis-Website bis zur umfassenden Lösung mit SEO und laufender Betreuung. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto. Nach unserer kostenlosen Website-Analyse und einem persönlichen Erstgespräch erhalten Sie ein transparentes Festpreis-Angebot ohne versteckte Kosten.",
+      "Die Kosten hängen von Umfang und Funktionen ab. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto — mit klar definiertem Leistungsumfang, unter anderem bis zu 10 Inhaltsseiten und 2 Korrekturrunden vor Veröffentlichung. Nach unserer kostenlosen Website-Analyse erhalten Sie ein transparentes Festpreis-Angebot.",
+
+  },
+
+  {
+
+    question: "Was ist im Festpreis von 2.999 € netto für die Praxis-Website enthalten?",
+
+    answer:
+
+      "Im Aktionspreis sind individuelle Konzeption und Design, bis zu 10 Inhaltsseiten (Impressum und Datenschutz zusätzlich), optimierte Darstellung auf allen Geräten, Erstellung und Optimierung der Website-Texte auf Grundlage Ihrer Praxisinformationen, SEO-Grundoptimierung, Kontaktformular, Integration eines bestehenden Terminbuchungssystems, Performance-Optimierung, technische Einbindung von Impressum und Datenschutzerklärung, 2 Korrekturrunden vor Veröffentlichung sowie die technische Veröffentlichung enthalten. Domain, Hosting und Gebühren externer Anbieter sind separat.",
+
+  },
+
+  {
+
+    question: "Was versteht sich unter einer Korrekturrunde?",
+
+    answer:
+
+      "Eine Korrekturrunde bedeutet eine gesammelt übermittelte Änderungsrunde Ihrerseits — also alle Anpassungswünsche in einer Rückmeldung. Im Website-Festpreis sind 2 Korrekturrunden vor Veröffentlichung enthalten.",
 
   },
 
@@ -126,7 +146,7 @@ export const faqItems = [
 
     answer:
 
-      "Wir unterstützen Sie bei Struktur, Formulierung und Bildauswahl. Sie können eigene Texte und Fotos einbringen — wir optimieren sie für Web und SEO. Auf Wunsch übernehmen wir die Erstellung professioneller Inhalte.",
+      "Im Festpreis erstellen und optimieren wir Website-Texte auf Grundlage Ihrer Praxisinformationen und übernehmen vorhandene Texte und Bilder für die vereinbarten Seiten. Umfangreiche medizinische Fachartikel oder Inhalte über den vereinbarten Seitenumfang hinaus sind nicht automatisch enthalten und werden individuell angeboten.",
 
   },
 

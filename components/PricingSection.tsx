@@ -26,10 +26,11 @@ import {
 } from "@/lib/content/google-ads-setup";
 import { erstgespraechUrl } from "@/lib/cta";
 import {
-  terminbuchungFeatureTitle,
   terminbuchungKombiFeature,
 } from "@/lib/content/terminbuchung";
 import { websiteBetreuungContentChangeScope } from "@/lib/content/website-betreuung";
+import { websitePackageCardFeatures } from "@/lib/content/website-package";
+import { WebsitePackageScope } from "@/components/WebsitePackageScope";
 
 type PackageTheme = {
   accent: string;
@@ -121,13 +122,7 @@ const packages: Package[] = [
     icon: Activity,
     theme: themes.navy,
     actionTheme: actionThemes.green,
-    features: [
-      "Individuelles Design",
-      terminbuchungFeatureTitle,
-      "Datenschutzfreundliche technische Umsetzung",
-      "SEO-Grundoptimierung",
-      "Texte & Bilder auf Wunsch",
-    ],
+    features: [...websitePackageCardFeatures],
     highlighted: false,
     badge: null,
     linkHref: "/leistungen/praxis-websites",
@@ -306,9 +301,11 @@ export function PricingSection() {
           ))}
         </div>
 
+        <WebsitePackageScope className="mt-10" />
+
         <div className="mt-8 text-center text-sm text-muted">
           <p>Alle Preise verstehen sich zzgl. der gesetzlichen MwSt.</p>
-          <p className="mt-1 text-xs">* Details und Voraussetzungen finden Sie in unseren Leistungsbeschreibungen.</p>
+          <p className="mt-1 text-xs">* Domain, Hosting und externe Anbietergebühren sind nicht im Website-Festpreis enthalten.</p>
         </div>
 
         {/* Monthly Options Box */}

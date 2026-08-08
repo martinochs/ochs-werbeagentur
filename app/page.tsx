@@ -22,10 +22,10 @@ import {
 
 const homeFaqItems = [
   faqItems[0], // Was kostet eine professionelle Website für eine Arztpraxis?
-  faqItems[1], // Wie lange dauert die Erstellung einer Praxis-Website?
-  faqItems[6], // Kann eine bestehende Praxis-Website modernisiert werden?
-  faqItems[10], // Wer betreut meine Praxis-Website nach dem Launch?
-  faqItems[13], // Wie starten wir mit der Zusammenarbeit?
+  faqItems[1], // Was ist im Festpreis von 2.999 € netto enthalten?
+  faqItems[2], // Was versteht sich unter einer Korrekturrunde?
+  faqItems[3], // Wie lange dauert die Erstellung einer Praxis-Website?
+  faqItems[15], // Wie starten wir mit der Zusammenarbeit?
 ];
 
 export const metadata: Metadata = {

@@ -3,16 +3,13 @@ import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
-import {
-  terminbuchungFeatureTitle,
-  terminbuchungHeroMention,
-} from "@/lib/content/terminbuchung";
+import { terminbuchungHeroMention } from "@/lib/content/terminbuchung";
 import {
   websiteBetreuungContentChangeFeature,
   websiteBetreuungContentChangeScope,
   websiteBetreuungIntro,
 } from "@/lib/content/website-betreuung";
-import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
+import { WebsitePackageScope } from "@/components/WebsitePackageScope";
 import { Monitor, Check, Gift, ShieldCheck, Info, Star, Rocket, TrendingUp, Activity } from "lucide-react";
 
 export const metadata = {
@@ -49,7 +46,7 @@ export default function PraxisWebsitesPage() {
                 Transparentes Angebot für Ihre Praxis
               </h2>
               <p className="mt-4 text-base text-muted">
-                Ein fester Preis für Ihre neue Website. Keine versteckten Kosten.
+                Festpreis 2.999 € netto mit klar definiertem Leistungsumfang.
               </p>
             </div>
 
@@ -74,32 +71,9 @@ export default function PraxisWebsitesPage() {
                     </div>
 
                     <p className="mt-6 text-sm text-navy">
-                      Wir konzipieren, designen und programmieren Ihre neue Praxis-Website – <br />
-                      schlüsselfertig und bereit für neue Patienten.
+                      Individuelle Konzeption, Design und technische Umsetzung — der Leistungsumfang
+                      ist im Festpreis klar definiert.
                     </p>
-
-                    <ul className="mt-6 space-y-4">
-                      {[
-                        { title: "Individuelles Design", desc: "Modernes Layout, das perfekt zu Ihrer Praxis passt." },
-                        {
-                          title: terminbuchungFeatureTitle,
-                          desc: "Nahtlos in Ihr Website-Design integriert.",
-                        },
-                        { title: "Datenschutzfreundliche technische Umsetzung", desc: "Deutsches Kundenhosting, SSL-Verschlüsselung und datensparsame Einbindungen — Impressum und Datenschutz als Basis." },
-                        { title: "SEO-Grundoptimierung", desc: "Gute Auffindbarkeit bei Google von Anfang an." },
-                        { title: "Texte & Bilder auf Wunsch", desc: "Wir unterstützen Sie bei der professionellen Inhaltserstellung." },
-                      ].map((feature) => (
-                        <li key={feature.title} className="flex items-start gap-3">
-                          <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#5b21b6]" strokeWidth={2.5} aria-hidden="true" />
-                          <div>
-                            <p className="text-sm font-bold text-navy">{feature.title}</p>
-                            <p className="text-sm text-muted">{feature.desc}</p>
-                          </div>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <TerminbuchungDisclaimer className="mt-6" />
                   </div>
 
                   {/* Right Side */}
@@ -116,7 +90,7 @@ export default function PraxisWebsitesPage() {
                         <p className="mt-2 text-5xl font-extrabold text-[#5b21b6]">
                           2.999 €
                         </p>
-                        <p className="mt-1 text-sm font-medium text-navy">einmalig</p>
+                        <p className="mt-1 text-sm font-medium text-navy">netto, einmalig</p>
                       </div>
                       <div className="mx-auto mt-4 inline-block rounded bg-[#7c3aed] px-3 py-1 text-[13px] font-bold text-white">
                         Sie sparen 1.750 €
@@ -133,8 +107,8 @@ export default function PraxisWebsitesPage() {
                       <div className="flex items-start gap-3">
                         <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-[#5b21b6]" aria-hidden="true" />
                         <div>
-                          <p className="text-sm font-bold text-navy">Schlüsselfertig</p>
-                          <p className="text-xs text-muted">Sie müssen sich um keine technischen Details kümmern.</p>
+                          <p className="text-sm font-bold text-navy">Klar definierter Umfang</p>
+                          <p className="text-xs text-muted">Alle Leistungen im Festpreis sind transparent aufgelistet.</p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -148,6 +122,8 @@ export default function PraxisWebsitesPage() {
                   </div>
                 </article>
               </div>
+
+              <WebsitePackageScope className="mt-6" checkColor="text-[#5b21b6]" />
 
               {/* Zusatzleistung */}
               <div className="relative mt-4">
@@ -305,11 +281,9 @@ export default function PraxisWebsitesPage() {
               {/* Footer Bar */}
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
-                  <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#5b21b6]" /> 100 % transparent</span>
+                  <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#5b21b6]" /> Festpreis 2.999 € netto</span>
                   <span className="text-border" aria-hidden="true"> &bull; </span>
-                  <span>Keine versteckten Kosten</span>
-                  <span className="text-border" aria-hidden="true"> &bull; </span>
-                  <span>Volle Kontrolle</span>
+                  <span>Klar definierter Leistungsumfang</span>
                 </div>
               </div>
 

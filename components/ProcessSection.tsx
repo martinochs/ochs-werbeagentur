@@ -50,7 +50,7 @@ const steps = [
 
     title: "Umsetzung & Inhalte",
 
-    text: "Technische Umsetzung, SEO-Grundlagen und Unterstützung bei Texten und Bildern — datenschutzfreundlich mit deutschem Hosting, SSL und datensparsamen Einbindungen.",
+    text: "Technische Umsetzung, SEO-Grundlagen und Texte auf Basis Ihrer Praxisinformationen — datenschutzfreundlich mit SSL und datensparsamen Einbindungen.",
 
   },
 

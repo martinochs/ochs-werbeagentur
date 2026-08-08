@@ -1,12 +1,11 @@
-import { terminbuchungFeatureTitle } from "@/lib/content/terminbuchung";
-import { TerminbuchungDisclaimer } from "@/components/TerminbuchungDisclaimer";
+import { WebsitePackageScope } from "@/components/WebsitePackageScope";
 import {
   Calendar,
-  Image,
+  Layers,
   Layout,
   MonitorSmartphone,
+  PenLine,
   Search,
-  Zap,
 } from "lucide-react";
 
 const features = [
@@ -15,24 +14,24 @@ const features = [
     title: "Individuelles Praxis-Design",
   },
   {
-    icon: MonitorSmartphone,
-    title: "Optimiert für Smartphone, Tablet und Desktop",
+    icon: Layers,
+    title: "Bis zu 10 Inhaltsseiten",
   },
   {
-    icon: Calendar,
-    title: terminbuchungFeatureTitle,
+    icon: MonitorSmartphone,
+    title: "Optimiert für Smartphone, Tablet und Desktop",
   },
   {
     icon: Search,
     title: "SEO-Grundoptimierung",
   },
   {
-    icon: Zap,
-    title: "Schnelle und moderne technische Umsetzung",
+    icon: Calendar,
+    title: "Integration bestehendes Terminbuchungssystem",
   },
   {
-    icon: Image,
-    title: "Unterstützung bei Texten und Bildern",
+    icon: PenLine,
+    title: "Texte auf Basis Ihrer Praxisinformationen",
   },
 ];
 
@@ -49,10 +48,11 @@ export function WebsiteFeaturesSection() {
             id="website-features-heading"
             className="text-2xl font-bold text-navy sm:text-3xl lg:text-4xl"
           >
-            Alles, was eine moderne Praxis-Website braucht
+            Wichtige Bausteine Ihrer Praxis-Website
           </h2>
           <p className="mt-4 text-base text-muted">
-            Die wichtigsten Bestandteile im Überblick — klar, übersichtlich und ohne versteckte Extras.
+            Die zentralen Leistungen im Überblick — der genaue Festpreis-Umfang steht bei unseren
+            Preisen.
           </p>
         </div>
 
@@ -69,8 +69,6 @@ export function WebsiteFeaturesSection() {
             </li>
           ))}
         </ul>
-
-        <TerminbuchungDisclaimer className="mx-auto mt-8 max-w-3xl" />
       </div>
     </section>
   );
