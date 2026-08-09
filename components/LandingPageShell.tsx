@@ -14,14 +14,18 @@ export function LandingPageHeader({ ctaHref, trustHint, ctaLabel }: LandingPageH
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 lg:px-8">
         <div className="flex min-w-0 items-center gap-3">
-          <div className="flex shrink-0 items-center gap-3" aria-label={siteConfig.name}>
+          <a
+            href="/"
+            className="relative z-10 flex shrink-0 items-center gap-3 rounded-md transition-opacity hover:opacity-80"
+            aria-label={`${siteConfig.name} Startseite`}
+          >
             <Logo className="h-9 w-9 shrink-0" />
             <span className="hidden text-[10px] font-bold leading-tight tracking-wide text-navy sm:block">
               OCHS DIGITAL
               <br />
               CONSULTING
             </span>
-          </div>
+          </a>
           <span className="hidden truncate text-xs font-medium text-[#5b21b6] md:inline">
             {trustHint}
           </span>

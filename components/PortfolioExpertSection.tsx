@@ -167,9 +167,6 @@ export function PortfolioExpertSection() {
               Individuelle Design-Konzepte — modern, vertrauensvoll und auf Ihre
               Fachrichtung zugeschnitten.
             </p>
-            <p className="mx-auto mt-3 max-w-2xl rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
-              Fiktive Designkonzepte zur Veranschaulichung – keine echten Kundenprojekte.
-            </p>
           </div>
           <div className="scrollbar-hide -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
             {portfolioExamples.map((item) => (

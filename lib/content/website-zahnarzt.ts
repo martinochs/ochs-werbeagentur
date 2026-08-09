@@ -64,7 +64,6 @@ export const websiteZahnarztDesign = {
   heading: "So kann Ihre neue Zahnarzt-Website aussehen",
   description:
     "Ein fiktives Designkonzept für eine Zahnarztpraxis – mit Leistungen, Team, Terminbuchungs-Einbindung und klarer Patientenführung.",
-  disclaimer: "Fiktives Designkonzept – kein echtes Kundenprojekt.",
   demoHref: "/webdesign-zahnarzt",
   demoImage: "/beispiele/zahnarzt-behandlungsraum.png",
   demoImageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs",

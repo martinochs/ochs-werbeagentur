@@ -156,8 +156,7 @@ export function WebsiteZahnarztLandingContent() {
                 priority={false}
               />
             </div>
-            <div className="flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-xs font-medium text-muted">{websiteZahnarztDesign.disclaimer}</p>
+            <div className="flex justify-end p-5">
               <Link
                 href={websiteZahnarztDesign.demoHref}
                 className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#5b21b6] px-5 py-2.5 text-sm font-bold text-white hover:opacity-90"
