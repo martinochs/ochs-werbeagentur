@@ -12,20 +12,25 @@ export const websiteZahnarztCta = {
 };
 
 export const websiteZahnarztHero = {
-  h1: "Moderne Websites für Zahnarztpraxen",
+  h1: "Websites für Zahnarztpraxen, die Patienten überzeugen.",
   subtitle:
-    "Individuell entwickelt für Zahnärzte – mobil optimiert, klar strukturiert und auf eine professionelle Patientenansprache ausgerichtet.",
-  priceHint: "Aktuell 2.999 € statt 4.749 € netto",
+    "Individuell entwickelt für Zahnärzte – professionell, mobil optimiert und darauf ausgerichtet, aus Website-Besuchern neue Patienten zu machen.",
+  priceCurrent: "Aktuell 2.999 €",
+  priceCompare: "4.749 €",
+  priceSuffix: "netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
-  designLinkLabel: "Zahnarzt-Designs ansehen",
+  designLinkLabel: "Beispiel-Website ansehen",
+  heroImage: "/beispiele/zahnarzt-hero-landing.png",
+  heroImageAlt:
+    "Moderner, heller Behandlungsraum in einer Zahnarztpraxis mit Behandlungsstuhl und moderner Ausstattung",
 };
 
 export const websiteZahnarztTrustBar = [
   "Spezialisiert auf Zahnarztpraxen",
-  "Bis zu 10 Inhaltsseiten",
-  "2 Korrekturrunden inklusive",
-  "Persönliche Betreuung",
-  "Individuelle Entwicklung statt Standard-Baukasten",
+  "Individuelles Design statt Baukasten",
+  "Mobil optimiert & schnell",
+  "SEO-Grundoptimierung inklusive",
+  "Persönlicher Ansprechpartner",
 ] as const;
 
 export const websiteZahnarztProblems = {

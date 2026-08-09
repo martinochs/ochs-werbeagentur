@@ -63,42 +63,81 @@ export function WebsiteZahnarztLandingContent() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#f8fafc] py-14 lg:py-20">
-        <div className="mx-auto max-w-3xl px-4 text-center lg:px-8">
-          <h1 className="text-3xl font-bold leading-tight text-navy sm:text-4xl lg:text-[2.65rem]">
-            {websiteZahnarztHero.h1}
-          </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-            {websiteZahnarztHero.subtitle}
-          </p>
-          <p className="mt-5 text-lg font-bold text-[#5b21b6]">{websiteZahnarztHero.priceHint}</p>
-          <p className="mt-2 text-sm text-muted">{websiteZahnarztHero.trustBullets}</p>
-          <LpCta
-            href={analyseUrl}
-            section="hero"
-            className="btn-primary mt-8 inline-flex items-center gap-2 px-8 py-4 text-base"
-          >
-            {websiteZahnarztCta.primary}
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </LpCta>
-          <p className="mt-3">
-            <a
-              href="#designbeispiele"
-              className="text-sm font-semibold text-[#5b21b6] underline-offset-2 hover:underline"
+      <section className="bg-[#f7f9fc] py-12 md:py-14 lg:py-16 xl:py-20">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:gap-10 lg:gap-14 lg:px-8">
+          <div className="text-left">
+            <h1 className="max-w-[34rem] text-[1.75rem] font-bold leading-[1.15] text-navy sm:text-4xl lg:text-[2.75rem] xl:text-5xl">
+              {websiteZahnarztHero.h1.replace(/\.$/, "")}
+              <span className="text-[#5b21b6]">.</span>
+            </h1>
+            <p className="mt-5 max-w-[36rem] text-base leading-relaxed text-[#5b6472] sm:text-lg sm:leading-relaxed">
+              {websiteZahnarztHero.subtitle}
+            </p>
+            <p className="mt-6 flex flex-wrap items-baseline gap-x-2 gap-y-1">
+              <span className="text-xl font-bold text-[#5b21b6] sm:text-2xl">
+                {websiteZahnarztHero.priceCurrent}
+              </span>
+              <span className="text-base text-[#5b6472]">
+                statt{" "}
+                <span className="line-through decoration-[#5b6472]/60">
+                  {websiteZahnarztHero.priceCompare}
+                </span>{" "}
+                {websiteZahnarztHero.priceSuffix}
+              </span>
+            </p>
+            <p className="mt-3 text-sm text-[#5b6472]">{websiteZahnarztHero.trustBullets}</p>
+            <LpCta
+              href={analyseUrl}
+              section="hero"
+              className="btn-primary mt-8 inline-flex w-full items-center justify-center gap-2 px-8 py-4 text-base sm:w-auto"
             >
-              {websiteZahnarztHero.designLinkLabel}
-            </a>
-          </p>
+              {websiteZahnarztCta.primary}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </LpCta>
+            <p className="mt-4">
+              <a
+                href="#designbeispiele"
+                className="text-sm font-semibold text-[#5b21b6] underline-offset-2 hover:underline"
+              >
+                {websiteZahnarztHero.designLinkLabel}
+              </a>
+            </p>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-xl md:max-w-none">
+            <div className="relative aspect-[16/11] overflow-hidden rounded-3xl rounded-br-[4.5rem] shadow-sm sm:aspect-[4/3] md:aspect-[5/6] md:min-h-[420px] lg:min-h-[480px] lg:rounded-br-[5.5rem]">
+              <Image
+                src={websiteZahnarztHero.heroImage}
+                alt={websiteZahnarztHero.heroImageAlt}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-center"
+              />
+              <div
+                className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#f7f9fc] to-transparent sm:w-1/5"
+                aria-hidden="true"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Trust bar */}
-      <section className="border-y border-border bg-white py-5">
-        <ul className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-6 gap-y-2 px-4 text-center text-xs font-semibold text-navy sm:text-sm lg:px-8">
+      <section className="border-y border-border bg-white py-8 lg:py-10">
+        <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-x-4 gap-y-6 px-4 sm:grid-cols-3 lg:grid-cols-5 lg:gap-x-6 lg:px-8">
           {websiteZahnarztTrustBar.map((item) => (
-            <li key={item} className="flex items-center gap-1.5">
-              <Check className={`h-3.5 w-3.5 shrink-0 ${accent}`} aria-hidden="true" />
-              {item}
+            <li
+              key={item}
+              className="flex flex-col items-center gap-2.5 text-center sm:flex-row sm:items-start sm:text-left"
+            >
+              <span
+                className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-[#ddd6fe] bg-[#f5f3ff]"
+                aria-hidden="true"
+              >
+                <Check className="h-3.5 w-3.5 text-[#5b21b6]" strokeWidth={2.5} />
+              </span>
+              <span className="text-xs font-semibold leading-snug text-navy sm:text-sm">{item}</span>
             </li>
           ))}
         </ul>
