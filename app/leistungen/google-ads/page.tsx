@@ -42,10 +42,17 @@ export default function GoogleAdsPage() {
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-muted">
               <Link
+                href="/google-ads-arztpraxis"
+                className="font-medium text-navy underline-offset-2 hover:underline"
+              >
+                Google Ads speziell für Arztpraxen
+              </Link>
+              {" · "}
+              <Link
                 href="/google-ads-zahnarzt"
                 className="font-medium text-navy underline-offset-2 hover:underline"
               >
-                Google Ads speziell für Zahnarztpraxen
+                Zahnarztpraxen
               </Link>
             </p>
           </div>
