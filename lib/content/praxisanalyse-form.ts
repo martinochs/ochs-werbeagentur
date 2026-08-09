@@ -43,6 +43,9 @@ export const googleAdsErfahrungOptions = [
   "Schon länger aktiv",
 ] as const;
 
+export const praxisanalysePrivacyNote =
+  "Bitte übermitteln Sie über dieses Formular keine Patienten- oder Gesundheitsdaten.";
+
 export function getFormVariantKey(
   initialLeistung: LeistungSlug | undefined,
   selectedFormValue: string,

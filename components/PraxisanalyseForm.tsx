@@ -10,6 +10,7 @@ import {
   googleAdsErfahrungOptions,
   gewuenschteLeistungen,
   leistungSlugToFormValue,
+  praxisanalysePrivacyNote,
 } from "@/lib/content/praxisanalyse-form";
 import type { LeistungSlug } from "@/lib/cta";
 import { analyseSuccessText, analyseSuccessTitle } from "@/lib/content/website-analyse";
@@ -126,6 +127,10 @@ export function PraxisanalyseForm({ initialLeistung, initialQuelle }: Praxisanal
           <code className="text-xs">.env.local</code>.
         </p>
       )}
+
+      <p className="rounded-lg border border-border bg-surface px-4 py-3 text-sm text-muted">
+        {praxisanalysePrivacyNote}
+      </p>
 
       <fieldset className="space-y-4">
         <legend className="text-base font-bold text-navy">Ihre Angaben</legend>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
@@ -38,6 +39,14 @@ export default function GoogleAdsPage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
               Professionelle Google-Ads-Kampagnen speziell für Arzt- und Zahnarztpraxen.<br />
               Sichtbar bei den richtigen Patienten, genau dann, wenn sie Sie suchen.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-muted">
+              <Link
+                href="/google-ads-zahnarzt"
+                className="font-medium text-navy underline-offset-2 hover:underline"
+              >
+                Google Ads speziell für Zahnarztpraxen
+              </Link>
             </p>
           </div>
         </section>
