@@ -15,6 +15,14 @@ export const portfolioExamples: PortfolioExample[] = [
     image: "/beispiele/zahnarzt-behandlungsraum.png",
   },
   {
+    title: "Zahnarztpraxis am See",
+    subtitle: "Helles Design mit Leistungsübersicht, Team & Terminbuchung",
+    gradient: "from-sky-700 to-slate-800",
+    href: "/webdesign-zahnarzt-am-see",
+    image:
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+  },
+  {
     title: "Hautärztin Dr. Sophie Keller",
     subtitle: "Elegante Praxis-Website mit Schwerpunkten & Ästhetik",
     gradient: "from-emerald-700 to-emerald-900",

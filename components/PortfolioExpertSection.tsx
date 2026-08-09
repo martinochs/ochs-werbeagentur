@@ -168,7 +168,7 @@ export function PortfolioExpertSection() {
               Fachrichtung zugeschnitten.
             </p>
           </div>
-          <div className="scrollbar-hide -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0">
+          <div className="scrollbar-hide -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-6 sm:-mx-8 sm:px-8 lg:mx-0 lg:grid lg:grid-cols-2 lg:gap-6 lg:overflow-visible lg:px-0 lg:pb-0 xl:grid-cols-4">
             {portfolioExamples.map((item) => (
               <div key={item.title} className="w-[85vw] shrink-0 snap-center sm:w-[50vw] lg:w-auto">
                 <ExampleCard {...item} />

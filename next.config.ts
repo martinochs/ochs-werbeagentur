@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/beispiele/zahnarztpraxis-am-see",
+        destination: "/webdesign-zahnarzt-am-see",
+        permanent: true,
+      },
+      {
         source: "/beispiele/hautarzt-dr-schmidt",
         destination: "/webdesign-hautarzt",
         permanent: true,
