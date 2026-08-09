@@ -83,7 +83,7 @@ export function WebsiteZahnarztLandingContent() {
           </LpCta>
           <p className="mt-3">
             <a
-              href="#designbeispiel"
+              href="#designbeispiele"
               className="text-sm font-semibold text-[#5b21b6] underline-offset-2 hover:underline"
             >
               {websiteZahnarztHero.designLinkLabel}
@@ -140,31 +140,38 @@ export function WebsiteZahnarztLandingContent() {
         </div>
       </section>
 
-      {/* Designbeispiel */}
-      <section id="designbeispiel" className="scroll-mt-24 border-t border-border bg-[#f8fafc] py-14 lg:py-16">
+      {/* Designbeispiele */}
+      <section id="designbeispiele" className="scroll-mt-24 border-t border-border bg-[#f8fafc] py-14 lg:py-16">
         <div className="mx-auto max-w-5xl px-4 lg:px-8">
           <h2 className="text-2xl font-bold text-navy sm:text-3xl">{websiteZahnarztDesign.heading}</h2>
-          <p className="mt-3 max-w-2xl text-muted">{websiteZahnarztDesign.description}</p>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border bg-white shadow-sm">
-            <div className="relative aspect-[16/10] w-full bg-surface">
-              <Image
-                src={websiteZahnarztDesign.demoImage}
-                alt={websiteZahnarztDesign.demoImageAlt}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 960px"
-                priority={false}
-              />
-            </div>
-            <div className="flex justify-end p-5">
-              <Link
-                href={websiteZahnarztDesign.demoHref}
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#5b21b6] px-5 py-2.5 text-sm font-bold text-white hover:opacity-90"
+          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+            {websiteZahnarztDesign.examples.map((example) => (
+              <article
+                key={example.href}
+                className="overflow-hidden rounded-2xl border border-border bg-white shadow-sm"
               >
-                {websiteZahnarztDesign.buttonLabel}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-            </div>
+                <div className="relative aspect-[16/10] w-full bg-surface">
+                  <Image
+                    src={example.image}
+                    alt={example.imageAlt}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 480px"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-lg font-bold text-navy">{example.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">{example.description}</p>
+                  <Link
+                    href={example.href}
+                    className="mt-4 inline-flex items-center gap-2 rounded-lg bg-[#5b21b6] px-5 py-2.5 text-sm font-bold text-white hover:opacity-90"
+                  >
+                    {websiteZahnarztDesign.buttonLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
           <p className="mt-4 text-sm text-muted">
             Weitere Designbeispiele:{" "}

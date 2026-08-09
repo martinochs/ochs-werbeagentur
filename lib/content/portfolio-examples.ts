@@ -8,19 +8,19 @@ export type PortfolioExample = {
 
 export const portfolioExamples: PortfolioExample[] = [
   {
-    title: "Zahnarztpraxis Dr. Schmidt",
-    subtitle: "Moderne Praxis-Website mit Team, Leistungen & Bewertungen",
-    gradient: "from-slate-600 to-slate-800",
-    href: "/webdesign-zahnarzt",
-    image: "/beispiele/zahnarzt-behandlungsraum.png",
-  },
-  {
     title: "Zahnarztpraxis am See",
     subtitle: "Helles Design mit Leistungsübersicht, Team & Terminbuchung",
     gradient: "from-sky-700 to-slate-800",
     href: "/webdesign-zahnarzt-am-see",
     image:
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Zahnarztpraxis Dr. Schmidt",
+    subtitle: "Moderne Praxis-Website mit Team, Leistungen & Bewertungen",
+    gradient: "from-slate-600 to-slate-800",
+    href: "/webdesign-zahnarzt",
+    image: "/beispiele/zahnarzt-behandlungsraum.png",
   },
   {
     title: "Hautärztin Dr. Sophie Keller",

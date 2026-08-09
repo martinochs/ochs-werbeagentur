@@ -17,7 +17,7 @@ export const websiteZahnarztHero = {
     "Individuell entwickelt für Zahnärzte – mobil optimiert, klar strukturiert und auf eine professionelle Patientenansprache ausgerichtet.",
   priceHint: "Aktuell 2.999 € statt 4.749 € netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
-  designLinkLabel: "Zahnarzt-Design ansehen",
+  designLinkLabel: "Zahnarzt-Designs ansehen",
 };
 
 export const websiteZahnarztTrustBar = [
@@ -62,12 +62,26 @@ export const websiteZahnarztProblems = {
 
 export const websiteZahnarztDesign = {
   heading: "So kann Ihre neue Zahnarzt-Website aussehen",
-  description:
-    "Ein fiktives Designkonzept für eine Zahnarztpraxis – mit Leistungen, Team, Terminbuchungs-Einbindung und klarer Patientenführung.",
-  demoHref: "/webdesign-zahnarzt",
-  demoImage: "/beispiele/zahnarzt-behandlungsraum.png",
-  demoImageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs",
-  buttonLabel: "Zahnarzt-Design ansehen",
+  buttonLabel: "Design ansehen",
+  examples: [
+    {
+      title: "Zahnarztpraxis am See",
+      description:
+        "Helles Designkonzept mit Leistungsübersicht, Teamvorstellung, Praxisbereich und Online-Terminvereinbarung.",
+      href: "/webdesign-zahnarzt-am-see",
+      image:
+        "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80",
+      imageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs – Zahnarztpraxis am See",
+    },
+    {
+      title: "Zahnarztpraxis Dr. Schmidt",
+      description:
+        "Modernes Designkonzept mit Leistungen, Team, Bewertungen und klarer Patientenführung.",
+      href: "/webdesign-zahnarzt",
+      image: "/beispiele/zahnarzt-behandlungsraum.png",
+      imageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs – Dr. Schmidt",
+    },
+  ],
   moreExamples: [
     { label: "Hautarzt-Beispiel", href: "/webdesign-hautarzt" },
     { label: "Orthopädie-Beispiel", href: "/webdesign-orthopaede" },
