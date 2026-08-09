@@ -366,9 +366,6 @@ export function HautarztDemoPageContent() {
                   Zeit für das Gespräch — damit Sie verstehen, welche Behandlung
                   für Ihre Haut am sinnvollsten ist.
                 </p>
-                <p className="mt-4 rounded-xl border border-[#5a6e5a]/15 bg-[#f5f3ef] px-3 py-2 text-xs font-medium text-[#3d4a3d]/75">
-                  Beispielprofil – Name und dargestellte Person sind fiktiv.
-                </p>
 
                 <ul className="mt-6 space-y-4">
                   {practiceFeatures.map(({ icon: Icon, title, description }) => (
@@ -478,9 +475,6 @@ export function HautarztDemoPageContent() {
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#b0946b]">
                 Das sagen unsere Patienten
-              </p>
-              <p className="mt-4 rounded-lg border border-[#5a6e5a]/15 bg-[#f5f3ef] px-4 py-3 text-sm text-[#3d4a3d]/80">
-                Beispielbewertungen – sämtliche dargestellten Bewertungen und Namen sind fiktiv.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">

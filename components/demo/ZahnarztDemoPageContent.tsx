@@ -305,9 +305,6 @@ export function ZahnarztDemoPageContent() {
               <h2 className="mt-3 text-2xl font-bold text-[#0a2540] sm:text-3xl">
                 Erfahren. Einfühlsam. Für Sie da.
               </h2>
-              <p className="mt-3 rounded-lg border border-[#2a9d8f]/20 bg-[#eef6f4] px-3 py-2 text-xs font-medium text-[#0a2540]/75">
-                Beispielteam – Namen und dargestellte Personen sind fiktiv.
-              </p>
               <p className="mt-4 text-sm leading-relaxed text-[#0a2540]/65">
                 Unser erfahrenes Team verbindet moderne Zahnmedizin mit
                 persönlicher Betreuung — damit Sie sich von Anfang an wohlfühlen
@@ -358,9 +355,6 @@ export function ZahnarztDemoPageContent() {
               <h2 className="mt-3 text-2xl font-bold sm:text-3xl">
                 Vertrauen, das uns motiviert
               </h2>
-              <p className="mt-4 rounded-lg border border-white/15 bg-white/5 px-4 py-3 text-sm text-white/85">
-                Beispielbewertungen – sämtliche dargestellten Bewertungen und Namen sind fiktiv.
-              </p>
             </div>
 
             <div className="mt-10 grid gap-5 md:grid-cols-3">
