@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/seo/config";
-import { websiteZahnarztCta } from "@/lib/content/website-zahnarzt";
 import { Mail, Phone } from "lucide-react";
 
 type LandingPageHeaderProps = {
   ctaHref: string;
+  trustHint: string;
+  ctaLabel: string;
 };
 
-export function LandingPageHeader({ ctaHref }: LandingPageHeaderProps) {
+export function LandingPageHeader({ ctaHref, trustHint, ctaLabel }: LandingPageHeaderProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3 lg:px-8">
@@ -22,7 +23,7 @@ export function LandingPageHeader({ ctaHref }: LandingPageHeaderProps) {
             </span>
           </div>
           <span className="hidden truncate text-xs font-medium text-[#5b21b6] md:inline">
-            Spezialisiert auf Zahnarztpraxen
+            {trustHint}
           </span>
         </div>
         <a
@@ -31,7 +32,7 @@ export function LandingPageHeader({ ctaHref }: LandingPageHeaderProps) {
           data-lp-section="header"
           className="btn-primary shrink-0 px-3 py-2.5 text-xs sm:px-4 sm:text-sm"
         >
-          {websiteZahnarztCta.header}
+          {ctaLabel}
         </a>
       </div>
     </header>

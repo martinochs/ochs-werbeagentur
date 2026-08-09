@@ -38,10 +38,17 @@ export default function PraxisWebsitesPage() {
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-sm text-muted">
               <Link
+                href="/website-arztpraxis"
+                className="font-medium text-navy underline-offset-2 hover:underline"
+              >
+                Websites speziell für Arztpraxen ansehen
+              </Link>
+              {" · "}
+              <Link
                 href="/website-zahnarzt"
                 className="font-medium text-navy underline-offset-2 hover:underline"
               >
-                Speziell für Zahnärzte: Website-Lösungen für Zahnarztpraxen ansehen
+                Zahnarztpraxen
               </Link>
             </p>
           </div>
