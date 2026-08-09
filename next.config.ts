@@ -22,6 +22,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/beispiele/zahnarztpraxis-leonhard",
+        destination: "/webdesign-zahnarzt-leonhard",
+        permanent: true,
+      },
+      {
         source: "/beispiele/hautarzt-dr-schmidt",
         destination: "/webdesign-hautarzt",
         permanent: true,

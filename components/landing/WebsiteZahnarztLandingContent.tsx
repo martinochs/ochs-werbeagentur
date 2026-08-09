@@ -183,7 +183,7 @@ export function WebsiteZahnarztLandingContent() {
       <section id="designbeispiele" className="scroll-mt-24 border-t border-border bg-[#f8fafc] py-14 lg:py-16">
         <div className="mx-auto max-w-5xl px-4 lg:px-8">
           <h2 className="text-2xl font-bold text-navy sm:text-3xl">{websiteZahnarztDesign.heading}</h2>
-          <div className="mt-8 grid gap-8 lg:grid-cols-2">
+          <div className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {websiteZahnarztDesign.examples.map((example) => (
               <article
                 key={example.href}

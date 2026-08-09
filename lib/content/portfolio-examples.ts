@@ -16,6 +16,13 @@ export const portfolioExamples: PortfolioExample[] = [
       "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
   },
   {
+    title: "Zahnarztpraxis Dr. Leonhard",
+    subtitle: "Premium-Design mit warmer Farbwelt & Interior-Charakter",
+    gradient: "from-stone-600 to-teal-900",
+    href: "/webdesign-zahnarzt-leonhard",
+    image: "/beispiele/zahnarzt-leonhard-hero.png",
+  },
+  {
     title: "Zahnarztpraxis Dr. Schmidt",
     subtitle: "Moderne Praxis-Website mit Team, Leistungen & Bewertungen",
     gradient: "from-slate-600 to-slate-800",

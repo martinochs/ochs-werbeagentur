@@ -86,6 +86,14 @@ export const websiteZahnarztDesign = {
       image: "/beispiele/zahnarzt-behandlungsraum.png",
       imageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs – Dr. Schmidt",
     },
+    {
+      title: "Zahnarztpraxis Dr. Leonhard",
+      description:
+        "Premium-Designkonzept mit warmer Farbwelt, Serif-Typografie und hochwertigem Interior-Auftritt.",
+      href: "/webdesign-zahnarzt-leonhard",
+      image: "/beispiele/zahnarzt-leonhard-hero.png",
+      imageAlt: "Vorschau eines fiktiven Zahnarzt-Website-Designs – Dr. Leonhard",
+    },
   ],
   moreExamples: [
     { label: "Hautarzt-Beispiel", href: "/webdesign-hautarzt" },
