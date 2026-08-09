@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ClosingCtaSection } from "@/components/ClosingCtaSection";
@@ -34,6 +35,14 @@ export default function PraxisWebsitesPage() {
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">
               Wir erstellen individuelle Websites für Ärzte und Zahnärzte – optimiert für die Patientengewinnung,
               inklusive {terminbuchungHeroMention} und datenschutzfreundlicher technischer Umsetzung.
+            </p>
+            <p className="mx-auto mt-4 max-w-2xl text-sm text-muted">
+              <Link
+                href="/website-zahnarzt"
+                className="font-medium text-navy underline-offset-2 hover:underline"
+              >
+                Speziell für Zahnärzte: Website-Lösungen für Zahnarztpraxen ansehen
+              </Link>
             </p>
           </div>
         </section>

@@ -9,7 +9,7 @@ import { getPraxisanalyseVariant } from "@/lib/content/praxisanalyse-variants";
 export const dynamic = "force-dynamic";
 
 type PraxisanalysePageProps = {
-  searchParams: Promise<{ leistung?: string }>;
+  searchParams: Promise<{ leistung?: string; quelle?: string }>;
 };
 
 export async function generateMetadata({
@@ -27,6 +27,7 @@ export async function generateMetadata({
 export default async function PraxisanalysePage({ searchParams }: PraxisanalysePageProps) {
   const params = await searchParams;
   const initialLeistung = parseLeistungSlug(params.leistung);
+  const initialQuelle = params.quelle?.trim() || undefined;
   const variant = getPraxisanalyseVariant(initialLeistung);
 
   return (
@@ -48,7 +49,10 @@ export default async function PraxisanalysePage({ searchParams }: PraxisanalyseP
           </div>
 
           <div className="mt-10 rounded-2xl border border-border bg-white p-6 shadow-[0_4px_24px_rgba(10,37,64,0.06)] lg:p-8">
-            <PraxisanalyseForm initialLeistung={initialLeistung} />
+            <PraxisanalyseForm
+              initialLeistung={initialLeistung}
+              initialQuelle={initialQuelle}
+            />
           </div>
         </div>
       </main>

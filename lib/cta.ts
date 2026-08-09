@@ -30,9 +30,19 @@ export function leistungToUrlParam(leistung: LeistungSlug): string {
   return leistung;
 }
 
-export function erstgespraechUrl(leistung?: LeistungSlug): string {
-  if (!leistung) return "/praxisanalyse";
-  return `/praxisanalyse?leistung=${leistungToUrlParam(leistung)}`;
+export function erstgespraechUrl(
+  leistung?: LeistungSlug,
+  options?: { quelle?: string },
+): string {
+  const params = new URLSearchParams();
+  if (leistung) {
+    params.set("leistung", leistungToUrlParam(leistung));
+  }
+  if (options?.quelle) {
+    params.set("quelle", options.quelle);
+  }
+  const query = params.toString();
+  return query ? `/praxisanalyse?${query}` : "/praxisanalyse";
 }
 
 /** @deprecated Alias — use erstgespraechUrl */

@@ -27,6 +27,7 @@ const labelClassName = "text-sm font-medium text-navy";
 
 type PraxisanalyseFormProps = {
   initialLeistung?: LeistungSlug;
+  initialQuelle?: string;
 };
 
 function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
@@ -34,7 +35,7 @@ function getDefaultLeistung(initialLeistung?: LeistungSlug): string {
   return leistungSlugToFormValue[initialLeistung] ?? "";
 }
 
-export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
+export function PraxisanalyseForm({ initialLeistung, initialQuelle }: PraxisanalyseFormProps) {
   const [status, setStatus] = useState<FormStatus>("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [gewuenschteLeistung, setGewuenschteLeistung] = useState(() =>
@@ -94,7 +95,11 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-accent/20 bg-accent-soft px-6 py-10 text-center">
+      <div
+        className="rounded-2xl border border-accent/20 bg-accent-soft px-6 py-10 text-center"
+        data-lp-form-success={initialQuelle ? "true" : undefined}
+        data-lp-quelle={initialQuelle}
+      >
         <CheckCircle2 className="mx-auto h-12 w-12 text-accent" aria-hidden="true" />
         <h2 className="mt-4 text-xl font-bold text-navy">{analyseSuccessTitle}</h2>
         <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-muted">
@@ -109,9 +114,11 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
 
   return (
     <form
-      key={initialLeistung ?? "default"}
+      key={`${initialLeistung ?? "default"}-${initialQuelle ?? ""}`}
       onSubmit={handleSubmit}
       className="space-y-8"
+      data-lp-form="praxisanalyse"
+      data-lp-quelle={initialQuelle}
     >
       {!formId && (
         <p className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
@@ -285,6 +292,8 @@ export function PraxisanalyseForm({ initialLeistung }: PraxisanalyseFormProps) {
           </label>
         )}
       </fieldset>
+
+      {initialQuelle && <input type="hidden" name="quelle" value={initialQuelle} />}
 
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
 
