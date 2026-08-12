@@ -9,8 +9,9 @@ import { Mail, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useId, useState } from "react";
 
-const SCROLL_THRESHOLD = 0.25;
-const TIME_THRESHOLD_MS = 10_000;
+const SCROLL_THRESHOLD = 0.08;
+const TIME_THRESHOLD_MS = 5_000;
+const NON_SCROLLABLE_DELAY_MS = 2_000;
 
 export function QuickInquiry() {
   const pathname = usePathname();
@@ -37,9 +38,20 @@ export function QuickInquiry() {
     setTriggerVisible(false);
     setOpen(false);
 
+    let nonScrollableTimer: number | undefined;
+
     function checkScroll() {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = docHeight > 0 ? window.scrollY / docHeight : 0;
+      if (docHeight <= 32) {
+        if (!nonScrollableTimer) {
+          nonScrollableTimer = window.setTimeout(
+            () => setTriggerVisible(true),
+            NON_SCROLLABLE_DELAY_MS,
+          );
+        }
+        return;
+      }
+      const progress = window.scrollY / docHeight;
       if (progress >= SCROLL_THRESHOLD) {
         setTriggerVisible(true);
       }
@@ -51,6 +63,7 @@ export function QuickInquiry() {
 
     return () => {
       window.clearTimeout(timer);
+      if (nonScrollableTimer) window.clearTimeout(nonScrollableTimer);
       window.removeEventListener("scroll", checkScroll);
     };
   }, [settings, pathname]);
@@ -79,8 +92,8 @@ export function QuickInquiry() {
   if (!settings) return null;
 
   const triggerClassName = triggerVisible
-    ? "pointer-events-auto opacity-100"
-    : "pointer-events-none opacity-0";
+    ? "pointer-events-auto translate-x-0 opacity-100"
+    : "pointer-events-none translate-x-4 opacity-0 md:translate-x-3";
 
   return (
     <>
@@ -89,7 +102,7 @@ export function QuickInquiry() {
         type="button"
         onClick={openPanel}
         aria-label={tabLabel}
-        className={`fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-2 rounded-l-md bg-navy px-2.5 py-4 text-white shadow-md transition-opacity duration-300 hover:bg-navy-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy md:flex ${triggerClassName}`}
+        className={`fixed right-0 top-1/2 z-[55] hidden -translate-y-1/2 flex-col items-center gap-2 rounded-l-md bg-navy px-2.5 py-4 text-white shadow-lg transition-all duration-300 hover:bg-navy-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy md:flex ${triggerClassName}`}
       >
         <Mail className="h-4 w-4 shrink-0 opacity-90" aria-hidden="true" />
         <span
@@ -104,7 +117,7 @@ export function QuickInquiry() {
       <button
         type="button"
         onClick={openPanel}
-        className={`fixed inset-x-4 bottom-4 z-40 flex items-center justify-center gap-2 rounded-lg bg-navy px-4 py-3 text-sm font-semibold text-white shadow-lg transition-opacity duration-300 hover:bg-navy-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy md:hidden ${triggerClassName}`}
+        className={`fixed inset-x-4 bottom-4 z-[55] flex items-center justify-center gap-2 rounded-lg bg-navy px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-navy-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-navy md:hidden ${triggerClassName}`}
         style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
       >
         <Mail className="h-4 w-4 shrink-0 opacity-90" aria-hidden="true" />
