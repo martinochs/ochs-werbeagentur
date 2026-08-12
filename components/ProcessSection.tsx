@@ -1,392 +1,235 @@
 import {
-
   ArrowRight,
-
-  Calendar,
-
-  Check,
-
+  Building2,
+  Heart,
   Monitor,
-
   Pencil,
-
   Rocket,
-
   Search,
-
+  Shield,
+  Smartphone,
+  Star,
+  TrendingUp,
 } from "lucide-react";
+import { Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
-
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+});
 
 const processNavy = "#0a2540";
 
-
-
 const steps = [
-
   {
-
     icon: Search,
-
+    number: "01",
     title: "Analyse & Strategie",
-
-    text: "Sie fordern eine kostenlose Analyse an — mit oder ohne bestehende Website prüfen wir Ihren Auftritt bzw. Ihre Ziele und senden Ihnen eine erste Einschätzung.",
-
+    text: "Wir analysieren Ihre aktuelle Website, Ihre Ziele und Ihre Zielgruppe, um die perfekte Strategie zu entwickeln.",
   },
-
   {
-
     icon: Pencil,
-
+    number: "02",
     title: "Konzept & Design",
-
-    text: "Individuelles Design-Konzept mit klarer Struktur, Vertrauenselementen und Festpreis-Angebot.",
-
+    text: "Wir erstellen ein individuelles Designkonzept mit klarer Struktur und Fokus auf Benutzerfreundlichkeit.",
   },
-
   {
-
     icon: Monitor,
-
+    number: "03",
     title: "Umsetzung & Inhalte",
-
-    text: "Technische Umsetzung, SEO-Grundlagen und Texte auf Basis Ihrer Praxisinformationen — datenschutzfreundlich mit SSL und datensparsamen Einbindungen.",
-
+    text: "Technische Umsetzung, SEO-Optimierung und Erstellung aller Inhalte – datenschutzkonform und barrierefrei.",
   },
-
   {
-
     icon: Rocket,
-
+    number: "04",
     title: "Launch & Betreuung",
-
-    text: "Veröffentlichung, Einweisung und optional laufende Betreuung — damit Ihre Website dauerhaft überzeugt.",
-
+    text: "Veröffentlichung Ihrer Website und optional laufende Betreuung, Weiterentwicklung und Optimierung.",
   },
-
 ];
 
-
-
-const highlights = [
-
-  "Individuelles Design für Ihre Fachrichtung",
-
-  "Datenschutzfreundlich & mobil optimiert",
-
-  "Transparentes Festpreis-Angebot nach der Analyse",
-
+const trustFeatures = [
+  {
+    icon: Shield,
+    title: "Individuelles Design",
+    text: "100 % auf Ihre Praxis und Ihre Patienten abgestimmt.",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobil optimiert",
+    text: "Perfekte Darstellung auf allen Geräten – für jeden Patienten.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Mehr Sichtbarkeit",
+    text: "SEO-optimiert für bessere Platzierungen bei Google.",
+  },
 ];
-
-
 
 function WebsiteMockup() {
-
   return (
-
-    <div className="mx-auto w-full max-w-[280px] lg:mx-0 lg:max-w-none">
-
-      <div className="rounded-2xl border border-border bg-white p-4 shadow-[0_8px_32px_rgba(10,37,64,0.1)]">
-
-        <div className="flex items-center gap-1.5 rounded-t-lg bg-surface px-3 py-2">
-
+    <div
+      className="mx-auto w-full max-w-[340px] lg:mx-0 lg:max-w-none"
+      role="img"
+      aria-label="Beispiel einer modernen Praxis-Website im Browser"
+    >
+      <div className="overflow-hidden rounded-xl border border-border bg-white shadow-[0_12px_40px_rgba(10,37,64,0.12)]">
+        <div className="flex items-center gap-1.5 border-b border-border bg-[#f5f7fa] px-3 py-2">
           <div className="h-2 w-2 rounded-full bg-red-400" aria-hidden="true" />
-
           <div className="h-2 w-2 rounded-full bg-yellow-400" aria-hidden="true" />
-
           <div className="h-2 w-2 rounded-full bg-green-400" aria-hidden="true" />
-
           <div className="ml-2 flex-1 rounded bg-white px-2 py-0.5 text-[9px] text-muted">
-
             praxis-beispiel.de
-
           </div>
-
         </div>
 
-
-
-        <div className="rounded-b-lg border border-t-0 border-border bg-white p-3">
-
-          <div className="flex items-center justify-between">
-
-            <div className="h-2 w-16 rounded bg-navy/15" aria-hidden="true" />
-
-            <div className="flex gap-1" aria-hidden="true">
-
-              <div className="h-1.5 w-6 rounded bg-navy/10" />
-
-              <div className="h-1.5 w-6 rounded bg-navy/10" />
-
-              <div className="h-1.5 w-6 rounded bg-navy/10" />
-
+        <div className="p-3">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[10px] font-bold uppercase tracking-wide text-navy">Ihre Praxis</p>
+            <div className="flex gap-2 text-[8px] text-muted">
+              <span>Praxis</span>
+              <span>Leistungen</span>
+              <span>Team</span>
+              <span>Kontakt</span>
             </div>
-
           </div>
 
-
-
-          <div className="mt-3 rounded-lg bg-gradient-to-br from-navy/5 to-accent-soft p-3">
-
-            <div className="h-2 w-3/4 rounded bg-navy/20" aria-hidden="true" />
-
-            <div className="mt-2 h-1.5 w-full rounded bg-navy/10" aria-hidden="true" />
-
-            <div className="mt-1 h-1.5 w-2/3 rounded bg-navy/10" aria-hidden="true" />
-
-            <div className="mt-3 inline-block rounded bg-navy px-2 py-1 text-[8px] font-medium text-white">
-
-              Termin buchen
-
+          <div className="relative mt-3 overflow-hidden rounded-lg">
+            <div className="relative aspect-[16/10]">
+              <Image
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80"
+                alt=""
+                fill
+                sizes="340px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-navy/10 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-3 text-white">
+                <p className="text-[11px] font-bold leading-snug">Willkommen in Ihrer Praxis</p>
+                <span className="mt-2 inline-block rounded bg-navy px-2 py-1 text-[8px] font-semibold">
+                  Termin vereinbaren
+                </span>
+              </div>
             </div>
-
           </div>
 
-
-
-          <div className="mt-3 grid grid-cols-3 gap-1.5" aria-hidden="true">
-
-            <div className="rounded bg-surface p-2">
-
-              <div className="h-1.5 w-full rounded bg-navy/10" />
-
-              <div className="mt-1.5 h-4 rounded bg-navy/5" />
-
-            </div>
-
-            <div className="rounded bg-surface p-2">
-
-              <div className="h-1.5 w-full rounded bg-navy/10" />
-
-              <div className="mt-1.5 h-4 rounded bg-navy/5" />
-
-            </div>
-
-            <div className="rounded bg-surface p-2">
-
-              <div className="h-1.5 w-full rounded bg-navy/10" />
-
-              <div className="mt-1.5 h-4 rounded bg-navy/5" />
-
-            </div>
-
+          <div className="mt-3 grid grid-cols-3 gap-1.5">
+            {[
+              { icon: Heart, label: "Persönliche Betreuung" },
+              { icon: Building2, label: "Moderne Ausstattung" },
+              { icon: Shield, label: "Alles unter einem Dach" },
+            ].map(({ icon: Icon, label }) => (
+              <div
+                key={label}
+                className="rounded border border-border bg-surface px-1.5 py-2 text-center"
+              >
+                <Icon className="mx-auto h-3 w-3 text-navy/60" aria-hidden="true" />
+                <p className="mt-1 text-[7px] leading-tight text-muted">{label}</p>
+              </div>
+            ))}
           </div>
 
+          <div className="mt-3 flex items-center gap-2 rounded-lg border border-border bg-white px-2.5 py-2">
+            <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Star key={i} className="h-2.5 w-2.5 fill-current" />
+              ))}
+            </div>
+            <div>
+              <p className="text-[8px] font-semibold text-navy">Über 100 zufriedene Patienten</p>
+              <p className="text-[7px] text-muted">4,9 von 5 Sternen auf Google</p>
+            </div>
+          </div>
         </div>
-
-
-
-        <div className="mt-3 flex items-center gap-2 rounded-xl border border-border bg-surface px-3 py-2">
-
-          <Calendar className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
-
-          <div>
-
-            <p className="text-[10px] font-semibold text-navy">Terminbuchung eingebunden</p>
-
-            <p className="text-[9px] text-muted">Bestehendes System in der Website</p>
-
-          </div>
-
-        </div>
-
       </div>
-
     </div>
-
   );
-
 }
-
-
-
-function StepContent({
-
-  icon: Icon,
-
-  title,
-
-  text,
-
-}: (typeof steps)[number]) {
-
-  return (
-
-    <>
-
-      <div
-
-        className="mx-auto flex h-11 w-11 items-center justify-center rounded-full text-white"
-
-        style={{ backgroundColor: processNavy }}
-
-      >
-
-        <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
-
-      </div>
-
-      <h3 className="mt-4 text-sm font-bold" style={{ color: processNavy }}>
-
-        {title}
-
-      </h3>
-
-      <p className="mt-2 text-sm leading-relaxed text-muted">{text}</p>
-
-    </>
-
-  );
-
-}
-
-
 
 export function ProcessSection() {
-
   return (
-
     <section
-
       id="ablauf"
-
-      className="scroll-mt-28 border-t border-border bg-white py-10 lg:py-14"
-
+      className="scroll-mt-28 border-t border-border bg-white py-14 lg:py-20"
       aria-labelledby="process-heading"
-
     >
-
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
-
-        <div className="relative overflow-hidden rounded-2xl bg-[#f0f4f9] px-6 py-10 ring-1 ring-black/[0.04] lg:px-10 lg:py-12">
-
-          <div className="grid gap-10 lg:grid-cols-[1fr_260px] lg:items-start lg:gap-8">
-
+        <div className="overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-sm lg:p-10">
+          <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
             <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#5b6472]">
+                So entsteht Ihre neue Praxis-Website
+              </p>
+              <h2
+                id="process-heading"
+                className={`${playfair.className} mt-3 text-3xl font-semibold leading-tight sm:text-4xl`}
+                style={{ color: processNavy }}
+              >
+                Ihre Praxis-Website in vier klaren Schritten
+              </h2>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted sm:text-base">
+                Wir begleiten Sie strukturiert von der Analyse bis zum Launch – mit modernster
+                Technologie und klarer Kommunikation.
+              </p>
 
-              <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
-
-                <h2
-
-                  id="process-heading"
-
-                  className="text-xl font-bold sm:text-2xl"
-
-                  style={{ color: processNavy }}
-
-                >
-
-                  Praxis-Website erstellen lassen — in vier klaren Schritten
-
-                </h2>
-
-                <p className="mt-3 text-sm leading-relaxed text-muted">
-
-                  Von der Analyse bis zum Go-live: Wir begleiten Sie
-
-                  strukturiert zum neuen Internetauftritt — ohne Technik-Stress
-
-                  und mit transparentem Festpreis.
-
-                </p>
-
-              </div>
-
-
-
-              <ol className="mt-10 flex list-none flex-col gap-8 lg:flex-row lg:items-start lg:gap-0">
+              <ol className="mt-10 grid list-none gap-8 sm:grid-cols-2 xl:grid-cols-4 xl:gap-4">
                 {steps.map((step, index) => (
-                  <li
-                    key={step.title}
-                    className="flex flex-1 flex-col items-center text-center lg:flex-row lg:items-start"
-                  >
-                    <div className="flex-1">
-                      <StepContent {...step} />
-                    </div>
+                  <li key={step.title} className="relative">
                     {index < steps.length - 1 && (
                       <span
-                        className="mt-4 flex justify-center lg:mt-0 lg:shrink-0 lg:items-start lg:px-1 lg:pt-3"
+                        className="pointer-events-none absolute -right-2 top-5 hidden text-navy/20 xl:block"
                         aria-hidden="true"
                       >
-                        <ArrowRight className="h-4 w-4 rotate-90 text-navy/25 lg:rotate-0" />
+                        <ArrowRight className="h-4 w-4" />
                       </span>
                     )}
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-border bg-[#f5f7fa] text-navy">
+                      <step.icon className="h-5 w-5" strokeWidth={1.5} aria-hidden="true" />
+                    </div>
+                    <p className="mt-3 text-[11px] font-semibold tracking-wide text-muted">
+                      {step.number}
+                    </p>
+                    <h3 className="mt-1 text-sm font-bold text-navy">{step.title}</h3>
+                    <p className="mt-2 text-xs leading-relaxed text-muted">{step.text}</p>
                   </li>
                 ))}
               </ol>
-
-
-
-              <div className="mt-10 flex flex-col gap-6 border-t border-navy/10 pt-8 lg:flex-row lg:items-center lg:justify-between">
-
-                <ul className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2">
-
-                  {highlights.map((item) => (
-
-                    <li
-
-                      key={item}
-
-                      className="flex items-center gap-2 text-sm text-navy"
-
-                    >
-
-                      <Check
-
-                        className="h-4 w-4 shrink-0 text-accent"
-
-                        strokeWidth={2.5}
-
-                        aria-hidden="true"
-
-                      />
-
-                      {item}
-
-                    </li>
-
-                  ))}
-
-                </ul>
-
-                <a
-
-                  href="#preise"
-
-                  className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
-
-                  style={{ backgroundColor: processNavy }}
-
-                >
-
-                  Preise &amp; Pakete ansehen
-
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
-
-                </a>
-
-              </div>
-
             </div>
 
-
-
-            <div className="lg:pt-2">
-
+            <div className="lg:pt-6">
               <WebsiteMockup />
-
             </div>
-
           </div>
 
+          <div className="mt-10 flex flex-col gap-6 rounded-xl bg-[#f5f7fa] p-5 lg:flex-row lg:items-center lg:justify-between lg:p-6">
+            <ul className="grid gap-5 sm:grid-cols-3 sm:gap-4">
+              {trustFeatures.map(({ icon: Icon, title, text }) => (
+                <li key={title} className="flex gap-3">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-white text-navy">
+                    <Icon className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="text-sm font-bold text-navy">{title}</p>
+                    <p className="mt-0.5 text-xs leading-relaxed text-muted">{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="shrink-0 text-center lg:text-right">
+              <a
+                href="#preise"
+                className="inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                style={{ backgroundColor: processNavy }}
+              >
+                Preise &amp; Pakete ansehen
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </a>
+              <p className="mt-2 text-[11px] text-muted">Transparent. Fair. Ohne versteckte Kosten.</p>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </section>
-
   );
-
 }
-
-
