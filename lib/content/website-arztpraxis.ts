@@ -70,7 +70,7 @@ export const websiteArztpraxisDesign = {
       description:
         "Fiktives Designkonzept mit Schwerpunkten, Leistungen und klarer Patientenführung für eine dermatologische Praxis.",
       href: "/webdesign-hautarzt",
-      image: "/beispiele/hautarzt-hero.jpg",
+      image: "/beispiele/hautarzt-preview.png",
       imageAlt: "Vorschau eines fiktiven Hautarzt-Website-Designs",
     },
     {

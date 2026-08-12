@@ -34,7 +34,7 @@ export const portfolioExamples: PortfolioExample[] = [
     subtitle: "Elegante Praxis-Website mit Schwerpunkten & Ästhetik",
     gradient: "from-emerald-700 to-emerald-900",
     href: "/webdesign-hautarzt",
-    image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80",
+    image: "/beispiele/hautarzt-preview.png",
   },
   {
     title: "Orthopädie Dr. Kraft",
