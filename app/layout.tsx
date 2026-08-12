@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { QuickInquiry } from "@/components/quick-inquiry/QuickInquiry";
 import { siteConfig } from "@/lib/seo/config";
 import "./globals.css";
 
@@ -53,7 +54,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} scroll-smooth antialiased`}>
-      <body className="min-h-full bg-white text-foreground">{children}</body>
+      <body className="min-h-full bg-white text-foreground">
+        {children}
+        <QuickInquiry />
+      </body>
     </html>
   );
 }
