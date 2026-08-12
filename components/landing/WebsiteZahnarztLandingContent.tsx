@@ -112,7 +112,7 @@ export function WebsiteZahnarztLandingContent() {
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-center"
+                className="object-cover object-[center_30%]"
               />
               <div
                 className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#f7f9fc] to-transparent sm:w-1/5"

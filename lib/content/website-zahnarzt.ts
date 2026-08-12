@@ -20,7 +20,8 @@ export const websiteZahnarztHero = {
   priceSuffix: "netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
   designLinkLabel: "Beispiel-Website ansehen",
-  heroImage: "/beispiele/zahnarzt-hero-landing.png",
+  heroImage:
+    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=85",
   heroImageAlt:
     "Moderner, heller Behandlungsraum in einer Zahnarztpraxis mit Behandlungsstuhl und moderner Ausstattung",
 };
