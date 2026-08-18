@@ -2,7 +2,7 @@ export const googleAdsCreditBadge = "Bonus für Neukunden";
 
 export const googleAdsCreditHeadline = {
   prefix: "Bis zu",
-  amount: "4.000 €",
+  amount: "1.200 €",
   suffix: "Google Ads-Werbeguthaben für Neukunden¹",
 };
 
