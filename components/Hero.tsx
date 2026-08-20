@@ -1,8 +1,9 @@
-import { ArrowRight, Calendar, Check, CheckCircle2, Stethoscope } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { erstgespraechUrl, primaryCtaLabel } from "@/lib/cta";
 import { analyseCtaSubtext } from "@/lib/content/website-analyse";
 import { terminbuchungHeroMention } from "@/lib/content/terminbuchung";
+import { siteConfig } from "@/lib/seo/config";
 
 const highlights = [
   { 
@@ -70,33 +71,33 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <ProfilePhoto
               priority
+              alt={`${siteConfig.contactPerson}, Gründerin von ${siteConfig.name}`}
               className="aspect-[4/5] w-full rounded-2xl shadow-xl lg:aspect-[3/4] lg:min-h-[480px]"
               sizes="(max-width: 1024px) 90vw, 520px"
             />
 
-            {/* Top Right Floating Badge */}
-            <div className="absolute right-4 top-8 z-20 flex flex-col items-center justify-center rounded-xl bg-white/90 p-3 text-center shadow-lg backdrop-blur-sm ring-1 ring-black/5">
-              <Stethoscope className="h-6 w-6 text-navy" strokeWidth={1.5} aria-hidden="true" />
-              <p className="mt-1 text-[10px] font-bold uppercase tracking-wide text-navy">
-                Zahnarztpraxis
-                <br />
-                Mannheim
+            <div className="absolute right-4 top-8 z-20 rounded-xl bg-white/90 px-3 py-2.5 text-center shadow-lg backdrop-blur-sm ring-1 ring-black/5">
+              <p className="text-[11px] font-bold leading-snug text-navy">
+                {siteConfig.contactPerson}
+              </p>
+              <p className="mt-0.5 text-[10px] font-medium uppercase tracking-wide text-muted">
+                Gründerin
               </p>
             </div>
 
-            {/* Bottom Right Floating Widget */}
             <div className="absolute bottom-6 right-4 z-20 w-[min(100%,240px)] rounded-xl bg-white p-4 shadow-2xl ring-1 ring-black/5">
-              <p className="text-xs font-semibold text-navy">Online-Termin buchen</p>
-              <div className="mt-3 flex items-center gap-2 rounded-lg bg-[#eef3f9] px-3 py-2 text-xs text-navy">
-                <Check className="h-4 w-4 text-accent" aria-hidden="true" />
-                Heute, 10:30 Uhr
-              </div>
-              <button
-                type="button"
-                className="btn-primary mt-3 w-full py-2 text-xs"
+              <p className="text-xs font-semibold text-navy">
+                Ihre persönliche Ansprechpartnerin
+              </p>
+              <p className="mt-1 text-[11px] leading-snug text-muted">
+                {siteConfig.name}
+              </p>
+              <a
+                href={erstgespraechUrl()}
+                className="btn-primary mt-3 block w-full py-2 text-center text-xs"
               >
-                Termin bestätigen
-              </button>
+                {primaryCtaLabel}
+              </a>
             </div>
           </div>
         </div>
