@@ -1,7 +1,7 @@
 export const googleAdsZahnarztMetadata = {
   title: "Google Ads für Zahnärzte & Zahnarztpraxen | OCHS Digital",
   description:
-    "Google Ads für Zahnarztpraxen: individuelle Kampagnenerstellung, Keyword-Recherche und 30 Tage Startoptimierung für 2.999 € netto.",
+    "Google Ads für Zahnarztpraxen: individuelle Kampagnenerstellung, Keyword-Recherche und 30 Tage Startoptimierung für 3.499 € netto.",
   canonicalPath: "/google-ads-zahnarzt",
 };
 
@@ -16,7 +16,7 @@ export const googleAdsZahnarztHero = {
   subtitle:
     "Erreichen Sie potenzielle Patienten genau dann, wenn sie bei Google nach zahnmedizinischen Leistungen in Ihrer Region suchen.",
   intro: "Wir planen, erstellen und optimieren Ihre Google-Ads-Kampagne speziell für Ihre Zahnarztpraxis.",
-  priceHint: "Kampagnenerstellung 2.999 € netto · inklusive 30 Tage Startoptimierung",
+  priceHint: "Kampagnenerstellung 3.499 € netto · inklusive 30 Tage Startoptimierung",
   scopeLinkLabel: "Leistungsumfang ansehen",
 };
 
@@ -82,7 +82,7 @@ export const googleAdsZahnarztExample = {
 };
 
 export const googleAdsZahnarztScope = {
-  heading: "Was wir für 2.999 € netto einrichten",
+  heading: "Was wir für 3.499 € netto einrichten",
   strategy: [
     "Analyse Ihrer Praxisleistungen",
     "Definition relevanter Zielregionen",
@@ -189,7 +189,7 @@ export const googleAdsZahnarztProcess = {
 
 export const googleAdsZahnarztPricing = {
   heading: "Google-Ads-Kampagne für Ihre Zahnarztpraxis",
-  price: "2.999 € netto einmalig",
+  price: "3.499 € netto einmalig",
   includesNote: "inklusive 30 Tage Startoptimierung",
   includes: [
     "Keyword-Recherche",
@@ -223,7 +223,7 @@ export const googleAdsZahnarztBetreuung = {
 
 export const googleAdsZahnarztBudgetInfo = {
   heading: "Einrichtung und Werbebudget sind zwei getrennte Kosten.",
-  text: "Die 2.999 € netto sind unser einmaliges Honorar für Planung, Einrichtung und 30 Tage Startoptimierung. Das eigentliche Anzeigenbudget legen Sie separat fest und zahlen es direkt an Google.",
+  text: "Die 3.499 € netto sind unser einmaliges Honorar für Planung, Einrichtung und 30 Tage Startoptimierung. Das eigentliche Anzeigenbudget legen Sie separat fest und zahlen es direkt an Google.",
   extra:
     "Die sinnvolle Höhe des Werbebudgets hängt unter anderem von Region, Wettbewerb, Leistungen und Klickpreisen ab.",
 };
@@ -238,10 +238,10 @@ export const googleAdsZahnarztFaq = [
   {
     question: "Was kostet die Einrichtung von Google Ads für meine Zahnarztpraxis?",
     answer:
-      "Die Kampagnenerstellung kostet einmalig 2.999 € netto. Darin sind Planung, Einrichtung und 30 Tage Startoptimierung enthalten.",
+      "Die Kampagnenerstellung kostet einmalig 3.499 € netto. Darin sind Planung, Einrichtung und 30 Tage Startoptimierung enthalten.",
   },
   {
-    question: "Ist das Google-Werbebudget in den 2.999 € enthalten?",
+    question: "Ist das Google-Werbebudget in den 3.499 € enthalten?",
     answer:
       "Nein. Das Anzeigenbudget wird separat festgelegt und direkt an Google gezahlt.",
   },

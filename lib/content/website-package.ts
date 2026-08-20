@@ -1,10 +1,10 @@
-export const websitePackageActionPrice = "2.999 €";
+export const websitePackageActionPrice = "3.499 €";
 
 export const websitePackageScopeHeading =
-  "Im Festpreis von 2.999 € konkret enthalten";
+  "Im Festpreis von 3.499 € konkret enthalten";
 
 export const websitePackageScopeHighlights = [
-  "2.999 € netto",
+  "3.499 € netto",
   "Bis zu 10 Inhaltsseiten",
   "2 Korrekturrunden",
 ] as const;

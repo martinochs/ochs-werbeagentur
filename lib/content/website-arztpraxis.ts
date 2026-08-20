@@ -1,7 +1,7 @@
 export const websiteArztpraxisMetadata = {
   title: "Website für Arztpraxen erstellen lassen | OCHS Digital",
   description:
-    "Moderne Websites für Arztpraxen: individuelles Design, bis zu 10 Seiten, persönliche Betreuung und klarer Festpreis. Aktuell 2.999 € netto.",
+    "Moderne Websites für Arztpraxen: individuelles Design, bis zu 10 Seiten, persönliche Betreuung und klarer Festpreis. Aktuell 3.499 € netto.",
   canonicalPath: "/website-arztpraxis",
 };
 
@@ -15,7 +15,7 @@ export const websiteArztpraxisHero = {
   h1: "Moderne Websites für Arztpraxen",
   subtitle:
     "Individuell entwickelt für moderne Arztpraxen – mobil optimiert, klar strukturiert und auf eine professionelle Patientenkommunikation ausgerichtet.",
-  priceHint: "Aktuell 2.999 € statt 4.749 € netto",
+  priceHint: "Aktuell 3.499 € statt 4.999 € netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
   designLinkLabel: "Praxis-Designs ansehen",
 };
@@ -169,8 +169,8 @@ export const websiteArztpraxisProcess = {
 
 export const websiteArztpraxisPricing = {
   heading: "Ihre neue Praxis-Website",
-  regular: "4.749 € netto",
-  action: "2.999 € netto",
+  regular: "4.999 € netto",
+  action: "3.499 € netto",
   includes: [
     "Bis zu 10 Inhaltsseiten",
     "2 Korrekturrunden",
@@ -207,7 +207,7 @@ export const websiteArztpraxisFaq = [
   {
     question: "Was kostet eine neue Website für meine Arztpraxis?",
     answer:
-      "Der reguläre Festpreis beträgt 4.749 € netto. Aktuell bieten wir die Umsetzung zum Aktionspreis von 2.999 € netto an.",
+      "Der reguläre Festpreis beträgt 4.999 € netto. Aktuell bieten wir die Umsetzung zum Aktionspreis von 3.499 € netto an.",
   },
   {
     question: "Wie viele Seiten sind enthalten?",

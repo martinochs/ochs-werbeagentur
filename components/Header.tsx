@@ -61,7 +61,7 @@ export function Header() {
             <Gift className="h-4 w-4 shrink-0 text-[#bbf7d0]" />
             <Link href="/#preise" className="leading-snug transition-opacity hover:opacity-80">
               <span className="font-bold text-[#bbf7d0] underline decoration-[#bbf7d0]/50 underline-offset-2">AKTIONSPREISE BIS 31.10.2026:</span>{" "}
-              Premium Praxis-Website oder Google-Ads-Einrichtung jeweils 2.999 € netto
+              Premium Praxis-Website oder Google-Ads-Einrichtung jeweils 3.499 € netto
             </Link>
           </div>
           <Link

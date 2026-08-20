@@ -1,7 +1,7 @@
 export const websiteZahnarztMetadata = {
   title: "Website für Zahnärzte erstellen lassen | OCHS Digital",
   description:
-    "Moderne Websites für Zahnarztpraxen: individuelles Design, bis zu 10 Seiten, persönliche Betreuung und klarer Festpreis. Aktuell 2.999 € netto.",
+    "Moderne Websites für Zahnarztpraxen: individuelles Design, bis zu 10 Seiten, persönliche Betreuung und klarer Festpreis. Aktuell 3.499 € netto.",
   canonicalPath: "/website-zahnarzt",
 };
 
@@ -15,8 +15,8 @@ export const websiteZahnarztHero = {
   h1: "Websites für Zahnarztpraxen, die Patienten überzeugen.",
   subtitle:
     "Individuell entwickelt für Zahnärzte – professionell, mobil optimiert und darauf ausgerichtet, aus Website-Besuchern neue Patienten zu machen.",
-  priceCurrent: "Aktuell 2.999 €",
-  priceCompare: "4.749 €",
+  priceCurrent: "Aktuell 3.499 €",
+  priceCompare: "4.999 €",
   priceSuffix: "netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
   designLinkLabel: "Beispiel-Website ansehen",
@@ -196,8 +196,8 @@ export const websiteZahnarztProcess = {
 
 export const websiteZahnarztPricing = {
   heading: "Ihre neue Zahnarzt-Website",
-  regular: "4.749 € netto",
-  action: "2.999 € netto",
+  regular: "4.999 € netto",
+  action: "3.499 € netto",
   includes: [
     "Bis zu 10 Inhaltsseiten",
     "2 Korrekturrunden",
@@ -233,7 +233,7 @@ export const websiteZahnarztFaq = [
   {
     question: "Was kostet eine neue Website für meine Zahnarztpraxis?",
     answer:
-      "Der reguläre Festpreis beträgt 4.749 € netto. Aktuell bieten wir die Umsetzung zum Aktionspreis von 2.999 € netto an.",
+      "Der reguläre Festpreis beträgt 4.999 € netto. Aktuell bieten wir die Umsetzung zum Aktionspreis von 3.499 € netto an.",
   },
   {
     question: "Wie viele Seiten sind enthalten?",

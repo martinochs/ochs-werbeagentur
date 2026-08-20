@@ -6,13 +6,13 @@ export const faqItems = [
 
     answer:
 
-      "Die Kosten hängen von Umfang und Funktionen ab. Unser Premium-Paket kostet regulär 4.749 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 2.999 € netto — mit klar definiertem Leistungsumfang, unter anderem bis zu 10 Inhaltsseiten und 2 Korrekturrunden vor Veröffentlichung. Nach unserer kostenlosen Website-Analyse erhalten Sie ein transparentes Festpreis-Angebot.",
+      "Die Kosten hängen von Umfang und Funktionen ab. Unser Premium-Paket kostet regulär 4.999 € netto. Aktuell erhalten Sie die Praxis-Website bis zum 31.10.2026 zum Aktionspreis von 3.499 € netto — mit klar definiertem Leistungsumfang, unter anderem bis zu 10 Inhaltsseiten und 2 Korrekturrunden vor Veröffentlichung. Nach unserer kostenlosen Website-Analyse erhalten Sie ein transparentes Festpreis-Angebot.",
 
   },
 
   {
 
-    question: "Was ist im Festpreis von 2.999 € netto für die Praxis-Website enthalten?",
+    question: "Was ist im Festpreis von 3.499 € netto für die Praxis-Website enthalten?",
 
     answer:
 

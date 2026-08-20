@@ -63,7 +63,7 @@ export default function PraxisWebsitesPage() {
                 Transparentes Angebot für Ihre Praxis
               </h2>
               <p className="mt-4 text-base text-muted">
-                Festpreis 2.999 € netto mit klar definiertem Leistungsumfang.
+                Festpreis 3.499 € netto mit klar definiertem Leistungsumfang.
               </p>
             </div>
 
@@ -103,14 +103,14 @@ export default function PraxisWebsitesPage() {
                         </p>
                       </div>
                       <div className="mt-6">
-                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">4.749 €</span> regulär</p>
+                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">4.999 €</span> regulär</p>
                         <p className="mt-2 text-5xl font-extrabold text-[#5b21b6]">
-                          2.999 €
+                          3.499 €
                         </p>
                         <p className="mt-1 text-sm font-medium text-navy">netto, einmalig</p>
                       </div>
                       <div className="mx-auto mt-4 inline-block rounded bg-[#7c3aed] px-3 py-1 text-[13px] font-bold text-white">
-                        Sie sparen 1.750 €
+                        Sie sparen 1.500 €
                       </div>
                       <a
                         href={erstgespraechUrl("website")}
@@ -280,12 +280,12 @@ export default function PraxisWebsitesPage() {
                     <span className="text-[11px] font-bold uppercase tracking-wide text-[#ca8a04]">Aktion bis 31.10.2026</span>
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">8.999 €</span>
+                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">9.499 €</span>
                     {" "}
-                    <span className="text-3xl font-extrabold text-[#ca8a04]">5.499 €</span>
+                    <span className="text-3xl font-extrabold text-[#ca8a04]">6.499 €</span>
                   </div>
                   <div className="mt-1.5 inline-block rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
-                    Sie sparen 3.500 €
+                    Sie sparen 3.000 €
                   </div>
                 </div>
                 <div className="shrink-0 w-full md:w-auto">
@@ -298,7 +298,7 @@ export default function PraxisWebsitesPage() {
               {/* Footer Bar */}
               <div className="mt-4 flex flex-col md:flex-row items-center justify-center gap-4 border-t border-border pt-6">
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[13px] text-muted">
-                  <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#5b21b6]" /> Festpreis 2.999 € netto</span>
+                  <span className="flex items-center gap-1.5"><ShieldCheck className="h-4 w-4 text-[#5b21b6]" /> Festpreis 3.499 € netto</span>
                   <span className="text-border" aria-hidden="true"> &bull; </span>
                   <span>Klar definierter Leistungsumfang</span>
                 </div>

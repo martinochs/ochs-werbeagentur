@@ -89,7 +89,7 @@ export default function GoogleAdsPage() {
                           Google-Ads-Kampagne
                         </h3>
                         <p className="mt-1 text-sm leading-snug text-muted">
-                          Einmalig 2.999 € netto
+                          Einmalig 3.499 € netto
                         </p>
                       </div>
                     </div>
@@ -128,14 +128,14 @@ export default function GoogleAdsPage() {
                         </p>
                       </div>
                       <div className="mt-6">
-                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">4.749 €</span> regulär</p>
+                        <p className="text-sm text-muted">Statt <span className="line-through decoration-red-500 decoration-2">4.999 €</span> regulär</p>
                         <p className="mt-2 text-5xl font-extrabold text-[#166534]">
-                          2.999 €
+                          3.499 €
                         </p>
                         <p className="mt-1 text-sm font-medium text-navy">einmalig · netto</p>
                       </div>
                       <div className="mx-auto mt-4 inline-block rounded bg-[#16a34a] px-3 py-1 text-[13px] font-bold text-white">
-                        Sie sparen 1.750 €
+                        Sie sparen 1.500 €
                       </div>
                       <a
                         href={erstgespraechUrl("google-ads")}
@@ -314,12 +314,12 @@ export default function GoogleAdsPage() {
                     <span className="text-[11px] font-bold uppercase tracking-wide text-[#ca8a04]">Aktion bis 31.10.2026</span>
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
-                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">8.999 €</span>
+                    <span className="text-sm text-muted line-through decoration-red-500 decoration-2">9.499 €</span>
                     {" "}
-                    <span className="text-3xl font-extrabold text-[#ca8a04]">5.499 €</span>
+                    <span className="text-3xl font-extrabold text-[#ca8a04]">6.499 €</span>
                   </div>
                   <div className="mt-1.5 inline-block rounded bg-[#fef08a] px-2 py-0.5 text-[11px] font-bold text-[#a16207]">
-                    Sie sparen 3.500 €
+                    Sie sparen 3.000 €
                   </div>
                 </div>
                 <div className="shrink-0 w-full md:w-auto">
