@@ -6,6 +6,8 @@ import {
   aufsichtsbehoerde,
   datenschutzSections,
   datenschutzStand,
+  googleAdsPrivacyUrl,
+  googleAdsSettingsUrl,
 } from "@/lib/content/datenschutz";
 import { formatRegisteredOffice, siteConfig } from "@/lib/seo/config";
 
@@ -105,6 +107,24 @@ export default function DatenschutzPage() {
                     {section.paragraphs.slice(1).map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}
+                  </div>
+                ) : section.id === "google-ads" ? (
+                  <div className="mt-3 space-y-3">
+                    {section.paragraphs.slice(0, -1).map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                    <p>
+                      Sie können personalisierte Anzeigen in den{" "}
+                      <ExternalLink href={googleAdsSettingsUrl}>
+                        Google-Werbeeinstellungen
+                      </ExternalLink>{" "}
+                      deaktivieren. Die Datenschutzerklärung von Google finden
+                      Sie unter{" "}
+                      <ExternalLink href={googleAdsPrivacyUrl}>
+                        policies.google.com/privacy
+                      </ExternalLink>
+                      .
+                    </p>
                   </div>
                 ) : section.id === "formspree" ? (
                   <div className="mt-3 space-y-3">

@@ -7,7 +7,10 @@ export type DatenschutzSection = {
   bullets?: string[];
 };
 
-export const datenschutzStand = "August 2026";
+export const datenschutzStand = "Oktober 2026";
+
+export const googleAdsPrivacyUrl = "https://policies.google.com/privacy";
+export const googleAdsSettingsUrl = "https://adssettings.google.com";
 
 export const datenschutzSections: DatenschutzSection[] = [
   {
@@ -21,7 +24,7 @@ export const datenschutzSections: DatenschutzSection[] = [
       `Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), Betriebssitz ${formatRegisteredOffice()}.`,
       "Beim Besuch der Website werden technisch notwendige Server-Logdaten durch unseren Hosting-Anbieter Vercel verarbeitet.",
       "Wenn Sie das Formular „Kostenlose Website-Analyse“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
-      "Wir setzen derzeit keine Analyse- oder Marketing-Tools ein und verwenden keine Cookies zu Tracking-Zwecken.",
+      "Zur Messung des Erfolgs unserer Google-Ads-Kampagnen setzen wir das Google-Ads-Conversion-Tag (AW-18401404956) ein. Dabei kann eine Verbindung zu Servern von Google entstehen.",
     ],
   },
   {
@@ -86,24 +89,37 @@ export const datenschutzSections: DatenschutzSection[] = [
     ],
   },
   {
-    id: "cookies",
-    title: "8. Cookies und Tracking",
+    id: "google-ads",
+    title: "8. Google Ads Conversion-Tracking",
     paragraphs: [
-      "Diese Website verwendet derzeit keine Cookies zu Analyse-, Marketing- oder Profiling-Zwecken.",
+      "Auf dieser Website setzen wir das Google-Ads-Conversion-Tag (Google-Tag / gtag.js) ein. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mutterunternehmen ist Google LLC, USA.",
+      "Die eingesetzte Google-Ads-ID lautet AW-18401404956. Das Tag wird beim Aufruf der Website geladen.",
+      "Zweck der Verarbeitung ist die Messung, ob und wie Besuche auf unserer Website bzw. bestimmte Aktionen — etwa das Absenden eines Formulars — mit unseren Google-Ads-Anzeigen in Zusammenhang stehen. So können wir den Erfolg unserer Werbung auswerten und Kampagnen wirtschaftlich steuern.",
+      "Beim Seitenaufruf wird eine Verbindung zu Servern von Google hergestellt. Google kann dabei insbesondere folgende Daten verarbeiten: IP-Adresse, Informationen zu Browser und Endgerät, aufgerufene Seiten, Datum und Uhrzeit des Aufrufs sowie — sofern Sie über eine Google-Anzeige auf unsere Website gelangt sind — Conversion-Kennungen. Google kann hierzu Cookies oder vergleichbare Technologien auf Ihrem Endgerät speichern.",
+      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der Messung und Optimierung unserer Google-Ads-Kampagnen. Soweit Google Cookies oder vergleichbare Speichertechniken auf Ihrem Endgerät setzt, kann zusätzlich § 25 TDDDG einschlägig sein.",
+      "Die Datenverarbeitung kann in den USA oder in anderen Drittländern erfolgen. Soweit erforderlich, stützt sich die Übermittlung auf die EU-Standardvertragsklauseln sowie — soweit anwendbar — das EU-US Data Privacy Framework.",
+      "Sie können personalisierte Anzeigen in den Google-Werbeeinstellungen deaktivieren. Die Datenschutzerklärung von Google finden Sie unter https://policies.google.com/privacy",
+    ],
+  },
+  {
+    id: "cookies",
+    title: "9. Cookies",
+    paragraphs: [
       "Beim Aufruf der Website können technisch notwendige Session- oder Sicherheitsinformationen durch den Hosting-Anbieter verarbeitet werden. Diese dienen ausschließlich dem Betrieb und der Sicherheit der Website.",
-      "Sollten wir künftig Tracking- oder Analyse-Tools einsetzen, werden wir diese Datenschutzerklärung entsprechend anpassen und — soweit gesetzlich erforderlich — vorab Ihre Einwilligung einholen.",
+      "Zusätzlich kann das unter Abschnitt 8 beschriebene Google-Ads-Conversion-Tag Cookies oder vergleichbare Technologien setzen, um Conversions zuzuordnen.",
     ],
   },
   {
     id: "schriften",
-    title: "9. Schriftarten",
+    title: "10. Schriftarten",
     paragraphs: [
-      "Diese Website nutzt die Schriftart „Inter“. Die Schriftdateien werden beim Build-Prozess lokal eingebunden und von unserem Server bzw. dem Hosting-Anbieter ausgeliefert. Beim Seitenaufruf findet keine direkte Verbindung zu Servern von Google statt.",
+      "Diese Website nutzt die Schriftart „Inter“. Die Schriftdateien werden beim Build-Prozess lokal eingebunden und von unserem Server bzw. dem Hosting-Anbieter ausgeliefert. Für die Schriftart selbst findet keine Verbindung zu Servern von Google statt.",
+      "Unabhängig davon stellt das Google-Ads-Conversion-Tag beim Seitenaufruf eine Verbindung zu Google her. Einzelheiten dazu finden Sie in Abschnitt 8.",
     ],
   },
   {
     id: "externe-links",
-    title: "10. Externe Links",
+    title: "11. Externe Links",
     paragraphs: [
       "Unsere Website enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Beispielsweise verlinken wir im Footer auf Google Maps, um unseren Standort anzuzeigen.",
       "Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Beim Anklicken eines externen Links verlassen Sie unsere Website. Es gelten dann die Datenschutzbestimmungen des jeweiligen Anbieters.",
@@ -111,7 +127,7 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "speicherdauer",
-    title: "11. Speicherdauer",
+    title: "12. Speicherdauer",
     paragraphs: [
       "Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.",
       "Anfragen über das Kontaktformular speichern wir in der Regel bis zu 24 Monate nach Abschluss der Korrespondenz, sofern kein Vertragsverhältnis zustande kommt. Entsteht ein Vertragsverhältnis, gelten die gesetzlichen handels- und steuerrechtlichen Aufbewahrungsfristen (regelmäßig 6 bis 10 Jahre).",
@@ -120,16 +136,16 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "rechtsgrundlagen",
-    title: "12. Rechtsgrundlagen der Verarbeitung",
+    title: "13. Rechtsgrundlagen der Verarbeitung",
     paragraphs: [
       "Sofern Sie in eine Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.",
       "Die Verarbeitung zur Erfüllung vorvertraglicher Maßnahmen oder zur Vertragserfüllung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.",
-      "Soweit die Verarbeitung zur Wahrung eines berechtigten Interesses erforderlich ist, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt insbesondere in der sicheren Bereitstellung der Website sowie in der Bearbeitung und Beantwortung von Anfragen.",
+      "Soweit die Verarbeitung zur Wahrung eines berechtigten Interesses erforderlich ist, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt insbesondere in der sicheren Bereitstellung der Website, in der Bearbeitung und Beantwortung von Anfragen sowie in der Messung und Optimierung unserer Google-Ads-Kampagnen.",
     ],
   },
   {
     id: "rechte",
-    title: "13. Ihre Rechte",
+    title: "14. Ihre Rechte",
     paragraphs: [
       "Sie haben jederzeit folgende Rechte gegenüber uns:",
     ],
@@ -145,7 +161,7 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "widerspruch",
-    title: "14. Widerspruch gegen die Verarbeitung",
+    title: "15. Widerspruch gegen die Verarbeitung",
     paragraphs: [
       "Sofern wir personenbezogene Daten auf Grundlage eines berechtigten Interesses verarbeiten, haben Sie das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen diese Verarbeitung einzulegen.",
       "Werden personenbezogene Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, jederzeit Widerspruch gegen die Verarbeitung zu diesem Zweck einzulegen.",
@@ -153,7 +169,7 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "beschwerde",
-    title: "15. Beschwerderecht bei der Aufsichtsbehörde",
+    title: "16. Beschwerderecht bei der Aufsichtsbehörde",
     paragraphs: [
       "Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht zu, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren.",
       "Zuständige Aufsichtsbehörde für uns ist:",
@@ -161,7 +177,7 @@ export const datenschutzSections: DatenschutzSection[] = [
   },
   {
     id: "aenderungen",
-    title: "16. Änderung dieser Datenschutzerklärung",
+    title: "17. Änderung dieser Datenschutzerklärung",
     paragraphs: [
       "Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen bzw. der eingesetzten Technologien abzubilden.",
       "Für Ihren erneuten Besuch gilt dann die jeweils aktuelle Datenschutzerklärung.",
