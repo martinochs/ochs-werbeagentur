@@ -55,7 +55,8 @@ export function QuickInquiryForm({
     setStatus("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -79,8 +80,8 @@ export function QuickInquiryForm({
         serviceCategory,
       });
 
+      form.reset();
       setStatus("success");
-      event.currentTarget.reset();
       onSuccess?.();
     } catch (error) {
       setStatus("error");

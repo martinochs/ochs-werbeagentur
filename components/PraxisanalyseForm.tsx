@@ -63,7 +63,8 @@ export function PraxisanalyseForm({ initialLeistung, initialQuelle }: Praxisanal
     setStatus("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -81,9 +82,9 @@ export function PraxisanalyseForm({ initialLeistung, initialQuelle }: Praxisanal
         throw new Error(data.error ?? "Beim Senden ist ein Fehler aufgetreten.");
       }
 
-      setStatus("success");
-      event.currentTarget.reset();
+      form.reset();
       setGewuenschteLeistung(getDefaultLeistung(initialLeistung));
+      setStatus("success");
     } catch (error) {
       setStatus("error");
       setErrorMessage(
