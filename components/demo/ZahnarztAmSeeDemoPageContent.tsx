@@ -62,7 +62,7 @@ const services = [
     title: "Ästhetische Zahnmedizin",
     description: "Veneers, Bleaching und harmonische Korrekturen für ein strahlendes Lächeln.",
     image:
-      "https://images.unsplash.com/photo-1598256989808-f780b1277841?auto=format&fit=crop&w=600&q=80",
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80",
   },
   {
     title: "Implantologie",

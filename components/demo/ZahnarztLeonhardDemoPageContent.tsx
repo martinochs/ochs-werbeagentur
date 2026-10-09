@@ -417,7 +417,7 @@ export function ZahnarztLeonhardDemoPageContent() {
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-4 lg:grid-cols-2 lg:gap-16 lg:px-8">
             <div className="relative aspect-[4/5] overflow-hidden rounded-sm lg:aspect-[5/6]">
               <Image
-                src="https://images.unsplash.com/photo-1598256989808-f780b1277841?auto=format&fit=crop&w=900&q=80"
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80"
                 alt="Ästhetische Zahnmedizin in der Praxis Dr. Leonhard"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
