@@ -29,9 +29,15 @@ export default function ImpressumPage() {
 
               <h2 className="mt-8 text-xl font-bold text-navy">Kontakt</h2>
               <p className="mt-2">
-                {siteConfig.phoneDisplay && (
+                {siteConfig.phone && siteConfig.phoneDisplay && (
                   <>
-                    Telefon: {siteConfig.phoneDisplay}
+                    Telefon:{" "}
+                    <a
+                      href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                      className="text-navy underline-offset-2 hover:underline"
+                    >
+                      {siteConfig.phoneDisplay}
+                    </a>
                     <br />
                   </>
                 )}

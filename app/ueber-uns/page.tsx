@@ -262,7 +262,16 @@ export default function UeberUnsPage() {
                     </div>
                     <div>
                       <p className="text-xs text-white/60 uppercase tracking-wider mb-1">Telefon</p>
-                      <p className="text-base font-medium">{siteConfig.phoneDisplay || "Wird in Kürze ergänzt"}</p>
+                      {siteConfig.phone && siteConfig.phoneDisplay ? (
+                        <a
+                          href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                          className="text-base font-medium hover:underline"
+                        >
+                          {siteConfig.phoneDisplay}
+                        </a>
+                      ) : (
+                        <p className="text-base font-medium">Wird in Kürze ergänzt</p>
+                      )}
                     </div>
                   </div>
 

@@ -4,7 +4,7 @@ import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettings
 import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
 
 export function Footer() {
-  const { name, email } = siteConfig;
+  const { name, email, phone, phoneDisplay } = siteConfig;
 
   return (
     <footer id="footer" className="scroll-mt-28 border-t border-border bg-navy text-white">
@@ -29,19 +29,31 @@ export function Footer() {
             </div>
           </div>
 
-          {email && (
+          {(email || (phone && phoneDisplay)) && (
             <div className="flex items-start gap-3 text-sm text-white/80">
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-white/60" aria-hidden="true" />
               <div>
                 <strong className="font-semibold text-white">Kontakt</strong>
-                <p className="mt-1.5">
-                  <a
-                    href={`mailto:${email}`}
-                    className="text-white underline-offset-2 hover:underline"
-                  >
-                    {email}
-                  </a>
-                </p>
+                {phone && phoneDisplay && (
+                  <p className="mt-1.5">
+                    <a
+                      href={`tel:${phone.replace(/\s/g, "")}`}
+                      className="text-white underline-offset-2 hover:underline"
+                    >
+                      {phoneDisplay}
+                    </a>
+                  </p>
+                )}
+                {email && (
+                  <p className="mt-1.5">
+                    <a
+                      href={`mailto:${email}`}
+                      className="text-white underline-offset-2 hover:underline"
+                    >
+                      {email}
+                    </a>
+                  </p>
+                )}
               </div>
             </div>
           )}

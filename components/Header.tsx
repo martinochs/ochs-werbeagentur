@@ -177,6 +177,16 @@ export function Header() {
                 )}
               </div>
             ))}
+            {siteConfig.phone && siteConfig.phoneDisplay && (
+              <a
+                href={`tel:${siteConfig.phone.replace(/\s/g, "")}`}
+                className="mt-2 flex items-center gap-1.5 text-sm font-medium text-navy"
+                onClick={() => setOpen(false)}
+              >
+                <Phone className="h-4 w-4" aria-hidden="true" />
+                {siteConfig.phoneDisplay}
+              </a>
+            )}
             <Link
               href="/praxisanalyse"
               className="btn-primary mt-2 text-center"
