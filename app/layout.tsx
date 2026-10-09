@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Script from "next/script";
+import { CookieConsent } from "@/components/cookie-consent/CookieConsent";
 import { QuickInquiry } from "@/components/quick-inquiry/QuickInquiry";
 import { siteConfig } from "@/lib/seo/config";
 import "./globals.css";
-
-const GOOGLE_ADS_ID = "AW-18401404956";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -57,23 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="de" className={`${inter.variable} scroll-smooth antialiased`}>
-      <head>
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
-          strategy="beforeInteractive"
-        />
-        <Script id="google-ads-gtag" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GOOGLE_ADS_ID}');
-          `}
-        </Script>
-      </head>
       <body className="min-h-full bg-white text-foreground">
         {children}
         <QuickInquiry />
+        <CookieConsent />
       </body>
     </html>
   );

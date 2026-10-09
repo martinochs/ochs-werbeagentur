@@ -24,7 +24,7 @@ export const datenschutzSections: DatenschutzSection[] = [
       `Verantwortlich für die Datenverarbeitung auf dieser Website ist OCHS Digital Consulting (Mariia Ochs), Betriebssitz ${formatRegisteredOffice()}.`,
       "Beim Besuch der Website werden technisch notwendige Server-Logdaten durch unseren Hosting-Anbieter Vercel verarbeitet.",
       "Wenn Sie das Formular „Kostenlose Website-Analyse“ nutzen, werden Ihre Angaben über den Dienst Formspree an uns übermittelt.",
-      "Zur Messung des Erfolgs unserer Google-Ads-Kampagnen setzen wir das Google-Ads-Conversion-Tag (AW-18401404956) ein. Dabei kann eine Verbindung zu Servern von Google entstehen.",
+      "Zur Messung des Erfolgs unserer Google-Ads-Kampagnen setzen wir das Google-Ads-Conversion-Tag (AW-18401404956) nur ein, wenn Sie über das Einwilligungs-Banner zustimmen.",
     ],
   },
   {
@@ -93,10 +93,10 @@ export const datenschutzSections: DatenschutzSection[] = [
     title: "8. Google Ads Conversion-Tracking",
     paragraphs: [
       "Auf dieser Website setzen wir das Google-Ads-Conversion-Tag (Google-Tag / gtag.js) ein. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Mutterunternehmen ist Google LLC, USA.",
-      "Die eingesetzte Google-Ads-ID lautet AW-18401404956. Das Tag wird beim Aufruf der Website geladen.",
+      "Die eingesetzte Google-Ads-ID lautet AW-18401404956. Das Tag wird nur geladen, wenn Sie über das Einwilligungs-Banner auf der Website zustimmen. Ohne Ihre Einwilligung wird das Tag nicht geladen.",
       "Zweck der Verarbeitung ist die Messung, ob und wie Besuche auf unserer Website bzw. bestimmte Aktionen — etwa das Absenden eines Formulars — mit unseren Google-Ads-Anzeigen in Zusammenhang stehen. So können wir den Erfolg unserer Werbung auswerten und Kampagnen wirtschaftlich steuern.",
-      "Beim Seitenaufruf wird eine Verbindung zu Servern von Google hergestellt. Google kann dabei insbesondere folgende Daten verarbeiten: IP-Adresse, Informationen zu Browser und Endgerät, aufgerufene Seiten, Datum und Uhrzeit des Aufrufs sowie — sofern Sie über eine Google-Anzeige auf unsere Website gelangt sind — Conversion-Kennungen. Google kann hierzu Cookies oder vergleichbare Technologien auf Ihrem Endgerät speichern.",
-      "Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der Messung und Optimierung unserer Google-Ads-Kampagnen. Soweit Google Cookies oder vergleichbare Speichertechniken auf Ihrem Endgerät setzt, kann zusätzlich § 25 TDDDG einschlägig sein.",
+      "Nach Ihrer Einwilligung wird eine Verbindung zu Servern von Google hergestellt. Google kann dabei insbesondere folgende Daten verarbeiten: IP-Adresse, Informationen zu Browser und Endgerät, aufgerufene Seiten, Datum und Uhrzeit des Aufrufs sowie — sofern Sie über eine Google-Anzeige auf unsere Website gelangt sind — Conversion-Kennungen. Google kann hierzu Cookies oder vergleichbare Technologien auf Ihrem Endgerät speichern.",
+      "Rechtsgrundlage ist Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO sowie — soweit Cookies oder vergleichbare Speichertechniken gesetzt werden — § 25 Abs. 1 TDDDG. Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft über den Link „Cookie-Einstellungen“ im Footer widerrufen.",
       "Die Datenverarbeitung kann in den USA oder in anderen Drittländern erfolgen. Soweit erforderlich, stützt sich die Übermittlung auf die EU-Standardvertragsklauseln sowie — soweit anwendbar — das EU-US Data Privacy Framework.",
       "Sie können personalisierte Anzeigen in den Google-Werbeeinstellungen deaktivieren. Die Datenschutzerklärung von Google finden Sie unter https://policies.google.com/privacy",
     ],
@@ -105,8 +105,8 @@ export const datenschutzSections: DatenschutzSection[] = [
     id: "cookies",
     title: "9. Cookies",
     paragraphs: [
-      "Beim Aufruf der Website können technisch notwendige Session- oder Sicherheitsinformationen durch den Hosting-Anbieter verarbeitet werden. Diese dienen ausschließlich dem Betrieb und der Sicherheit der Website.",
-      "Zusätzlich kann das unter Abschnitt 8 beschriebene Google-Ads-Conversion-Tag Cookies oder vergleichbare Technologien setzen, um Conversions zuzuordnen.",
+      "Beim Aufruf der Website können technisch notwendige Session- oder Sicherheitsinformationen durch den Hosting-Anbieter verarbeitet werden. Diese dienen ausschließlich dem Betrieb und der Sicherheit der Website und erfordern keine Einwilligung.",
+      "Zusätzlich kann das unter Abschnitt 8 beschriebene Google-Ads-Conversion-Tag Cookies oder vergleichbare Technologien setzen, um Conversions zuzuordnen — jedoch nur, wenn Sie zuvor zugestimmt haben. Ihre Auswahl speichern wir lokal in Ihrem Browser, damit wir sie bei späteren Besuchen berücksichtigen können.",
     ],
   },
   {
@@ -114,7 +114,7 @@ export const datenschutzSections: DatenschutzSection[] = [
     title: "10. Schriftarten",
     paragraphs: [
       "Diese Website nutzt die Schriftart „Inter“. Die Schriftdateien werden beim Build-Prozess lokal eingebunden und von unserem Server bzw. dem Hosting-Anbieter ausgeliefert. Für die Schriftart selbst findet keine Verbindung zu Servern von Google statt.",
-      "Unabhängig davon stellt das Google-Ads-Conversion-Tag beim Seitenaufruf eine Verbindung zu Google her. Einzelheiten dazu finden Sie in Abschnitt 8.",
+      "Unabhängig davon stellt das Google-Ads-Conversion-Tag nach Ihrer Einwilligung eine Verbindung zu Google her. Einzelheiten dazu finden Sie in Abschnitt 8.",
     ],
   },
   {
@@ -140,7 +140,7 @@ export const datenschutzSections: DatenschutzSection[] = [
     paragraphs: [
       "Sofern Sie in eine Datenverarbeitung eingewilligt haben, verarbeiten wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO.",
       "Die Verarbeitung zur Erfüllung vorvertraglicher Maßnahmen oder zur Vertragserfüllung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO.",
-      "Soweit die Verarbeitung zur Wahrung eines berechtigten Interesses erforderlich ist, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt insbesondere in der sicheren Bereitstellung der Website, in der Bearbeitung und Beantwortung von Anfragen sowie in der Messung und Optimierung unserer Google-Ads-Kampagnen.",
+      "Soweit die Verarbeitung zur Wahrung eines berechtigten Interesses erforderlich ist, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt insbesondere in der sicheren Bereitstellung der Website sowie in der Bearbeitung und Beantwortung von Anfragen.",
     ],
   },
   {

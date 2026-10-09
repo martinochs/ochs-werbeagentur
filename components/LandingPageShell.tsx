@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettingsButton";
 import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/seo/config";
 import { Mail, Phone } from "lucide-react";
@@ -77,6 +78,7 @@ export function LandingPageFooter() {
           <Link href="/datenschutz" className="hover:text-white/80">
             Datenschutz
           </Link>
+          <CookieSettingsButton className="hover:text-white/80" />
         </nav>
         <p className="mt-4 text-xs text-white/45">
           © {new Date().getFullYear()} {name}

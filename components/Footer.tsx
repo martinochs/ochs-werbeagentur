@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin } from "lucide-react";
+import { CookieSettingsButton } from "@/components/cookie-consent/CookieSettingsButton";
 import { formatAddress, mapsUrl, siteConfig } from "@/lib/seo/config";
 
 export function Footer() {
@@ -54,6 +55,7 @@ export function Footer() {
             <Link href="/datenschutz" className="hover:text-white/70">
               Datenschutz
             </Link>
+            <CookieSettingsButton className="hover:text-white/70" />
           </nav>
           <p>
             © {new Date().getFullYear()} {name} · Mannheim, Deutschland
