@@ -31,6 +31,16 @@ export type SiteConfig = {
   keywords: string[];
 };
 
+const PRODUCTION_SITE_URL = "https://www.ochsdigital.de";
+
+function resolveSiteUrl(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/$/, "");
+  if (!raw || raw.includes("vercel.app")) {
+    return PRODUCTION_SITE_URL;
+  }
+  return raw;
+}
+
 export const siteConfig: SiteConfig = {
   name: "OCHS Digital Consulting",
   legalName: "OCHS Digital Consulting",
@@ -39,7 +49,7 @@ export const siteConfig: SiteConfig = {
   seoDefaultTitle: "Praxis-Websites & Google Ads für Ärzte | OCHS Digital",
   description:
     "Webdesign für Arzt- und Zahnarztpraxen in Mannheim: Moderne Praxis-Websites mit Einbindung bestehender Terminbuchungssysteme, Google Ads und persönlicher Betreuung durch Mariia Ochs — kostenlose Website-Analyse.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ochs-digital-consulting.vercel.app",
+  url: resolveSiteUrl(),
   locale: "de_DE",
   phone: "+4962143789764",
   phoneDisplay: "0621 43789764",
