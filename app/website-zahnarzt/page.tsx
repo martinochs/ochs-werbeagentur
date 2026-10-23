@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
 import { LandingPageFooter, LandingPageHeader } from "@/components/LandingPageShell";
 import { WebsiteZahnarztLandingContent } from "@/components/landing/WebsiteZahnarztLandingContent";
-import { erstgespraechUrl } from "@/lib/cta";
 import {
   websiteZahnarztCta,
-  websiteZahnarztLeadQuelle,
+  websiteZahnarztFormAnchor,
   websiteZahnarztMetadata,
 } from "@/lib/content/website-zahnarzt";
 import { siteConfig } from "@/lib/seo/config";
-
-const ctaHref = erstgespraechUrl("website", { quelle: websiteZahnarztLeadQuelle });
 
 export const metadata: Metadata = {
   title: {
@@ -25,7 +22,7 @@ export default function WebsiteZahnarztLandingPage() {
   return (
     <>
       <LandingPageHeader
-        ctaHref={ctaHref}
+        ctaHref={websiteZahnarztFormAnchor}
         trustHint="Spezialisiert auf Zahnarztpraxen"
         ctaLabel={websiteZahnarztCta.header}
       />

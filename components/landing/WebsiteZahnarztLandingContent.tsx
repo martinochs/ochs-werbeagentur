@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { WebsiteZahnarztHeroForm } from "@/components/landing/WebsiteZahnarztHeroForm";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { erstgespraechUrl } from "@/lib/cta";
 import {
@@ -10,6 +11,7 @@ import {
   websiteZahnarztDesign,
   websiteZahnarztFinalCta,
   websiteZahnarztFaq,
+  websiteZahnarztFormAnchor,
   websiteZahnarztHero,
   websiteZahnarztLeadQuelle,
   websiteZahnarztPricing,
@@ -22,7 +24,6 @@ import {
 } from "@/lib/content/website-zahnarzt";
 import { ArrowRight, Check } from "lucide-react";
 
-const analyseUrl = erstgespraechUrl("website", { quelle: websiteZahnarztLeadQuelle });
 const kombiUrl = erstgespraechUrl("kombi", { quelle: websiteZahnarztLeadQuelle });
 const accent = "text-[#5b21b6]";
 
@@ -64,7 +65,7 @@ export function WebsiteZahnarztLandingContent() {
     <>
       {/* Hero */}
       <section className="bg-[#f7f9fc] py-12 md:py-14 lg:py-16 xl:py-20">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 md:grid-cols-2 md:gap-10 lg:gap-14 lg:px-8">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 items-start gap-8 px-4 md:grid-cols-2 md:items-center md:gap-x-10 md:gap-y-4 lg:gap-x-14 lg:px-8">
           <div className="text-left">
             <h1 className="max-w-[34rem] text-[1.75rem] font-bold leading-[1.15] text-navy sm:text-4xl lg:text-[2.75rem] xl:text-5xl">
               {websiteZahnarztHero.h1.replace(/\.$/, "")}
@@ -86,40 +87,20 @@ export function WebsiteZahnarztLandingContent() {
               </span>
             </p>
             <p className="mt-3 text-sm text-[#5b6472]">{websiteZahnarztHero.trustBullets}</p>
-            <LpCta
-              href={analyseUrl}
-              section="hero"
-              className="btn-primary mt-8 inline-flex w-full items-center justify-center gap-2 px-8 py-4 text-base sm:w-auto"
-            >
-              {websiteZahnarztCta.primary}
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
-            </LpCta>
-            <p className="mt-4">
-              <a
-                href="#designbeispiele"
-                className="text-sm font-semibold text-[#5b21b6] underline-offset-2 hover:underline"
-              >
-                {websiteZahnarztHero.designLinkLabel}
-              </a>
-            </p>
           </div>
 
-          <div className="relative mx-auto w-full max-w-xl md:max-w-none">
-            <div className="relative aspect-[16/11] overflow-hidden rounded-3xl rounded-br-[4.5rem] shadow-sm sm:aspect-[4/3] md:aspect-[5/6] md:min-h-[420px] lg:min-h-[480px] lg:rounded-br-[5.5rem]">
-              <Image
-                src={websiteZahnarztHero.heroImage}
-                alt={websiteZahnarztHero.heroImageAlt}
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover object-[center_30%]"
-              />
-              <div
-                className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-[#f7f9fc] to-transparent sm:w-1/5"
-                aria-hidden="true"
-              />
-            </div>
+          <div id="formular" className="scroll-mt-24 md:row-span-2">
+            <WebsiteZahnarztHeroForm />
           </div>
+
+          <p>
+            <a
+              href="#designbeispiele"
+              className="text-sm font-semibold text-[#5b21b6] underline-offset-2 hover:underline"
+            >
+              {websiteZahnarztHero.designLinkLabel} ↓
+            </a>
+          </p>
         </div>
       </section>
 
@@ -297,7 +278,7 @@ export function WebsiteZahnarztLandingContent() {
               <p className="mt-4 text-muted leading-relaxed">{websiteZahnarztAbout.text}</p>
               <p className="mt-4 text-sm text-muted leading-relaxed">{websiteZahnarztAbout.extra}</p>
               <LpCta
-                href={analyseUrl}
+                href={websiteZahnarztFormAnchor}
                 section="about"
                 className="btn-primary mt-6 inline-flex items-center gap-2 px-6 py-3"
               >
@@ -356,7 +337,7 @@ export function WebsiteZahnarztLandingContent() {
               ))}
             </ul>
             <LpCta
-              href={analyseUrl}
+              href={websiteZahnarztFormAnchor}
               section="pricing"
               className="btn-primary mt-8 flex w-full items-center justify-center gap-2 py-4 text-base"
             >
@@ -430,7 +411,7 @@ export function WebsiteZahnarztLandingContent() {
           <h2 className="text-2xl font-bold text-navy sm:text-3xl">{websiteZahnarztFinalCta.heading}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted leading-relaxed">{websiteZahnarztFinalCta.text}</p>
           <LpCta
-            href={analyseUrl}
+            href={websiteZahnarztFormAnchor}
             section="final"
             className="btn-primary mt-8 inline-flex items-center gap-2 px-8 py-4 text-base"
           >

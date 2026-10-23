@@ -5,10 +5,27 @@ export const websiteZahnarztMetadata = {
   canonicalPath: "/website-zahnarzt",
 };
 
+export const websiteZahnarztFormAnchor = "#formular";
+
 export const websiteZahnarztCta = {
   primary: "Kostenlose Website-Analyse anfordern",
   header: "Kostenlose Website-Analyse",
   subline: "Kostenlos · unverbindlich · persönliche Rückmeldung",
+};
+
+export const websiteZahnarztHeroForm = {
+  title: "Kostenlose Website-Analyse",
+  intro: "Erfahren Sie, wie Ihre Praxis online noch besser überzeugen kann.",
+  nameLabel: "Ihr Name",
+  emailLabel: "E-Mail-Adresse",
+  websiteLabel: "Praxis-Website (optional)",
+  websitePlaceholder: "www.ihre-praxis.de",
+  privacyLead: "Informationen zur Verarbeitung Ihrer Daten finden Sie in unserer",
+  privacyLinkLabel: "Datenschutzerklärung",
+  submit: "Kostenlose Analyse anfordern",
+  successTitle: "Vielen Dank – wir prüfen Ihre Angaben.",
+  successText:
+    "Ihre Anfrage ist bei uns eingegangen. Wir melden uns mit einer ersten Einschätzung per E-Mail.",
 };
 
 export const websiteZahnarztHero = {
@@ -19,11 +36,7 @@ export const websiteZahnarztHero = {
   priceCompare: "4.999 €",
   priceSuffix: "netto",
   trustBullets: "Bis zu 10 Inhaltsseiten · 2 Korrekturrunden · persönliche Betreuung",
-  designLinkLabel: "Beispiel-Website ansehen",
-  heroImage:
-    "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1400&q=85",
-  heroImageAlt:
-    "Moderner, heller Behandlungsraum in einer Zahnarztpraxis mit Behandlungsstuhl und moderner Ausstattung",
+  designLinkLabel: "Beispiel-Websites ansehen",
 };
 
 export const websiteZahnarztTrustBar = [

@@ -22,7 +22,7 @@ export const QUICK_INQUIRY_PAGES: Record<string, QuickInquiryPageSettings> = {
   "/leistungen/praxis-websites": { showQuickInquiry: true, serviceCategory: "website" },
   "/leistungen/google-ads": { showQuickInquiry: true, serviceCategory: "google-ads" },
   "/leistungen/betreuung": { showQuickInquiry: true, serviceCategory: "general" },
-  "/website-zahnarzt": { showQuickInquiry: true, serviceCategory: "website" },
+  "/website-zahnarzt": { showQuickInquiry: false, serviceCategory: "website" },
   "/website-arztpraxis": { showQuickInquiry: true, serviceCategory: "website" },
   "/google-ads-zahnarzt": { showQuickInquiry: true, serviceCategory: "google-ads" },
   "/google-ads-arztpraxis": { showQuickInquiry: true, serviceCategory: "google-ads" },
