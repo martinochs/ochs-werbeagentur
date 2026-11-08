@@ -48,7 +48,7 @@ export const siteConfig: SiteConfig = {
   tagline: "Praxis-Websites & Google Ads für Ärzte",
   seoDefaultTitle: "Praxis-Websites & Google Ads für Ärzte | OCHS Digital",
   description:
-    "Webdesign für Arzt- und Zahnarztpraxen in Mannheim: Moderne Praxis-Websites mit Einbindung bestehender Terminbuchungssysteme, Google Ads und persönlicher Betreuung durch Mariia Ochs — kostenlose Website-Analyse.",
+    "Webdesign für Arzt- und Zahnarztpraxen in Mannheim. Praxis-Websites, Google Ads und Betreuung durch Mariia Ochs. Kostenlose Analyse.",
   url: resolveSiteUrl(),
   locale: "de_DE",
   phone: "+4962143789764",
