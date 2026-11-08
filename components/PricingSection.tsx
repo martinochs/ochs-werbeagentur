@@ -183,7 +183,7 @@ function PricingFooter({ pkg }: { pkg: Package }) {
         <div className="flex items-center justify-center gap-1.5">
           <Gift className={`h-4 w-4 ${iconColor}`} aria-hidden="true" />
           <p className={`text-[11px] font-bold uppercase tracking-wide ${titleText}`}>
-            Aktion bis 31.10.2026
+            Aktion bis 31.12.2026
           </p>
         </div>
         <p className="mt-2 text-xs font-semibold text-navy">Aktionspreis</p>
@@ -292,7 +292,7 @@ export function PricingSection() {
         </h2>
         <div className="mt-3 flex items-center justify-center gap-2 text-sm font-bold text-[#166534]">
           <Calendar className="h-5 w-5" aria-hidden="true" />
-          Aktionsangebot gültig bis 31.10.2026
+          Aktionsangebot gültig bis 31.12.2026
         </div>
 
         <div className="mt-10 grid items-stretch gap-6 lg:grid-cols-3">

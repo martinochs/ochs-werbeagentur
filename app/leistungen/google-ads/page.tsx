@@ -124,7 +124,7 @@ export default function GoogleAdsPage() {
                       <div className="flex items-center justify-center gap-2">
                         <Gift className="h-4 w-4 text-[#166534]" aria-hidden="true" />
                         <p className="text-[11px] font-bold uppercase tracking-wide text-[#166534]">
-                          AKTION BIS 31.10.2026
+                          AKTION BIS 31.12.2026
                         </p>
                       </div>
                       <div className="mt-6">
@@ -311,7 +311,7 @@ export default function GoogleAdsPage() {
                 <div className="text-center md:text-right shrink-0 flex flex-col items-center md:items-end">
                   <div className="flex items-center gap-1.5">
                     <Gift className="h-3.5 w-3.5 text-[#ca8a04]" aria-hidden="true" />
-                    <span className="text-[11px] font-bold uppercase tracking-wide text-[#ca8a04]">Aktion bis 31.10.2026</span>
+                    <span className="text-[11px] font-bold uppercase tracking-wide text-[#ca8a04]">Aktion bis 31.12.2026</span>
                   </div>
                   <div className="mt-1 flex items-baseline gap-2">
                     <span className="text-sm text-muted line-through decoration-red-500 decoration-2">9.499 €</span>
