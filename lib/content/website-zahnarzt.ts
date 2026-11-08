@@ -26,6 +26,8 @@ export const websiteZahnarztHeroForm = {
   successTitle: "Vielen Dank – wir prüfen Ihre Angaben.",
   successText:
     "Ihre Anfrage ist bei uns eingegangen. Wir melden uns mit einer ersten Einschätzung per E-Mail.",
+  subjectGoogleAds: "Google Ads – Kostenlose Website-Analyse – Zahnarzt-Landingpage",
+  subjectWebsite: "Website – Kostenlose Website-Analyse – Zahnarzt-Landingpage",
 };
 
 export const websiteZahnarztHero = {

@@ -8,6 +8,7 @@ import {
   websiteZahnarztHeroForm,
   websiteZahnarztLeadQuelle,
 } from "@/lib/content/website-zahnarzt";
+import { getLeadAttribution } from "@/lib/leads/attribution";
 
 const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "kqerngya";
 
@@ -38,6 +39,16 @@ export function WebsiteZahnarztHeroForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    const attribution = getLeadAttribution();
+    formData.set("herkunft", attribution.isGoogleAds ? "Google Ads" : "Website");
+    formData.set(
+      "_subject",
+      attribution.isGoogleAds
+        ? websiteZahnarztHeroForm.subjectGoogleAds
+        : websiteZahnarztHeroForm.subjectWebsite,
+    );
+    if (attribution.gclid) formData.set("gclid", attribution.gclid);
+    if (attribution.utmCampaign) formData.set("kampagne", attribution.utmCampaign);
     const payload = Object.fromEntries(formData.entries());
 
     try {
@@ -146,7 +157,8 @@ export function WebsiteZahnarztHeroForm() {
       <input type="hidden" name="fachrichtung" value="Zahnarztpraxis" />
       <input type="hidden" name="gewuenschte_leistung" value="Website / Relaunch" />
       <input type="hidden" name="formular_typ" value="website-zahnarzt-hero" />
-      <input type="hidden" name="_subject" value="Kostenlose Website-Analyse – Zahnarzt-Landingpage" />
+      <input type="hidden" name="herkunft" value="Website" />
+      <input type="hidden" name="_subject" value={websiteZahnarztHeroForm.subjectWebsite} />
       <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" className="hidden" />
 
       {status === "error" && errorMessage && (
