@@ -12,7 +12,7 @@ const adsGreen = "#064e3b";
 const steps = [
   {
     icon: Search,
-    title: "Analyse & Strategie",
+    title: "Analyse der Suchanfragen",
     text: "Wir analysieren Ihre Leistungen, relevante Suchanfragen, Ihre Region und die Wettbewerbssituation.",
   },
   {
