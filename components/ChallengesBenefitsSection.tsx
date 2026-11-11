@@ -64,7 +64,7 @@ export function ChallengesBenefitsSection() {
             Herausforderungen meistern. Vorteile nutzen.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base text-muted">
-            Eine moderne Praxis-Website spart Zeit, entlastet Ihr Team und überzeugt Ihre Patienten.
+            Eine moderne Praxis-Website spart Zeit, soll Ihr Team entlasten und neue Patienten überzeugen.
           </p>
         </div>
 
