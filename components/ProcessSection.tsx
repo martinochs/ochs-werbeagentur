@@ -98,7 +98,7 @@ function WebsiteMockup() {
             <div className="relative aspect-[16/10]">
               <Image
                 src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80"
-                alt=""
+                alt="Behandlungsraum einer Zahnarztpraxis im Beispiel der Praxis-Website"
                 fill
                 sizes="340px"
                 className="object-cover"
