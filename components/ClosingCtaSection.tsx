@@ -6,9 +6,13 @@ import { getLeistungCtaLabel } from "@/lib/content/praxisanalyse-variants";
 
 type ClosingCtaSectionProps = {
   leistung?: LeistungSlug;
+  text?: string;
 };
 
-export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
+export function ClosingCtaSection({
+  leistung,
+  text = analyseCtaSubtext,
+}: ClosingCtaSectionProps = {}) {
   const ctaLabel = getLeistungCtaLabel(leistung);
 
   return (
@@ -22,7 +26,7 @@ export function ClosingCtaSection({ leistung }: ClosingCtaSectionProps = {}) {
           Lassen Sie uns über Ihre Praxis sprechen
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted">
-          {analyseCtaSubtext}
+          {text}
         </p>
         <a
           href={erstgespraechUrl(leistung)}

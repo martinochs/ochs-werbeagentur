@@ -10,6 +10,9 @@ export const analyseNoWebsiteNote =
 export const analyseCtaSubtext =
   "Fordern Sie eine kostenlose Website-Analyse an — mit oder ohne bestehende Website. Wir melden uns mit einer ersten Einschätzung per E-Mail; danach können Sie bequem einen Termin für Ihr persönliches Erstgespräch auswählen.";
 
+export const homepageClosingText =
+  "Schildern Sie uns Ihre aktuelle Website oder Ihre Pläne für einen neuen Auftritt. Wir melden uns persönlich und besprechen mit Ihnen den passenden nächsten Schritt.";
+
 export const analyseMetadataDescription =
   "Fordern Sie eine kostenlose Website-Analyse für Ihre Arzt- oder Zahnarztpraxis an — mit oder ohne bestehende Website. Wir prüfen Ihren Auftritt bzw. Ihre Ziele und senden Ihnen eine erste Einschätzung per E-Mail.";
 

@@ -13,6 +13,7 @@ import { ProcessSection } from "@/components/ProcessSection";
 import { TrustBarSection } from "@/components/TrustBarSection";
 import { WebsiteFeaturesSection } from "@/components/WebsiteFeaturesSection";
 import { faqItems } from "@/lib/content/faq";
+import { homepageClosingText } from "@/lib/content/website-analyse";
 import { siteConfig } from "@/lib/seo/config";
 import {
   faqSchema,
@@ -64,7 +65,7 @@ export default function HomePage() {
         <GoogleAdsSection />
         <PricingSection />
         <FaqSection items={homeFaqItems} showMoreLink={true} />
-        <ClosingCtaSection />
+        <ClosingCtaSection text={homepageClosingText} />
       </main>
       <Footer />
     </>
