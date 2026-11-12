@@ -69,17 +69,18 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="relative h-[520px] sm:h-[640px] lg:absolute lg:inset-y-0 lg:right-0 lg:h-auto lg:w-[58%]">
+      <div className="relative mx-auto h-[440px] w-full max-w-[420px] sm:h-[500px] lg:absolute lg:inset-y-8 lg:right-8 lg:mx-0 lg:h-auto lg:w-[420px]">
         <Image
           src="/images/mariia-ochs-start.jpg"
           alt={`${siteConfig.contactPerson}, Gründerin von ${siteConfig.name}`}
           fill
           priority
-          sizes="(max-width: 1024px) 100vw, 58vw"
-          className="object-cover object-[center_22%]"
+          quality={90}
+          sizes="768px"
+          className="object-contain object-bottom"
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,rgba(255,255,255,0.72)_16%,transparent_42%)] lg:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.92)_8%,rgba(255,255,255,0.55)_24%,transparent_46%)]"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,white_0%,transparent_18%)] lg:bg-[linear-gradient(to_right,white_0%,rgba(255,255,255,0.35)_12%,transparent_32%)]"
           aria-hidden="true"
         />
       </div>

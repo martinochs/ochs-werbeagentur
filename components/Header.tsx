@@ -42,9 +42,8 @@ function MenuPortrait() {
         src="/images/mariia-ochs-start.jpg"
         alt=""
         fill
-        sizes="32px"
-        className="object-cover object-top"
-        style={{ transform: "scale(2.15)", transformOrigin: "center 38%" }}
+        sizes="96px"
+        className="object-cover object-[center_22%]"
       />
     </span>
   );
