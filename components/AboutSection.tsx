@@ -20,7 +20,7 @@ export function AboutSection() {
       <div className="mx-auto max-w-6xl px-4 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[280px_1fr] lg:items-center lg:gap-12">
           <ProfilePhoto
-            src="/images/mariia-ochs-about.png"
+            src="/images/mariia-ochs-start.jpg"
             alt={`${contactPerson} — Ihre persönliche Ansprechpartnerin`}
             className="mx-auto aspect-[4/5] w-full max-w-[280px] rounded-2xl shadow-xl lg:mx-0"
             imageClassName="object-cover object-center"

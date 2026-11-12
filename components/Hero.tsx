@@ -70,6 +70,7 @@ export function Hero() {
 
           <div className="relative mx-auto w-full max-w-md lg:max-w-none">
             <ProfilePhoto
+              src="/images/mariia-ochs-start.jpg"
               priority
               alt={`${siteConfig.contactPerson}, Gründerin von ${siteConfig.name}`}
               className="aspect-[4/5] w-full rounded-2xl shadow-xl lg:aspect-[3/4] lg:min-h-[480px]"
