@@ -35,18 +35,24 @@ const navLinks: NavLink[] = [
   { path: "#kontakt", label: "Kontakt" },
 ];
 
-function OwnerMark() {
+function OwnerLink() {
   return (
-    <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-border">
-      <Image
-        src="/images/mariia-ochs-start.jpg"
-        alt=""
-        fill
-        sizes="28px"
-        className="object-cover object-top"
-        style={{ transform: "scale(2.15)", transformOrigin: "center 38%" }}
-      />
-    </span>
+    <Link href="/ueber-uns" className="flex items-center gap-2">
+      <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-border">
+        <Image
+          src="/images/mariia-ochs-start.jpg"
+          alt=""
+          fill
+          sizes="36px"
+          className="object-cover object-top"
+          style={{ transform: "scale(2.15)", transformOrigin: "center 38%" }}
+        />
+      </span>
+      <span className="text-sm font-semibold leading-tight text-navy">
+        Mariia Ochs
+        <span className="block text-[10px] font-medium text-muted">Inhaberin</span>
+      </span>
+    </Link>
   );
 }
 
@@ -92,27 +98,29 @@ export function Header() {
 
       <header className="border-b border-border bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 lg:px-8">
-        <Link
-          href="/"
-          className="flex items-center gap-3"
-          aria-label={`${siteConfig.name} Startseite`}
-        >
-          <Logo className="h-9 w-9 shrink-0" />
-          <span className="hidden text-[10px] font-bold leading-tight tracking-wide text-navy sm:block">
-            OCHS DIGITAL
-            <br />
-            CONSULTING
-          </span>
-        </Link>
+        <div className="flex items-center gap-3 sm:gap-4">
+          <Link
+            href="/"
+            className="flex items-center gap-3"
+            aria-label={`${siteConfig.name} Startseite`}
+          >
+            <Logo className="h-9 w-9 shrink-0" />
+            <span className="hidden text-[10px] font-bold leading-tight tracking-wide text-navy lg:block">
+              OCHS DIGITAL
+              <br />
+              CONSULTING
+            </span>
+          </Link>
+          <OwnerLink />
+        </div>
 
         <nav className="hidden items-center gap-4 xl:flex" aria-label="Hauptnavigation">
           {navLinks.map((link) => (
             <div key={link.path} className="group relative">
               <Link
                 href={getHref(pathname, link.path)}
-                className="flex items-center gap-1.5 whitespace-nowrap text-sm text-muted transition-colors hover:text-navy"
+                className="flex items-center gap-1 text-sm text-muted transition-colors hover:text-navy"
               >
-                {link.path === "/ueber-uns" && <OwnerMark />}
                 {link.label}
                 {link.children && <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />}
               </Link>
@@ -173,10 +181,9 @@ export function Header() {
               <div key={link.path} className="flex flex-col gap-2">
                 <Link
                   href={getHref(pathname, link.path)}
-                  className={`flex items-center gap-2 text-sm ${link.children ? "font-semibold text-navy" : "text-muted"}`}
+                  className={`text-sm ${link.children ? "font-semibold text-navy" : "text-muted"}`}
                   onClick={() => setOpen(false)}
                 >
-                  {link.path === "/ueber-uns" && <OwnerMark />}
                   {link.label}
                 </Link>
                 {link.children && (
