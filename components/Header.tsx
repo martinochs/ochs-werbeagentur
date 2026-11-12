@@ -1,6 +1,7 @@
 "use client";
 
 import { ChevronDown, Gift, Menu, Phone, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -33,6 +34,21 @@ const navLinks: NavLink[] = [
   { path: "/praxisanalyse", label: navAnalyseLabel },
   { path: "#kontakt", label: "Kontakt" },
 ];
+
+function OwnerMark() {
+  return (
+    <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full ring-1 ring-border">
+      <Image
+        src="/images/mariia-ochs-start.jpg"
+        alt=""
+        fill
+        sizes="28px"
+        className="object-cover object-top"
+        style={{ transform: "scale(2.15)", transformOrigin: "center 38%" }}
+      />
+    </span>
+  );
+}
 
 function getHref(pathname: string, path: string) {
   if (path.startsWith("/")) return path;
@@ -94,8 +110,9 @@ export function Header() {
             <div key={link.path} className="group relative">
               <Link
                 href={getHref(pathname, link.path)}
-                className="flex items-center gap-1 text-sm text-muted transition-colors hover:text-navy"
+                className="flex items-center gap-1.5 whitespace-nowrap text-sm text-muted transition-colors hover:text-navy"
               >
+                {link.path === "/ueber-uns" && <OwnerMark />}
                 {link.label}
                 {link.children && <ChevronDown className="h-3.5 w-3.5" aria-hidden="true" />}
               </Link>
@@ -156,9 +173,10 @@ export function Header() {
               <div key={link.path} className="flex flex-col gap-2">
                 <Link
                   href={getHref(pathname, link.path)}
-                  className={`text-sm ${link.children ? "font-semibold text-navy" : "text-muted"}`}
+                  className={`flex items-center gap-2 text-sm ${link.children ? "font-semibold text-navy" : "text-muted"}`}
                   onClick={() => setOpen(false)}
                 >
+                  {link.path === "/ueber-uns" && <OwnerMark />}
                   {link.label}
                 </Link>
                 {link.children && (
